@@ -44,8 +44,8 @@ WARNING: StructureDefinition/task-status-change-with-identifier-filter: Structur
 WARNING: StructureDefinition/task-status-change-with-identifier-filter: StructureDefinition.snapshot.element[23].binding: The definition for the element 'SubscriptionTopic.jurisdiction' binds to the value set 'http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0' which is experimental, but this structure is not labeled as experimental
 
 # Intended to be draft for now
-%Reference to draft CodeSystem http://hl7.org/fhir/uv/apix/CodeSystem/apix-business-status|0.1.0%
-%Reference to draft CodeSystem http://hl7.org/fhir/uv/apix/CodeSystem/apix-task-code|0.1.0%
+%Reference to draft CodeSystem http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status|0.1.0%
+%Reference to draft CodeSystem http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code|0.1.0%
 
 # To address at a later time - has no effect on demo
 %The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed%

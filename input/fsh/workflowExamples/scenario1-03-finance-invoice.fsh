@@ -30,7 +30,7 @@ Usage: #example
 
 * identifier.system = "http://example.org/health-authority/task-id"
 * identifier.value = "urn:uuid:5dbf06dc-e8f5-4f2b-bd69-a034dacb2836"
-* identifier.type = http://hl7.org/fhir/uv/apix/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:workflow-group-id-12345"
@@ -39,12 +39,12 @@ Usage: #example
 * status = #requested
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/apix/CodeSystem/apix-task-code#request-payment "Request Payment"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#request-payment "Request Payment"
 //* for = Reference(MedicinalProductDefinition/example-ma) "WonderDrug 50mg Tablets"
 * lastModified = "2025-11-21T09:00:00+01:00"
 * requester = Reference(org-ema-srm-hmed) "Health Authority"
 * owner = Reference(org-synthpharma-ag) "SynthPharma AG"
-* input.type = http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section#invoice-reg-fee "Invoice Regulatory Fee"
+* input.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#invoice-reg-fee "Invoice Regulatory Fee"
 * input.valueReference = Reference(docref-invoice)
 
 Instance: docref-invoice
@@ -56,7 +56,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1.0"
-* type = http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section#invoice-reg-fee "Invoice Regulatory Fee"
+* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#invoice-reg-fee "Invoice Regulatory Fee"
 * description = "Financial invoice for regulatory submission review"
 * content.attachment.contentType = #application/pdf
 * content.attachment.url = "https://api.health.authority.example/binaries/invoices/INV-2025-001.pdf"

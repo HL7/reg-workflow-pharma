@@ -6,20 +6,20 @@
 //* meta.versionId = "3"
 //* meta.lastUpdated = "2025-04-20T09:00:00+01:00"
 //* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
-// * identifier.type = http://hl7.org/fhir/uv/apix/CodeSystem/apix-identifier-type#task-instance-uuid "Task Instance UUID"
+// * identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-identifier-type#task-instance-uuid "Task Instance UUID"
 //* identifier.system = "urn:ietf:rfc:3986"
 //* identifier.value = "urn:uuid:999e7d2a-8b1c-4d9f-9a2e-1f6c9d8e7b3d"
 //* partOf = Reference(scenario1-01-initial-submission) "Initial Submission Task"
 //* status = #completed
-//* businessStatus = http://hl7.org/fhir/uv/apix/CodeSystem/apix-business-status#approved "Approved"
+//* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#approved "Approved"
 //* intent = #proposal
 //* priority = #routine
-//* code = http://hl7.org/fhir/uv/apix/CodeSystem/apix-task-code#approval "Approval Letter / Positive Decision"
+//* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#approval "Approval Letter / Positive Decision"
 //* for = Reference(MedicinalProductDefinition/example-ma) "WonderDrug 50mg Tablets"
 //* groupIdentifier.use = #official
 //* groupIdentifier.system = "urn:ietf:rfc:3986"
 //* groupIdentifier.value = "urn:uuid:workflow-group-id-12345"
-// * groupIdentifier.type = http://hl7.org/fhir/uv/apix/CodeSystem/apix-identifier-type#submission-group-uuid "Submission Group UUID"
+// * groupIdentifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-identifier-type#submission-group-uuid "Submission Group UUID"
 //* requester = Reference(Organization/org-ema-srm-hmed) "European Medicines Agency"
 //* owner = Reference(Organization/org-synthpharma-ag) "SynthPharma AG"
 
@@ -91,21 +91,21 @@ Usage: #example
 * identifier.use = #official
 * identifier.system = "http://example.org/health-authority/task-id"
 * identifier.value = "urn:uuid:f1500e1d-599f-47a6-a38c-ca60a5189726"
-* identifier.type = http://hl7.org/fhir/uv/apix/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
-// * identifier.type = http://hl7.org/fhir/uv/apix/CodeSystem/apix-identifier-type#task-instance-uuid "Task Instance UUID"
+* identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+// * identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-identifier-type#task-instance-uuid "Task Instance UUID"
 
 * identifier[+].use = #official
 * identifier[=].system = "http://example.org/health.authority/procedure-number"
 * identifier[=].value = "PROC-2025-12345" //"EMEA/H/C/001234/IB/0025"
-* identifier[=].type = http://hl7.org/fhir/uv/apix/CodeSystem/apix-demo#apixregulatorprocedureno "APIX Regulator Procedure Number"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixregulatorprocedureno "APIX Regulator Procedure Number"
 
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:workflow-group-id-12345"
-// * groupIdentifier.type = http://hl7.org/fhir/uv/apix/CodeSystem/apix-identifier-type#submission-group-uuid "Submission Group UUID"
+// * groupIdentifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-identifier-type#submission-group-uuid "Submission Group UUID"
 
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/apix/CodeSystem/apix-business-status#approved "Approved"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#approved "Approved"
 * intent = #proposal
 * priority = #routine
 * code = apix-task-code#variation-type-ib "Type IB Variation"
@@ -113,33 +113,33 @@ Usage: #example
 
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority"
-* input[0].type = http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section#1.0 "Cover Letter"
+* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#1.0 "Cover Letter"
 * input[0].valueReference = Reference(doc1)
-* input[1].type = http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section#application-form "Application Form"
+* input[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#application-form "Application Form"
 * input[1].valueReference = Reference(doc2)
-* input[2].type = http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section#1.14.1.2 "Annotated draft labeling text"
+* input[2].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#1.14.1.2 "Annotated draft labeling text"
 * input[2].valueReference = Reference(doc3)
-* input[3].type = http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section#1.14.1.3 "Draft labeling text"
+* input[3].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#1.14.1.3 "Draft labeling text"
 * input[3].valueReference = Reference(doc4)
-* input[4].type = http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section#1.3.2 "Mock-ups"
+* input[4].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#1.3.2 "Mock-ups"
 * input[4].valueReference = Reference(doc5)
-* input[5].type = http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section#3.2.P.8.1 "Stability Summary and Conclusion"
+* input[5].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#3.2.P.8.1 "Stability Summary and Conclusion"
 * input[5].valueReference = Reference(doc6)
-* input[6].type = http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section#3.2.P.8.3 "Stability Data"
+* input[6].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#3.2.P.8.3 "Stability Data"
 * input[6].valueReference = Reference(doc7)
-* input[7].type =  http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section#3.2.S.7 "Stability (Drug Substance)" //http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section#3.2.P.8.2 "Post-approval Stability Protocol and Commitment"
+* input[7].type =  http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#3.2.S.7 "Stability (Drug Substance)" //http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#3.2.P.8.2 "Post-approval Stability Protocol and Commitment"
 * input[7].valueReference = Reference(doc8)
 
 * lastModified = "2025-12-22T09:00:00+01:00"
 
-* output[0].type = http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section#acknowledgement-receipt "Acknowledgement of Receipt"
+* output[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#acknowledgement-receipt "Acknowledgement of Receipt"
 * output[=].valueReference = Reference(output-ack) "Acknowledgement of Receipt"
-* output[+].type = http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section#validation-report "Validation Report"
+* output[+].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#validation-report "Validation Report"
 * output[=].valueReference = Reference(output-validation) "Validation Report"
 
-* output[+].type = http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section#approval-letter "Approval Letter"
+* output[+].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#approval-letter "Approval Letter"
 * output[=].valueReference = Reference(docref-approval-letter) "Approval Letter"
-* output[+].type = http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section#assessment-report "Assessment Report"
+* output[+].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#assessment-report "Assessment Report"
 * output[=].valueReference = Reference(docref-assessment-report) "Final Assessment Report"
 
 Instance: docref-approval-letter
@@ -151,7 +151,7 @@ Usage: #example
 * meta.lastUpdated = "2025-12-22T09:00:00+01:00"
 * meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
 * status = #current
-* type = http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section#approval-letter "Approval Letter"
+* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#approval-letter "Approval Letter"
 * date = "2025-12-22T09:00:00+01:00"
 * content.attachment.contentType = #application/pdf
 * content.attachment.title = "approval-letter.pdf"
@@ -171,7 +171,7 @@ Usage: #example
 * meta.lastUpdated = "2025-12-22T09:00:00+01:00"
 * meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
 * status = #current
-* type = http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section#assessment-report "Assessment Report"
+* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#assessment-report "Assessment Report"
 * date = "2025-12-22T09:00:00+01:00"
 * content.attachment.contentType = #application/pdf
 * content.attachment.title = "final-assessment-report.pdf"

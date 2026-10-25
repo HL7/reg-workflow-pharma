@@ -74,7 +74,7 @@ Description: "Task profile for APIX regulatory submission workflows"
   * ^short = "Technical UUID for this specific Task instance"
   //* ^defintion = "Slice highlights that a Technical UUID for this specific Task instance is needed"
   //* type = http://terminology.hl7.org/CodeSystem/v2-0203#RI "Resource identifier"
-  * type = http://hl7.org/fhir/uv/apix/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+  * type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
   //* system = "urn:ietf:rfc:3986"
   * value 1..1
 
@@ -87,7 +87,7 @@ Description: "Task profile for APIX regulatory submission workflows"
   * value 1..1
     //* ^constraint[0].expression = "value.empty() or not(value.matches('^urn:uuid:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$'))"
     * ^short = "The actual regulator-assigned procedure number (format varies by authority)"
-  * type = http://hl7.org/fhir/uv/apix/CodeSystem/apix-demo#apixregulatorprocedureno "APIX Regulator Procedure Number"
+  * type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixregulatorprocedureno "APIX Regulator Procedure Number"
 
 * groupIdentifier 1..1 MS
   * ^short = "Parent/Set ID – groups all Tasks in the same regulatory procedure"
@@ -168,7 +168,7 @@ Description: "Task profile for APIX regulatory submission workflows"
 //* input contains regulatoryDocument 0..* MS
 //* input[regulatoryDocument]
 //  * ^short = "Regulatory document (CTD section, via DocumentReference index)"
-//* input[regulatoryDocument].type = http://hl7.org/fhir/uv/apix/CodeSystem/apix-task-input-type#regulatory-document "Regulatory Document"
+//* input[regulatoryDocument].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-type#regulatory-document "Regulatory Document"
 //* input[regulatoryDocument].value[x] only Reference(APIXDocumentReference)
 
 // Task Output with slicing
@@ -187,7 +187,7 @@ Description: "Task profile for APIX regulatory submission workflows"
 //* output contains regulatoryDocument 0..* MS
 //* output[regulatoryDocument]
 //  * ^short = "Regulatory document produced as output (via DocumentReference index)"
-//* output[regulatoryDocument].type  = http://hl7.org/fhir/uv/apix/CodeSystem/apix-task-output-type#regulatory-document "Regulatory Document"
+//* output[regulatoryDocument].type  = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-output-type#regulatory-document "Regulatory Document"
 //* output[regulatoryDocument].value[x] only Reference(APIXDocumentReference)
 
 * focus 0..1
