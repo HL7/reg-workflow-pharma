@@ -12,6 +12,9 @@ extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm  #<<<<< this to to inform the publisher of the default FMM level for the artifacts in this IG
     valueInteger: 1
 version: 0.1.0
+
+oid-root: 2.16.840.1.113883.4.642.40.101
+
 fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build
