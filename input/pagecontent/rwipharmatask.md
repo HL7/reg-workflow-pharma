@@ -1,24 +1,24 @@
 <!-- RWI-pharma TASK PAGE -->
 <div style="margin-bottom:32px;">
   <!--h2 style="font-size:1.7em; font-weight:800; color:#111827; margin-bottom:10px;">RWI-pharma Task Structure</h2-->
-  <p style="font-size:.95em; color:#6b7280; line-height:1.6; max-width:640px;">The Task resource is the universal envelope and workflow engine for all biopharmaceutical regulatory interactions — submissions, questions, decisions, and payments are all represented as individual Task resources.</p>
+  <p style="font-size:.95em; color:#6b7280; line-height:1.6; max-width:640px;">The Task resource is the universal envelope and workflow engine for all biopharmaceutical regulatory interactions — Each request (a submission, a question, a payment request) is a Task. As the work progresses, the same Task is updated: its status changes and responses and decisions are added as outputs, while its <code>Task.id</code> stays the same.</p>
 </div>
 
 <div style="background:linear-gradient(135deg,#eff6ff,#faf5ff); border:1px solid #bfdbfe; border-radius:12px; padding:20px 24px; margin-bottom:16px;">
   <div style="font-weight:700; color:#003087; font-size:.92em; margin-bottom:6px;">For Business Readers</div>
-  <p style="font-size:.85em; color:#374151; line-height:1.6; margin:0;">Think of a Task as a <strong>regulatory envelope</strong>. When you submit an application, you create a Task containing references to your documents. When the regulator has questions, they create a new Task assigned to you. When the decision is made, the original Task is completed with the decision letter attached. Each Task has a status that progresses through the lifecycle — giving both sides real-time visibility.</p>
+  <p style="font-size:.85em; color:#374151; line-height:1.6; margin:0;">Think of a Task as a <strong>regulatory envelope</strong>. When you submit an application, you create a Task containing references to your documents. When the regulator has questions, they create a new Task assigned to you. When the decision is made, the original Task is completed with the decision letter attached. Each Task has a status that progresses through the lifecycle — giving both sides real-time visibility. The envelope keeps the same tracking number (its <code>Task.id</code>) from submission to decision. Each update is a new version of the same envelope, never a new envelope.</p>
 </div>
 
 <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:32px;">
   <a href="Task-scenario1-01-initial-submission.html" style="text-decoration:none; background:#eff6ff; border:1px solid #bfdbfe; border-radius:6px; padding:6px 12px; font-size:.8em; font-weight:600; color:#1d4ed8;">📤 Initial Submission</a>
   <a href="Task-scenario1-05-technical-question.html" style="text-decoration:none; background:#fff7ed; border:1px solid #fed7aa; border-radius:6px; padding:6px 12px; font-size:.8em; font-weight:600; color:#c2410c;">❓ Questions</a>
-  <a href="Task-scenario1-06-technical-response.json" style="text-decoration:none; background:#ecfdf5; border:1px solid #a7f3d0; border-radius:6px; padding:6px 12px; font-size:.8em; font-weight:600; color:#047857;">💬 Response</a>
+  <a href="Task-scenario1-06-technical-response.html" style="text-decoration:none; background:#ecfdf5; border:1px solid #a7f3d0; border-radius:6px; padding:6px 12px; font-size:.8em; font-weight:600; color:#047857;">💬 Response</a>
   <a href="Task-scenario1-07-final-decision.html" style="text-decoration:none; background:#faf5ff; border:1px solid #e9d5ff; border-radius:6px; padding:6px 12px; font-size:.8em; font-weight:600; color:#7e22ce;">📩 Decision</a>
 </div>
 
 <hr style="border:none; border-top:1px solid #e5e7eb; margin:0 0 24px;"/>
 
-The following are examples of Tasks with synthetic content: <a href="Task-scenario1-01-initial-submission.html">Initial Submission</a>, <a href="Task-scenario1-05-technical-question.html">Questions</a>, <a href="Task-scenario1-06-technical-response.json">Response</a>, and <a href="Task-scenario1-07-final-decision.html">Decision</a>.
+The following are examples of Tasks with synthetic content: <a href="Task-scenario1-01-initial-submission.html">Initial Submission</a>, <a href="Task-scenario1-05-technical-question.html">Questions</a>, <a href="Task-scenario1-06-technical-response.html">Response</a>, and <a href="Task-scenario1-07-final-decision.html">Decision</a>.
 
 The following table provides an overview of the key elements of the RWI-pharma Task resource. For a technical description of the Task resource, see the <a href="StructureDefinition-rwi-pharma-task.html">RWI-pharma Task profile</a>.
 
@@ -40,10 +40,16 @@ The following table provides an overview of the key elements of the RWI-pharma T
 </thead>
 <tbody>
 <tr>
+<td><code>Task.id</code></td>
+<td>1..1</td>
+<td>Assigned by the server when the Task is created</td>
+<td>The Task's logical identity. It never changes for the life of the Task: every update, whether a status or business-status change or adding outputs, is a new version (<code>meta.versionId</code>) of the same <code>Task.id</code>. Never create a new Task to record progress or return documents. See <a href="#task-identifiers">Task Identity and Versions</a>.</td>
+</tr>
+<tr>
 <td><code>Task.meta</code></td>
 <td>1..1</td>
 <td>• <code>versionId</code> (Mandatory)<br>• <code>lastUpdated</code> (Mandatory)<br>• <code>profile</code> (Fixed)</td>
-<td>Technical metadata for versioning and conformance</td>
+<td>Technical metadata for versioning and conformance. <code>versionId</code> increases with every update of the same <code>Task.id</code>.</td>
 </tr>
 <tr>
 <td><code>Task.text</code></td>
@@ -102,14 +108,14 @@ The following table provides an overview of the key elements of the RWI-pharma T
 <tr>
 <td><code>Task.input</code></td>
 <td>0..*</td>
-<td>type = <code>regulatory-document</code><br>valueReference = Reference(DocumentReference)</td>
+<td>type from the domain Task input value sets (e.g. <code>cover-letter</code>), see <a href="terminology.html">Terminology</a><br>valueReference = Reference(DocumentReference)</td>
 <td>Primary mechanism to attach submission content, or for a Regulator to ask questions or make requests. Can reference DocumentReferences.</td>
 </tr>
 <tr>
 <td><code>Task.output</code></td>
 <td>0..*</td>
-<td>type = <code>regulatory-document</code><br>valueReference = Reference(DocumentReference)</td>
-<td>Used by the regulator to return assessment reports, decisions, etc. Or, used by Applicant to provide responses to Regulator questions or requests. Can reference DocumentReferences.</td>
+<td>type from the domain Task output value sets (e.g. <code>validation-report</code>), see <a href="terminology.html">Terminology</a><br>valueReference = Reference(DocumentReference)</td>
+<td>Used by the regulator to return assessment reports, decisions, etc. Or, used by Applicant to provide responses to Regulator questions or requests. Can reference DocumentReferences. Outputs are added to the existing Task as a new version. Returning a document never creates a new Task.</td>
 </tr>
 <tr>
 <td><code>Task.groupIdentifier</code></td>
@@ -120,7 +126,7 @@ The following table provides an overview of the key elements of the RWI-pharma T
 <tr>
 <td><code>Task.basedOn</code></td>
 <td>0..*</td>
-<td>Reference to the parent Task (e.g. a response points to the question Task), ordered lineage of Tasks (oldest → newest).</td>
+<td>Reference to the parent Task (e.g. a question Task points to the submission Task), ordered lineage of Tasks (oldest → newest).</td>
 <td>The element is an ordered array with the most distant ancestor Task as the first Task of the array (e.g. an initial request for review). The parent Task will be in the last position of the array.</td> 
 </tr>
 <tr>
@@ -150,7 +156,7 @@ The following table provides an overview of the key elements of the RWI-pharma T
 <tr>
 <td><code>Task.businessStatus</code></td>
 <td>0..1</td>
-<td>Detailed regulatory status (e.g. clock-short, validated)</td>
+<td>Detailed regulatory status (e.g. <code>validation-successful</code>, <code>clock-stop</code>), see <a href="terminology.html">Terminology</a></td>
 <td>Enables detailed process analytics and clock-stop tracking</td>
 </tr>
 <tr>
@@ -159,23 +165,34 @@ The following table provides an overview of the key elements of the RWI-pharma T
 <td>Date/time the sender created the Task</td>
 <td>Starting point for regulatory cycle-time metrics</td>
 </tr>
-<tr>
-<td><code>Task.lastUpdated</code></td>
-<td>1..1</td>
-<td>Automatically updated on every change</td>
-<td>Critical for audit and performance reporting</td>
-</tr>
 </tbody>
 </table>
 
-### Task Identifiers
-Each regulatory message (initial submission, response to questions, approval letter) is a separate **Task** instance. 
+### Task Identity and Versions {#task-identifiers}
+A Task is created once, when a request is made, and is then updated as the work progresses. Its `Task.id` never changes. Each update creates a new version of the same Task, recorded in `meta.versionId`. On a FHIR server, `GET Task/[id]` returns the current state and `GET Task/[id]/_history` returns every state.
 
-Each Task is connected by four identifiers: 
-1. `Task.groupIdentifier` is a common UUID used to group all Tasks within a regulatory activity.
-2. `Task.RegulatoryProcedureIdentifier` is the procedure number or application number assigned by the regulator.
-3. `basedOn` relates a child Task to its parent Task. 
-3. `partOf` indicates a set of Tasks performed together.
+| | Changes when the status changes? | Changes when outputs are added? | Purpose |
+|---|---|---|---|
+| `Task.id` | **Never** | **Never** | The resource. Every party, notification and reference points to it. |
+| `meta.versionId` | **Every update** | **Every update** | Which state of the Task you are looking at |
+| `Task.identifier` | No (identifiers can be added, such as the regulator's procedure number) | No | Business identity, used to filter notifications |
+| `Task.groupIdentifier` | No | No | Ties every Task in one procedure together |
+
+**Update the same Task** when the same request moves forward: status, business status, outputs (responses, reports, decisions), owner, or the clock.
+
+**Create a new Task** only for a new request (a question, an invoice, a labelling round), or after a terminal state (for example, a resubmission after `rejected`). Link it to the original with `basedOn` and give it the same `groupIdentifier`.
+
+<div class="markdown-alert markdown-alert-note">
+  <p class="markdown-alert-title">Note</p>
+  <p>An implementation guide cannot publish two examples with the same id. The scenario examples therefore show each version of a Task as a separate example instance. Each example's description says which Task and version it shows, and on a server those examples are versions of one Task with one <code>Task.id</code>.</p>
+</div>
+
+### Linking Tasks
+Tasks in the same procedure are connected by:
+1. `Task.groupIdentifier`: a common UUID shared by all Tasks within a regulatory activity.
+2. `Task.identifier`: the regulator's procedure or application number, once assigned.
+3. `Task.basedOn`: links a child Task (for example a question) to its parent Task.
+4. `Task.partOf`: indicates a set of Tasks performed together.
 
 ### Task Status
 In addition to the identifiers mentioned above, RWI-pharma uses **Task Status** ([see here for the Task Status Valueset](http://hl7.org/fhir/ValueSet/task-status)) to drive the the regulatory workflow.
@@ -217,7 +234,7 @@ The following table lists each status and its purpose throughout the workflow.
 </div>
 
 #### Typical State Transitions in a Regulatory Procedure
-The following table demonstrates how the Status on a given Task changes throughout a regulatory activity.
+The following table shows how the status of a Task changes during a regulatory activity. Every row is an update to the same Task (same `Task.id`, new `meta.versionId`), except where a new child Task is created.
 
 <table class="apix-table">
   <thead>
@@ -234,9 +251,10 @@ The following table demonstrates how the Status on a given Task changes througho
     <tr><td>received → accepted</td><td>Gateway validation successful</td><td>Regulator</td><td>Yes (validation passed)</td></tr>
     <tr><td>received → rejected</td><td>Gateway validation fails</td><td>Regulator</td><td>Yes (rejection)</td></tr>
     <tr><td>accepted → in-progress</td><td>Assessment team begins review</td><td>Regulator</td><td>Yes</td></tr>
-    <tr><td>in-progress → on-hold</td><td>Regulator creates child Task with questions</td><td>Regulator</td><td>Yes (clock-stop)</td></tr>
+    <tr><td>in-progress → on-hold</td><td>Regulator creates a <strong>new child Task</strong> with questions (the original Task is put on hold)</td><td>Regulator</td><td>Yes (clock-stop)</td></tr>
     <tr><td>on-hold → in-progress</td><td>Company responds → regulator restarts clock</td><td>Regulator</td><td>Yes (clock-restart)</td></tr>
-    <tr><td>in-progress → completed</td><td>Decision letter issued</td><td>Regulator</td><td>Yes (final decisoin)</td></tr>
+    <tr><td>in-progress → completed</td><td>Decision letter added to <code>Task.output</code></td><td>Regulator</td><td>Yes (final decision)</td></tr>
+    <tr><td>(unchanged)</td><td>Outputs added (for example an acknowledgment of receipt)</td><td>Task owner</td><td>Only if the Subscription's topic triggers on any update</td></tr>
     <tr><td>any → rejected</td><td>Scientific rejection</td><td>Regulator</td><td>Yes</td></tr>
     <tr><td>any → cancelled</td><td>Company withdraws</td><td>Company</td><td>Yes</td></tr>
   </tbody>
