@@ -19,7 +19,7 @@ Usage: #example
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:936c6113-a6d2-5df6-93f3-4c2726e6bef6"
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#submitted "Submitted"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#submitted "Submitted"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#icsr "Individual Case Safety Report"
@@ -48,7 +48,7 @@ Usage: #example
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:936c6113-a6d2-5df6-93f3-4c2726e6bef6"
 * status = #accepted
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#accepted "Accepted"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#accepted "Accepted"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#icsr "Individual Case Safety Report"
@@ -80,7 +80,7 @@ Usage: #example
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:936c6113-a6d2-5df6-93f3-4c2726e6bef6"
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#complete "Complete"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#complete "Complete"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#icsr "Individual Case Safety Report"
@@ -113,7 +113,7 @@ Usage: #example
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546"
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#submitted "Submitted"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#submitted "Submitted"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#icsr "Individual Case Safety Report"
@@ -143,7 +143,7 @@ Usage: #example
 * groupIdentifier.value = "urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546"
 * status = #rejected
 * statusReason.concept.text = "The ICSR failed validation (rule R2-0214: MedDRA version missing in B.2.i.1a) and was not loaded. See the acknowledgment log and validation report."
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#rejected "Rejected"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#rejected "Rejected"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#icsr "Individual Case Safety Report"
@@ -156,7 +156,7 @@ Usage: #example
 * input[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
 * input[0].valueReference = Reference(docref-icsr-2b) "ICSR — case CH-SYNTHPHARMA-2026-000512"
 * output[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
-* output[0].valueReference = Reference(docref-icsr-2b-acklog) "ICSR acknowledgment log (rejected)"
+* output[0].valueReference = Reference(docref-icsr-2b-acklog) "ICSR acknowledgment log rejected"
 * output[1].type = RWIpharmaTaskInputOutputTypeCS#validation-report "Validation Report"
 * output[1].valueReference = Reference(docref-icsr-2b-validation-report) "ICSR validation report"
 
@@ -179,7 +179,7 @@ Usage: #example
 * groupIdentifier.value = "urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546"
 * basedOn = Reference(scenario2b-01-icsr-submitted)
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#submitted "Submitted"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#submitted "Submitted"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#icsr "Individual Case Safety Report"
@@ -209,7 +209,7 @@ Usage: #example
 * groupIdentifier.value = "urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546"
 * basedOn = Reference(scenario2b-01-icsr-submitted)
 * status = #accepted
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#accepted "Accepted"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#accepted "Accepted"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#icsr "Individual Case Safety Report"
@@ -221,7 +221,7 @@ Usage: #example
 * input[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
 * input[0].valueReference = Reference(docref-icsr-2b-resubmission) "ICSR resubmission — case CH-SYNTHPHARMA-2026-000512"
 * output[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
-* output[0].valueReference = Reference(docref-icsr-2b-resubmission-acklog) "ICSR acknowledgment log (resubmission)"
+* output[0].valueReference = Reference(docref-icsr-2b-resubmission-acklog) "ICSR acknowledgment log resubmission"
 
 Instance: scenario2b-05-icsr-complete
 InstanceOf: Task
@@ -242,7 +242,7 @@ Usage: #example
 * groupIdentifier.value = "urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546"
 * basedOn = Reference(scenario2b-01-icsr-submitted)
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#complete "Complete"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#complete "Complete"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#icsr "Individual Case Safety Report"
@@ -255,7 +255,7 @@ Usage: #example
 * input[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
 * input[0].valueReference = Reference(docref-icsr-2b-resubmission) "ICSR resubmission — case CH-SYNTHPHARMA-2026-000512"
 * output[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
-* output[0].valueReference = Reference(docref-icsr-2b-resubmission-acklog) "ICSR acknowledgment log (resubmission)"
+* output[0].valueReference = Reference(docref-icsr-2b-resubmission-acklog) "ICSR acknowledgment log resubmission"
 
 Instance: docref-icsr-2a
 InstanceOf: DocumentReference
@@ -337,7 +337,7 @@ Usage: #example
 
 Instance: docref-icsr-2b-acklog
 InstanceOf: DocumentReference
-Title: "ICSR acknowledgment log (rejected)"
+Title: "ICSR acknowledgment log rejected"
 Description: "ICH E2B(R2) acknowledgment: transmission 02 (not all reports loaded), report 02 (report not loaded), with the error."
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
@@ -415,7 +415,7 @@ Usage: #example
 
 Instance: docref-icsr-2b-resubmission-acklog
 InstanceOf: DocumentReference
-Title: "ICSR acknowledgment log (resubmission)"
+Title: "ICSR acknowledgment log resubmission"
 Description: "ICH E2B(R2) acknowledgment: transmission 01 (all reports loaded), report 01 (report loaded)."
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"

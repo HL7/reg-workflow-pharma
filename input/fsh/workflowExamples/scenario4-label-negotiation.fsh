@@ -19,7 +19,7 @@ Usage: #example
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be"
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#submitted "Submitted"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#submitted "Submitted"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#variation-type-ii "Type II Variation"
@@ -60,7 +60,7 @@ Usage: #example
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be"
 * status = #accepted
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#validation-successful "Validation Successful"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#validation-successful "Validation Successful"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#variation-type-ii "Type II Variation"
@@ -104,7 +104,7 @@ Usage: #example
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be"
 * status = #in-progress
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#under-assessment "Under Assessment"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#under-assessment "Under Assessment"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#variation-type-ii "Type II Variation"
@@ -149,7 +149,7 @@ Usage: #example
 * groupIdentifier.value = "urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be"
 * basedOn = Reference(scenario4-01-variation-submitted)
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#labelling-comments-issued "Labelling Comments Issued"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#labelling-comments-issued "Labelling Comments Issued"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#labelling-comments "Labelling Comments"
@@ -185,7 +185,7 @@ Usage: #example
 * groupIdentifier.value = "urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be"
 * basedOn = Reference(scenario4-01-variation-submitted)
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#counter-proposal-received "Counter-Proposal Received"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#counter-proposal-received "Counter-Proposal Received"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#labelling-comments "Labelling Comments"
@@ -227,7 +227,7 @@ Usage: #example
 * groupIdentifier.value = "urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be"
 * basedOn = Reference(scenario4-01-variation-submitted)
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#labelling-comments-issued "Labelling Comments Issued"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#labelling-comments-issued "Labelling Comments Issued"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#labelling-comments "Labelling Comments"
@@ -263,7 +263,7 @@ Usage: #example
 * groupIdentifier.value = "urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be"
 * basedOn = Reference(scenario4-01-variation-submitted)
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#response-received "Response Received"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#response-received "Response Received"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#labelling-comments "Labelling Comments"
@@ -303,7 +303,7 @@ Usage: #example
 * groupIdentifier.value = "urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be"
 * basedOn = Reference(scenario4-01-variation-submitted)
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#awaiting-applicant-response "Awaiting Applicant Response"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#awaiting-applicant-response "Awaiting Applicant Response"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#labelling-agreement "Labelling Agreement"
@@ -337,7 +337,7 @@ Usage: #example
 * groupIdentifier.value = "urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be"
 * basedOn = Reference(scenario4-01-variation-submitted)
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#labelling-agreed "Labelling Agreed"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#labelling-agreed "Labelling Agreed"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#labelling-agreement "Labelling Agreement"
@@ -372,7 +372,7 @@ Usage: #example
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be"
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#approved "Approved"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#approved "Approved"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#variation-type-ii "Type II Variation"

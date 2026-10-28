@@ -40,7 +40,7 @@ Usage: #example
 * identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * basedOn = Reference(scenario1-01-initial-submission) "Initial Submission Task"
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#clock-stop "Clock Stop"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#clock-stop "Clock Stop"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#information-request "List of Questions / Information Request"

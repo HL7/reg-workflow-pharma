@@ -92,7 +92,7 @@ Description: "Task profile for RWI Pharma regulatory submission workflows"
 * businessStatus 0..1
   * ^short = "Detailed regulatory status (e.g., clock-stop)"
   * ^binding.strength = #example
-  * ^binding.valueSet = Canonical(rwipharma-buisness-status-vs)
+  * ^binding.valueSet = Canonical(rwipharma-business-status-vs)
   * ^binding.description = "Detailed regulatory status such as clock-stop"
   
 * statusReason ^short = "Required if status is rejected or cancelled"

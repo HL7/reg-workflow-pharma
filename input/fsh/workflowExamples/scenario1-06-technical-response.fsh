@@ -11,7 +11,7 @@ Usage: #example
 //* identifier.value = "urn:uuid:888e7d2a-8b1c-4d9f-9a2e-1f6c9d8e7b3c"
 //* partOf = Reference(scenario1-05-technical-question) "Technical Question Task"
 //* status = #in-progress
-//* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#submitted "Submitted"
+//* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#submitted "Submitted"
 //* intent = #proposal
 //* priority = #routine
 //* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#response-to-questions "Response to Information Request"
@@ -61,7 +61,7 @@ Usage: #example
 * identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * basedOn = Reference(scenario1-01-initial-submission) "Initial Submission Task"
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#clock-restart "Clock Restart"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#clock-restart "Clock Restart"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#information-request "List of Questions / Information Request"

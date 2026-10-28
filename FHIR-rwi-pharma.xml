@@ -37,8 +37,8 @@
 <artifact id="ValueSet/rwipharma-ma-task-code-vs" key="ValueSet-rwipharma-ma-task-code-vs" name="Example Value Set RWI-Pharma Marketing Authorization Task Codes"/>
 <artifact id="Endpoint/1003" key="Endpoint-1003" name="Example basic RWI Pharma interaction Endpoint"/>
 <artifact id="DocumentReference/docref-icsr-2a-acklog" key="DocumentReference-docref-icsr-2a-acklog" name="ICSR acknowledgment log"/>
-<artifact id="DocumentReference/docref-icsr-2b-acklog" key="DocumentReference-docref-icsr-2b-acklog" name="ICSR acknowledgment log (rejected)"/>
-<artifact id="DocumentReference/docref-icsr-2b-resubmission-acklog" key="DocumentReference-docref-icsr-2b-resubmission-acklog" name="ICSR acknowledgment log (resubmission)"/>
+<artifact id="DocumentReference/docref-icsr-2b-acklog" key="DocumentReference-docref-icsr-2b-acklog" name="ICSR acknowledgment log rejected"/>
+<artifact id="DocumentReference/docref-icsr-2b-resubmission-acklog" key="DocumentReference-docref-icsr-2b-resubmission-acklog" name="ICSR acknowledgment log resubmission"/>
 <artifact id="DocumentReference/docref-icsr-2b-resubmission" key="DocumentReference-docref-icsr-2b-resubmission" name="ICSR resubmission — case CH-SYNTHPHARMA-2026-000512"/>
 <artifact id="DocumentReference/docref-icsr-2b-validation-report" key="DocumentReference-docref-icsr-2b-validation-report" name="ICSR validation report"/>
 <artifact id="DocumentReference/docref-icsr-2a" key="DocumentReference-docref-icsr-2a" name="ICSR — case CH-SYNTHPHARMA-2026-000456"/>
@@ -55,7 +55,7 @@
 <artifact id="StructureDefinition/rwi-pharma-subscription" key="StructureDefinition-rwi-pharma-subscription" name="RWI Pharma Subscription"/>
 <artifact id="StructureDefinition/task-creation-with-organization-assigned-filter" key="StructureDefinition-task-creation-with-organization-assigned-filter" name="RWI Pharma Task Assignment and Creation With Organization Filter"/>
 <artifact id="StructureDefinition/task-status-change-with-identifier-filter" key="StructureDefinition-task-status-change-with-identifier-filter" name="RWI Pharma Task Status Change With Identifier Filter"/>
-<artifact id="CodeSystem/rwipharma-buisness-status" key="CodeSystem-rwipharma-buisness-status" name="RWI-pharma Regulatory Business Status"/>
+<artifact id="CodeSystem/rwipharma-business-status" key="CodeSystem-rwipharma-business-status" name="RWI-pharma Regulatory Business Status"/>
 <artifact id="ValueSet/rwipharma-submission-type-vs" key="ValueSet-rwipharma-submission-type-vs" name="RWI-pharma Submission Types"/>
 <artifact id="DocumentReference/docref-cta-rfi" key="DocumentReference-docref-cta-rfi" name="Request for information"/>
 <artifact id="DocumentReference/docref-cta-rfi-response" key="DocumentReference-docref-cta-rfi-response" name="Response to request for information"/>
@@ -65,7 +65,7 @@
 <artifact id="SubscriptionTopic/TaskStatusChangeWithIdentifierFilter" key="SubscriptionTopic-TaskStatusChangeWithIdentifierFilter" name="Task Status Change With Identifier Filter"/>
 <artifact id="CodeSystem/rwi-pharma-temp" key="CodeSystem-rwi-pharma-temp" name="Temporary and Experimental RWI Pharma Codes"/>
 <artifact id="ValueSet/eg-ctd-section-vs" key="ValueSet-eg-ctd-section-vs" name="Value Set Example CTD Section Code System"/>
-<artifact id="ValueSet/rwipharma-buisness-status-vs" key="ValueSet-rwipharma-buisness-status-vs" name="Value Set RWI-pharma Regulatory Business Status"/>
+<artifact id="ValueSet/rwipharma-business-status-vs" key="ValueSet-rwipharma-business-status-vs" name="Value Set RWI-pharma Regulatory Business Status"/>
 <artifact id="DocumentReference/docref-var-application-form" key="DocumentReference-docref-var-application-form" name="Variation application form"/>
 <artifact id="DocumentReference/docref-var-approval-letter" key="DocumentReference-docref-var-approval-letter" name="Variation approval letter"/>
 <artifact id="DocumentReference/docref-var-cover-letter" key="DocumentReference-docref-var-cover-letter" name="Variation cover letter"/>

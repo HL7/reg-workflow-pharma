@@ -19,7 +19,7 @@ Usage: #example
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:0a57b9f1-fc39-5bae-a93a-c86bd94484a5"
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#submitted "Submitted"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#submitted "Submitted"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#clinical-trial-application "Clinical Trial Application"
@@ -56,7 +56,7 @@ Usage: #example
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:0a57b9f1-fc39-5bae-a93a-c86bd94484a5"
 * status = #accepted
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#validation-successful "Validation Successful"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#validation-successful "Validation Successful"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#clinical-trial-application "Clinical Trial Application"
@@ -97,7 +97,7 @@ Usage: #example
 * groupIdentifier.value = "urn:uuid:0a57b9f1-fc39-5bae-a93a-c86bd94484a5"
 * basedOn = Reference(scenario3-01-cta-submission)
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#request-for-information-issued "Request for Information Issued"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#request-for-information-issued "Request for Information Issued"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#information-request "List of Questions / Information Request"
@@ -133,7 +133,7 @@ Usage: #example
 * groupIdentifier.value = "urn:uuid:0a57b9f1-fc39-5bae-a93a-c86bd94484a5"
 * basedOn = Reference(scenario3-01-cta-submission)
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#clock-restart "Clock Restart"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#clock-restart "Clock Restart"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#information-request "List of Questions / Information Request"
@@ -172,7 +172,7 @@ Usage: #example
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:0a57b9f1-fc39-5bae-a93a-c86bd94484a5"
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#authorised "Authorised"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#authorised "Authorised"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#clinical-trial-application "Clinical Trial Application"

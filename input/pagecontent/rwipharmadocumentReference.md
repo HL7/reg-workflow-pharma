@@ -13,7 +13,7 @@ In RWI-pharma, the **DocumentReference** resource provides the metadata wrapper 
 
 The `DocumentReference.author` element identifies the creator of both the metadata and the associated binary content, ensuring clear provenance for regulatory submissions. DocumentReferences are then attached to Tasks via `Task.input` or `Task.output`, allowing the regulator to discover and retrieve documents only when needed.
 
-Note: To keep the server healthy, buisness rules should be determined at what frequency unattached binaries and unused DocumentReferences be expunged. 
+Note: To keep the server healthy, business rules should be determined at what frequency unattached binaries and unused DocumentReferences be expunged. 
 
 ---
 

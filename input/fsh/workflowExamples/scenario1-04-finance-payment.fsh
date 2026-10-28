@@ -35,7 +35,7 @@ Usage: #example
 * authoredOn = "2025-11-21T09:00:00+01:00"
 * basedOn = Reference(scenario1-01-initial-submission)
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#payment-received "Payment Received"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#payment-received "Payment Received"
 * intent = #proposal
 * priority = #routine
 * code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#request-payment "Request Payment"

@@ -1,5 +1,5 @@
 CodeSystem: RWIpharmaBusinessStatusCS
-Id: rwipharma-buisness-status
+Id: rwipharma-business-status
 Title: "RWI-pharma Regulatory Business Status"
 Description: "Code system for regulatory business status in RWI-pharma submissions"
 

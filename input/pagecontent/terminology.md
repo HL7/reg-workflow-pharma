@@ -21,22 +21,23 @@ There are three code systems. Each domain section below has an example value set
 
 | Task element | Code system (id) | Example value sets per domain |
 |---|---|---|
-| `Task.code` | `rwipharma-task-code` | `apix-ma-task-code-vs`, `apix-ct-task-code-vs`, `apix-icsr-task-code-vs` |
-| `Task.businessStatus` | `rwipharma-buisness-status` | `apix-ma-business-status-vs`, `apix-ct-business-status-vs`, `apix-icsr-business-status-vs` |
-| `Task.input.type` | `apix-task-input-output-type` | `apix-ma-task-input-type-vs`, `apix-ct-task-input-type-vs`, `apix-icsr-task-input-type-vs` |
-| `Task.output.type` | `apix-task-input-output-type` (same code system) | `apix-ma-task-output-type-vs`, `apix-ct-task-output-type-vs`, `apix-icsr-task-output-type-vs` |
+| `Task.code` | [`rwipharma-task-code`](CodeSystem-rwipharma-task-code.html) | [`rwipharma-ma-task-code-vs`](ValueSet-rwipharma-ma-task-code-vs.html), [`rwipharma-ct-task-code-vs`](ValueSet-rwipharma-ct-task-code-vs.html), [`rwipharma-icsr-task-code-vs`](ValueSet-rwipharma-icsr-task-code-vs.html) |
+| `Task.businessStatus` | [`rwipharma-business-status`](CodeSystem-rwipharma-business-status.html) | [`rwipharma-ma-business-status-vs`](ValueSet-rwipharma-ma-business-status-vs.html), [`rwipharma-ct-business-status-vs`](ValueSet-rwipharma-ct-business-status-vs.html), [`rwipharma-icsr-business-status-vs`](ValueSet-rwipharma-icsr-business-status-vs.html) |
+| `Task.input.type` | [`rwipharma-task-input-output-type`](CodeSystem-rwipharma-task-input-output-type.html) | [`rwipharma-ma-task-input-type-vs`](ValueSet-rwipharma-ma-task-input-type-vs.html), [`rwipharma-ct-task-input-type-vs`](ValueSet-rwipharma-ct-task-input-type-vs.html), [`rwipharma-icsr-task-input-type-vs`](ValueSet-rwipharma-icsr-task-input-type-vs.html) |
+| `Task.output.type` | [`rwipharma-task-input-output-type`](CodeSystem-rwipharma-task-input-output-type.html) (same code system) | [`rwipharma-ma-task-output-type-vs`](ValueSet-rwipharma-ma-task-output-type-vs.html), [`rwipharma-ct-task-output-type-vs`](ValueSet-rwipharma-ct-task-output-type-vs.html), [`rwipharma-icsr-task-output-type-vs`](ValueSet-rwipharma-icsr-task-output-type-vs.html) |
 {: .term-table}
 
 Conventions used throughout:
 
 - **Inputs come from the requester, outputs from the owner.** The party that creates the Task supplies `Task.input`; the party that does the work returns `Task.output`. For example, on a Payment Task created by the regulator, the invoice is an input and the proof of payment is an output.
 - **One code system for input and output types.** The same document type can be an input on one Task and an output on another (for example, proposed labelling or a questionnaire response), so input and output types share one code system and differ only by value set.
-- **Task codes are hierarchical.** Grouping codes (marked *grouping*) organise the Market Authorization sub-areas and the domain roots, so a value set can include a whole branch.
+- **Task codes are hierarchical.** Grouping codes (marked *grouping*) organise the Market Authorization sub-areas and the domain roots, so a Task code value set includes a whole branch.
+- **Business statuses and input/output types are tagged.** Each concept carries an `RWI-Pharma-Domain` property (Shared, Market Authorization, Clinical Trial, ICSR), and input/output types also carry `RWI-Pharma-Direction` (Input, Output). The domain value sets select concepts by these properties.
 - **Shared terms.** Some business statuses and input/output types apply to every domain. They are listed once, in [Shared terms](#shared-terms), and included in each domain's value sets.
 
 ### Shared terms {#shared-terms}
 
-Used by all three domains. The ICSR value sets use only `submitted`, `rejected` and `validation-report` from this list.
+Used by all three domains. The ICSR value sets use only `submitted`, `rejected` and `validation-report` from this list. Shared business statuses are defined in [`rwipharma-business-status`](CodeSystem-rwipharma-business-status.html), and shared input and output types in [`rwipharma-task-input-output-type`](CodeSystem-rwipharma-task-input-output-type.html).
 
 #### Business status (shared)
 
@@ -76,7 +77,7 @@ Used by all three domains. The ICSR value sets use only `submitted`, `rejected` 
 
 ### Market Authorization
 
-#### Task codes — `apix-ma-task-code-vs`
+#### Task codes — [`rwipharma-ma-task-code-vs`](ValueSet-rwipharma-ma-task-code-vs.html) {#ma-task-codes}
 
 | Code | Display | Definition |
 |---|---|---|
@@ -171,7 +172,7 @@ Used by all three domains. The ICSR value sets use only `submitted`, `rejected` 
 {: .term-table}
 
 
-#### Business status — `apix-ma-business-status-vs`
+#### Business status — [`rwipharma-ma-business-status-vs`](ValueSet-rwipharma-ma-business-status-vs.html) {#ma-business-status}
 
 Domain-specific statuses:
 
@@ -233,7 +234,7 @@ Also included from shared terms: `submitted`, `received`, `receipt-acknowledged`
 **Worked example:** a Type II variation with two rounds of label negotiation on an annotated ePI — [submitted](Task-scenario4-01-variation-submitted.html), [validated](Task-scenario4-02-variation-validated.html), [under assessment](Task-scenario4-03-variation-under-assessment.html), [labelling comments round 1](Task-scenario4-04-labelling-comments-round1.html), [counter-proposal](Task-scenario4-05-labelling-comments-round1-response.html), [labelling comments round 2](Task-scenario4-06-labelling-comments-round2.html), [response](Task-scenario4-07-labelling-comments-round2-response.html), [agreement requested](Task-scenario4-08-labelling-agreement.html), [labelling agreed](Task-scenario4-09-labelling-agreed.html), [approved](Task-scenario4-10-variation-approved.html).
 
 
-#### Input and output types — `apix-ma-task-input-type-vs` / `apix-ma-task-output-type-vs`
+#### Input and output types — [`rwipharma-ma-task-input-type-vs`](ValueSet-rwipharma-ma-task-input-type-vs.html) / [`rwipharma-ma-task-output-type-vs`](ValueSet-rwipharma-ma-task-output-type-vs.html) {#ma-input-output-types}
 
 Domain-specific types:
 
@@ -250,7 +251,7 @@ Domain-specific types:
 | `clinical-study-report` | Clinical Study Report | Clinical study report supporting the application. |
 | `risk-management-plan` | Risk Management Plan | Risk management plan or REMS. |
 | `epi-bundle` | ePI Bundle | Electronic product information as a FHIR document Bundle. |
-| `proposed-labelling` | Proposed Labelling | Proposed product information (e.g., annotated PDF or Word). |
+| `proposed-labelling` | Proposed Labelling | Proposed product information (e.g., annotated ePI, annotated PDF or Word). |
 | `labelling-comments` | Labelling Comments | Regulator’s comments on, or revised version of, proposed labelling. |
 | `approved-labelling` | Approved Labelling | Final agreed product information. |
 | `invoice` | Invoice | Fee invoice issued by the regulator. |
@@ -306,7 +307,7 @@ Value set membership (including shared types):
 
 ### Clinical Trials
 
-#### Task codes — `apix-ct-task-code-vs`
+#### Task codes — [`rwipharma-ct-task-code-vs`](ValueSet-rwipharma-ct-task-code-vs.html) {#ct-task-codes}
 
 | Code | Display | Definition |
 |---|---|---|
@@ -334,7 +335,7 @@ Value set membership (including shared types):
 Also included from Market Authorization: `information-request`, `withdrawal`.
 
 
-#### Business status — `apix-ct-business-status-vs`
+#### Business status — [`rwipharma-ct-business-status-vs`](ValueSet-rwipharma-ct-business-status-vs.html) {#ct-business-status}
 
 Domain-specific statuses:
 
@@ -368,7 +369,7 @@ Also included from shared terms: `submitted`, `received`, `receipt-acknowledged`
 **Worked example:** a clinical trial application from submission to authorisation, including a request for information — [submission](Task-scenario3-01-cta-submission.html), [validated](Task-scenario3-02-cta-validated.html), [request for information](Task-scenario3-03-cta-rfi.html), [response](Task-scenario3-04-cta-rfi-response.html), [authorised](Task-scenario3-05-cta-authorised.html).
 
 
-#### Input and output types — `apix-ct-task-input-type-vs` / `apix-ct-task-output-type-vs`
+#### Input and output types — [`rwipharma-ct-task-input-type-vs`](ValueSet-rwipharma-ct-task-input-type-vs.html) / [`rwipharma-ct-task-output-type-vs`](ValueSet-rwipharma-ct-task-output-type-vs.html) {#ct-input-output-types}
 
 Domain-specific types:
 
@@ -420,16 +421,17 @@ Value set membership (including shared types):
 
 ### Individual Case Safety Reports (ICSR) {#individual-case-safety-reports-icsr}
 
-#### Task codes — `apix-icsr-task-code-vs`
+#### Task codes — [`rwipharma-icsr-task-code-vs`](ValueSet-rwipharma-icsr-task-code-vs.html) {#icsr-task-codes}
 
 | Code | Display | Definition |
 |---|---|---|
+| `icsr-flow` *(grouping)* | ICSR workflow | Grouping: Tasks for ICSR |
 | `icsr` | Individual Case Safety Report | Transmission of a single individual case safety report (ICSR) as an ICH E2B(R2) or E2B(R3) message. The input type gives the E2B version. |
 | `susar` | Suspected Unexpected Serious Adverse Reaction | Transmission of a single SUSAR report from a clinical trial as an ICH E2B(R2) or E2B(R3) message. The input type gives the E2B version. |
 {: .term-table}
 
 
-#### Business status — `apix-icsr-business-status-vs`
+#### Business status — [`rwipharma-icsr-business-status-vs`](ValueSet-rwipharma-icsr-business-status-vs.html) {#icsr-business-status}
 
 | Code | Display | Definition |
 |---|---|---|
@@ -460,7 +462,7 @@ A rejected Task is final, so a resubmission is a new Task. `Task.statusReason` i
 - *Rejected and resubmitted:* an E2B(R2) ICSR with a validation error — [submitted](Task-scenario2b-01-icsr-submitted.html), [rejected](Task-scenario2b-02-icsr-rejected.html), [resubmitted](Task-scenario2b-03-icsr-resubmitted.html), [accepted](Task-scenario2b-04-icsr-accepted.html), [complete](Task-scenario2b-05-icsr-complete.html).
 
 
-#### Input and output types — `apix-icsr-task-input-type-vs` / `apix-icsr-task-output-type-vs`
+#### Input and output types — [`rwipharma-icsr-task-input-type-vs`](ValueSet-rwipharma-icsr-task-input-type-vs.html) / [`rwipharma-icsr-task-output-type-vs`](ValueSet-rwipharma-icsr-task-output-type-vs.html) {#icsr-input-output-types}
 
 | Code | Display | Definition |
 |---|---|---|

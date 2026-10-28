@@ -11,7 +11,7 @@
 //* identifier.value = "urn:uuid:999e7d2a-8b1c-4d9f-9a2e-1f6c9d8e7b3d"
 //* partOf = Reference(scenario1-01-initial-submission) "Initial Submission Task"
 //* status = #completed
-//* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#approved "Approved"
+//* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#approved "Approved"
 //* intent = #proposal
 //* priority = #routine
 //* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#approval "Approval Letter / Positive Decision"
@@ -105,7 +105,7 @@ Usage: #example
 // * groupIdentifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharama-identifier-type#submission-group-uuid "Submission Group UUID"
 
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#approved "Approved"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#approved "Approved"
 * intent = #proposal
 * priority = #routine
 * code = rwipharma-task-code#variation-type-ib "Type IB Variation"

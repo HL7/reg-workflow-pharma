@@ -55,7 +55,7 @@ Usage: #example
 * groupIdentifier.value = "urn:uuid:workflow-group-id-12345"
 // * groupIdentifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/-identifier-type#submission-group-uuid "Submission Group UUID"
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#submitted "Submitted"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#submitted "Submitted"
 * intent = #proposal
 * priority = #routine
 * code = rwipharma-task-code#variation-type-ib "Type IB Variation"

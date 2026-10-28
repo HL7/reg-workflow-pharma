@@ -50,7 +50,7 @@ WARNING: StructureDefinition/task-status-change-with-identifier-filter: Structur
 ERROR: SubscriptionTopic/TaskCreationWithOrganizationAssignedFilter: SubscriptionTopic: SubscriptionTopic.canFilterBy: minimum required = 1, but only found 0 (from http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/task-creation-with-organization-assigned-filter|0.1.0)
 
 # Intended to be draft for now
-%Reference to draft CodeSystem http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status|0.1.0%
+%Reference to draft CodeSystem http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status|0.1.0%
 %Reference to draft CodeSystem http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code|0.1.0%
 
 # To address at a later time - has no effect on demo
