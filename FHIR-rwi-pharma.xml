@@ -4,8 +4,6 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="ValueSet/apix-ctd-module-vs" key="ValueSet-apix-ctd-module-vs" name="APIX CTD/eCTD Module Value Set"/>
-<artifact id="CodeSystem/ctd-section" key="CodeSystem-ctd-section" name="APIX CTD/eCTD Section Code System"/>
 <artifact id="DocumentReference/docref-epi-annotated-v1" key="DocumentReference-docref-epi-annotated-v1" name="Annotated ePI v1 (proposal)"/>
 <artifact id="DocumentReference/docref-epi-annotated-v2" key="DocumentReference-docref-epi-annotated-v2" name="Annotated ePI v2 (regulator comments, round 1)"/>
 <artifact id="DocumentReference/docref-epi-annotated-v3" key="DocumentReference-docref-epi-annotated-v3" name="Annotated ePI v3 (counter-proposal, round 1)"/>
@@ -19,6 +17,8 @@
 <artifact id="DocumentReference/docref-epi-clean-v1" key="DocumentReference-docref-epi-clean-v1" name="Clean ePI v1 (proposal)"/>
 <artifact id="DocumentReference/docref-epi-clean-v3" key="DocumentReference-docref-epi-clean-v3" name="Clean ePI v3 (counter-proposal, round 1)"/>
 <artifact id="DocumentReference/docref-epi-clean-v5" key="DocumentReference-docref-epi-clean-v5" name="Clean ePI v5 (agreed text)"/>
+<artifact id="ValueSet/eg-ctd-module-vs" key="ValueSet-eg-ctd-module-vs" name="Example CTD Module Value Set"/>
+<artifact id="CodeSystem/eg-ctd-section" key="CodeSystem-eg-ctd-section" name="Example CTD Section Code System"/>
 <artifact id="CodeSystem/rwi-pharma-demo" key="CodeSystem-rwi-pharma-demo" name="Example RWI Pharma Identifier Type Codes"/>
 <artifact id="Endpoint/1005" key="Endpoint-1005" name="Example RWI Pharma interaction Endpoint with header"/>
 <artifact id="CodeSystem/rwipharma-task-code" key="CodeSystem-rwipharma-task-code" name="Example RWI-pharma Task Code System"/>
@@ -64,7 +64,7 @@
 <artifact id="SubscriptionTopic/TaskCreationWithOrganizationAssignedFilter" key="SubscriptionTopic-TaskCreationWithOrganizationAssignedFilter" name="Task Assignment and Creation With Organization Filter"/>
 <artifact id="SubscriptionTopic/TaskStatusChangeWithIdentifierFilter" key="SubscriptionTopic-TaskStatusChangeWithIdentifierFilter" name="Task Status Change With Identifier Filter"/>
 <artifact id="CodeSystem/rwi-pharma-temp" key="CodeSystem-rwi-pharma-temp" name="Temporary and Experimental RWI Pharma Codes"/>
-<artifact id="ValueSet/apix-ctd-section-vs" key="ValueSet-apix-ctd-section-vs" name="Value Set APIX CTD/eCTD Section Code System"/>
+<artifact id="ValueSet/eg-ctd-section-vs" key="ValueSet-eg-ctd-section-vs" name="Value Set Example CTD Section Code System"/>
 <artifact id="ValueSet/rwipharma-buisness-status-vs" key="ValueSet-rwipharma-buisness-status-vs" name="Value Set RWI-pharma Regulatory Business Status"/>
 <artifact id="DocumentReference/docref-var-application-form" key="DocumentReference-docref-var-application-form" name="Variation application form"/>
 <artifact id="DocumentReference/docref-var-approval-letter" key="DocumentReference-docref-var-approval-letter" name="Variation approval letter"/>

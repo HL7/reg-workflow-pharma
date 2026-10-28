@@ -20,7 +20,7 @@
 
 The following are examples of Tasks with synthetic content: <a href="Task-scenario1-01-initial-submission.html">Initial Submission</a>, <a href="Task-scenario1-05-technical-question.html">Questions</a>, <a href="Task-scenario1-06-technical-response.json">Response</a>, and <a href="Task-scenario1-07-final-decision.html">Decision</a>.
 
-The following table provides an overview of the key elements of the RWI-pharma Task resource. For a technical description of the Task resource, see the <a href="https://build.fhir.org/ig/HL7/APIX---API-Exchange-for-Medicinal-Products/branches/main/StructureDefinition-apix-task.html">RWI-pharma Task profile</a>.
+The following table provides an overview of the key elements of the RWI-pharma Task resource. For a technical description of the Task resource, see the <a href="StructureDefinition-rwi-pharma-task.html">RWI-pharma Task profile</a>.
 
 <style>
 .apix-table { border-collapse: collapse; width: 100%; margin: 1.5em 0; }

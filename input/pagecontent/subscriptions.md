@@ -53,12 +53,12 @@ RWI-pharma uses the R5 Topic-Based Subscription model (`SubscriptionTopic`) to d
   </thead>
   <tbody>
     <tr>
-      <td style="border: 1px solid #d3d3d3; padding: 8px;"><code>http://hl7.org/fhir/uv/apix/SubscriptionTopic/task-update</code></td>
+      <td style="border: 1px solid #d3d3d3; padding: 8px;"><code>http://hl7.org/fhir/uv/rwi-pharma/SubscriptionTopic/task-update</code></td>
       <td style="border: 1px solid #d3d3d3; padding: 8px;"><strong>Task Status Change</strong></td>
       <td style="border: 1px solid #d3d3d3; padding: 8px;">Any update to <code>Task.status</code> (e.g., <code>accepted</code>, <code>rejected</code>, <code>on-hold</code>)</td>
     </tr>
     <tr>
-      <td style="border: 1px solid #d3d3d3; padding: 8px;"><code>http://hl7.org/fhir/uv/apix/SubscriptionTopic/new-message</code></td>
+      <td style="border: 1px solid #d3d3d3; padding: 8px;"><code>http://hl7.org/fhir/uv/rwi-pharma/SubscriptionTopic/new-message</code></td>
       <td style="border: 1px solid #d3d3d3; padding: 8px;"><strong>New Inbound Task</strong></td>
       <td style="border: 1px solid #d3d3d3; padding: 8px;">Creation of a new Task assigned to the subscriber (e.g., a new Question or Decision)</td>
     </tr>
@@ -75,7 +75,7 @@ To start receiving notifications, an Applicant POSTs a `Subscription` resource.
 {
   "resourceType": "Subscription",
   "status": "active",
-  "topic": "http://hl7.org/fhir/uv/apix/SubscriptionTopic/task-update",
+  "topic": "http://hl7.org/fhir/uv/rwi-pharma/SubscriptionTopic/task-update",
   "filterBy": [
     {
       "filterParameter": "group-identifier",
@@ -86,7 +86,7 @@ To start receiving notifications, an Applicant POSTs a `Subscription` resource.
     "system": "http://terminology.hl7.org/CodeSystem/subscription-channel-type",
     "code": "rest-hook"
   },
-  "endpoint": "https://rim-system.pharma-corp.com/apix-webhook"
+  "endpoint": "https://rim-system.pharma-corp.com/rwi-pharma-webhook"
 }
 ```
 

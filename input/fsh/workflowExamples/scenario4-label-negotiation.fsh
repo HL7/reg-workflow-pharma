@@ -715,7 +715,8 @@ Usage: #example
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "Approval of Type II variation VAR-II-2027-0012."
 * content.attachment.contentType = #application/pdf
-* content.attachment.url = "Binary/binary-var-approval-letter"
+* content.attachment.url = "Binary/binary-var-approval-letter"  //"http://hl7.org/fhir/uv/rwi-pharma/Bundle/binary-var-approval-letter.json"
+
 * content.attachment.title = "var-approval-letter.pdf"
 * content.attachment.size = 2379
 * content.attachment.hash = "7NlktCqBeRfm6INlY4BCc6OGVb8="

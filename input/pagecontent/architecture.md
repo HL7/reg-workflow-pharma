@@ -62,7 +62,7 @@ sequenceDiagram
     autonumber
     participant App as Applicant (RIM System)
     participant Auth as Auth Server (OAuth2)
-    participant APIX as RWI-pharma FHIR Server
+    participant RWI-pharma as RWI-pharma FHIR Server
     participant Val as Validation Engine
 
     note over App, Val: Phase 1: Authentication & Submission
@@ -70,19 +70,19 @@ sequenceDiagram
     App->>Auth: 1. Request Access Token
     Auth-->>App: 2. Return JWT (Scope: system/Task.cruds)
     
-    App->>APIX: 3. POST /Task (Submission Bundle)
-    APIX->>Val: 4. $validate Bundle
-    Val-->>APIX: 5. Validation Outcome (Pass)
-    APIX-->>App: 6. 201 Created (Task.status = received)
+    App->>RWI-pharma: 3. POST /Task (Submission Bundle)
+    RWI-pharma->>Val: 4. $validate Bundle
+    Val-->>RWI-pharma: 5. Validation Outcome (Pass)
+    RWI-pharma-->>App: 6. 201 Created (Task.status = received)
 
     note over App, Val: Phase 2: Asynchronous Processing & Notification
 
-    APIX->>APIX: 7. Regulator Review (Status Change)
+    RWI-pharma->>RWI-pharma: 7. Regulator Review (Status Change)
     
     par Real-Time Notification
-        APIX->>App: 8. POST Subscription Notification (Task.status = in-progress)
+        RWI-pharma->>App: 8. POST Subscription Notification (Task.status = in-progress)
     and Audit Logging
-        APIX->>APIX: 9. Create Provenance Record
+        RWI-pharma->>RWI-pharma: 9. Create Provenance Record
     end
 
 </pre>

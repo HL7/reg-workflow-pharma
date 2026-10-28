@@ -174,7 +174,7 @@ Description: "Task profile for RWI Pharma regulatory submission workflows"
 * output.type MS
   * ^short = "Output type indicates the type of output, such as the code used as a DocumentReference type"
   * ^binding.strength = #example
-  * ^binding.valueSet = Canonical(apix-ctd-section-vs)
+  * ^binding.valueSet = Canonical(eg-ctd-section-vs)
 //  * ^slicing.discriminator.type = #value
 //  * ^slicing.discriminator.path = "type"
 //  * ^slicing.rules = #open
@@ -183,7 +183,7 @@ Description: "Task profile for RWI Pharma regulatory submission workflows"
 //* output contains regulatoryDocument 0..* MS
 //* output[regulatoryDocument]
 //  * ^short = "Regulatory document produced as output (via DocumentReference index)"
-//* output[regulatoryDocument].type  = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-output-type#regulatory-document "Regulatory Document"
+//* output[regulatoryDocument].type  = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-task-output-type#regulatory-document "Regulatory Document"
 
 * focus 0..1
 * for 0..1 MS
