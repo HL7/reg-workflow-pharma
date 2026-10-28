@@ -35,6 +35,217 @@ parameters:
  #apply-wg: true
   auto-oid-root: 2.16.840.1.113883.4.642.40.101
 
+groups:
+  profiles:
+    name: "Profiles"
+    description: "Profiles defined by this guide."
+    resources:
+      - StructureDefinition/endpoint-subscription-notify
+      - StructureDefinition/rwi-pharma-documentreference
+      - StructureDefinition/rwi-pharma-organization
+      - StructureDefinition/rwi-pharma-subscription
+      - StructureDefinition/rwi-pharma-task
+      - StructureDefinition/task-creation-with-organization-assigned-filter
+      - StructureDefinition/task-status-change-with-identifier-filter
+  code-systems:
+    name: "Code Systems"
+    description: "Code systems defined by this guide. See [Terminology](terminology.html)."
+    resources:
+      - CodeSystem/eg-ctd-section
+      - CodeSystem/rwi-pharma-demo
+      - CodeSystem/rwi-pharma-temp
+      - CodeSystem/rwipharma-business-status
+      - CodeSystem/rwipharma-task-code
+      - CodeSystem/rwipharma-task-input-output-type
+  value-sets:
+    name: "Value Sets"
+    description: "Value sets defined by this guide. See [Terminology](terminology.html)."
+    resources:
+      - ValueSet/eg-ctd-module-vs
+      - ValueSet/eg-ctd-section-vs
+      - ValueSet/rwipharma-business-status-vs
+      - ValueSet/rwipharma-ct-business-status-vs
+      - ValueSet/rwipharma-ct-task-code-vs
+      - ValueSet/rwipharma-ct-task-input-type-vs
+      - ValueSet/rwipharma-ct-task-output-type-vs
+      - ValueSet/rwipharma-icsr-business-status-vs
+      - ValueSet/rwipharma-icsr-task-code-vs
+      - ValueSet/rwipharma-icsr-task-input-type-vs
+      - ValueSet/rwipharma-icsr-task-output-type-vs
+      - ValueSet/rwipharma-ma-business-status-vs
+      - ValueSet/rwipharma-ma-task-code-vs
+      - ValueSet/rwipharma-ma-task-input-type-vs
+      - ValueSet/rwipharma-ma-task-output-type-vs
+      - ValueSet/rwipharma-submission-type-vs     
+  participants:
+    name: "Participants"
+    description: "The applicant (SynthPharma AG) and health authority organizations used by every scenario."
+    resources:
+      - Organization/org-synthpharma-ag
+      - Organization/org-ema-srm-hmed
+  notifications-and-endpoints:
+    name: "Notifications and Endpoints"
+    description: "Subscription, SubscriptionTopics, a notification Bundle, and the Organization and Endpoints used for notifications. See [Notifications](subscriptions.html)."
+    resources:
+      - Subscription/Subscription-TaskStatusChange-FullResource
+      - SubscriptionTopic/TaskCreationWithOrganizationAssignedFilter
+      - SubscriptionTopic/TaskStatusChangeWithIdentifierFilter
+      - Bundle/eee72492-c236-41f7-a7ba-3af356204f4c
+      - Organization/1002
+      - Endpoint/1003
+      - Endpoint/1005
+  scenario-1-stability-tasks:
+    name: "Scenario 1: Stability Update – Tasks"
+    description: "Tasks for a stability update submission, from initial submission through validation, fees, questions and responses, to the final decision. See [Scenario 1](usecases-scenario-stability.html)."
+    resources:
+      - Task/scenario1-01-initial-submission
+      - Task/scenario1-02-validation
+      - Task/scenario1-03-finance-invoice
+      - Task/scenario1-04-finance-payment
+      - Task/scenario1-05-technical-question
+      - Task/scenario1-06-technical-response
+      - Task/scenario1-07-final-decision
+  scenario-1-stability-docrefs:
+    name: "Scenario 1: Stability Update – DocumentReferences"
+    description: "DocumentReferences used by the Scenario 1 Tasks. See [Scenario 1](usecases-scenario-stability.html)."
+    resources:
+      - DocumentReference/doc1
+      - DocumentReference/doc2
+      - DocumentReference/doc3
+      - DocumentReference/doc4
+      - DocumentReference/doc5
+      - DocumentReference/doc6
+      - DocumentReference/doc7
+      - DocumentReference/doc8
+      - DocumentReference/output-ack
+      - DocumentReference/output-validation
+      - DocumentReference/docref-invoice
+      - DocumentReference/docref-payment-proof
+      - DocumentReference/docref-list-of-questions
+      - DocumentReference/docref-responses-qresponse
+      - DocumentReference/docref-stability-data-annex
+      - DocumentReference/docref-approval-letter
+      - DocumentReference/docref-assessment-report
+  scenario-1-stability-binaries:
+    name: "Scenario 1: Stability Update – Binaries"
+    description: "Binaries used by the Scenario 1 Tasks. See [Scenario 1](usecases-scenario-stability.html)."
+    resources:
+      - Binary/binary-1004
+      - Binary/binary-1005
+      - Binary/binary-1006
+  scenario-2-icsr-tasks:
+    name: "Scenario 2: ICSR Accepted, and Rejected then Resubmitted – Tasks"
+    description: "Tasks for an ICSR that is accepted (2a), and one that is rejected and then resubmitted (2b). See [Scenario 2](usecases-scenario-icsr.html)."
+    resources:
+      - Task/scenario2a-01-icsr-submitted
+      - Task/scenario2a-02-icsr-accepted
+      - Task/scenario2a-03-icsr-complete
+      - Task/scenario2b-01-icsr-submitted
+      - Task/scenario2b-02-icsr-rejected
+      - Task/scenario2b-03-icsr-resubmitted
+      - Task/scenario2b-04-icsr-accepted
+      - Task/scenario2b-05-icsr-complete
+  scenario-2-icsr-docrefs:
+    name: "Scenario 2: ICSR Accepted, and Rejected then Resubmitted – DocumentReferences"
+    description: "DocumentReferences used by the Scenario 2 Tasks. See [Scenario 2](usecases-scenario-icsr.html)."
+    resources:
+      - DocumentReference/docref-icsr-2a
+      - DocumentReference/docref-icsr-2a-acklog
+      - DocumentReference/docref-icsr-2b
+      - DocumentReference/docref-icsr-2b-acklog
+      - DocumentReference/docref-icsr-2b-validation-report
+      - DocumentReference/docref-icsr-2b-resubmission
+      - DocumentReference/docref-icsr-2b-resubmission-acklog
+  scenario-2-icsr-binaries:
+    name: "Scenario 2: ICSR Accepted, and Rejected then Resubmitted – Binaries"
+    description: "Binaries used by the Scenario 2 Tasks. See [Scenario 2](usecases-scenario-icsr.html)."
+    resources:
+      - Binary/binary-icsr-2a-e2b-r2
+      - Binary/binary-icsr-2a-e2b-r2-acklog
+      - Binary/binary-icsr-2b-e2b-r2
+      - Binary/binary-icsr-2b-e2b-r2-acklog
+      - Binary/binary-icsr-2b-validation-report
+      - Binary/binary-icsr-2b-resubmission-e2b-r2
+      - Binary/binary-icsr-2b-resubmission-e2b-r2-acklog
+  scenario-3-cta-tasks:
+    name: "Scenario 3: Clinical Trial Application – Tasks"
+    description: "Tasks for a clinical trial application from submission to authorisation, including a request for information. See [Scenario 3](usecases-scenario-cta.html)."
+    resources:
+      - Task/scenario3-01-cta-submission
+      - Task/scenario3-02-cta-validated
+      - Task/scenario3-03-cta-rfi
+      - Task/scenario3-04-cta-rfi-response
+      - Task/scenario3-05-cta-authorised
+  scenario-3-cta-docrefs:
+    name: "Scenario 3: Clinical Trial Application – DocumentReferences"
+    description: "DocumentReferences used by the Scenario 3 Tasks. See [Scenario 3](usecases-scenario-cta.html)."
+    resources:
+      - DocumentReference/docref-cta-cover-letter
+      - DocumentReference/docref-cta-application-form
+      - DocumentReference/docref-cta-protocol
+      - DocumentReference/docref-cta-validation-report
+      - DocumentReference/docref-cta-rfi
+      - DocumentReference/docref-cta-rfi-response
+      - DocumentReference/docref-cta-decision
+  scenario-3-cta-binaries:
+    name: "Scenario 3: Clinical Trial Application – Binaries"
+    description: "Binaries used by the Scenario 3 Tasks. See [Scenario 3](usecases-scenario-cta.html)."
+    resources:
+      - Binary/binary-cta-cover-letter
+      - Binary/binary-cta-application-form
+      - Binary/binary-cta-protocol
+      - Binary/binary-cta-validation-report
+      - Binary/binary-cta-rfi
+      - Binary/binary-cta-rfi-response
+      - Binary/binary-cta-decision
+  scenario-4-label-negotiation-tasks:
+    name: "Scenario 4: Label Negotiation – Tasks"
+    description: "Tasks for a Type II variation with two rounds of label negotiation on an annotated ePI, through to approval. See [Scenario 4](usecases-scenario-label-negotiation.html)."
+    resources:
+      - Task/scenario4-01-variation-submitted
+      - Task/scenario4-02-variation-validated
+      - Task/scenario4-03-variation-under-assessment
+      - Task/scenario4-04-labelling-comments-round1
+      - Task/scenario4-05-labelling-comments-round1-response
+      - Task/scenario4-06-labelling-comments-round2
+      - Task/scenario4-07-labelling-comments-round2-response
+      - Task/scenario4-08-labelling-agreement
+      - Task/scenario4-09-labelling-agreed
+      - Task/scenario4-10-variation-approved
+  scenario-4-label-negotiation-docrefs:
+    name: "Scenario 4: Label Negotiation – DocumentReferences"
+    description: "DocumentReferences used by the Scenario 4 Tasks. See [Scenario 4](usecases-scenario-label-negotiation.html)."
+    resources:
+      - DocumentReference/docref-var-cover-letter
+      - DocumentReference/docref-var-application-form
+      - DocumentReference/docref-var-change-description
+      - DocumentReference/docref-epi-annotated-v1
+      - DocumentReference/docref-epi-clean-v1
+      - DocumentReference/docref-var-validation-report
+      - DocumentReference/docref-epi-annotated-v2
+      - DocumentReference/docref-epi-annotated-v3
+      - DocumentReference/docref-epi-clean-v3
+      - DocumentReference/docref-epi-annotated-v4
+      - DocumentReference/docref-epi-clean-v5
+      - DocumentReference/docref-var-approval-letter
+      - DocumentReference/docref-epi-approved
+  scenario-4-label-negotiation-binaries:
+    name: "Scenario 4: Label Negotiation – Binaries"
+    description: "Binaries used by the Scenario 4 Tasks. See [Scenario 4](usecases-scenario-label-negotiation.html)."
+    resources:
+      - Binary/binary-var-cover-letter
+      - Binary/binary-var-application-form
+      - Binary/binary-var-change-description
+      - Binary/binary-epi-annotated-v1
+      - Binary/binary-epi-clean-v1
+      - Binary/binary-var-validation-report
+      - Binary/binary-epi-annotated-v2
+      - Binary/binary-epi-annotated-v3
+      - Binary/binary-epi-clean-v3
+      - Binary/binary-epi-annotated-v4
+      - Binary/binary-epi-clean-v5
+      - Binary/binary-var-approval-letter
+
 pages:
   index.md:
     title: Home

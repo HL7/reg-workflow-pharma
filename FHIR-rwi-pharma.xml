@@ -27,10 +27,10 @@
 <artifact id="ValueSet/rwipharma-ct-task-code-vs" key="ValueSet-rwipharma-ct-task-code-vs" name="Example Value Set RWI-Pharma Clinical Trial Task Codes"/>
 <artifact id="ValueSet/rwipharma-ct-task-input-type-vs" key="ValueSet-rwipharma-ct-task-input-type-vs" name="Example Value Set RWI-Pharma Clinical Trial Task Input Types"/>
 <artifact id="ValueSet/rwipharma-ct-task-output-type-vs" key="ValueSet-rwipharma-ct-task-output-type-vs" name="Example Value Set RWI-Pharma Clinical Trial Task Output Types"/>
+<artifact id="ValueSet/rwipharma-icsr-business-status-vs" key="ValueSet-rwipharma-icsr-business-status-vs" name="Example Value Set RWI-Pharma ICSR Business Status"/>
 <artifact id="ValueSet/rwipharma-icsr-task-code-vs" key="ValueSet-rwipharma-icsr-task-code-vs" name="Example Value Set RWI-Pharma ICSR Task Codes"/>
-<artifact id="ValueSet/rwipharma-icsr-business-status-vs" key="ValueSet-rwipharma-icsr-business-status-vs" name="Example Value Set RWI-Pharma Individual Case Safety Report (ICSR) Business Status"/>
-<artifact id="ValueSet/rwipharma-icsr-task-input-type-vs" key="ValueSet-rwipharma-icsr-task-input-type-vs" name="Example Value Set RWI-Pharma Individual Case Safety Report (ICSR) Task Input Types"/>
-<artifact id="ValueSet/rwipharma-icsr-task-output-type-vs" key="ValueSet-rwipharma-icsr-task-output-type-vs" name="Example Value Set RWI-Pharma Individual Case Safety Report (ICSR) Task Output Types"/>
+<artifact id="ValueSet/rwipharma-icsr-task-input-type-vs" key="ValueSet-rwipharma-icsr-task-input-type-vs" name="Example Value Set RWI-Pharma ICSR Task Input Types"/>
+<artifact id="ValueSet/rwipharma-icsr-task-output-type-vs" key="ValueSet-rwipharma-icsr-task-output-type-vs" name="Example Value Set RWI-Pharma ICSR Task Output Types"/>
 <artifact id="ValueSet/rwipharma-ma-business-status-vs" key="ValueSet-rwipharma-ma-business-status-vs" name="Example Value Set RWI-Pharma Market Authorization Business Status"/>
 <artifact id="ValueSet/rwipharma-ma-task-input-type-vs" key="ValueSet-rwipharma-ma-task-input-type-vs" name="Example Value Set RWI-Pharma Market Authorization Task Input Types"/>
 <artifact id="ValueSet/rwipharma-ma-task-output-type-vs" key="ValueSet-rwipharma-ma-task-output-type-vs" name="Example Value Set RWI-Pharma Market Authorization Task Output Types"/>
