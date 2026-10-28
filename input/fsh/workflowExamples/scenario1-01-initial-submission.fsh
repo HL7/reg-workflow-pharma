@@ -63,21 +63,21 @@ Usage: #example
 * lastModified = "2025-11-15T09:00:00+01:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority" 
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#1.0 "Cover Letter"
+* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#1.0 "Cover Letter"
 * input[0].valueReference = Reference(doc1)
-* input[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#application-form "Application Form"
+* input[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#application-form "Application Form"
 * input[1].valueReference = Reference(doc2)
-* input[2].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#1.14.1.2 "Annotated draft labeling text"
+* input[2].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#1.14.1.2 "Annotated draft labeling text"
 * input[2].valueReference = Reference(doc3)
-* input[3].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#1.14.1.3 "Draft labeling text" 
+* input[3].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#1.14.1.3 "Draft labeling text" 
 * input[3].valueReference = Reference(doc4)
-* input[4].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#1.3.2 "Mock-ups"
+* input[4].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#1.3.2 "Mock-ups"
 * input[4].valueReference = Reference(doc5)
-* input[5].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#3.2.P.8.1 "Stability Summary and Conclusion"
+* input[5].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#3.2.P.8.1 "Stability Summary and Conclusion"
 * input[5].valueReference = Reference(doc6)
-* input[6].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#3.2.P.8.3 "Stability Data"
+* input[6].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#3.2.P.8.3 "Stability Data"
 * input[6].valueReference = Reference(doc7)
-* input[7].type =  http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#3.2.S.7 "Stability (Drug Substance)" //http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#3.2.P.8.2 "Post-approval Stability Protocol and Commitment"
+* input[7].type =  http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#3.2.S.7 "Stability (Drug Substance)" //http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#3.2.P.8.2 "Post-approval Stability Protocol and Commitment"
 * input[7].valueReference = Reference(doc8)
 
 Instance: doc1
@@ -89,9 +89,9 @@ Usage: #example
 * docStatus = #final
 * version = "1.0"
 //* category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-module#m1 "Module 1"
-* category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#m1 "Module 1"
+* category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#m1 "Module 1"
 
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#1.0 "Cover Letter"
+* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#1.0 "Cover Letter"
 * content.attachment.contentType = #application/pdf
 * content.attachment.url = "https://api.synthpharma.example/binaries/submission-123/m1/cover-letter.pdf"
 * content.attachment.title = "Cover Letter.pdf"
@@ -113,8 +113,8 @@ Usage: #example
 * docStatus = #final
 * version = "1.0"
 //* category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-module#m1 "Module 1"
-* category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#m1 "Module 1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#application-form "Application Form"
+* category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#m1 "Module 1"
+* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#application-form "Application Form"
 * content.attachment.contentType = #application/pdf
 * content.attachment.url = "https://api.synthpharma.example/binaries/submission-123/m1/app-form.pdf"
 * content.attachment.title = "Application Form.pdf"
@@ -136,8 +136,8 @@ Usage: #example
 * docStatus = #final
 * version = "1.0"
 //* category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-module#m1 "Module 1"
-* category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#m1 "Module 1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#1.14.1.2 "Annotated draft labeling text" //"annotated-label "Annotated Label"
+* category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#m1 "Module 1"
+* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#1.14.1.2 "Annotated draft labeling text" //"annotated-label "Annotated Label"
 * content.attachment.contentType = #application/fhir+json
 * content.attachment.url = "https://api.synthpharma.example/bundles/submission-123/m1/annotated-label.json"
 * content.attachment.title = "Annotated Label (Bundle)"
@@ -159,8 +159,8 @@ Usage: #example
 * docStatus = #final
 * version = "1.0"
 //* category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-module#m1 "Module 1"
-* category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#m1 "Module 1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#1.14.1.3 "Draft labeling text" //"clean-label "Clean Label"
+* category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#m1 "Module 1"
+* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#1.14.1.3 "Draft labeling text" //"clean-label "Clean Label"
 * content.attachment.contentType = #application/fhir+json
 * content.attachment.url = "https://api.synthpharma.example/bundles/submission-123/m1/clean-label.json"
 * content.attachment.title = "Clean Label (Bundle)"
@@ -181,7 +181,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1.0"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#1.3.2 "Mock-ups" //"Pack Mockup"
+* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#1.3.2 "Mock-ups" //"Pack Mockup"
 * content.attachment.contentType = #text/html
 * content.attachment.url = "https://api.synthpharma.example/binaries/submission-123/m1/mockup.html"
 * content.attachment.title = "Pack Mockup.html"
@@ -202,8 +202,8 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1.0"
-* category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#m3 "Module 3"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#3.2.P.8.1 "Stability Summary and Conclusion"
+* category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#m3 "Module 3"
+* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#3.2.P.8.1 "Stability Summary and Conclusion"
 * content.attachment.contentType = #application/fhir+json
 * content.attachment.url = "Binary/binary-1004"
 * content.attachment.title = "STABILITY SUMMARY AND CONCLUSIONS ON STELBAT TABLETS, 20 MG"
@@ -224,8 +224,8 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1.0"
-* category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#m3 "Module 3"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#3.2.P.8.3 "Stability Data"
+* category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#m3 "Module 3"
+* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#3.2.P.8.3 "Stability Data"
 * content.attachment.contentType = #application/fhir+json
 * content.attachment.url = "Binary/binary-1005"
 * content.attachment.title = "STABILITY DATA ON STELBAT TABLETS, 20MG"
@@ -246,9 +246,9 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1.0"
-* category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#m3 "Module 3"
-//* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#3.2.P.8.2 "Post-approval Stability Protocol and Commitment"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#3.2.S.7 "Stability (Drug Substance)"
+* category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#m3 "Module 3"
+//* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#3.2.P.8.2 "Post-approval Stability Protocol and Commitment"
+* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#3.2.S.7 "Stability (Drug Substance)"
 * content.attachment.contentType = #application/fhir+json
 //* content.attachment.url = "https://api.synthpharma.example/bundles/submission-123/m3/stability-commitment.json"
 * content.attachment.url = "Binary/binary-1006"

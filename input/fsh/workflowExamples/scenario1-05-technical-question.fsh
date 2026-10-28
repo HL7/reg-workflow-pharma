@@ -53,7 +53,7 @@ Usage: #example
 * requestedPeriod.start = "2025-12-01T14:30:00+01:00"
 * requestedPeriod.end = "2025-12-08T14:30:00+01:00"
 * owner = Reference(org-synthpharma-ag) "SynthPharma AG"
-* input.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#list-of-questions "List of Questions"
+* input.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#list-of-questions "List of Questions"
 * input.valueReference = Reference(docref-list-of-questions) "List of Questions (LoQ)"
 
 Instance: docref-list-of-questions
@@ -67,7 +67,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1.0"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#list-of-questions "List of Questions"
+* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#list-of-questions "List of Questions"
 * date = "2024-03-01T14:30:00+01:00"
 * content.attachment.contentType = #application/fhir+json
 * content.attachment.url = "https://build.fhir.org/ig/HL7/rtq-ig/Questionnaire-questionnaire-ID001.html"

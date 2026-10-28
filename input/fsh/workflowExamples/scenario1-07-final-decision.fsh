@@ -113,33 +113,33 @@ Usage: #example
 
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#1.0 "Cover Letter"
+* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#1.0 "Cover Letter"
 * input[0].valueReference = Reference(doc1)
-* input[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#application-form "Application Form"
+* input[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#application-form "Application Form"
 * input[1].valueReference = Reference(doc2)
-* input[2].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#1.14.1.2 "Annotated draft labeling text"
+* input[2].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#1.14.1.2 "Annotated draft labeling text"
 * input[2].valueReference = Reference(doc3)
-* input[3].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#1.14.1.3 "Draft labeling text"
+* input[3].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#1.14.1.3 "Draft labeling text"
 * input[3].valueReference = Reference(doc4)
-* input[4].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#1.3.2 "Mock-ups"
+* input[4].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#1.3.2 "Mock-ups"
 * input[4].valueReference = Reference(doc5)
-* input[5].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#3.2.P.8.1 "Stability Summary and Conclusion"
+* input[5].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#3.2.P.8.1 "Stability Summary and Conclusion"
 * input[5].valueReference = Reference(doc6)
-* input[6].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#3.2.P.8.3 "Stability Data"
+* input[6].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#3.2.P.8.3 "Stability Data"
 * input[6].valueReference = Reference(doc7)
-* input[7].type =  http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#3.2.S.7 "Stability (Drug Substance)" //http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#3.2.P.8.2 "Post-approval Stability Protocol and Commitment"
+* input[7].type =  http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#3.2.S.7 "Stability (Drug Substance)" //http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#3.2.P.8.2 "Post-approval Stability Protocol and Commitment"
 * input[7].valueReference = Reference(doc8)
 
 * lastModified = "2025-12-22T09:00:00+01:00"
 
-* output[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#acknowledgement-receipt "Acknowledgement of Receipt"
+* output[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#acknowledgement-receipt "Acknowledgement of Receipt"
 * output[=].valueReference = Reference(output-ack) "Acknowledgement of Receipt"
-* output[+].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#validation-report "Validation Report"
+* output[+].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#validation-report "Validation Report"
 * output[=].valueReference = Reference(output-validation) "Validation Report"
 
-* output[+].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#approval-letter "Approval Letter"
+* output[+].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#approval-letter "Approval Letter"
 * output[=].valueReference = Reference(docref-approval-letter) "Approval Letter"
-* output[+].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#assessment-report "Assessment Report"
+* output[+].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#assessment-report "Assessment Report"
 * output[=].valueReference = Reference(docref-assessment-report) "Final Assessment Report"
 
 Instance: docref-approval-letter
@@ -151,7 +151,7 @@ Usage: #example
 * meta.lastUpdated = "2025-12-22T09:00:00+01:00"
 * meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
 * status = #current
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#approval-letter "Approval Letter"
+* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#approval-letter "Approval Letter"
 * date = "2025-12-22T09:00:00+01:00"
 * content.attachment.contentType = #application/pdf
 * content.attachment.title = "approval-letter.pdf"
@@ -175,7 +175,7 @@ Usage: #example
 * meta.lastUpdated = "2025-12-22T09:00:00+01:00"
 * meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
 * status = #current
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#assessment-report "Assessment Report"
+* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#assessment-report "Assessment Report"
 * date = "2025-12-22T09:00:00+01:00"
 * content.attachment.contentType = #application/pdf
 * content.attachment.title = "final-assessment-report.pdf"

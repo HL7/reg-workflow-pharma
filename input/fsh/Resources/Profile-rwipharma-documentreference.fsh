@@ -52,13 +52,13 @@ Description: "DocumentReference profile used in RWI Pharma regulatory submission
 * category 0..1 MS
   * ^short = "High-level categorization (e.g. CTD Module 1, Clinical Trial Data)"
   * ^binding.strength = #extensible
-  * ^binding.valueSet = Canonical(apix-ctd-module-vs)
+  * ^binding.valueSet = Canonical(eg-ctd-module-vs)
 
 * type 1..1 MS
   * ^short = "CTD section code (e.g. 3.2.S.1.1)"
   * ^definition = "Coded representation of the specific document type or CTD section."
   * ^binding.strength = #example
-  * ^binding.valueSet = Canonical(apix-ctd-section-vs)
+  * ^binding.valueSet = Canonical(eg-ctd-section-vs)
 
 * relatesTo 0..* MS
   * ^short = "Relationships to other documents"

@@ -17,6 +17,7 @@ Most code systems defined in HL7 IGs will need to move to THO later during the p
 # Slices are intentional and are examples of other slices that can occur
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-organization|0.1.0%
+INFORMATION: Organization/1002: Organization.contact[0].telecom[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-organization|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # These references are intended
 %Reference to experimental CodeSystem http://hl7.org/fhir/request-intent|5.0.0

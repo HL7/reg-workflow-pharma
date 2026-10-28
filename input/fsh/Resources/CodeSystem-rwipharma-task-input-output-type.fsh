@@ -236,7 +236,7 @@ Description: "Example Types of documents and data exchanged as Task inputs and o
   * ^property[=].valueString = "Market Authorization"
   * ^property[+].code = #RWI-Pharma-Direction
   * ^property[=].valueString = "Output"
-* #ectd-sequence "eCTD Sequence" "An eCTD submission sequence (backbone and documents)."
+* #ctd-sequence "CTD Sequence" "An CTD submission sequence (backbone and documents)."
   * ^property[0].code = #RWI-Pharma-Domain
   * ^property[=].valueString = "Market Authorization"
   * ^property[+].code = #RWI-Pharma-Direction

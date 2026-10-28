@@ -244,7 +244,7 @@ Domain-specific types:
 | `preliminary-responses` | Preliminary Responses | Regulator’s preliminary written answers to meeting questions. |
 | `meeting-minutes` | Meeting Minutes | Final record of a meeting or advice outcome. |
 | `designation-decision` | Designation Decision | Decision on a designation or eligibility request. |
-| `ectd-sequence` | eCTD Sequence | An eCTD submission sequence (backbone and documents). |
+| `ctd-sequence` | CTD Sequence | An CTD submission sequence (backbone and documents). |
 | `cmc-documents` | CMC Documents | Chemistry, manufacturing, and controls documentation. |
 | `stability-data` | Stability Data | Stability study data and summaries. |
 | `clinical-study-report` | Clinical Study Report | Clinical study report supporting the application. |
@@ -283,7 +283,7 @@ Value set membership (including shared types):
 | `preliminary-responses` | Preliminary Responses |  | ✓ |
 | `meeting-minutes` | Meeting Minutes |  | ✓ |
 | `designation-decision` | Designation Decision |  | ✓ |
-| `ectd-sequence` | eCTD Sequence | ✓ |  |
+| `ctd-sequence` | CTD Sequence | ✓ |  |
 | `cmc-documents` | CMC Documents | ✓ |  |
 | `stability-data` | Stability Data | ✓ |  |
 | `clinical-study-report` | Clinical Study Report | ✓ |  |

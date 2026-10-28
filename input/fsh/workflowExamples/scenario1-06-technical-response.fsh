@@ -74,13 +74,13 @@ Usage: #example
 * owner = Reference(org-synthpharma-ag) "SynthPharma AG"
 * requestedPeriod.start = "2025-12-01T14:30:00+01:00"
 * requestedPeriod.end = "2025-12-08T14:30:00+01:00"
-* input.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#list-of-questions "List of Questions"
+* input.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#list-of-questions "List of Questions"
 * input.valueReference = Reference(docref-list-of-questions) "List of Questions (LoQ)"
 
 * lastModified = "2025-12-05T10:00:00+01:00"
-* output[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#applicant-questionnaireResponse "Applicant QuestionnaireResponse"
+* output[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#applicant-questionnaireResponse "Applicant QuestionnaireResponse"
 * output[0].valueReference = Reference(docref-responses-qresponse) "Applicant QuestionnaireResponse"
-* output[+].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#3.2.P.8.3 "Stability Data"
+* output[+].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#3.2.P.8.3 "Stability Data"
 * output[=].valueReference = Reference(docref-stability-data-annex) "Annex: Updated Stability Data"
 
 Instance: docref-responses-qresponse
@@ -91,7 +91,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1.0"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#applicant-questionnaireResponse "Applicant QuestionnaireResponse"
+* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#applicant-questionnaireResponse "Applicant QuestionnaireResponse"
 * relatesTo.code = http://hl7.org/fhir/document-relationship-type#appends
 * relatesTo.target = Reference(docref-list-of-questions) "List of Questions (LoQ)"
 * date = "2025-12-04T10:00:00+01:00"
@@ -116,7 +116,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1.0"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#3.2.P.8.3 "Stability Data"
+* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#3.2.P.8.3 "Stability Data"
 * date = "2025-12-04T09:59:00+01:00"
 * content.attachment.contentType = #application/fhir+json
 * content.attachment.url = "https://api.synthpharma.example/bundles/submission-123/m3/stability-data-v2.json"

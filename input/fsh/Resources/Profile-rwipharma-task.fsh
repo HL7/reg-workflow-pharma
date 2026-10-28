@@ -156,7 +156,7 @@ Description: "Task profile for RWI Pharma regulatory submission workflows"
 * input.type MS
   * ^short = "Input type  indicates the type of input, such as the code used as a DocumentReference type"
   * ^binding.strength = #example
-  * ^binding.valueSet = Canonical(apix-ctd-section-vs)
+  * ^binding.valueSet = Canonical(eg-ctd-section-vs)
 //* input ^slicing.discriminator.type = #value
 //* input ^slicing.discriminator.path = "type"
 //* input ^slicing.rules = #open  
@@ -165,7 +165,7 @@ Description: "Task profile for RWI Pharma regulatory submission workflows"
 //* input contains regulatoryDocument 0..* MS
 //* input[regulatoryDocument]
 //  * ^short = "Regulatory document (CTD section, via DocumentReference index)"
-//* input[regulatoryDocument].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-type#regulatory-document "Regulatory Document"
+//* input[regulatoryDocument].type = #regulatory-document "Regulatory Document"
 
 // Task Output with slicing
 * output 0..* MS

@@ -1,7 +1,7 @@
-CodeSystem: APIXCTDSECTION
-Id: ctd-section
-Title: "APIX CTD/eCTD Section Code System"
-Description: "Code system defining all relevant CTD/eCTD section codes used in APIX regulatory submissions to EMA, FDA, PMDA and other agencies. Based on ICH guidelines https://www.ich.org/page/ctd."
+CodeSystem: EXAMPLECTDSECTION
+Id: eg-ctd-section
+Title: "Example CTD Section Code System"
+Description: "Code system defining all relevant CTD section codes used in APIX regulatory submissions to EMA, FDA, PMDA and other agencies. Based on ICH guidelines https://www.ich.org/page/ctd."
 
 * ^status = #active
 * ^caseSensitive = true
