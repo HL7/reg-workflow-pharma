@@ -13,8 +13,6 @@ extension:
     valueInteger: 1
 version: 0.1.0
 
-#oid-root: 2.16.840.1.113883.4.642.40.101
-
 fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build
@@ -28,16 +26,14 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 publisher:
   name: HL7 International / Biomedical Research and Regulation
   url: http://www.hl7.org/Special/committees/rcrim
-  # name: Gravitate Health Project
-  # url: https://www.gravitatehealth.eu/
-
 
 parameters:
   apply-contact: true
   apply-jurisdiction: true
   apply-publisher: true
   apply-version: true
-  apply-wg: true
+ #apply-wg: true
+  auto-oid-root: 2.16.840.1.113883.4.642.40.101
 
 pages:
   index.md:
@@ -62,21 +58,21 @@ pages:
     title: Notifications
   architecture.md:
     title: Architecture
-  apixinteractionpattern.md:
+  rwipharmainteractionpattern.md:
     title: Interaction Pattern
   terminology.md:
     title: Terminology
-  apixtask.md:
+  rwipharmatask.md:
     title: RWI-pharma Task Structure
-  apixsubscription.md:
+  rwipharmasubscription.md:
     title: Subscription
-  apixsubscriptionTopic.md:
+  rwipharmasubscriptionTopic.md:
     title: SubscriptionTopic
-  apixsubscriptionNotificationAndStatus.md:
+  rwipharmasubscriptionNotificationAndStatus.md:
     title: Notification & Status
-  apixorganizationEndpoint.md:
+  rwipharmaorganizationEndpoint.md:
     title: Organization & Endpoint
-  apixdocumentReference.md:
+  rwipharmadocumentReference.md:
     title: DocumentReference
 
 menu:
@@ -94,14 +90,14 @@ menu:
   Terminology: terminology.html
   Technical Details:
     Architecture: architecture.html
-    Interaction Pattern: apixinteractionpattern.html
+    Interaction Pattern: rwipharmainteractionpattern.html
   Key Resources:
-    RWI-pharma Task: apixtask.html
-    Subscription: apixsubscription.html
-    SubscriptionTopic: apixsubscriptionTopic.html
-    Notification & Status: apixsubscriptionNotificationAndStatus.html
-    Organization & Endpoint: apixorganizationEndpoint.html
-    DocumentReference: apixdocumentReference.html
+    RWI-pharma Task: rwipharmatask.html
+    Subscription: rwipharmasubscription.html
+    SubscriptionTopic: rwipharmasubscriptionTopic.html
+    Notification & Status: rwipharmasubscriptionNotificationAndStatus.html
+    Organization & Endpoint: rwipharmaorganizationEndpoint.html
+    DocumentReference: rwipharmadocumentReference.html
   Artifacts: artifacts.html
 
 instanceOptions:

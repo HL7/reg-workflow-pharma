@@ -1,5 +1,5 @@
 Instance: Organization-1002
-InstanceOf: APIXOrganization
+InstanceOf: RWIpharmaOrganization
 Title: "Organization example with Endpoint"
 Description: "Organization example with Endpoint."
 

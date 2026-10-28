@@ -8,30 +8,30 @@ Description: "The sponsor posts the clinical trial application Task with the cov
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2026-09-01T10:00:00+02:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Clinical trial application submitted</b></p><table class=\"grid\"><tr><th>Task</th><td>Clinical Trial Application (<code>clinical-trial-application</code>)</td></tr><tr><th>Version</th><td>1</td></tr><tr><th>Status</th><td>requested</td></tr><tr><th>Business status</th><td>Submitted (<code>submitted</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:0a57b9f1-fc39-5bae-a93a-c86bd94484a5</td></tr><tr><th>Authored</th><td>2026-09-01T10:00:00+02:00</td></tr><tr><th>Last modified</th><td>2026-09-01T10:00:00+02:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-cta-cover-letter.html\">CTA cover letter</a> <code>cover-letter</code></li><li><a href=\"DocumentReference-docref-cta-application-form.html\">CTA application form</a> <code>application-form</code></li><li><a href=\"DocumentReference-docref-cta-protocol.html\">Protocol WD-201 v1.0</a> <code>protocol</code></li></ul><p><b>Outputs (from the owner)</b></p><p>None</p></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:d572e793-2889-5b3d-bb51-7338eb4a3a07"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:0a57b9f1-fc39-5bae-a93a-c86bd94484a5"
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#submitted "Submitted"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#submitted "Submitted"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#clinical-trial-application "Clinical Trial Application"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#clinical-trial-application "Clinical Trial Application"
 * authoredOn = "2026-09-01T10:00:00+02:00"
 * lastModified = "2026-09-01T10:00:00+02:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#cover-letter "Cover Letter"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#cover-letter "Cover Letter"
 * input[0].valueReference = Reference(docref-cta-cover-letter) "CTA cover letter"
-* input[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#application-form "Application Form"
+* input[1].type = RWIpharmaTaskInputOutputTypeCS#application-form "Application Form"
 * input[1].valueReference = Reference(docref-cta-application-form) "CTA application form"
-* input[2].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#protocol "Protocol"
+* input[2].type = RWIpharmaTaskInputOutputTypeCS#protocol "Protocol"
 * input[2].valueReference = Reference(docref-cta-protocol) "Protocol WD-201 v1.0"
 
 Instance: scenario3-02-cta-validated
@@ -41,37 +41,37 @@ Description: "Version 2 of the application Task (in production, the same Task as
 Usage: #example
 * meta.versionId = "2"
 * meta.lastUpdated = "2026-09-12T15:00:00+02:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Clinical trial application validated</b></p><table class=\"grid\"><tr><th>Task</th><td>Clinical Trial Application (<code>clinical-trial-application</code>)</td></tr><tr><th>Procedure number</th><td>CT-2026-000789</td></tr><tr><th>Version</th><td>2</td></tr><tr><th>Status</th><td>accepted</td></tr><tr><th>Business status</th><td>Validation Successful (<code>validation-successful</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:0a57b9f1-fc39-5bae-a93a-c86bd94484a5</td></tr><tr><th>Authored</th><td>2026-09-01T10:00:00+02:00</td></tr><tr><th>Last modified</th><td>2026-09-12T15:00:00+02:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-cta-cover-letter.html\">CTA cover letter</a> <code>cover-letter</code></li><li><a href=\"DocumentReference-docref-cta-application-form.html\">CTA application form</a> <code>application-form</code></li><li><a href=\"DocumentReference-docref-cta-protocol.html\">Protocol WD-201 v1.0</a> <code>protocol</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-cta-validation-report.html\">CTA validation report</a> <code>validation-report</code></li></ul></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:d572e793-2889-5b3d-bb51-7338eb4a3a07"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * identifier[+].use = #official
 * identifier[=].system = "http://example.org/health-authority/clinical-trial-number"
 * identifier[=].value = "CT-2026-000789"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixregulatorprocedureno "APIX Regulator Procedure Number"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmaregulatorprocedureno "RWI Pharma Regulator Procedure Number"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:0a57b9f1-fc39-5bae-a93a-c86bd94484a5"
 * status = #accepted
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#validation-successful "Validation Successful"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#validation-successful "Validation Successful"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#clinical-trial-application "Clinical Trial Application"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#clinical-trial-application "Clinical Trial Application"
 * authoredOn = "2026-09-01T10:00:00+02:00"
 * lastModified = "2026-09-12T15:00:00+02:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * executionPeriod.start = "2026-09-02T08:00:00+02:00"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#cover-letter "Cover Letter"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#cover-letter "Cover Letter"
 * input[0].valueReference = Reference(docref-cta-cover-letter) "CTA cover letter"
-* input[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#application-form "Application Form"
+* input[1].type = RWIpharmaTaskInputOutputTypeCS#application-form "Application Form"
 * input[1].valueReference = Reference(docref-cta-application-form) "CTA application form"
-* input[2].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#protocol "Protocol"
+* input[2].type = RWIpharmaTaskInputOutputTypeCS#protocol "Protocol"
 * input[2].valueReference = Reference(docref-cta-protocol) "Protocol WD-201 v1.0"
-* output[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#validation-report "Validation Report"
+* output[0].type = RWIpharmaTaskInputOutputTypeCS#validation-report "Validation Report"
 * output[0].valueReference = Reference(docref-cta-validation-report) "CTA validation report"
 
 Instance: scenario3-03-cta-rfi
@@ -81,33 +81,33 @@ Description: "The regulator posts a request-for-information Task, based on the a
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2026-10-01T11:00:00+02:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Request for information issued</b></p><table class=\"grid\"><tr><th>Task</th><td>List of Questions / Information Request (<code>information-request</code>)</td></tr><tr><th>Procedure number</th><td>CT-2026-000789</td></tr><tr><th>Version</th><td>1</td></tr><tr><th>Status</th><td>requested</td></tr><tr><th>Business status</th><td>Request for Information Issued (<code>request-for-information-issued</code>)</td></tr><tr><th>Requester</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Owner</th><td>SynthPharma AG</td></tr><tr><th>Group identifier</th><td>urn:uuid:0a57b9f1-fc39-5bae-a93a-c86bd94484a5</td></tr><tr><th>Authored</th><td>2026-10-01T11:00:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-01T11:00:00+02:00</td></tr><tr><th>Based on</th><td><a href=\"Task-scenario3-01-cta-submission.html\">scenario3-01-cta-submission</a></td></tr><tr><th>Response due</th><td>2026-10-15T23:59:59+02:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-cta-rfi.html\">Request for information</a> <code>request-for-information</code></li></ul><p><b>Outputs (from the owner)</b></p><p>None</p></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:d1bba8de-3301-5250-b6aa-6dbc38489f29"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * identifier[+].use = #official
 * identifier[=].system = "http://example.org/health-authority/clinical-trial-number"
 * identifier[=].value = "CT-2026-000789"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixregulatorprocedureno "APIX Regulator Procedure Number"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmaregulatorprocedureno "RWI Pharma Regulator Procedure Number"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:0a57b9f1-fc39-5bae-a93a-c86bd94484a5"
 * basedOn = Reference(scenario3-01-cta-submission)
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#request-for-information-issued "Request for Information Issued"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#request-for-information-issued "Request for Information Issued"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#information-request "List of Questions / Information Request"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#information-request "List of Questions / Information Request"
 * authoredOn = "2026-10-01T11:00:00+02:00"
 * lastModified = "2026-10-01T11:00:00+02:00"
 * requester = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * owner = Reference(org-synthpharma-ag) "SynthPharma AG"
 * requestedPeriod.start = "2026-10-01T11:00:00+02:00"
 * requestedPeriod.end = "2026-10-15T23:59:59+02:00"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#request-for-information "Request for Information"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#request-for-information "Request for Information"
 * input[0].valueReference = Reference(docref-cta-rfi) "Request for information"
 
 Instance: scenario3-04-cta-rfi-response
@@ -117,26 +117,26 @@ Description: "Version 2 of the request-for-information Task (in production, the 
 Usage: #example
 * meta.versionId = "2"
 * meta.lastUpdated = "2026-10-12T16:00:00+02:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Request for information answered</b></p><table class=\"grid\"><tr><th>Task</th><td>List of Questions / Information Request (<code>information-request</code>)</td></tr><tr><th>Procedure number</th><td>CT-2026-000789</td></tr><tr><th>Version</th><td>2</td></tr><tr><th>Status</th><td>completed</td></tr><tr><th>Business status</th><td>Clock Restart (<code>clock-restart</code>)</td></tr><tr><th>Requester</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Owner</th><td>SynthPharma AG</td></tr><tr><th>Group identifier</th><td>urn:uuid:0a57b9f1-fc39-5bae-a93a-c86bd94484a5</td></tr><tr><th>Authored</th><td>2026-10-01T11:00:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-12T16:00:00+02:00</td></tr><tr><th>Based on</th><td><a href=\"Task-scenario3-01-cta-submission.html\">scenario3-01-cta-submission</a></td></tr><tr><th>Response due</th><td>2026-10-15T23:59:59+02:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-cta-rfi.html\">Request for information</a> <code>request-for-information</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-cta-rfi-response.html\">Response to request for information</a> <code>response-to-questions</code></li></ul></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:d1bba8de-3301-5250-b6aa-6dbc38489f29"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * identifier[+].use = #official
 * identifier[=].system = "http://example.org/health-authority/clinical-trial-number"
 * identifier[=].value = "CT-2026-000789"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixregulatorprocedureno "APIX Regulator Procedure Number"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmaregulatorprocedureno "RWI Pharma Regulator Procedure Number"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:0a57b9f1-fc39-5bae-a93a-c86bd94484a5"
 * basedOn = Reference(scenario3-01-cta-submission)
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#clock-restart "Clock Restart"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#clock-restart "Clock Restart"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#information-request "List of Questions / Information Request"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#information-request "List of Questions / Information Request"
 * authoredOn = "2026-10-01T11:00:00+02:00"
 * lastModified = "2026-10-12T16:00:00+02:00"
 * requester = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
@@ -145,9 +145,9 @@ Usage: #example
 * requestedPeriod.end = "2026-10-15T23:59:59+02:00"
 * executionPeriod.start = "2026-10-01T11:05:00+02:00"
 * executionPeriod.end = "2026-10-12T16:00:00+02:00"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#request-for-information "Request for Information"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#request-for-information "Request for Information"
 * input[0].valueReference = Reference(docref-cta-rfi) "Request for information"
-* output[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#response-to-questions "Response to Questions"
+* output[0].type = RWIpharmaTaskInputOutputTypeCS#response-to-questions "Response to Questions"
 * output[0].valueReference = Reference(docref-cta-rfi-response) "Response to request for information"
 
 Instance: scenario3-05-cta-authorised
@@ -157,40 +157,40 @@ Description: "Version 3 of the application Task (in production, the same Task as
 Usage: #example
 * meta.versionId = "3"
 * meta.lastUpdated = "2026-11-03T09:00:00+01:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Clinical trial authorised</b></p><table class=\"grid\"><tr><th>Task</th><td>Clinical Trial Application (<code>clinical-trial-application</code>)</td></tr><tr><th>Procedure number</th><td>CT-2026-000789</td></tr><tr><th>Version</th><td>3</td></tr><tr><th>Status</th><td>completed</td></tr><tr><th>Business status</th><td>Authorised (<code>authorised</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:0a57b9f1-fc39-5bae-a93a-c86bd94484a5</td></tr><tr><th>Authored</th><td>2026-09-01T10:00:00+02:00</td></tr><tr><th>Last modified</th><td>2026-11-03T09:00:00+01:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-cta-cover-letter.html\">CTA cover letter</a> <code>cover-letter</code></li><li><a href=\"DocumentReference-docref-cta-application-form.html\">CTA application form</a> <code>application-form</code></li><li><a href=\"DocumentReference-docref-cta-protocol.html\">Protocol WD-201 v1.0</a> <code>protocol</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-cta-validation-report.html\">CTA validation report</a> <code>validation-report</code></li><li><a href=\"DocumentReference-docref-cta-decision.html\">Authorisation decision</a> <code>authorisation-decision</code></li></ul></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:d572e793-2889-5b3d-bb51-7338eb4a3a07"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * identifier[+].use = #official
 * identifier[=].system = "http://example.org/health-authority/clinical-trial-number"
 * identifier[=].value = "CT-2026-000789"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixregulatorprocedureno "APIX Regulator Procedure Number"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmaregulatorprocedureno "RWI Pharma Regulator Procedure Number"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:0a57b9f1-fc39-5bae-a93a-c86bd94484a5"
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#authorised "Authorised"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#authorised "Authorised"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#clinical-trial-application "Clinical Trial Application"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#clinical-trial-application "Clinical Trial Application"
 * authoredOn = "2026-09-01T10:00:00+02:00"
 * lastModified = "2026-11-03T09:00:00+01:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * executionPeriod.start = "2026-09-02T08:00:00+02:00"
 * executionPeriod.end = "2026-11-03T09:00:00+01:00"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#cover-letter "Cover Letter"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#cover-letter "Cover Letter"
 * input[0].valueReference = Reference(docref-cta-cover-letter) "CTA cover letter"
-* input[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#application-form "Application Form"
+* input[1].type = RWIpharmaTaskInputOutputTypeCS#application-form "Application Form"
 * input[1].valueReference = Reference(docref-cta-application-form) "CTA application form"
-* input[2].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#protocol "Protocol"
+* input[2].type = RWIpharmaTaskInputOutputTypeCS#protocol "Protocol"
 * input[2].valueReference = Reference(docref-cta-protocol) "Protocol WD-201 v1.0"
-* output[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#validation-report "Validation Report"
+* output[0].type = RWIpharmaTaskInputOutputTypeCS#validation-report "Validation Report"
 * output[0].valueReference = Reference(docref-cta-validation-report) "CTA validation report"
-* output[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#authorisation-decision "Authorisation Decision"
+* output[1].type = RWIpharmaTaskInputOutputTypeCS#authorisation-decision "Authorisation Decision"
 * output[1].valueReference = Reference(docref-cta-decision) "Authorisation decision"
 
 Instance: docref-cta-cover-letter
@@ -198,17 +198,17 @@ InstanceOf: DocumentReference
 Title: "CTA cover letter"
 Description: "Cover letter for the initial clinical trial application for study WD-201."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:f3a633ed-0b26-5c33-b680-5aa38282a221"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/synthpharma/document-version-id"
 * identifier[1].value = "urn:uuid:2c83dc8e-c62e-5471-aafe-2b618a23bc29"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#cover-letter "Cover Letter"
+* type = RWIpharmaTaskInputOutputTypeCS#cover-letter "Cover Letter"
 * date = "2026-09-01T10:00:00+02:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Cover letter for the initial clinical trial application for study WD-201."
@@ -224,17 +224,17 @@ InstanceOf: DocumentReference
 Title: "CTA application form"
 Description: "Completed clinical trial application form for study WD-201."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:e33fcdce-3042-5eae-bbe9-2670c661dc11"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/synthpharma/document-version-id"
 * identifier[1].value = "urn:uuid:f65ce64c-63ec-52d6-9013-550d7c526334"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#application-form "Application Form"
+* type = RWIpharmaTaskInputOutputTypeCS#application-form "Application Form"
 * date = "2026-09-01T10:00:00+02:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Completed clinical trial application form for study WD-201."
@@ -250,17 +250,17 @@ InstanceOf: DocumentReference
 Title: "Protocol WD-201 v1.0"
 Description: "Clinical trial protocol WD-201, version 1.0 (synopsis)."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:924f1558-e2fe-5500-a2a2-965473e754d6"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/synthpharma/document-version-id"
 * identifier[1].value = "urn:uuid:f8d4719d-5dd0-5787-9fd3-0471fbeb07e0"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#protocol "Protocol"
+* type = RWIpharmaTaskInputOutputTypeCS#protocol "Protocol"
 * date = "2026-09-01T10:00:00+02:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Clinical trial protocol WD-201, version 1.0 (synopsis)."
@@ -276,17 +276,17 @@ InstanceOf: DocumentReference
 Title: "CTA validation report"
 Description: "Validation report: application complete; trial number assigned."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/health-authority/document-set-id"
 * identifier[0].value = "urn:uuid:cd2b53a0-9659-50e6-80c4-f7dd33a5fdc5"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/health-authority/document-version-id"
 * identifier[1].value = "urn:uuid:3dd9fc02-3016-52a9-a116-76e50ca9c829"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#validation-report "Validation Report"
+* type = RWIpharmaTaskInputOutputTypeCS#validation-report "Validation Report"
 * date = "2026-09-12T15:00:00+02:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "Validation report: application complete; trial number assigned."
@@ -302,17 +302,17 @@ InstanceOf: DocumentReference
 Title: "Request for information"
 Description: "Request for information raised during assessment (three questions)."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/health-authority/document-set-id"
 * identifier[0].value = "urn:uuid:e41a6eb1-4998-5415-a891-a769b7756a65"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/health-authority/document-version-id"
 * identifier[1].value = "urn:uuid:2ef55f48-ebfc-554c-bcc8-97b781963b88"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#request-for-information "Request for Information"
+* type = RWIpharmaTaskInputOutputTypeCS#request-for-information "Request for Information"
 * date = "2026-10-01T11:00:00+02:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "Request for information raised during assessment (three questions)."
@@ -328,17 +328,17 @@ InstanceOf: DocumentReference
 Title: "Response to request for information"
 Description: "Sponsor response to the three questions."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:243ecbdf-6203-5e0b-a728-54bb55826640"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/synthpharma/document-version-id"
 * identifier[1].value = "urn:uuid:579a532e-dbb9-5408-9bbf-3c98323ee051"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#response-to-questions "Response to Questions"
+* type = RWIpharmaTaskInputOutputTypeCS#response-to-questions "Response to Questions"
 * date = "2026-10-12T16:00:00+02:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Sponsor response to the three questions."
@@ -354,17 +354,17 @@ InstanceOf: DocumentReference
 Title: "Authorisation decision"
 Description: "Decision authorising clinical trial CT-2026-000789."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/health-authority/document-set-id"
 * identifier[0].value = "urn:uuid:db0d54fe-c6ea-58be-9135-94aff57fab27"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/health-authority/document-version-id"
 * identifier[1].value = "urn:uuid:69682214-86ca-593d-8af7-6e7910c002cc"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#authorisation-decision "Authorisation Decision"
+* type = RWIpharmaTaskInputOutputTypeCS#authorisation-decision "Authorisation Decision"
 * date = "2026-11-03T09:00:00+01:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "Decision authorising clinical trial CT-2026-000789."

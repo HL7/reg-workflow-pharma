@@ -1,0 +1,98 @@
+[
+  {
+    "outputFile": "DocumentReference-docref-invoice.json",
+    "fshName": "docref-invoice",
+    "fshType": "Instance",
+    "fshFile": "instances\\docref-invoice.fsh",
+    "startLine": 1,
+    "endLine": 17
+  },
+  {
+    "outputFile": "Task-scenario1-01-initial-submission.json",
+    "fshName": "scenario1-01-initial-submission",
+    "fshType": "Instance",
+    "fshFile": "instances\\scenario1-01-initial-submission.fsh",
+    "startLine": 1,
+    "endLine": 50
+  },
+  {
+    "outputFile": "Task-scenario1-01b-stability-update-1.json",
+    "fshName": "scenario1-01b-stability-update-1",
+    "fshType": "Instance",
+    "fshFile": "instances\\scenario1-01b-stability-update-1.fsh",
+    "startLine": 1,
+    "endLine": 32
+  },
+  {
+    "outputFile": "Task-scenario1-01c-stability-update-2.json",
+    "fshName": "scenario1-01c-stability-update-2",
+    "fshType": "Instance",
+    "fshFile": "instances\\scenario1-01c-stability-update-2.fsh",
+    "startLine": 1,
+    "endLine": 32
+  },
+  {
+    "outputFile": "Task-scenario1-02-validation.json",
+    "fshName": "scenario1-02-validation",
+    "fshType": "Instance",
+    "fshFile": "instances\\scenario1-02-validation.fsh",
+    "startLine": 1,
+    "endLine": 72
+  },
+  {
+    "outputFile": "Task-scenario1-03-finance-invoice.json",
+    "fshName": "scenario1-03-finance-invoice",
+    "fshType": "Instance",
+    "fshFile": "instances\\scenario1-03-finance-invoice.fsh",
+    "startLine": 1,
+    "endLine": 23
+  },
+  {
+    "outputFile": "Task-scenario1-04-finance-payment.json",
+    "fshName": "scenario1-04-finance-payment",
+    "fshType": "Instance",
+    "fshFile": "instances\\scenario1-04-finance-payment.fsh",
+    "startLine": 1,
+    "endLine": 28
+  },
+  {
+    "outputFile": "Task-scenario1-05-technical-question.json",
+    "fshName": "scenario1-05-technical-question",
+    "fshType": "Instance",
+    "fshFile": "instances\\scenario1-05-technical-question.fsh",
+    "startLine": 1,
+    "endLine": 25
+  },
+  {
+    "outputFile": "Task-scenario1-06-technical-response.json",
+    "fshName": "scenario1-06-technical-response",
+    "fshType": "Instance",
+    "fshFile": "instances\\scenario1-06-technical-response.fsh",
+    "startLine": 1,
+    "endLine": 33
+  },
+  {
+    "outputFile": "Task-scenario1-07-final-decision.json",
+    "fshName": "scenario1-07-final-decision",
+    "fshType": "Instance",
+    "fshFile": "instances\\scenario1-07-final-decision.fsh",
+    "startLine": 1,
+    "endLine": 33
+  },
+  {
+    "outputFile": "Task-task-nda-submission-index-2025.json",
+    "fshName": "task-nda-submission-index-2025",
+    "fshType": "Instance",
+    "fshFile": "instances\\task-nda-submission-index-2025.fsh",
+    "startLine": 1,
+    "endLine": 29
+  },
+  {
+    "outputFile": "Task-task-shelf-life-extension-synthpharma-2025.json",
+    "fshName": "task-shelf-life-extension-synthpharma-2025",
+    "fshType": "Instance",
+    "fshFile": "instances\\task-shelf-life-extension-synthpharma-2025.fsh",
+    "startLine": 1,
+    "endLine": 38
+  }
+]

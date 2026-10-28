@@ -5,7 +5,7 @@ Description: "Example Task Information Request"
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2025-12-01T14:30:00+01:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 // * identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-identifier-type#task-instance-uuid "Task Instance UUID"
 
 * text.status = #additional 
@@ -37,13 +37,13 @@ Usage: #example
 
 * identifier.system = "http://example.org/health-authority/task-id"
 * identifier.value = "urn:uuid:778e7d2a-8b1c-4d9f-9a2e-1f6c9d8e7b3b"
-* identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * basedOn = Reference(scenario1-01-initial-submission) "Initial Submission Task"
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#clock-stop "Clock Stop"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#clock-stop "Clock Stop"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#information-request "List of Questions / Information Request"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#information-request "List of Questions / Information Request"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:workflow-group-id-12345"
@@ -59,11 +59,11 @@ Usage: #example
 Instance: docref-list-of-questions
 InstanceOf: DocumentReference
 Title: "docref list of questions"
-Description: "Example DocumentReference Cover Letter"
+Description: "Example DocumentReference List of Questions"
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2024-03-01T14:30:00+01:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
 * status = #current
 * docStatus = #final
 * version = "1.0"
@@ -72,7 +72,11 @@ Usage: #example
 * content.attachment.contentType = #application/fhir+json
 * content.attachment.url = "https://build.fhir.org/ig/HL7/rtq-ig/Questionnaire-questionnaire-ID001.html"
 * content.attachment.title = "List of Questions (Questionnaire)"
-* content.attachment.size = 30241
+* content.attachment.size = 810
 * content.attachment.creation = "2025-03-01T14:20:00+01:00"
-* identifier[0].system = "http://example.org/health-authority/docRefid"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
+* identifier[0].system = "http://example.org/health-authority/document-set-id"
 * identifier[0].value = "urn:uuid:40404040-4040-4040-4040-404040404040"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
+* identifier[1].system = "http://example.org/health-authority/document-version-id"
+* identifier[1].value = "urn:uuid:d8a41f63-2e7b-4c95-8b0d-6f3e1a7c9254"

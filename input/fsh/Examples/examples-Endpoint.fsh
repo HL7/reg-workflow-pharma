@@ -1,7 +1,7 @@
 Instance: Endpoint-1003
 InstanceOf: EndpointSubscriptionNotify
-Title: "Example basic APIX interaction Endpoint"
-Description: "Example basic APIX interaction Endpoint, payload is very loosely defined; payload considerations are handled internally and not exposed. Note identifier."
+Title: "Example basic RWI Pharma interaction Endpoint"
+Description: "Example basic RWI Pharma interaction Endpoint, payload is very loosely defined; payload considerations are handled internally and not exposed. Note identifier."
 Usage: #example
 
 * id = "1003"
@@ -15,7 +15,7 @@ Usage: #example
 
 * managingOrganization = Reference(Organization-1002)
 
-* connectionType[0].coding[0].system = "http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-temp"
+* connectionType[0].coding[0].system = "http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-temp"
 * connectionType[0].coding[0].code = #hl7-fhir-subscription-notify "HL7 FHIR Subscription Notification Endpoint"
 
 * name = "Authority FHIR Subscription Notification Endpoint"
@@ -28,8 +28,8 @@ Usage: #example
 
 Instance: Endpoint-1005
 InstanceOf: EndpointSubscriptionNotify
-Title: "Example APIX interaction Endpoint with header"
-Description: "Example APIX interaction Endpoint with header information; payload is very loosely defined, sufficient where payload considerations are handled internally and not exposed. Note identifier.   n"
+Title: "Example RWI Pharma interaction Endpoint with header"
+Description: "Example RWI Pharma interaction Endpoint with header information; payload is very loosely defined, sufficient where payload considerations are handled internally and not exposed. Note identifier.   n"
 Usage: #example
 
 * id = "1005"
@@ -41,7 +41,7 @@ Usage: #example
 
 * status = #active
 
-* connectionType[0].coding[0].system = "http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-temp"
+* connectionType[0].coding[0].system = "http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-temp"
 * connectionType[0].coding[0].code = #hl7-fhir-subscription-notify "HL7 FHIR Subscription Notification Endpoint"
 
 * name = "Best Company FHIR Subscription Notification Endpoint"

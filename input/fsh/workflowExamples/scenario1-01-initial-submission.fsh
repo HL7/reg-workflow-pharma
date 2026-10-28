@@ -5,7 +5,7 @@ Description: "Example Task Type IB Variation"
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2025-11-15T09:00:00+01:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 
 * text.status = #additional 
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><div style=\"font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(to bottom,#f2f6fa,#e8eef5);color:#1d1d1f;margin:0;padding:40px 20px;line-height:1.5;\"><div style=\"max-width:1000px;margin:0 auto;\"><div style=\"background:linear-gradient(135deg,#007aff,#5ac8fa);color:#ffffff;padding:40px 24px;border-radius:18px;text-align:center;box-shadow:0 10px 30px rgba(0,122,255,0.3);margin-bottom:36px;\"><div style=\"margin:0 0 8px 0;font-size:32px;font-weight:600;\">Task: Type IB Variation</div><p style=\"margin:0;opacity:0.95;font-size:17px;\">HL7 FHIR R5 – APIX Implementation Guide</p></div><div style=\"background:#ffffff;border-radius:18px;padding:32px;margin-bottom:32px;box-shadow:0 8px 28px rgba(0,0,0,0.08),0 2px 10px rgba(0,0,0,0.06);\"><div style=\"font-size:24px;font-weight:600;color:#007aff;margin:0 0 24px 0;padding-bottom:12px;border-bottom:1px solid #e5e5ea;display:flex;justify-content:space-between;align-items:center;\">Task Description</div><div style=\"font-size:18px;line-height:1.6;color:#333333;\">Type IB Variation</div></div><div style=\"background:#ffffff;border-radius:18px;padding:32px;margin-bottom:32px;box-shadow:0 8px 28px rgba(0,0,0,0.08),0 2px 10px rgba(0,0,0,0.06);\"><div style=\"font-size:24px;font-weight:600;color:#007aff;margin:0 0 24px 0;padding-bottom:12px;border-bottom:1px solid #e5e5ea;display:flex;justify-content:space-between;align-items:center;\">Core Task Information</div><div style=\"display:grid;grid-template-columns:max-content auto;gap:12px 20px;align-items:baseline;\"><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Version ID</span><span style=\"color:#1d1d1f;\">1</span><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Task ID</span><span style=\"color:#1d1d1f;\">scenario1-01-initial-submission</span><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Instance UUID</span><span style=\"color:#1d1d1f;\">urn:uuid:f1500e1d-599f-47a6-a38c-ca60a5189726</span><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Group Identifier</span><span style=\"color:#1d1d1f;\">urn:uuid:workflow-group-id-12345</span><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Procedure ID</span><span style=\"color:#1d1d1f;\">not yet assigned</span><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Task Status</span><span style=\"color:#1d1d1f;\"><span style=\"padding:2px 8px;border-radius:12px;font-size:0.9em;font-weight:500;color:#ffffff;background:#007aff;\">requested</span></span><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Business Status</span><span style=\"color:#1d1d1f;\"><span style=\"padding:2px 8px;border-radius:12px;font-size:0.9em;font-weight:500;color:#ffffff;background:#8e8e93;\">Submitted</span></span><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Intent</span><span style=\"color:#1d1d1f;\">proposal</span><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Priority</span><span style=\"color:#1d1d1f;\">routine</span></div><hr style=\"border:0;border-top:1px solid #eeeeee;margin:20px 0;\" /><div style=\"display:grid;grid-template-columns:max-content auto;gap:12px 20px;align-items:baseline;\"><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Code</span><span style=\"color:#1d1d1f;\">Type IB Variation (variation-type-ib)</span><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Authored</span><span style=\"color:#1d1d1f;\">2025-11-15 09:00:00 UTC+01:00</span><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Last Updated</span><span style=\"color:#1d1d1f;\">2025-11-15 09:00:00 UTC+01:00</span></div></div><div style=\"background:#ffffff;border-radius:18px;padding:32px;margin-bottom:32px;box-shadow:0 8px 28px rgba(0,0,0,0.08),0 2px 10px rgba(0,0,0,0.06);\"><div style=\"font-size:24px;font-weight:600;color:#007aff;margin:0 0 24px 0;padding-bottom:12px;border-bottom:1px solid #e5e5ea;display:flex;justify-content:space-between;align-items:center;\">Parties Involved</div><div style=\"margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid #eeeeee;\"><span style=\"font-weight:600;color:#007aff;margin-bottom:4px;display:block;\">Requester</span><div style=\"font-size:16px;font-weight:500;margin-bottom:8px;color:#1d1d1f;\">SynthPharma AG</div><div style=\"font-size:14px;color:#555555;line-height:1.5;\"><strong>Address:</strong> 123 Synthetic Research Blvd, 4000 Basel, Switzerland<br /> <strong>Contact:</strong> Dr. John Doe, Head of Regulatory Affairs<br /> <strong>Email:</strong> john.doe@synthpharma.example</div></div><div style=\"margin-bottom:0;padding-bottom:0;border-bottom:none;\"><span style=\"font-weight:600;color:#007aff;margin-bottom:4px;display:block;\">Performer</span><div style=\"font-size:16px;font-weight:500;margin-bottom:8px;color:#1d1d1f;\">Health Authority – Regulatory Review Division</div><div style=\"font-size:14px;color:#555555;line-height:1.5;\"><strong>Address:</strong> Regulatory Authority Headquarters, 1083 HS Capital City, Country<br /> <strong>Contact:</strong> Scientific and Regulatory Management<br /> <strong>Email:</strong> regulatory@health-authority.example</div></div></div>
@@ -48,17 +48,17 @@ Usage: #example
 * identifier.use = #official
 * identifier.system = "http://example.org/health-authority/task-id"
 * identifier.value = "urn:uuid:f1500e1d-599f-47a6-a38c-ca60a5189726"
-* identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 // * identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-identifier-type#task-instance-uuid "Task Instance UUID"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:workflow-group-id-12345"
 // * groupIdentifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-identifier-type#submission-group-uuid "Submission Group UUID"
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#submitted "Submitted"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#submitted "Submitted"
 * intent = #proposal
 * priority = #routine
-* code = apix-task-code#variation-type-ib "Type IB Variation"
+* code = rwipharma-task-code#variation-type-ib "Type IB Variation"
 * authoredOn = "2025-11-15T09:00:00+01:00"
 * lastModified = "2025-11-15T09:00:00+01:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
@@ -97,8 +97,12 @@ Usage: #example
 * content.attachment.title = "Cover Letter.pdf"
 * content.attachment.size = 1250000
 * content.attachment.creation = "2025-11-15T08:30:00+01:00"
-* identifier[0].system = "http://example.org/health-authority/docRefid"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
+* identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:80808080-8080-8080-8080-808080808097"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
+* identifier[1].system = "http://example.org/synthpharma/document-version-id"
+* identifier[1].value = "urn:uuid:57edd8de-4826-4cb0-8057-3b3cc2c4af5b"
 
 Instance: doc2
 InstanceOf: DocumentReference
@@ -116,8 +120,12 @@ Usage: #example
 * content.attachment.title = "Application Form.pdf"
 * content.attachment.size = 3400000
 * content.attachment.creation = "2025-11-15T08:35:00+01:00"
-* identifier[0].system = "http://example.org/health-authority/docRefid"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
+* identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:80808080-8080-8080-8080-808080808096"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
+* identifier[1].system = "http://example.org/synthpharma/document-version-id"
+* identifier[1].value = "urn:uuid:895ad93e-5c0e-4f8f-9e17-0f622c6b440c"
 
 Instance: doc3
 InstanceOf: DocumentReference
@@ -135,8 +143,12 @@ Usage: #example
 * content.attachment.title = "Annotated Label (Bundle)"
 * content.attachment.size = 45000
 * content.attachment.creation = "2025-11-14T16:00:00+01:00"
-* identifier[0].system = "http://example.org/health-authority/docRefid"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
+* identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:80808080-8080-8080-8080-808080808095"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
+* identifier[1].system = "http://example.org/synthpharma/document-version-id"
+* identifier[1].value = "urn:uuid:979e701b-88b0-4a97-8d52-2f6c28302c79"
 
 Instance: doc4
 InstanceOf: DocumentReference
@@ -154,8 +166,12 @@ Usage: #example
 * content.attachment.title = "Clean Label (Bundle)"
 * content.attachment.size = 42000
 * content.attachment.creation = "2025-11-14T16:05:00+01:00"
-* identifier[0].system = "http://example.org/health-authority/docRefid"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
+* identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:80808080-8080-8080-8080-808080808094"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
+* identifier[1].system = "http://example.org/synthpharma/document-version-id"
+* identifier[1].value = "urn:uuid:12185bea-d648-4ff8-a193-ceb839da82dd"
 
 Instance: doc5
 InstanceOf: DocumentReference
@@ -171,8 +187,12 @@ Usage: #example
 * content.attachment.title = "Pack Mockup.html"
 * content.attachment.size = 890000
 * content.attachment.creation = "2025-11-14T10:00:00+01:00"
-* identifier[0].system = "http://example.org/health-authority/docRefid"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
+* identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:80808080-8080-8080-8080-808080808093"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
+* identifier[1].system = "http://example.org/synthpharma/document-version-id"
+* identifier[1].value = "urn:uuid:182d7f36-b212-439e-9b44-50df7107145a"
 
 Instance: doc6
 InstanceOf: DocumentReference
@@ -189,8 +209,12 @@ Usage: #example
 * content.attachment.title = "STABILITY SUMMARY AND CONCLUSIONS ON STELBAT TABLETS, 20 MG"
 * content.attachment.size = 116000
 * content.attachment.creation = "2025-11-12T14:30:00+01:00"
-* identifier[0].system = "http://example.org/health-authority/docRefid"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
+* identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:80808080-8080-8080-8080-808080808092"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
+* identifier[1].system = "http://example.org/synthpharma/document-version-id"
+* identifier[1].value = "urn:uuid:ccfdb9fd-e89b-45cc-90c4-97a565273345"
 
 Instance: doc7
 InstanceOf: DocumentReference
@@ -207,8 +231,12 @@ Usage: #example
 * content.attachment.title = "STABILITY DATA ON STELBAT TABLETS, 20MG"
 * content.attachment.size = 312000
 * content.attachment.creation = "2025-11-12T14:35:00+01:00"
-* identifier[0].system = "http://example.org/health-authority/docRefid"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
+* identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:80808080-8080-8080-8080-808080808091"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
+* identifier[1].system = "http://example.org/synthpharma/document-version-id"
+* identifier[1].value = "urn:uuid:e9cebbba-6306-460c-8261-2b5fd73b63a2"
 
 Instance: doc8
 InstanceOf: DocumentReference
@@ -227,5 +255,9 @@ Usage: #example
 * content.attachment.title = "STABILITY DATA ON API"
 * content.attachment.size = 238000
 * content.attachment.creation = "2025-11-12T14:40:00+01:00"
-* identifier[0].system = "http://example.org/health-authority/docRefid"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
+* identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:80808080-8080-8080-8080-808080808090"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
+* identifier[1].system = "http://example.org/synthpharma/document-version-id"
+* identifier[1].value = "urn:uuid:9724c4ef-b71e-4880-8b9b-f072f8de8614"

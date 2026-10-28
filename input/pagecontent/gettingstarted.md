@@ -24,7 +24,7 @@
         <div style="font-size:.82em; color:#374151; line-height:1.5;">Registering a shipping address before you can send or receive packages. You only do this once.</div>
       </div>
       <div style="font-size:.82em; color:#6b7280;">✅ <strong>Business benefit:</strong> One-time setup — connects your organization to any party, regulator or company, that supports RWI-pharma.</div>
-      <div style="margin-top:10px;"><a href="apixorganizationEndpoint.html" style="font-size:.82em; color:#2563eb; font-weight:600; text-decoration:none;">Deep dive: Organization &amp; Endpoint →</a></div>
+      <div style="margin-top:10px;"><a href="RWIpharmaOrganizationEndpoint.html" style="font-size:.82em; color:#2563eb; font-weight:600; text-decoration:none;">Deep dive: Organization &amp; Endpoint →</a></div>
     </div>
   </div>
 </div>
@@ -64,7 +64,7 @@
         <div style="font-size:.82em; color:#374151; line-height:1.5;">A library catalog card. The card describes the book (title, author, subject) so you can find it without reading every book on the shelf.</div>
       </div>
       <div style="font-size:.82em; color:#6b7280;">✅ <strong>Business benefit:</strong> Recipients instantly find the exact document they need. No more searching through ZIP files.</div>
-      <div style="margin-top:10px;"><a href="apixdocumentReference.html" style="font-size:.82em; color:#ea580c; font-weight:600; text-decoration:none;">Deep dive: DocumentReference →</a></div>
+      <div style="margin-top:10px;"><a href="rwipharmadocumentReference.html" style="font-size:.82em; color:#ea580c; font-weight:600; text-decoration:none;">Deep dive: DocumentReference →</a></div>
     </div>
   </div>
 </div>
@@ -154,7 +154,7 @@
   </div>
 </div>
       </div>
-      <div style="margin-top:10px;"><a href="apixtask.html" style="font-size:.82em; color:#7c3aed; font-weight:600; text-decoration:none;">Deep dive: RWI-pharma Task Structure →</a></div>
+      <div style="margin-top:10px;"><a href="rwipharmatask.html" style="font-size:.82em; color:#7c3aed; font-weight:600; text-decoration:none;">Deep dive: RWI-pharma Task Structure →</a></div>
     </div>
   </div>
 </div>

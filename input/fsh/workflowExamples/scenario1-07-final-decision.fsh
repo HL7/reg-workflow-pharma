@@ -5,16 +5,16 @@
 //Usage: #example
 //* meta.versionId = "3"
 //* meta.lastUpdated = "2025-04-20T09:00:00+01:00"
-//* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+//* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 // * identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-identifier-type#task-instance-uuid "Task Instance UUID"
 //* identifier.system = "urn:ietf:rfc:3986"
 //* identifier.value = "urn:uuid:999e7d2a-8b1c-4d9f-9a2e-1f6c9d8e7b3d"
 //* partOf = Reference(scenario1-01-initial-submission) "Initial Submission Task"
 //* status = #completed
-//* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#approved "Approved"
+//* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#approved "Approved"
 //* intent = #proposal
 //* priority = #routine
-//* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#approval "Approval Letter / Positive Decision"
+//* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#approval "Approval Letter / Positive Decision"
 //* for = Reference(MedicinalProductDefinition/example-ma) "WonderDrug 50mg Tablets"
 //* groupIdentifier.use = #official
 //* groupIdentifier.system = "urn:ietf:rfc:3986"
@@ -31,7 +31,7 @@ Description: "Completetion of Scenario 01 initial submission Task - Example Task
 Usage: #example
 * meta.versionId = "3"
 * meta.lastUpdated = "2025-12-22T09:00:00+01:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 
 * text.status = #additional 
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><div style=\"font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(to bottom,#f2f6fa,#e8eef5);color:#1d1d1f;margin:0;padding:40px 20px;line-height:1.5;\"><div style=\"max-width:1000px;margin:0 auto;\"><div style=\"background:linear-gradient(135deg,#007aff,#5ac8fa);color:#ffffff;padding:40px 24px;border-radius:18px;text-align:center;box-shadow:0 10px 30px rgba(0,122,255,0.3);margin-bottom:36px;\"><div style=\"margin:0 0 8px 0;font-size:32px;font-weight:600;\">Task: Approval Letter / Positive Decision</div><p style=\"margin:0;opacity:0.95;font-size:17px;\">HL7 FHIR R5 – APIX Implementation Guide</p></div><div style=\"background:#ffffff;border-radius:18px;padding:32px;margin-bottom:32px;box-shadow:0 8px 28px rgba(0,0,0,0.08),0 2px 10px rgba(0,0,0,0.06);\"><div style=\"font-size:24px;font-weight:600;color:#007aff;margin:0 0 24px 0;padding-bottom:12px;border-bottom:1px solid #e5e5ea;display:flex;justify-content:space-between;align-items:center;\">Task Description</div><div style=\"font-size:18px;line-height:1.6;color:#333333;\">Final Decision: Approval for Type IB Variation</div></div><div style=\"background:#ffffff;border-radius:18px;padding:32px;margin-bottom:32px;box-shadow:0 8px 28px rgba(0,0,0,0.08),0 2px 10px rgba(0,0,0,0.06);\"><div style=\"font-size:24px;font-weight:600;color:#007aff;margin:0 0 24px 0;padding-bottom:12px;border-bottom:1px solid #e5e5ea;display:flex;justify-content:space-between;align-items:center;\">Core Task Information</div><div style=\"display:grid;grid-template-columns:max-content auto;gap:12px 20px;align-items:baseline;\"><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Version ID</span><span style=\"color:#1d1d1f;\">3</span>
@@ -91,13 +91,13 @@ Usage: #example
 * identifier.use = #official
 * identifier.system = "http://example.org/health-authority/task-id"
 * identifier.value = "urn:uuid:f1500e1d-599f-47a6-a38c-ca60a5189726"
-* identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 // * identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-identifier-type#task-instance-uuid "Task Instance UUID"
 
 * identifier[+].use = #official
 * identifier[=].system = "http://example.org/health.authority/procedure-number"
 * identifier[=].value = "PROC-2025-12345" //"EMEA/H/C/001234/IB/0025"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixregulatorprocedureno "APIX Regulator Procedure Number"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmaregulatorprocedureno "RWI Pharma Regulator Procedure Number"
 
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
@@ -105,10 +105,10 @@ Usage: #example
 // * groupIdentifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-identifier-type#submission-group-uuid "Submission Group UUID"
 
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#approved "Approved"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#approved "Approved"
 * intent = #proposal
 * priority = #routine
-* code = apix-task-code#variation-type-ib "Type IB Variation"
+* code = rwipharma-task-code#variation-type-ib "Type IB Variation"
 * authoredOn = "2025-11-15T09:00:00+01:00"
 
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
@@ -149,7 +149,7 @@ Description: "Example DocumentReference Approval Letter"
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2025-12-22T09:00:00+01:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
 * status = #current
 * type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#approval-letter "Approval Letter"
 * date = "2025-12-22T09:00:00+01:00"
@@ -158,8 +158,12 @@ Usage: #example
 * content.attachment.creation = "2025-12-22T09:00:00+01:00"
 //* content.attachment.data = "VGhpcyBpcyBhIHBsYWNlaG9sZGVyIGRvY3VtZW50IGZvciB2YWxpZGF0aW9uIHB1cnBvc2VzLgo="
 * content.attachment.url = "http://example.org/FHIR/Binary/101"
-* identifier[0].system = "http://example.org/health-authority/docref-id"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
+* identifier[0].system = "http://example.org/health-authority/document-set-id"
 * identifier[0].value = "urn:uuid:70707070-7070-7070-7070-707070707070"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
+* identifier[1].system = "http://example.org/health-authority/document-version-id"
+* identifier[1].value = "urn:uuid:3f6b2c1e-8d4a-4e7b-9c2f-5a1d7e9b0c46"
 
 
 Instance: docref-assessment-report
@@ -169,7 +173,7 @@ Description: "Example DocumentReference Assessment Report"
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2025-12-22T09:00:00+01:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
 * status = #current
 * type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section#assessment-report "Assessment Report"
 * date = "2025-12-22T09:00:00+01:00"
@@ -178,5 +182,9 @@ Usage: #example
 * content.attachment.creation = "2025-12-22T09:00:00+01:00"
 //* content.attachment.data = "VGhpcyBpcyBhIHBsYWNlaG9sZGVyIGRvY3VtZW50IGZvciB2YWxpZGF0aW9uIHB1cnBvc2VzLgo="
 * content.attachment.url = "http://example.org/FHIR/Binary/102"
-* identifier[0].system = "http://example.org/health-authority/docRefid"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
+* identifier[0].system = "http://example.org/health-authority/document-set-id"
 * identifier[0].value = "urn:uuid:80808080-8080-8080-8080-808080808080"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
+* identifier[1].system = "http://example.org/health-authority/document-version-id"
+* identifier[1].value = "urn:uuid:b52e9d17-6c3a-4f08-a1e4-9d7c2b6f8a35"

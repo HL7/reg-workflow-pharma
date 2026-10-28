@@ -5,7 +5,7 @@ Description: "Example Task Type IB Variation"
 Usage: #example
 * meta.versionId = "2"
 * meta.lastUpdated = "2025-11-20T14:30:00+01:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 
 * text.status = #additional 
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><div style=\"font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(to bottom,#f2f6fa,#e8eef5);color:#1d1d1f;margin:0;padding:40px 20px;line-height:1.5;\"><div style=\"max-width:1000px;margin:0 auto;\"><div style=\"background:linear-gradient(135deg,#007aff,#5ac8fa);color:#ffffff;padding:40px 24px;border-radius:18px;text-align:center;box-shadow:0 10px 30px rgba(0,122,255,0.3);margin-bottom:36px;\"><div style=\"margin:0 0 8px 0;font-size:32px;font-weight:600;\">Task: Type IB Variation</div><p style=\"margin:0;opacity:0.95;font-size:17px;\">HL7 FHIR R5 – APIX Implementation Guide</p></div><div style=\"background:#ffffff;border-radius:18px;padding:32px;margin-bottom:32px;box-shadow:0 8px 28px rgba(0,0,0,0.08),0 2px 10px rgba(0,0,0,0.06);\"><div style=\"font-size:24px;font-weight:600;color:#007aff;margin:0 0 24px 0;padding-bottom:12px;border-bottom:1px solid #e5e5ea;display:flex;justify-content:space-between;align-items:center;\">Task Description</div><div style=\"font-size:18px;line-height:1.6;color:#333333;\">Validation of Type IB Variation</div></div><div style=\"background:#ffffff;border-radius:18px;padding:32px;margin-bottom:32px;box-shadow:0 8px 28px rgba(0,0,0,0.08),0 2px 10px rgba(0,0,0,0.06);\"><div style=\"font-size:24px;font-weight:600;color:#007aff;margin:0 0 24px 0;padding-bottom:12px;border-bottom:1px solid #e5e5ea;display:flex;justify-content:space-between;align-items:center;\">Core Task Information</div><div style=\"display:grid;grid-template-columns:max-content auto;gap:12px 20px;align-items:baseline;\"><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Version ID</span><span style=\"color:#1d1d1f;\">2</span>
@@ -57,22 +57,22 @@ Usage: #example
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:f1500e1d-599f-47a6-a38c-ca60a5189726" //"urn:uuid:d7f9bc88-658f-418a-ba4c-40307099603e"
-* identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 // * identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-identifier-type#task-instance-uuid "Task Instance UUID"
 * identifier[+].use = #official
 * identifier[=].system = "http://example.org/health.authority/procedure-number"
 * identifier[=].value = "PROC-2025-12345" //"EMEA/H/C/001234/IB/0025"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixregulatorprocedureno "APIX Regulator Procedure Number"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmaregulatorprocedureno "RWI Pharma Regulator Procedure Number"
 // * identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-identifier-type#regulator-procedure-number "Regulator Procedure Number"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:workflow-group-id-12345"
 // * groupIdentifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-identifier-type#submission-group-uuid "Submission Group UUID"
 * status = #accepted
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#validation-successful "Validation Successful"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#validation-successful "Validation Successful"
 * intent = #proposal
 * priority = #routine
-* code = apix-task-code#variation-type-ib "Type IB Variation"
+* code = rwipharma-task-code#variation-type-ib "Type IB Variation"
 * authoredOn = "2025-11-15T09:00:00+01:00"
 * lastModified = "2025-11-20T14:30:00+01:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
@@ -112,8 +112,12 @@ Usage: #example
 * content.attachment.contentType = #application/pdf
 * content.attachment.creation = "2025-11-19T09:00:00+01:00"
 * content.attachment.url = "https://api.example/acknowledgement-receipt.pdf"
-* identifier[0].system = "http://example.org/health-authority/docRefid"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
+* identifier[0].system = "http://example.org/health-authority/document-set-id"
 * identifier[0].value = "urn:uuid:80808080-8080-8080-8080-808080808082"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
+* identifier[1].system = "http://example.org/health-authority/document-version-id"
+* identifier[1].value = "urn:uuid:7cc77af1-e579-4366-9918-3deda3fc377f"
 
 Instance: output-validation
 InstanceOf: DocumentReference
@@ -127,8 +131,12 @@ Usage: #example
 * content.attachment.contentType = #application/pdf
 * content.attachment.creation = "2025-11-19T09:00:00+01:00"
 * content.attachment.url = "https://api.example/validation-report.pdf"
-* identifier[0].system = "http://example.org/health-authority/docRefid"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
+* identifier[0].system = "http://example.org/health-authority/document-set-id"
 * identifier[0].value = "urn:uuid:80808080-8080-8080-8080-808080808081"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
+* identifier[1].system = "http://example.org/health-authority/document-version-id"
+* identifier[1].value = "urn:uuid:538ae0fc-a192-41be-a6bb-1a5e913ba972"
 
 
 

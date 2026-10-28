@@ -1,7 +1,8 @@
+<style>h3:before, h4:before { content: none !important; }</style>
 <!-- HERO -->
 <div style="text-align:center; padding:40px 20px 24px;">
   <div style="font-size:.75em; font-weight:700; text-transform:uppercase; letter-spacing:.22em; color:#003087; margin-bottom:16px;">HL7 FHIR R5 · Global Standard</div>
-  <h1 style="font-size:2.4em; font-weight:800; line-height:1.15; margin-bottom:16px; color:#111827;">Regulatory exchange,<br/><span style="background:linear-gradient(135deg,#003087,#7c3aed); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">reimagined.</span></h1>
+  <h3 style="font-size:2.4em; font-weight:800; line-height:1.15; margin-bottom:16px; color:#111827;">Regulatory exchange,<br/><span style="background:linear-gradient(135deg,#003087,#7c3aed); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">reimagined.</span></h3>
   <p style="font-size:1.02em; color:#4b5563; max-width:680px; margin:0 auto 24px; line-height:1.6;">Regulatory exchange is globally fragmented across authorities, product lines, procedures, and technologies. This IG establishes a common Task- and Subscription-based framework for regulatory workflows and interactions, enabling them to be exchanged, tracked, and acted upon with machine-readable status and event-driven notifications.</p>
   <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
     <a href="gettingstarted.html" style="display:inline-block; background:#003087; color:#fff; padding:14px 28px; border-radius:8px; font-weight:700; font-size:1em; text-decoration:none;">Get Started</a>
@@ -13,17 +14,17 @@
 </div>
 
 <!-- ABOUT THIS IG -->
-<h2 id="about" style="font-size:1.3em; font-weight:700; color:#111827; margin-bottom:12px;">About this IG</h2>
+<h3 id="about" style="font-size:1.3em; font-weight:700; color:#111827; margin-bottom:12px;">About this IG</h3>
 
 <div style="margin-bottom:24px;">
   <p style="font-size:.88em; color:#374151; line-height:1.7; margin-bottom:12px;">The Regulatory Workflows and Interactions - pharma Implementation Guide defines how FHIR can support end-to-end digital regulatory workflows and interactions between applicants and regulatory authorities for human biopharmaceutical products.</p>
   <p style="font-size:.88em; color:#374151; line-height:1.7; margin-bottom:12px;">Today, regulatory exchange is highly fragmented. Authorities may use different mechanisms across product lines and procedures, including portals, gateways, email, secure email, FTP, HTTPS, and physical mail. These differences multiply across regulators globally, creating significant complexity for industry and limiting interoperability.</p>
   <p style="font-size:.88em; color:#374151; line-height:1.7; margin-bottom:12px;">Applicants also frequently lack end-to-end visibility into the status of their regulatory interactions. Consumers can track a FedEx or Amazon delivery through each major step and receive notifications as it progresses, yet applicants often cannot similarly track a critical regulatory interaction or receive automated notifications when key milestones occur.</p>
-  <p style="font-size:.88em; color:#374151; line-height:1.7; margin:0;">Using <a href="apixtask.html">Task</a>, <a href="apixdocumentReference.html">DocumentReference</a>, <a href="architecture.html#binary-upload-guide-post-then-link">Binary</a>, <a href="apixsubscription.html">Subscription</a>, APIs, and related FHIR capabilities, the guide enables regulatory activities to be interoperable, traceable, trackable, and event-driven, replacing fragmented exchange mechanisms with a standardized digital workflow.</p>
+  <p style="font-size:.88em; color:#374151; line-height:1.7; margin:0;">Using <a href="rwipharmatask.html">Task</a>, <a href="rwipharmadocumentReference.html">DocumentReference</a>, <a href="architecture.html#binary-upload-guide-post-then-link">Binary</a>, <a href="rwipharmasubscription.html">Subscription</a>, APIs, and related FHIR capabilities, the guide enables regulatory activities to be interoperable, traceable, trackable, and event-driven, replacing fragmented exchange mechanisms with a standardized digital workflow.</p>
 </div>
 
 <!-- SCOPE -->
-<h3 id="scope" style="font-size:1.1em; font-weight:700; color:#111827; margin-bottom:12px;">Scope</h3>
+<h4 id="scope" style="font-size:1.1em; font-weight:700; color:#111827; margin-bottom:12px;">Scope</h4>
 
 <p style="font-size:.88em; color:#374151; line-height:1.7; margin-bottom:16px;">This Implementation Guide focuses on human biopharmaceutical products and the regulatory procedures and interactions associated with their development, authorization, and lifecycle management.</p>
 
@@ -65,7 +66,7 @@
 <!-- ========================================= -->
 <div style="padding:0 20px 8px;">
   <div style="text-align:center; margin-bottom:28px;">
-    <h2 style="font-size:1.5em; font-weight:800; color:#111827; margin-bottom:8px;">How It Works</h2>
+    <h3 style="font-size:1.5em; font-weight:800; color:#111827; margin-bottom:8px;">How It Works</h3>
     <p style="font-size:.92em; color:#6b7280; max-width:540px; margin:0 auto; line-height:1.55;">Five steps to connect any two parties, industry or regulator, in either direction.</p>
   </div>
 </div>
@@ -122,7 +123,7 @@
 
 <!-- WHY ADOPT (merged with Submit / Track / Analyze) -->
 <div style="text-align:center; padding:16px 20px 8px;">
-  <h2 style="font-size:1.5em; font-weight:800; color:#111827; margin-bottom:10px;">Why adopt RWI-pharma</h2>
+  <h3 style="font-size:1.5em; font-weight:800; color:#111827; margin-bottom:10px;">Why adopt RWI-pharma</h3>
   <p style="font-size:.95em; color:#6b7280; max-width:520px; margin:0 auto 28px; line-height:1.55;">Replace fragmented portals, emails, and static documents with a single, modern API standard.</p>
 </div>
 
@@ -149,7 +150,7 @@
     <div style="font-size:1.4em; margin-bottom:10px;">📈</div>
     <div style="font-weight:700; color:#003087; margin-bottom:6px;">Instant Analytics</div>
     <p style="font-size:.88em; color:#4b5563; line-height:1.6; margin:0 0 12px; flex:1;">Every milestone is a timestamped event. Run cycle-time KPIs and SLA reports with one simple search across the entire submission portfolio.</p>
-    <a href="apixtask.html" style="color:#003087; font-weight:600; font-size:.85em; text-decoration:none;">Task milestones →</a>
+    <a href="rwipharmatask.html" style="color:#003087; font-weight:600; font-size:.85em; text-decoration:none;">Task milestones →</a>
   </div>
 </div>
 
@@ -160,7 +161,7 @@
 <hr style="border:none; border-top:1px solid #e5e7eb; margin:0 0 32px;"/>
 
 <!-- GOVERNANCE -->
-<h2 style="font-size:1.3em; font-weight:700; color:#111827; margin-bottom:12px;">Governance &amp; Participation</h2>
+<h3 style="font-size:1.3em; font-weight:700; color:#111827; margin-bottom:12px;">Governance &amp; Participation</h3>
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:32px;">
   <div style="background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:20px;">
     <div style="font-size:1.3em; margin-bottom:8px;">🤝</div>

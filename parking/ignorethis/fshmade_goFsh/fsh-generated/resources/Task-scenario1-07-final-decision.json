@@ -1,0 +1,245 @@
+{
+  "resourceType": "Task",
+  "id": "scenario1-07-final-decision",
+  "meta": {
+    "versionId": "3",
+    "lastUpdated": "2025-04-20T09:00:00+01:00",
+    "profile": [
+      "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "task-instance-uuid",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-identifier-type",
+            "display": "Task Instance UUID"
+          }
+        ]
+      },
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:uuid:999e7d2a-8b1c-4d9f-9a2e-1f6c9d8e7b3d"
+    }
+  ],
+  "partOf": [
+    {
+      "reference": "Task/scenario1-01-initial-submission",
+      "display": "Initial Submission Task"
+    }
+  ],
+  "contained": [
+    {
+      "resourceType": "Organization",
+      "id": "org-synthpharma-ag",
+      "name": "SynthPharma AG",
+      "address": [
+        {
+          "type": "physical",
+          "text": "123 Synthetic Research Blvd, 4000 Basel, Switzerland",
+          "line": [
+            "123 Synthetic Research Blvd"
+          ],
+          "city": "Basel",
+          "district": "Basel-Stadt",
+          "state": "Basel-Stadt",
+          "postalCode": "4000",
+          "country": "Switzerland"
+        }
+      ],
+      "contact": [
+        {
+          "name": {
+            "text": "Dr. John Doe, Head of Regulatory Affairs"
+          },
+          "telecom": [
+            {
+              "system": "email",
+              "value": "john.doe@synthpharma.example",
+              "use": "work"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resourceType": "Organization",
+      "id": "org-ema-srm-hmed",
+      "name": "European Medicines Agency – Human Medicines Evaluation Division",
+      "address": [
+        {
+          "type": "physical",
+          "text": "Domenico Scarlattilaan 6, 1083 HS Amsterdam, Netherlands",
+          "line": [
+            "Domenico Scarlattilaan 6"
+          ],
+          "city": "Amsterdam",
+          "postalCode": "1083 HS",
+          "country": "Netherlands"
+        }
+      ],
+      "contact": [
+        {
+          "name": {
+            "text": "Scientific and Regulatory Management"
+          },
+          "telecom": [
+            {
+              "system": "email",
+              "value": "srm@ema.example.eu",
+              "use": "work"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resourceType": "DocumentReference",
+      "id": "docref-approval-letter",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-04-20T09:00:00+01:00",
+        "profile": [
+          "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
+        ]
+      },
+      "masterIdentifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:70707070-7070-7070-7070-707070707070"
+      },
+      "status": "current",
+      "type": {
+        "coding": [
+          {
+            "code": "1.0",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section",
+            "display": "Cover Letter"
+          }
+        ]
+      },
+      "date": "2025-04-20T09:00:00+01:00",
+      "content": [
+        {
+          "attachment": {
+            "contentType": "application/pdf",
+            "title": "approval-letter.pdf",
+            "creation": "2025-04-20T09:00:00+01:00",
+            "data": "VGhpcyBpcyBhIHBsYWNlaG9sZGVyIGRvY3VtZW50IGZvciB2YWxpZGF0aW9uIHB1cnBvc2VzLgo="
+          }
+        }
+      ]
+    },
+    {
+      "resourceType": "DocumentReference",
+      "id": "docref-assessment-report",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-04-20T09:00:00+01:00",
+        "profile": [
+          "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
+        ]
+      },
+      "masterIdentifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:80808080-8080-8080-8080-808080808080"
+      },
+      "status": "current",
+      "type": {
+        "coding": [
+          {
+            "code": "1.0",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section",
+            "display": "Cover Letter"
+          }
+        ]
+      },
+      "date": "2025-04-20T09:00:00+01:00",
+      "content": [
+        {
+          "attachment": {
+            "contentType": "application/pdf",
+            "title": "final-assessment-report.pdf",
+            "creation": "2025-04-20T09:00:00+01:00",
+            "data": "VGhpcyBpcyBhIHBsYWNlaG9sZGVyIGRvY3VtZW50IGZvciB2YWxpZGF0aW9uIHB1cnBvc2VzLgo="
+          }
+        }
+      ]
+    }
+  ],
+  "status": "completed",
+  "businessStatus": {
+    "coding": [
+      {
+        "code": "approved",
+        "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-business-status",
+        "display": "Approved"
+      }
+    ]
+  },
+  "intent": "proposal",
+  "priority": "routine",
+  "code": {
+    "coding": [
+      {
+        "code": "approval",
+        "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-task-code",
+        "display": "Approval Letter / Positive Decision"
+      }
+    ]
+  },
+  "for": {
+    "reference": "MedicinalProductDefinition/example-ma",
+    "display": "WonderDrug 50mg Tablets"
+  },
+  "groupIdentifier": {
+    "use": "official",
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:workflow-group-id-12345",
+    "type": {
+      "coding": [
+        {
+          "code": "submission-group-uuid",
+          "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-identifier-type",
+          "display": "Submission Group UUID"
+        }
+      ]
+    }
+  },
+  "requester": {
+    "reference": "#org-ema-srm-hmed",
+    "display": "European Medicines Agency"
+  },
+  "authoredOn": "2025-04-20T09:00:00+01:00",
+  "lastModified": "2025-04-20T09:00:00+01:00",
+  "output": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "regulatory-document",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-task-output-type"
+          }
+        ]
+      },
+      "valueReference": {
+        "reference": "#docref-approval-letter",
+        "display": "Approval Letter"
+      }
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "regulatory-document",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-task-output-type"
+          }
+        ]
+      },
+      "valueReference": {
+        "reference": "#docref-assessment-report",
+        "display": "Final Assessment Report"
+      }
+    }
+  ]
+}

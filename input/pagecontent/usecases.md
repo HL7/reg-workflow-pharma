@@ -8,9 +8,9 @@
 <div style="display:flex; flex-wrap:wrap; align-items:stretch; gap:10px; margin-bottom:14px;">
   <div style="flex:1 1 200px; border:1px solid #d1d5db; border-radius:8px; padding:12px 16px;"><div style="font-weight:700; color:#003087;"><a href="https://hl7.org/fhir/R5/binary.html">Binary</a></div><div style="font-size:.85em; color:#4b5563;">The file: eCTD sequence, E2B message, ePI, PDF</div></div>
   <div aria-hidden="true" style="display:flex; align-items:center; color:#6b7280; font-size:1.2em;">→</div>
-  <div style="flex:1 1 200px; border:1px solid #d1d5db; border-radius:8px; padding:12px 16px;"><div style="font-weight:700; color:#003087;"><a href="apixdocumentReference.html">DocumentReference</a></div><div style="font-size:.85em; color:#4b5563;">Describes the file: type, version, author</div></div>
+  <div style="flex:1 1 200px; border:1px solid #d1d5db; border-radius:8px; padding:12px 16px;"><div style="font-weight:700; color:#003087;"><a href="rwipharmadocumentReference.html">DocumentReference</a></div><div style="font-size:.85em; color:#4b5563;">Describes the file: type, version, author</div></div>
   <div aria-hidden="true" style="display:flex; align-items:center; color:#6b7280; font-size:1.2em;">→</div>
-  <div style="flex:1 1 200px; border:1px solid #d1d5db; border-radius:8px; padding:12px 16px;"><div style="font-weight:700; color:#003087;"><a href="apixtask.html">Task</a></div><div style="font-size:.85em; color:#4b5563;">Who asks, who acts, what it is, where it stands</div></div>
+  <div style="flex:1 1 200px; border:1px solid #d1d5db; border-radius:8px; padding:12px 16px;"><div style="font-weight:700; color:#003087;"><a href="rwipharmatask.html">Task</a></div><div style="font-size:.85em; color:#4b5563;">Who asks, who acts, what it is, where it stands</div></div>
 </div>
 
 <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; font-size:.86em; color:#374151; line-height:1.55; margin-bottom:32px;">

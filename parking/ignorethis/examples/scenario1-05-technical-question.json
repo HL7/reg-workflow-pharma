@@ -1,0 +1,188 @@
+{
+    "resourceType": "Task",
+    "id": "scenario1-05-technical-question",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-03-01T14:30:00+01:00",
+        "profile": [
+            "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+        ]
+    },
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Regulatory Questions: Request for additional stability data</div>"
+    },
+    "identifier": [
+        {
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-identifier-type",
+                        "code": "task-instance-uuid",
+                        "display": "Task Instance UUID"
+                    }
+                ]
+            },
+            "system": "urn:ietf:rfc:3986",
+            "value": "urn:uuid:778e7d2a-8b1c-4d9f-9a2e-1f6c9d8e7b3b"
+        }
+    ],
+    "partOf": [
+        {
+            "reference": "Task/scenario1-01-initial-submission",
+            "display": "Initial Submission Task"
+        }
+    ],
+    "contained": [
+        {
+            "resourceType": "Organization",
+            "id": "org-synthpharma-ag",
+            "name": "SynthPharma AG",
+            "address": {
+                "type": "physical",
+                "text": "123 Synthetic Research Blvd, 4000 Basel, Switzerland",
+                "line": [
+                    "123 Synthetic Research Blvd"
+                ],
+                "city": "Basel",
+                "district": "Basel-Stadt",
+                "state": "Basel-Stadt",
+                "postalCode": "4000",
+                "country": "Switzerland"
+            },
+            "contact": [
+                {
+                    "name": {
+                        "text": "Dr. John Doe, Head of Regulatory Affairs"
+                    },
+                    "telecom": [
+                        {
+                            "system": "email",
+                            "value": "john.doe@synthpharma.example",
+                            "use": "work"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "resourceType": "Organization",
+            "id": "org-ema-srm-hmed",
+            "name": "European Medicines Agency – Human Medicines Evaluation Division",
+            "address": {
+                "type": "physical",
+                "text": "Domenico Scarlattilaan 6, 1083 HS Amsterdam, Netherlands",
+                "line": [
+                    "Domenico Scarlattilaan 6"
+                ],
+                "city": "Amsterdam",
+                "postalCode": "1083 HS",
+                "country": "Netherlands"
+            },
+            "contact": [
+                {
+                    "name": {
+                        "text": "Scientific and Regulatory Management"
+                    },
+                    "telecom": [
+                        {
+                            "system": "email",
+                            "value": "srm@ema.example.eu",
+                            "use": "work"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "resourceType": "DocumentReference",
+            "id": "docref-list-of-questions",
+            "meta": {
+                "versionId": "1",
+                "lastUpdated": "2025-03-01T14:30:00+01:00",
+                "profile": [
+                    "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
+                ]
+            },
+            "masterIdentifier": {
+                "system": "urn:ietf:rfc:3986",
+                "value": "urn:uuid:40404040-4040-4040-4040-404040404040"
+            },
+            "status": "current",
+            "docStatus": "final",
+            "version": "1.0",
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section",
+                        "code": "1.0",
+                        "display": "Cover Letter"
+                    }
+                ]
+            },
+            "date": "2025-03-01T14:30:00+01:00",
+            "content": [
+                {
+                    "attachment": {
+                        "contentType": "application/fhir+json",
+                        "url": "https://api.ema.example/questionnaires/q-shelf-life-limit.json",
+                        "title": "List of Questions (Questionnaire)",
+                        "size": 12400,
+                        "creation": "2025-03-01T14:20:00+01:00"
+                    }
+                }
+            ]
+        }
+    ],
+    "status": "requested",
+    "businessStatus": {
+        "coding": [
+            {
+                "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-business-status",
+                "code": "clock-stop",
+                "display": "Clock Stop"
+            }
+        ]
+    },
+    "intent": "proposal",
+    "priority": "routine",
+    "code": {
+        "coding": [
+            {
+                "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-task-code",
+                "code": "information-request",
+                "display": "Information Request"
+            }
+        ]
+    },
+    "authoredOn": "2025-03-01T14:30:00+01:00",
+    "lastModified": "2025-03-01T14:30:00+01:00",
+    "requester": {
+        "reference": "#org-ema-srm-hmed",
+        "display": "European Medicines Agency"
+    },
+    "requestedPerformer": [
+        {
+            "reference": {
+                "reference": "#org-synthpharma-ag",
+                "display": "SynthPharma AG"
+            }
+        }
+    ],
+    "input": [
+        {
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-task-input-type",
+                        "code": "regulatory-document"
+                    }
+                ]
+            },
+            "valueReference": {
+                "reference": "#docref-list-of-questions",
+                "display": "List of Questions (LoQ)"
+            }
+        }
+    ]
+}

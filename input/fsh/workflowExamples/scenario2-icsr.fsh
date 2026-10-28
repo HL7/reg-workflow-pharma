@@ -8,26 +8,26 @@ Description: "The marketing authorization holder posts an ICSR Task; the E2B(R2)
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2026-10-02T09:30:00+02:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR submitted</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>1</td></tr><tr><th>Status</th><td>requested</td></tr><tr><th>Business status</th><td>Submitted (<code>submitted</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:936c6113-a6d2-5df6-93f3-4c2726e6bef6</td></tr><tr><th>Authored</th><td>2026-10-02T09:30:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-02T09:30:00+02:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2a.html\">ICSR — case CH-SYNTHPHARMA-2026-000456</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><p>None</p></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:ba8218ac-6b4e-5be0-8234-3e4cfd5b9cac"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:936c6113-a6d2-5df6-93f3-4c2726e6bef6"
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#submitted "Submitted"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#submitted "Submitted"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#icsr "Individual Case Safety Report"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#icsr "Individual Case Safety Report"
 * authoredOn = "2026-10-02T09:30:00+02:00"
 * lastModified = "2026-10-02T09:30:00+02:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#icsr-e2b-r2 "ICSR (E2B(R2))"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
 * input[0].valueReference = Reference(docref-icsr-2a) "ICSR — case CH-SYNTHPHARMA-2026-000456"
 
 Instance: scenario2a-02-icsr-accepted
@@ -37,29 +37,29 @@ Description: "Version 2 of the ICSR Task (in production, the same Task as scenar
 Usage: #example
 * meta.versionId = "2"
 * meta.lastUpdated = "2026-10-02T09:45:12+02:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR accepted</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>2</td></tr><tr><th>Status</th><td>accepted</td></tr><tr><th>Business status</th><td>Accepted (<code>accepted</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:936c6113-a6d2-5df6-93f3-4c2726e6bef6</td></tr><tr><th>Authored</th><td>2026-10-02T09:30:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-02T09:45:12+02:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2a.html\">ICSR — case CH-SYNTHPHARMA-2026-000456</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2a-acklog.html\">ICSR acknowledgment log</a> <code>icsr-e2b-r2-acklog</code></li></ul></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:ba8218ac-6b4e-5be0-8234-3e4cfd5b9cac"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:936c6113-a6d2-5df6-93f3-4c2726e6bef6"
 * status = #accepted
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#accepted "Accepted"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#accepted "Accepted"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#icsr "Individual Case Safety Report"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#icsr "Individual Case Safety Report"
 * authoredOn = "2026-10-02T09:30:00+02:00"
 * lastModified = "2026-10-02T09:45:12+02:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * executionPeriod.start = "2026-10-02T09:30:05+02:00"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#icsr-e2b-r2 "ICSR (E2B(R2))"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
 * input[0].valueReference = Reference(docref-icsr-2a) "ICSR — case CH-SYNTHPHARMA-2026-000456"
-* output[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
+* output[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
 * output[0].valueReference = Reference(docref-icsr-2a-acklog) "ICSR acknowledgment log"
 
 Instance: scenario2a-03-icsr-complete
@@ -69,30 +69,30 @@ Description: "Version 3 of the ICSR Task (in production, the same Task as scenar
 Usage: #example
 * meta.versionId = "3"
 * meta.lastUpdated = "2026-10-02T10:02:40+02:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR complete</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>3</td></tr><tr><th>Status</th><td>completed</td></tr><tr><th>Business status</th><td>Complete (<code>complete</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:936c6113-a6d2-5df6-93f3-4c2726e6bef6</td></tr><tr><th>Authored</th><td>2026-10-02T09:30:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-02T10:02:40+02:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2a.html\">ICSR — case CH-SYNTHPHARMA-2026-000456</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2a-acklog.html\">ICSR acknowledgment log</a> <code>icsr-e2b-r2-acklog</code></li></ul></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:ba8218ac-6b4e-5be0-8234-3e4cfd5b9cac"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:936c6113-a6d2-5df6-93f3-4c2726e6bef6"
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#complete "Complete"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#complete "Complete"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#icsr "Individual Case Safety Report"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#icsr "Individual Case Safety Report"
 * authoredOn = "2026-10-02T09:30:00+02:00"
 * lastModified = "2026-10-02T10:02:40+02:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * executionPeriod.start = "2026-10-02T09:30:05+02:00"
 * executionPeriod.end = "2026-10-02T10:02:40+02:00"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#icsr-e2b-r2 "ICSR (E2B(R2))"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
 * input[0].valueReference = Reference(docref-icsr-2a) "ICSR — case CH-SYNTHPHARMA-2026-000456"
-* output[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
+* output[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
 * output[0].valueReference = Reference(docref-icsr-2a-acklog) "ICSR acknowledgment log"
 
 Instance: scenario2b-01-icsr-submitted
@@ -102,26 +102,26 @@ Description: "The marketing authorization holder posts an ICSR Task; the E2B(R2)
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2026-10-14T11:00:00+02:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR submitted</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>1</td></tr><tr><th>Status</th><td>requested</td></tr><tr><th>Business status</th><td>Submitted (<code>submitted</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546</td></tr><tr><th>Authored</th><td>2026-10-14T11:00:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-14T11:00:00+02:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b.html\">ICSR — case CH-SYNTHPHARMA-2026-000512</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><p>None</p></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:b2f7cb95-4ab9-5dc5-b889-83f284126d52"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546"
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#submitted "Submitted"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#submitted "Submitted"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#icsr "Individual Case Safety Report"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#icsr "Individual Case Safety Report"
 * authoredOn = "2026-10-14T11:00:00+02:00"
 * lastModified = "2026-10-14T11:00:00+02:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#icsr-e2b-r2 "ICSR (E2B(R2))"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
 * input[0].valueReference = Reference(docref-icsr-2b) "ICSR — case CH-SYNTHPHARMA-2026-000512"
 
 Instance: scenario2b-02-icsr-rejected
@@ -131,33 +131,33 @@ Description: "Version 2 of the ICSR Task (in production, the same Task as scenar
 Usage: #example
 * meta.versionId = "2"
 * meta.lastUpdated = "2026-10-14T11:12:30+02:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR rejected</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>2</td></tr><tr><th>Status</th><td>rejected</td></tr><tr><th>Status reason</th><td>The ICSR failed validation (rule R2-0214: MedDRA version missing in B.2.i.1a) and was not loaded. See the acknowledgment log and validation report.</td></tr><tr><th>Business status</th><td>Rejected (<code>rejected</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546</td></tr><tr><th>Authored</th><td>2026-10-14T11:00:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-14T11:12:30+02:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b.html\">ICSR — case CH-SYNTHPHARMA-2026-000512</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b-acklog.html\">ICSR acknowledgment log (rejected)</a> <code>icsr-e2b-r2-acklog</code></li><li><a href=\"DocumentReference-docref-icsr-2b-validation-report.html\">ICSR validation report</a> <code>validation-report</code></li></ul></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:b2f7cb95-4ab9-5dc5-b889-83f284126d52"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546"
 * status = #rejected
 * statusReason.concept.text = "The ICSR failed validation (rule R2-0214: MedDRA version missing in B.2.i.1a) and was not loaded. See the acknowledgment log and validation report."
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#rejected "Rejected"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#rejected "Rejected"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#icsr "Individual Case Safety Report"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#icsr "Individual Case Safety Report"
 * authoredOn = "2026-10-14T11:00:00+02:00"
 * lastModified = "2026-10-14T11:12:30+02:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * executionPeriod.start = "2026-10-14T11:00:04+02:00"
 * executionPeriod.end = "2026-10-14T11:12:30+02:00"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#icsr-e2b-r2 "ICSR (E2B(R2))"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
 * input[0].valueReference = Reference(docref-icsr-2b) "ICSR — case CH-SYNTHPHARMA-2026-000512"
-* output[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
+* output[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
 * output[0].valueReference = Reference(docref-icsr-2b-acklog) "ICSR acknowledgment log (rejected)"
-* output[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#validation-report "Validation Report"
+* output[1].type = RWIpharmaTaskInputOutputTypeCS#validation-report "Validation Report"
 * output[1].valueReference = Reference(docref-icsr-2b-validation-report) "ICSR validation report"
 
 Instance: scenario2b-03-icsr-resubmitted
@@ -167,27 +167,27 @@ Description: "The marketing authorization holder posts a new ICSR Task with the 
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2026-10-14T15:40:00+02:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR resubmitted</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>1</td></tr><tr><th>Status</th><td>requested</td></tr><tr><th>Business status</th><td>Submitted (<code>submitted</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546</td></tr><tr><th>Authored</th><td>2026-10-14T15:40:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-14T15:40:00+02:00</td></tr><tr><th>Based on</th><td><a href=\"Task-scenario2b-01-icsr-submitted.html\">scenario2b-01-icsr-submitted</a></td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b-resubmission.html\">ICSR resubmission — case CH-SYNTHPHARMA-2026-000512</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><p>None</p></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:27b56f00-39f7-5b08-8519-a7e7fdf34945"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546"
 * basedOn = Reference(scenario2b-01-icsr-submitted)
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#submitted "Submitted"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#submitted "Submitted"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#icsr "Individual Case Safety Report"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#icsr "Individual Case Safety Report"
 * authoredOn = "2026-10-14T15:40:00+02:00"
 * lastModified = "2026-10-14T15:40:00+02:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#icsr-e2b-r2 "ICSR (E2B(R2))"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
 * input[0].valueReference = Reference(docref-icsr-2b-resubmission) "ICSR resubmission — case CH-SYNTHPHARMA-2026-000512"
 
 Instance: scenario2b-04-icsr-accepted
@@ -197,30 +197,30 @@ Description: "Version 2 of the resubmission Task (in production, the same Task a
 Usage: #example
 * meta.versionId = "2"
 * meta.lastUpdated = "2026-10-14T15:52:08+02:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR resubmission accepted</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>2</td></tr><tr><th>Status</th><td>accepted</td></tr><tr><th>Business status</th><td>Accepted (<code>accepted</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546</td></tr><tr><th>Authored</th><td>2026-10-14T15:40:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-14T15:52:08+02:00</td></tr><tr><th>Based on</th><td><a href=\"Task-scenario2b-01-icsr-submitted.html\">scenario2b-01-icsr-submitted</a></td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b-resubmission.html\">ICSR resubmission — case CH-SYNTHPHARMA-2026-000512</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b-resubmission-acklog.html\">ICSR acknowledgment log (resubmission)</a> <code>icsr-e2b-r2-acklog</code></li></ul></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:27b56f00-39f7-5b08-8519-a7e7fdf34945"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546"
 * basedOn = Reference(scenario2b-01-icsr-submitted)
 * status = #accepted
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#accepted "Accepted"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#accepted "Accepted"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#icsr "Individual Case Safety Report"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#icsr "Individual Case Safety Report"
 * authoredOn = "2026-10-14T15:40:00+02:00"
 * lastModified = "2026-10-14T15:52:08+02:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * executionPeriod.start = "2026-10-14T15:40:03+02:00"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#icsr-e2b-r2 "ICSR (E2B(R2))"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
 * input[0].valueReference = Reference(docref-icsr-2b-resubmission) "ICSR resubmission — case CH-SYNTHPHARMA-2026-000512"
-* output[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
+* output[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
 * output[0].valueReference = Reference(docref-icsr-2b-resubmission-acklog) "ICSR acknowledgment log (resubmission)"
 
 Instance: scenario2b-05-icsr-complete
@@ -230,31 +230,31 @@ Description: "Version 3 of the resubmission Task (in production, the same Task a
 Usage: #example
 * meta.versionId = "3"
 * meta.lastUpdated = "2026-10-14T16:10:21+02:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR resubmission complete</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>3</td></tr><tr><th>Status</th><td>completed</td></tr><tr><th>Business status</th><td>Complete (<code>complete</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546</td></tr><tr><th>Authored</th><td>2026-10-14T15:40:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-14T16:10:21+02:00</td></tr><tr><th>Based on</th><td><a href=\"Task-scenario2b-01-icsr-submitted.html\">scenario2b-01-icsr-submitted</a></td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b-resubmission.html\">ICSR resubmission — case CH-SYNTHPHARMA-2026-000512</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b-resubmission-acklog.html\">ICSR acknowledgment log (resubmission)</a> <code>icsr-e2b-r2-acklog</code></li></ul></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:27b56f00-39f7-5b08-8519-a7e7fdf34945"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546"
 * basedOn = Reference(scenario2b-01-icsr-submitted)
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#complete "Complete"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#complete "Complete"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#icsr "Individual Case Safety Report"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#icsr "Individual Case Safety Report"
 * authoredOn = "2026-10-14T15:40:00+02:00"
 * lastModified = "2026-10-14T16:10:21+02:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * executionPeriod.start = "2026-10-14T15:40:03+02:00"
 * executionPeriod.end = "2026-10-14T16:10:21+02:00"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#icsr-e2b-r2 "ICSR (E2B(R2))"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
 * input[0].valueReference = Reference(docref-icsr-2b-resubmission) "ICSR resubmission — case CH-SYNTHPHARMA-2026-000512"
-* output[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
+* output[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
 * output[0].valueReference = Reference(docref-icsr-2b-resubmission-acklog) "ICSR acknowledgment log (resubmission)"
 
 Instance: docref-icsr-2a
@@ -262,17 +262,17 @@ InstanceOf: DocumentReference
 Title: "ICSR — case CH-SYNTHPHARMA-2026-000456"
 Description: "ICH E2B(R2) ICSR for case CH-SYNTHPHARMA-2026-000456 (nausea with WonderDrug 50 mg)."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:ec242d98-d188-5979-b21c-c9b974a089f4"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/synthpharma/document-version-id"
 * identifier[1].value = "urn:uuid:90d3f69f-b140-50da-80b6-6a60ac076a48"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#icsr-e2b-r2 "ICSR (E2B(R2))"
+* type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
 * date = "2026-10-02T09:30:00+02:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "ICH E2B(R2) ICSR for case CH-SYNTHPHARMA-2026-000456 (nausea with WonderDrug 50 mg)."
@@ -288,17 +288,17 @@ InstanceOf: DocumentReference
 Title: "ICSR acknowledgment log"
 Description: "ICH E2B(R2) acknowledgment: transmission 01 (all reports loaded), report 01 (report loaded)."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/health-authority/document-set-id"
 * identifier[0].value = "urn:uuid:f6d01b27-3dde-5ff4-aec7-faa9d037ed9b"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/health-authority/document-version-id"
 * identifier[1].value = "urn:uuid:1e260728-c2b3-5391-9d5b-37be69d94fcc"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
+* type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
 * date = "2026-10-02T09:45:12+02:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "ICH E2B(R2) acknowledgment: transmission 01 (all reports loaded), report 01 (report loaded)."
@@ -314,17 +314,17 @@ InstanceOf: DocumentReference
 Title: "ICSR — case CH-SYNTHPHARMA-2026-000512"
 Description: "ICH E2B(R2) ICSR for case CH-SYNTHPHARMA-2026-000512 (dizziness with WonderDrug 50 mg). The MedDRA version is missing."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:eb0b89f0-1588-5fcf-a37a-f34719828793"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/synthpharma/document-version-id"
 * identifier[1].value = "urn:uuid:51a59b7c-be1c-5e74-b863-35b3b6d34b81"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#icsr-e2b-r2 "ICSR (E2B(R2))"
+* type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
 * date = "2026-10-14T11:00:00+02:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "ICH E2B(R2) ICSR for case CH-SYNTHPHARMA-2026-000512 (dizziness with WonderDrug 50 mg). The MedDRA version is missing."
@@ -340,17 +340,17 @@ InstanceOf: DocumentReference
 Title: "ICSR acknowledgment log (rejected)"
 Description: "ICH E2B(R2) acknowledgment: transmission 02 (not all reports loaded), report 02 (report not loaded), with the error."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/health-authority/document-set-id"
 * identifier[0].value = "urn:uuid:ad3b9393-be13-58c0-9295-725238a396a3"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/health-authority/document-version-id"
 * identifier[1].value = "urn:uuid:53142a0e-6217-53c1-ad7b-b6d0745dad61"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
+* type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
 * date = "2026-10-14T11:12:30+02:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "ICH E2B(R2) acknowledgment: transmission 02 (not all reports loaded), report 02 (report not loaded), with the error."
@@ -366,17 +366,17 @@ InstanceOf: DocumentReference
 Title: "ICSR validation report"
 Description: "Validation report listing the error that caused the rejection."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/health-authority/document-set-id"
 * identifier[0].value = "urn:uuid:789b8e3d-9a56-5b7d-8583-dd2aa7affdf6"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/health-authority/document-version-id"
 * identifier[1].value = "urn:uuid:0326bc11-ddd7-5032-a37b-6736848a8708"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#validation-report "Validation Report"
+* type = RWIpharmaTaskInputOutputTypeCS#validation-report "Validation Report"
 * date = "2026-10-14T11:12:30+02:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "Validation report listing the error that caused the rejection."
@@ -392,17 +392,17 @@ InstanceOf: DocumentReference
 Title: "ICSR resubmission — case CH-SYNTHPHARMA-2026-000512"
 Description: "Corrected ICH E2B(R2) ICSR for case CH-SYNTHPHARMA-2026-000512, with the MedDRA version added."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:cb8b3337-efb8-5512-846f-2ac6b5381153"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/synthpharma/document-version-id"
 * identifier[1].value = "urn:uuid:409ddb04-47e9-55d6-bb54-f17d5df8137a"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#icsr-e2b-r2 "ICSR (E2B(R2))"
+* type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
 * date = "2026-10-14T15:40:00+02:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Corrected ICH E2B(R2) ICSR for case CH-SYNTHPHARMA-2026-000512, with the MedDRA version added."
@@ -418,17 +418,17 @@ InstanceOf: DocumentReference
 Title: "ICSR acknowledgment log (resubmission)"
 Description: "ICH E2B(R2) acknowledgment: transmission 01 (all reports loaded), report 01 (report loaded)."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/health-authority/document-set-id"
 * identifier[0].value = "urn:uuid:3f01b890-d15e-5431-a1c7-3656e7c9687c"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/health-authority/document-version-id"
 * identifier[1].value = "urn:uuid:c2849456-afe5-50ed-a1cd-67f0bbb6cb7b"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
+* type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
 * date = "2026-10-14T15:52:08+02:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "ICH E2B(R2) acknowledgment: transmission 01 (all reports loaded), report 01 (report loaded)."

@@ -1,0 +1,191 @@
+{
+  "resourceType": "Task",
+  "id": "scenario1-04-finance-payment",
+  "meta": {
+    "versionId": "2",
+    "lastUpdated": "2025-03-06T14:00:00+01:00",
+    "profile": [
+      "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:uuid:invoice-task-uuid"
+    }
+  ],
+  "partOf": [
+    {
+      "reference": "Task/scenario1-01-initial-submission"
+    }
+  ],
+  "status": "completed",
+  "businessStatus": {
+    "coding": [
+      {
+        "code": "payment-received",
+        "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-business-status",
+        "display": "Payment Received"
+      }
+    ]
+  },
+  "intent": "proposal",
+  "priority": "routine",
+  "code": {
+    "coding": [
+      {
+        "code": "request-payment",
+        "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-task-code",
+        "display": "Request Payment"
+      }
+    ]
+  },
+  "for": {
+    "reference": "MedicinalProductDefinition/example-ma",
+    "display": "WonderDrug 50mg Tablets"
+  },
+  "authoredOn": "2025-03-05T09:00:00+01:00",
+  "lastModified": "2025-03-06T14:00:00+01:00",
+  "requester": {
+    "reference": "#org-ema-srm-hmed",
+    "display": "European Medicines Agency"
+  },
+  "contained": [
+    {
+      "resourceType": "Organization",
+      "id": "org-synthpharma-ag",
+      "name": "SynthPharma AG",
+      "address": [
+        {
+          "type": "physical",
+          "text": "123 Synthetic Research Blvd, 4000 Basel, Switzerland",
+          "line": [
+            "123 Synthetic Research Blvd"
+          ],
+          "city": "Basel",
+          "district": "Basel-Stadt",
+          "state": "Basel-Stadt",
+          "postalCode": "4000",
+          "country": "Switzerland"
+        }
+      ],
+      "contact": [
+        {
+          "name": {
+            "text": "Dr. John Doe, Head of Regulatory Affairs"
+          },
+          "telecom": [
+            {
+              "system": "email",
+              "value": "john.doe@synthpharma.example",
+              "use": "work"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resourceType": "Organization",
+      "id": "org-ema-srm-hmed",
+      "name": "European Medicines Agency – Human Medicines Evaluation Division",
+      "address": [
+        {
+          "text": "Domenico Scarlattilaan 6, 1083 HS Amsterdam, Netherlands"
+        }
+      ]
+    },
+    {
+      "resourceType": "DocumentReference",
+      "id": "docref-invoice",
+      "status": "current",
+      "docStatus": "final",
+      "type": {
+        "coding": [
+          {
+            "code": "m1.0",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section",
+            "display": "Invoice"
+          }
+        ]
+      },
+      "content": [
+        {
+          "attachment": {
+            "contentType": "application/pdf",
+            "url": "https://api.ema.example/binaries/invoices/INV-2025-001.pdf",
+            "title": "INV-2025-001.pdf",
+            "size": 450000,
+            "creation": "2025-03-05T08:00:00+01:00"
+          }
+        }
+      ]
+    },
+    {
+      "resourceType": "DocumentReference",
+      "id": "docref-payment-proof",
+      "status": "current",
+      "docStatus": "final",
+      "type": {
+        "coding": [
+          {
+            "code": "m1.0",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section",
+            "display": "Proof of Payment"
+          }
+        ]
+      },
+      "relatesTo": [
+        {
+          "code": "appends",
+          "target": {
+            "reference": "#docref-invoice",
+            "display": "Invoice #INV-2025-001"
+          }
+        }
+      ],
+      "content": [
+        {
+          "attachment": {
+            "contentType": "application/pdf",
+            "url": "https://api.synthpharma.example/binaries/payments/confirm-inv-2025-001.pdf",
+            "title": "Payment-Confirmation.pdf",
+            "size": 280000,
+            "creation": "2025-03-06T13:30:00+01:00"
+          }
+        }
+      ]
+    }
+  ],
+  "input": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "regulatory-document",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-task-input-type",
+            "display": "Regulatory Document"
+          }
+        ]
+      },
+      "valueReference": {
+        "reference": "#docref-invoice"
+      }
+    }
+  ],
+  "output": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "regulatory-document",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-task-output-type",
+            "display": "Regulatory Document"
+          }
+        ]
+      },
+      "valueReference": {
+        "reference": "#docref-payment-proof"
+      }
+    }
+  ]
+}

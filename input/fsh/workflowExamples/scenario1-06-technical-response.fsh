@@ -5,16 +5,16 @@ Description: "Example Task Response to Information Request, fulfillment of infor
 Usage: #example
 //* meta.versionId = "1"
 //* meta.lastUpdated = "2025-03-15T10:00:00+01:00"
-//* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+//* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 // * identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-identifier-type#task-instance-uuid "Task Instance UUID"
 //* identifier.system = "http://example.org/health-authority/task-id"
 //* identifier.value = "urn:uuid:888e7d2a-8b1c-4d9f-9a2e-1f6c9d8e7b3c"
 //* partOf = Reference(scenario1-05-technical-question) "Technical Question Task"
 //* status = #in-progress
-//* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#submitted "Submitted"
+//* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#submitted "Submitted"
 //* intent = #proposal
 //* priority = #routine
-//* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#response-to-questions "Response to Information Request"
+//* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#response-to-questions "Response to Information Request"
 //* for = Reference(MedicinalProductDefinition/example-ma) "WonderDrug 50mg Tablets"
 //* groupIdentifier.use = #official
 //* groupIdentifier.system = "urn:ietf:rfc:3986"
@@ -26,7 +26,7 @@ Usage: #example
 
 * meta.versionId = "3"
 * meta.lastUpdated = "2025-12-05T10:00:00+01:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 
 * text.status = #additional 
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><div style=\"font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(to bottom,#f2f6fa,#e8eef5);color:#1d1d1f;margin:0;padding:40px 20px;line-height:1.5;\"><div style=\"max-width:1000px;margin:0 auto;\"><div style=\"background:linear-gradient(135deg,#007aff,#5ac8fa);color:#ffffff;padding:40px 24px;border-radius:18px;text-align:center;box-shadow:0 10px 30px rgba(0,122,255,0.3);margin-bottom:36px;\"><div style=\"margin:0 0 8px 0;font-size:32px;font-weight:600;\">Task: Response to Information Request</div><p style=\"margin:0;opacity:0.95;font-size:17px;\">HL7 FHIR R5 – APIX Implementation Guide</p></div><div style=\"background:#ffffff;border-radius:18px;padding:32px;margin-bottom:32px;box-shadow:0 8px 28px rgba(0,0,0,0.08),0 2px 10px rgba(0,0,0,0.06);\"><div style=\"font-size:24px;font-weight:600;color:#007aff;margin:0 0 24px 0;padding-bottom:12px;border-bottom:1px solid #e5e5ea;display:flex;justify-content:space-between;align-items:center;\">Task Description</div><div style=\"font-size:18px;line-height:1.6;color:#333333;\">Response to Questions: Submission of additional stability data</div></div><div style=\"background:#ffffff;border-radius:18px;padding:32px;margin-bottom:32px;box-shadow:0 8px 28px rgba(0,0,0,0.08),0 2px 10px rgba(0,0,0,0.06);\"><div style=\"font-size:24px;font-weight:600;color:#007aff;margin:0 0 24px 0;padding-bottom:12px;border-bottom:1px solid #e5e5ea;display:flex;justify-content:space-between;align-items:center;\">Core Task Information</div><div style=\"display:grid;grid-template-columns:max-content auto;gap:12px 20px;align-items:baseline;\"><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Version ID</span><span style=\"color:#1d1d1f;\">3</span><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Task ID</span><span style=\"color:#1d1d1f;\">In production this would be the same as scenario1-05-technical-question</span><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Instance UUID</span><span style=\"color:#1d1d1f;\">urn:uuid:888e7d2a-8b1c-4d9f-9a2e-1f6c9d8e7b3c</span><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Group Identifier</span><span style=\"color:#1d1d1f;\">urn:uuid:workflow-group-id-12345</span><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Parent Task</span><span style=\"color:#1d1d1f;\">scenario1-01-initial-submission</span><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Task Status</span><span style=\"color:#1d1d1f;\"><span style=\"padding:2px 8px;border-radius:12px;font-size:0.9em;font-weight:500;color:#ffffff;background:#17a2b8;\">requested</span></span><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Business Status</span><span style=\"color:#1d1d1f;\"><span style=\"padding:2px 8px;border-radius:12px;font-size:0.9em;font-weight:500;color:#ffffff;background:#6c757d;\">Submitted</span></span><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Intent</span><span style=\"color:#1d1d1f;\">proposal</span><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Priority</span><span style=\"color:#1d1d1f;\">routine</span></div><hr style=\"border:0;border-top:1px solid #eee;margin:20px 0;\" /><div style=\"display:grid;grid-template-columns:max-content auto;gap:12px 20px;align-items:baseline;\"><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Code</span><span style=\"color:#1d1d1f;\">Response to Information Request (response-to-questions)</span><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Authored</span><span style=\"color:#1d1d1f;\">2025-12-01T14:30:00+01:00</span><span style=\"font-weight:600;color:#555555;text-align:right;min-width:150px;\">Last Updated</span><span style=\"color:#1d1d1f;\">2025-12-05T10:00:00+01:00</span>
@@ -58,13 +58,13 @@ Usage: #example
 // * identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-identifier-type#task-instance-uuid "Task Instance UUID"
 * identifier.system = "http://example.org/health-authority/task-id"
 * identifier.value = "urn:uuid:778e7d2a-8b1c-4d9f-9a2e-1f6c9d8e7b3b"
-* identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * basedOn = Reference(scenario1-01-initial-submission) "Initial Submission Task"
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#clock-restart "Clock Restart"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#clock-restart "Clock Restart"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#information-request "List of Questions / Information Request"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#information-request "List of Questions / Information Request"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:workflow-group-id-12345"
@@ -100,8 +100,12 @@ Usage: #example
 * content.attachment.title = "Response to Questions (QuestionnaireResponse)"
 * content.attachment.size = 18400
 * content.attachment.creation = "2025-12-04T09:59:00+01:00"
-* identifier[0].system = "http://example.org/health-authority/docRefid"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
+* identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:80808080-8080-8080-8080-808080808085"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
+* identifier[1].system = "http://example.org/synthpharma/document-version-id"
+* identifier[1].value = "urn:uuid:086f3e41-c58c-4762-8e00-893708f5e098"
 
 
 Instance: docref-stability-data-annex
@@ -119,5 +123,9 @@ Usage: #example
 * content.attachment.title = "Updated Stability Data (Transaction Bundle)"
 * content.attachment.size = 5800000
 * content.attachment.creation = "2025-12-04T09:59:00+01:00"
-* identifier[0].system = "http://example.org/health-authority/docRefid"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
+* identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:80808080-8080-8080-8080-808080808084"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
+* identifier[1].system = "http://example.org/synthpharma/document-version-id"
+* identifier[1].value = "urn:uuid:0d782ef9-603f-4034-9ae6-3f22b84918c5"

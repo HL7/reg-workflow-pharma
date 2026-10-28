@@ -1,6 +1,6 @@
 <!-- WORKFLOW (merged Workflow Overview + Workflow Deep-Dive) -->
 <div style="margin-bottom:32px;">
-  <h2 style="font-size:1.7em; font-weight:800; color:#111827; margin-bottom:10px;">Workflow</h2>
+  <!--h2 style="font-size:1.7em; font-weight:800; color:#111827; margin-bottom:10px;">Workflow</h2-->
   <p style="font-size:.95em; color:#6b7280; line-height:1.6; max-width:640px;">How RWI-pharma orchestrates a regulatory procedure — first the big picture, then a step-by-step technical walkthrough of a shelf-life update showing every FHIR resource exchange.</p>
 </div>
 

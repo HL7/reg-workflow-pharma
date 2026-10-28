@@ -8,34 +8,34 @@ Description: "The marketing authorisation holder posts a Type II variation addin
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2027-01-11T10:00:00+01:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Type II variation submitted</b></p><table class=\"grid\"><tr><th>Task</th><td>Type II Variation (<code>variation-type-ii</code>)</td></tr><tr><th>Version</th><td>1</td></tr><tr><th>Status</th><td>requested</td></tr><tr><th>Business status</th><td>Submitted (<code>submitted</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be</td></tr><tr><th>Authored</th><td>2027-01-11T10:00:00+01:00</td></tr><tr><th>Last modified</th><td>2027-01-11T10:00:00+01:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-var-cover-letter.html\">Variation cover letter</a> <code>cover-letter</code></li><li><a href=\"DocumentReference-docref-var-application-form.html\">Variation application form</a> <code>application-form</code></li><li><a href=\"DocumentReference-docref-var-change-description.html\">Change description and justification</a> <code>change-description</code></li><li><a href=\"DocumentReference-docref-epi-annotated-v1.html\">Annotated ePI v1 (proposal)</a> <code>proposed-labelling</code></li><li><a href=\"DocumentReference-docref-epi-clean-v1.html\">Clean ePI v1 (proposal)</a> <code>epi-bundle</code></li></ul><p><b>Outputs (from the owner)</b></p><p>None</p></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:86c83ea7-80e5-5efa-aa1a-4cd36f9a425e"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be"
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#submitted "Submitted"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#submitted "Submitted"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#variation-type-ii "Type II Variation"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#variation-type-ii "Type II Variation"
 * authoredOn = "2027-01-11T10:00:00+01:00"
 * lastModified = "2027-01-11T10:00:00+01:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#cover-letter "Cover Letter"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#cover-letter "Cover Letter"
 * input[0].valueReference = Reference(docref-var-cover-letter) "Variation cover letter"
-* input[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#application-form "Application Form"
+* input[1].type = RWIpharmaTaskInputOutputTypeCS#application-form "Application Form"
 * input[1].valueReference = Reference(docref-var-application-form) "Variation application form"
-* input[2].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#change-description "Change Description and Justification"
+* input[2].type = RWIpharmaTaskInputOutputTypeCS#change-description "Change Description and Justification"
 * input[2].valueReference = Reference(docref-var-change-description) "Change description and justification"
-* input[3].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#proposed-labelling "Proposed Labelling"
+* input[3].type = RWIpharmaTaskInputOutputTypeCS#proposed-labelling "Proposed Labelling"
 * input[3].valueReference = Reference(docref-epi-annotated-v1) "Annotated ePI v1 (proposal)"
-* input[4].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#epi-bundle "ePI Bundle"
+* input[4].type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
 * input[4].valueReference = Reference(docref-epi-clean-v1) "Clean ePI v1 (proposal)"
 
 Instance: scenario4-02-variation-validated
@@ -45,41 +45,41 @@ Description: "Version 2 of the variation Task (in production, the same Task as s
 Usage: #example
 * meta.versionId = "2"
 * meta.lastUpdated = "2027-01-15T14:00:00+01:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Type II variation validated</b></p><table class=\"grid\"><tr><th>Task</th><td>Type II Variation (<code>variation-type-ii</code>)</td></tr><tr><th>Procedure number</th><td>VAR-II-2027-0012</td></tr><tr><th>Version</th><td>2</td></tr><tr><th>Status</th><td>accepted</td></tr><tr><th>Business status</th><td>Validation Successful (<code>validation-successful</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be</td></tr><tr><th>Authored</th><td>2027-01-11T10:00:00+01:00</td></tr><tr><th>Last modified</th><td>2027-01-15T14:00:00+01:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-var-cover-letter.html\">Variation cover letter</a> <code>cover-letter</code></li><li><a href=\"DocumentReference-docref-var-application-form.html\">Variation application form</a> <code>application-form</code></li><li><a href=\"DocumentReference-docref-var-change-description.html\">Change description and justification</a> <code>change-description</code></li><li><a href=\"DocumentReference-docref-epi-annotated-v1.html\">Annotated ePI v1 (proposal)</a> <code>proposed-labelling</code></li><li><a href=\"DocumentReference-docref-epi-clean-v1.html\">Clean ePI v1 (proposal)</a> <code>epi-bundle</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-var-validation-report.html\">Variation validation report</a> <code>validation-report</code></li></ul></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:86c83ea7-80e5-5efa-aa1a-4cd36f9a425e"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * identifier[+].use = #official
 * identifier[=].system = "http://example.org/health-authority/procedure-number"
 * identifier[=].value = "VAR-II-2027-0012"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixregulatorprocedureno "APIX Regulator Procedure Number"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmaregulatorprocedureno "RWI Pharma Regulator Procedure Number"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be"
 * status = #accepted
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#validation-successful "Validation Successful"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#validation-successful "Validation Successful"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#variation-type-ii "Type II Variation"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#variation-type-ii "Type II Variation"
 * authoredOn = "2027-01-11T10:00:00+01:00"
 * lastModified = "2027-01-15T14:00:00+01:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * executionPeriod.start = "2027-01-15T14:00:00+01:00"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#cover-letter "Cover Letter"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#cover-letter "Cover Letter"
 * input[0].valueReference = Reference(docref-var-cover-letter) "Variation cover letter"
-* input[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#application-form "Application Form"
+* input[1].type = RWIpharmaTaskInputOutputTypeCS#application-form "Application Form"
 * input[1].valueReference = Reference(docref-var-application-form) "Variation application form"
-* input[2].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#change-description "Change Description and Justification"
+* input[2].type = RWIpharmaTaskInputOutputTypeCS#change-description "Change Description and Justification"
 * input[2].valueReference = Reference(docref-var-change-description) "Change description and justification"
-* input[3].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#proposed-labelling "Proposed Labelling"
+* input[3].type = RWIpharmaTaskInputOutputTypeCS#proposed-labelling "Proposed Labelling"
 * input[3].valueReference = Reference(docref-epi-annotated-v1) "Annotated ePI v1 (proposal)"
-* input[4].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#epi-bundle "ePI Bundle"
+* input[4].type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
 * input[4].valueReference = Reference(docref-epi-clean-v1) "Clean ePI v1 (proposal)"
-* output[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#validation-report "Validation Report"
+* output[0].type = RWIpharmaTaskInputOutputTypeCS#validation-report "Validation Report"
 * output[0].valueReference = Reference(docref-var-validation-report) "Variation validation report"
 
 Instance: scenario4-03-variation-under-assessment
@@ -89,41 +89,41 @@ Description: "Version 3 of the variation Task (in production, the same Task as s
 Usage: #example
 * meta.versionId = "3"
 * meta.lastUpdated = "2027-01-18T09:00:00+01:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Type II variation under assessment</b></p><table class=\"grid\"><tr><th>Task</th><td>Type II Variation (<code>variation-type-ii</code>)</td></tr><tr><th>Procedure number</th><td>VAR-II-2027-0012</td></tr><tr><th>Version</th><td>3</td></tr><tr><th>Status</th><td>in-progress</td></tr><tr><th>Business status</th><td>Under Assessment (<code>under-assessment</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be</td></tr><tr><th>Authored</th><td>2027-01-11T10:00:00+01:00</td></tr><tr><th>Last modified</th><td>2027-01-18T09:00:00+01:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-var-cover-letter.html\">Variation cover letter</a> <code>cover-letter</code></li><li><a href=\"DocumentReference-docref-var-application-form.html\">Variation application form</a> <code>application-form</code></li><li><a href=\"DocumentReference-docref-var-change-description.html\">Change description and justification</a> <code>change-description</code></li><li><a href=\"DocumentReference-docref-epi-annotated-v1.html\">Annotated ePI v1 (proposal)</a> <code>proposed-labelling</code></li><li><a href=\"DocumentReference-docref-epi-clean-v1.html\">Clean ePI v1 (proposal)</a> <code>epi-bundle</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-var-validation-report.html\">Variation validation report</a> <code>validation-report</code></li></ul></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:86c83ea7-80e5-5efa-aa1a-4cd36f9a425e"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * identifier[+].use = #official
 * identifier[=].system = "http://example.org/health-authority/procedure-number"
 * identifier[=].value = "VAR-II-2027-0012"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixregulatorprocedureno "APIX Regulator Procedure Number"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmaregulatorprocedureno "RWI Pharma Regulator Procedure Number"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be"
 * status = #in-progress
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#under-assessment "Under Assessment"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#under-assessment "Under Assessment"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#variation-type-ii "Type II Variation"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#variation-type-ii "Type II Variation"
 * authoredOn = "2027-01-11T10:00:00+01:00"
 * lastModified = "2027-01-18T09:00:00+01:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * executionPeriod.start = "2027-01-15T14:00:00+01:00"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#cover-letter "Cover Letter"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#cover-letter "Cover Letter"
 * input[0].valueReference = Reference(docref-var-cover-letter) "Variation cover letter"
-* input[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#application-form "Application Form"
+* input[1].type = RWIpharmaTaskInputOutputTypeCS#application-form "Application Form"
 * input[1].valueReference = Reference(docref-var-application-form) "Variation application form"
-* input[2].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#change-description "Change Description and Justification"
+* input[2].type = RWIpharmaTaskInputOutputTypeCS#change-description "Change Description and Justification"
 * input[2].valueReference = Reference(docref-var-change-description) "Change description and justification"
-* input[3].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#proposed-labelling "Proposed Labelling"
+* input[3].type = RWIpharmaTaskInputOutputTypeCS#proposed-labelling "Proposed Labelling"
 * input[3].valueReference = Reference(docref-epi-annotated-v1) "Annotated ePI v1 (proposal)"
-* input[4].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#epi-bundle "ePI Bundle"
+* input[4].type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
 * input[4].valueReference = Reference(docref-epi-clean-v1) "Clean ePI v1 (proposal)"
-* output[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#validation-report "Validation Report"
+* output[0].type = RWIpharmaTaskInputOutputTypeCS#validation-report "Validation Report"
 * output[0].valueReference = Reference(docref-var-validation-report) "Variation validation report"
 
 Instance: scenario4-04-labelling-comments-round1
@@ -133,33 +133,33 @@ Description: "The regulator posts round 1 of the label negotiation, based on the
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2027-02-22T10:00:00+01:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Labelling comments issued (round 1)</b></p><table class=\"grid\"><tr><th>Task</th><td>Labelling Comments (<code>labelling-comments</code>)</td></tr><tr><th>Procedure number</th><td>VAR-II-2027-0012</td></tr><tr><th>Version</th><td>1</td></tr><tr><th>Status</th><td>requested</td></tr><tr><th>Business status</th><td>Labelling Comments Issued (<code>labelling-comments-issued</code>)</td></tr><tr><th>Requester</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Owner</th><td>SynthPharma AG</td></tr><tr><th>Group identifier</th><td>urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be</td></tr><tr><th>Authored</th><td>2027-02-22T10:00:00+01:00</td></tr><tr><th>Last modified</th><td>2027-02-22T10:00:00+01:00</td></tr><tr><th>Based on</th><td><a href=\"Task-scenario4-01-variation-submitted.html\">scenario4-01-variation-submitted</a></td></tr><tr><th>Response due</th><td>2027-03-04T23:59:59+01:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-epi-annotated-v2.html\">Annotated ePI v2 (regulator comments, round 1)</a> <code>labelling-comments</code></li></ul><p><b>Outputs (from the owner)</b></p><p>None</p></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:8d04eb3f-cad1-5a30-aa90-894f6ea36577"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * identifier[+].use = #official
 * identifier[=].system = "http://example.org/health-authority/procedure-number"
 * identifier[=].value = "VAR-II-2027-0012"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixregulatorprocedureno "APIX Regulator Procedure Number"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmaregulatorprocedureno "RWI Pharma Regulator Procedure Number"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be"
 * basedOn = Reference(scenario4-01-variation-submitted)
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#labelling-comments-issued "Labelling Comments Issued"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#labelling-comments-issued "Labelling Comments Issued"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#labelling-comments "Labelling Comments"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#labelling-comments "Labelling Comments"
 * authoredOn = "2027-02-22T10:00:00+01:00"
 * lastModified = "2027-02-22T10:00:00+01:00"
 * requester = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * owner = Reference(org-synthpharma-ag) "SynthPharma AG"
 * requestedPeriod.start = "2027-02-22T10:00:00+01:00"
 * requestedPeriod.end = "2027-03-04T23:59:59+01:00"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#labelling-comments "Labelling Comments"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#labelling-comments "Labelling Comments"
 * input[0].valueReference = Reference(docref-epi-annotated-v2) "Annotated ePI v2 (regulator comments, round 1)"
 
 Instance: scenario4-05-labelling-comments-round1-response
@@ -169,26 +169,26 @@ Description: "Version 2 of the round 1 Task (in production, the same Task as sce
 Usage: #example
 * meta.versionId = "2"
 * meta.lastUpdated = "2027-03-01T16:30:00+01:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Counter-proposal received (round 1)</b></p><table class=\"grid\"><tr><th>Task</th><td>Labelling Comments (<code>labelling-comments</code>)</td></tr><tr><th>Procedure number</th><td>VAR-II-2027-0012</td></tr><tr><th>Version</th><td>2</td></tr><tr><th>Status</th><td>completed</td></tr><tr><th>Business status</th><td>Counter-Proposal Received (<code>counter-proposal-received</code>)</td></tr><tr><th>Requester</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Owner</th><td>SynthPharma AG</td></tr><tr><th>Group identifier</th><td>urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be</td></tr><tr><th>Authored</th><td>2027-02-22T10:00:00+01:00</td></tr><tr><th>Last modified</th><td>2027-03-01T16:30:00+01:00</td></tr><tr><th>Based on</th><td><a href=\"Task-scenario4-01-variation-submitted.html\">scenario4-01-variation-submitted</a></td></tr><tr><th>Response due</th><td>2027-03-04T23:59:59+01:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-epi-annotated-v2.html\">Annotated ePI v2 (regulator comments, round 1)</a> <code>labelling-comments</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-epi-annotated-v3.html\">Annotated ePI v3 (counter-proposal, round 1)</a> <code>proposed-labelling</code></li><li><a href=\"DocumentReference-docref-epi-clean-v3.html\">Clean ePI v3 (counter-proposal, round 1)</a> <code>epi-bundle</code></li></ul></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:8d04eb3f-cad1-5a30-aa90-894f6ea36577"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * identifier[+].use = #official
 * identifier[=].system = "http://example.org/health-authority/procedure-number"
 * identifier[=].value = "VAR-II-2027-0012"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixregulatorprocedureno "APIX Regulator Procedure Number"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmaregulatorprocedureno "RWI Pharma Regulator Procedure Number"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be"
 * basedOn = Reference(scenario4-01-variation-submitted)
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#counter-proposal-received "Counter-Proposal Received"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#counter-proposal-received "Counter-Proposal Received"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#labelling-comments "Labelling Comments"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#labelling-comments "Labelling Comments"
 * authoredOn = "2027-02-22T10:00:00+01:00"
 * lastModified = "2027-03-01T16:30:00+01:00"
 * requester = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
@@ -197,11 +197,11 @@ Usage: #example
 * requestedPeriod.end = "2027-03-04T23:59:59+01:00"
 * executionPeriod.start = "2027-02-22T10:20:00+01:00"
 * executionPeriod.end = "2027-03-01T16:30:00+01:00"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#labelling-comments "Labelling Comments"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#labelling-comments "Labelling Comments"
 * input[0].valueReference = Reference(docref-epi-annotated-v2) "Annotated ePI v2 (regulator comments, round 1)"
-* output[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#proposed-labelling "Proposed Labelling"
+* output[0].type = RWIpharmaTaskInputOutputTypeCS#proposed-labelling "Proposed Labelling"
 * output[0].valueReference = Reference(docref-epi-annotated-v3) "Annotated ePI v3 (counter-proposal, round 1)"
-* output[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#epi-bundle "ePI Bundle"
+* output[1].type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
 * output[1].valueReference = Reference(docref-epi-clean-v3) "Clean ePI v3 (counter-proposal, round 1)"
 
 Instance: scenario4-06-labelling-comments-round2
@@ -211,33 +211,33 @@ Description: "The regulator posts round 2: it accepts the counter-proposal and m
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2027-03-08T10:00:00+01:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Labelling comments issued (round 2)</b></p><table class=\"grid\"><tr><th>Task</th><td>Labelling Comments (<code>labelling-comments</code>)</td></tr><tr><th>Procedure number</th><td>VAR-II-2027-0012</td></tr><tr><th>Version</th><td>1</td></tr><tr><th>Status</th><td>requested</td></tr><tr><th>Business status</th><td>Labelling Comments Issued (<code>labelling-comments-issued</code>)</td></tr><tr><th>Requester</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Owner</th><td>SynthPharma AG</td></tr><tr><th>Group identifier</th><td>urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be</td></tr><tr><th>Authored</th><td>2027-03-08T10:00:00+01:00</td></tr><tr><th>Last modified</th><td>2027-03-08T10:00:00+01:00</td></tr><tr><th>Based on</th><td><a href=\"Task-scenario4-01-variation-submitted.html\">scenario4-01-variation-submitted</a></td></tr><tr><th>Response due</th><td>2027-03-18T23:59:59+01:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-epi-annotated-v4.html\">Annotated ePI v4 (regulator comments, round 2)</a> <code>labelling-comments</code></li></ul><p><b>Outputs (from the owner)</b></p><p>None</p></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:8a3d95f3-0eec-5411-bed1-b117622746a7"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * identifier[+].use = #official
 * identifier[=].system = "http://example.org/health-authority/procedure-number"
 * identifier[=].value = "VAR-II-2027-0012"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixregulatorprocedureno "APIX Regulator Procedure Number"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmaregulatorprocedureno "RWI Pharma Regulator Procedure Number"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be"
 * basedOn = Reference(scenario4-01-variation-submitted)
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#labelling-comments-issued "Labelling Comments Issued"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#labelling-comments-issued "Labelling Comments Issued"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#labelling-comments "Labelling Comments"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#labelling-comments "Labelling Comments"
 * authoredOn = "2027-03-08T10:00:00+01:00"
 * lastModified = "2027-03-08T10:00:00+01:00"
 * requester = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * owner = Reference(org-synthpharma-ag) "SynthPharma AG"
 * requestedPeriod.start = "2027-03-08T10:00:00+01:00"
 * requestedPeriod.end = "2027-03-18T23:59:59+01:00"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#labelling-comments "Labelling Comments"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#labelling-comments "Labelling Comments"
 * input[0].valueReference = Reference(docref-epi-annotated-v4) "Annotated ePI v4 (regulator comments, round 2)"
 
 Instance: scenario4-07-labelling-comments-round2-response
@@ -247,26 +247,26 @@ Description: "Version 2 of the round 2 Task (in production, the same Task as sce
 Usage: #example
 * meta.versionId = "2"
 * meta.lastUpdated = "2027-03-10T11:15:00+01:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Response received (round 2)</b></p><table class=\"grid\"><tr><th>Task</th><td>Labelling Comments (<code>labelling-comments</code>)</td></tr><tr><th>Procedure number</th><td>VAR-II-2027-0012</td></tr><tr><th>Version</th><td>2</td></tr><tr><th>Status</th><td>completed</td></tr><tr><th>Business status</th><td>Response Received (<code>response-received</code>)</td></tr><tr><th>Requester</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Owner</th><td>SynthPharma AG</td></tr><tr><th>Group identifier</th><td>urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be</td></tr><tr><th>Authored</th><td>2027-03-08T10:00:00+01:00</td></tr><tr><th>Last modified</th><td>2027-03-10T11:15:00+01:00</td></tr><tr><th>Based on</th><td><a href=\"Task-scenario4-01-variation-submitted.html\">scenario4-01-variation-submitted</a></td></tr><tr><th>Response due</th><td>2027-03-18T23:59:59+01:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-epi-annotated-v4.html\">Annotated ePI v4 (regulator comments, round 2)</a> <code>labelling-comments</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-epi-clean-v5.html\">Clean ePI v5 (agreed text)</a> <code>epi-bundle</code></li></ul></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:8a3d95f3-0eec-5411-bed1-b117622746a7"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * identifier[+].use = #official
 * identifier[=].system = "http://example.org/health-authority/procedure-number"
 * identifier[=].value = "VAR-II-2027-0012"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixregulatorprocedureno "APIX Regulator Procedure Number"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmaregulatorprocedureno "RWI Pharma Regulator Procedure Number"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be"
 * basedOn = Reference(scenario4-01-variation-submitted)
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#response-received "Response Received"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#response-received "Response Received"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#labelling-comments "Labelling Comments"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#labelling-comments "Labelling Comments"
 * authoredOn = "2027-03-08T10:00:00+01:00"
 * lastModified = "2027-03-10T11:15:00+01:00"
 * requester = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
@@ -275,9 +275,9 @@ Usage: #example
 * requestedPeriod.end = "2027-03-18T23:59:59+01:00"
 * executionPeriod.start = "2027-03-08T10:05:00+01:00"
 * executionPeriod.end = "2027-03-10T11:15:00+01:00"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#labelling-comments "Labelling Comments"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#labelling-comments "Labelling Comments"
 * input[0].valueReference = Reference(docref-epi-annotated-v4) "Annotated ePI v4 (regulator comments, round 2)"
-* output[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#epi-bundle "ePI Bundle"
+* output[0].type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
 * output[0].valueReference = Reference(docref-epi-clean-v5) "Clean ePI v5 (agreed text)"
 
 Instance: scenario4-08-labelling-agreement
@@ -287,31 +287,31 @@ Description: "The regulator asks the applicant to confirm that clean ePI v5 is t
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2027-03-11T09:00:00+01:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Labelling agreement requested</b></p><table class=\"grid\"><tr><th>Task</th><td>Labelling Agreement (<code>labelling-agreement</code>)</td></tr><tr><th>Procedure number</th><td>VAR-II-2027-0012</td></tr><tr><th>Version</th><td>1</td></tr><tr><th>Status</th><td>requested</td></tr><tr><th>Business status</th><td>Awaiting Applicant Response (<code>awaiting-applicant-response</code>)</td></tr><tr><th>Requester</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Owner</th><td>SynthPharma AG</td></tr><tr><th>Group identifier</th><td>urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be</td></tr><tr><th>Authored</th><td>2027-03-11T09:00:00+01:00</td></tr><tr><th>Last modified</th><td>2027-03-11T09:00:00+01:00</td></tr><tr><th>Based on</th><td><a href=\"Task-scenario4-01-variation-submitted.html\">scenario4-01-variation-submitted</a></td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-epi-clean-v5.html\">Clean ePI v5 (agreed text)</a> <code>epi-bundle</code></li></ul><p><b>Outputs (from the owner)</b></p><p>None</p></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:ec8135db-420e-5265-95a0-1a8864167848"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * identifier[+].use = #official
 * identifier[=].system = "http://example.org/health-authority/procedure-number"
 * identifier[=].value = "VAR-II-2027-0012"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixregulatorprocedureno "APIX Regulator Procedure Number"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmaregulatorprocedureno "RWI Pharma Regulator Procedure Number"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be"
 * basedOn = Reference(scenario4-01-variation-submitted)
 * status = #requested
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#awaiting-applicant-response "Awaiting Applicant Response"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#awaiting-applicant-response "Awaiting Applicant Response"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#labelling-agreement "Labelling Agreement"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#labelling-agreement "Labelling Agreement"
 * authoredOn = "2027-03-11T09:00:00+01:00"
 * lastModified = "2027-03-11T09:00:00+01:00"
 * requester = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * owner = Reference(org-synthpharma-ag) "SynthPharma AG"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#epi-bundle "ePI Bundle"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
 * input[0].valueReference = Reference(docref-epi-clean-v5) "Clean ePI v5 (agreed text)"
 
 Instance: scenario4-09-labelling-agreed
@@ -321,33 +321,33 @@ Description: "Version 2 of the agreement Task (in production, the same Task as s
 Usage: #example
 * meta.versionId = "2"
 * meta.lastUpdated = "2027-03-11T15:40:00+01:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Labelling agreed</b></p><table class=\"grid\"><tr><th>Task</th><td>Labelling Agreement (<code>labelling-agreement</code>)</td></tr><tr><th>Procedure number</th><td>VAR-II-2027-0012</td></tr><tr><th>Version</th><td>2</td></tr><tr><th>Status</th><td>completed</td></tr><tr><th>Business status</th><td>Labelling Agreed (<code>labelling-agreed</code>)</td></tr><tr><th>Requester</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Owner</th><td>SynthPharma AG</td></tr><tr><th>Group identifier</th><td>urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be</td></tr><tr><th>Authored</th><td>2027-03-11T09:00:00+01:00</td></tr><tr><th>Last modified</th><td>2027-03-11T15:40:00+01:00</td></tr><tr><th>Based on</th><td><a href=\"Task-scenario4-01-variation-submitted.html\">scenario4-01-variation-submitted</a></td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-epi-clean-v5.html\">Clean ePI v5 (agreed text)</a> <code>epi-bundle</code></li></ul><p><b>Outputs (from the owner)</b></p><p>None</p></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:ec8135db-420e-5265-95a0-1a8864167848"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * identifier[+].use = #official
 * identifier[=].system = "http://example.org/health-authority/procedure-number"
 * identifier[=].value = "VAR-II-2027-0012"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixregulatorprocedureno "APIX Regulator Procedure Number"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmaregulatorprocedureno "RWI Pharma Regulator Procedure Number"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be"
 * basedOn = Reference(scenario4-01-variation-submitted)
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#labelling-agreed "Labelling Agreed"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#labelling-agreed "Labelling Agreed"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#labelling-agreement "Labelling Agreement"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#labelling-agreement "Labelling Agreement"
 * authoredOn = "2027-03-11T09:00:00+01:00"
 * lastModified = "2027-03-11T15:40:00+01:00"
 * requester = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * owner = Reference(org-synthpharma-ag) "SynthPharma AG"
 * executionPeriod.start = "2027-03-11T09:10:00+01:00"
 * executionPeriod.end = "2027-03-11T15:40:00+01:00"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#epi-bundle "ePI Bundle"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
 * input[0].valueReference = Reference(docref-epi-clean-v5) "Clean ePI v5 (agreed text)"
 
 Instance: scenario4-10-variation-approved
@@ -357,46 +357,46 @@ Description: "Version 4 of the variation Task (in production, the same Task as s
 Usage: #example
 * meta.versionId = "4"
 * meta.lastUpdated = "2027-03-17T09:00:00+01:00"
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Type II variation approved</b></p><table class=\"grid\"><tr><th>Task</th><td>Type II Variation (<code>variation-type-ii</code>)</td></tr><tr><th>Procedure number</th><td>VAR-II-2027-0012</td></tr><tr><th>Version</th><td>4</td></tr><tr><th>Status</th><td>completed</td></tr><tr><th>Business status</th><td>Approved (<code>approved</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be</td></tr><tr><th>Authored</th><td>2027-01-11T10:00:00+01:00</td></tr><tr><th>Last modified</th><td>2027-03-17T09:00:00+01:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-var-cover-letter.html\">Variation cover letter</a> <code>cover-letter</code></li><li><a href=\"DocumentReference-docref-var-application-form.html\">Variation application form</a> <code>application-form</code></li><li><a href=\"DocumentReference-docref-var-change-description.html\">Change description and justification</a> <code>change-description</code></li><li><a href=\"DocumentReference-docref-epi-annotated-v1.html\">Annotated ePI v1 (proposal)</a> <code>proposed-labelling</code></li><li><a href=\"DocumentReference-docref-epi-clean-v1.html\">Clean ePI v1 (proposal)</a> <code>epi-bundle</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-var-validation-report.html\">Variation validation report</a> <code>validation-report</code></li><li><a href=\"DocumentReference-docref-var-approval-letter.html\">Variation approval letter</a> <code>approval-letter</code></li><li><a href=\"DocumentReference-docref-epi-approved.html\">Approved ePI</a> <code>approved-labelling</code></li></ul></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:86c83ea7-80e5-5efa-aa1a-4cd36f9a425e"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixtaskinstance "APIX Task Instance ID"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmataskinstance "RWI Pharma Task Instance ID"
 * identifier[+].use = #official
 * identifier[=].system = "http://example.org/health-authority/procedure-number"
 * identifier[=].value = "VAR-II-2027-0012"
-* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#apixregulatorprocedureno "APIX Regulator Procedure Number"
+* identifier[=].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#rwipharmaregulatorprocedureno "RWI Pharma Regulator Procedure Number"
 * groupIdentifier.use = #official
 * groupIdentifier.system = "http://example.org/health-authority/work-flow-group-id"
 * groupIdentifier.value = "urn:uuid:60ac55b8-8d46-58ff-b1b2-e8015d4960be"
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-business-status#approved "Approved"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-buisness-status#approved "Approved"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-code#variation-type-ii "Type II Variation"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#variation-type-ii "Type II Variation"
 * authoredOn = "2027-01-11T10:00:00+01:00"
 * lastModified = "2027-03-17T09:00:00+01:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * executionPeriod.start = "2027-01-15T14:00:00+01:00"
 * executionPeriod.end = "2027-03-17T09:00:00+01:00"
-* input[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#cover-letter "Cover Letter"
+* input[0].type = RWIpharmaTaskInputOutputTypeCS#cover-letter "Cover Letter"
 * input[0].valueReference = Reference(docref-var-cover-letter) "Variation cover letter"
-* input[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#application-form "Application Form"
+* input[1].type = RWIpharmaTaskInputOutputTypeCS#application-form "Application Form"
 * input[1].valueReference = Reference(docref-var-application-form) "Variation application form"
-* input[2].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#change-description "Change Description and Justification"
+* input[2].type = RWIpharmaTaskInputOutputTypeCS#change-description "Change Description and Justification"
 * input[2].valueReference = Reference(docref-var-change-description) "Change description and justification"
-* input[3].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#proposed-labelling "Proposed Labelling"
+* input[3].type = RWIpharmaTaskInputOutputTypeCS#proposed-labelling "Proposed Labelling"
 * input[3].valueReference = Reference(docref-epi-annotated-v1) "Annotated ePI v1 (proposal)"
-* input[4].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#epi-bundle "ePI Bundle"
+* input[4].type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
 * input[4].valueReference = Reference(docref-epi-clean-v1) "Clean ePI v1 (proposal)"
-* output[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#validation-report "Validation Report"
+* output[0].type = RWIpharmaTaskInputOutputTypeCS#validation-report "Validation Report"
 * output[0].valueReference = Reference(docref-var-validation-report) "Variation validation report"
-* output[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#approval-letter "Approval Letter"
+* output[1].type = RWIpharmaTaskInputOutputTypeCS#approval-letter "Approval Letter"
 * output[1].valueReference = Reference(docref-var-approval-letter) "Variation approval letter"
-* output[2].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#approved-labelling "Approved Labelling"
+* output[2].type = RWIpharmaTaskInputOutputTypeCS#approved-labelling "Approved Labelling"
 * output[2].valueReference = Reference(docref-epi-approved) "Approved ePI"
 
 Instance: docref-var-cover-letter
@@ -404,17 +404,17 @@ InstanceOf: DocumentReference
 Title: "Variation cover letter"
 Description: "Cover letter for the Type II variation adding nausea to the WonderDrug product information."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:6ab431f3-1337-5ff6-a7bb-a486e8a6dcd3"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/synthpharma/document-version-id"
 * identifier[1].value = "urn:uuid:489fbabe-0f82-5705-847c-2bf10ffba04d"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#cover-letter "Cover Letter"
+* type = RWIpharmaTaskInputOutputTypeCS#cover-letter "Cover Letter"
 * date = "2027-01-11T10:00:00+01:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Cover letter for the Type II variation adding nausea to the WonderDrug product information."
@@ -430,17 +430,17 @@ InstanceOf: DocumentReference
 Title: "Variation application form"
 Description: "Completed Type II variation application form."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:0df41bc8-d8d1-5f0e-9361-58b10f3c733f"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/synthpharma/document-version-id"
 * identifier[1].value = "urn:uuid:c0599e25-4725-53d3-8363-024459f225ce"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#application-form "Application Form"
+* type = RWIpharmaTaskInputOutputTypeCS#application-form "Application Form"
 * date = "2027-01-11T10:00:00+01:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Completed Type II variation application form."
@@ -456,17 +456,17 @@ InstanceOf: DocumentReference
 Title: "Change description and justification"
 Description: "Current versus proposed product information, with justification."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:643db3d1-6d6d-538a-ae26-104bad118f33"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/synthpharma/document-version-id"
 * identifier[1].value = "urn:uuid:a28833d1-36ed-597c-845e-e37905ff8e31"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#change-description "Change Description and Justification"
+* type = RWIpharmaTaskInputOutputTypeCS#change-description "Change Description and Justification"
 * date = "2027-01-11T10:00:00+01:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Current versus proposed product information, with justification."
@@ -482,17 +482,17 @@ InstanceOf: DocumentReference
 Title: "Annotated ePI v1 (proposal)"
 Description: "Proposed product information as annotated ePI, version 1: adds nausea (uncommon) to SmPC 4.8 and leaflet section 4."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:700f0cc4-7500-5394-8c7f-cc1a47f697fc"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/synthpharma/document-version-id"
 * identifier[1].value = "urn:uuid:8ee1964d-f23e-5dc2-8f64-7fbbc2e94416"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#proposed-labelling "Proposed Labelling"
+* type = RWIpharmaTaskInputOutputTypeCS#proposed-labelling "Proposed Labelling"
 * date = "2027-01-11T10:00:00+01:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Proposed product information as annotated ePI, version 1: adds nausea (uncommon) to SmPC 4.8 and leaflet section 4."
@@ -508,17 +508,17 @@ InstanceOf: DocumentReference
 Title: "Clean ePI v1 (proposal)"
 Description: "Proposed product information as clean ePI, version 1."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:754662fd-786a-5623-9442-4ce6d0276707"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/synthpharma/document-version-id"
 * identifier[1].value = "urn:uuid:5d8a2d51-c804-5e14-a10a-537251d0543d"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#epi-bundle "ePI Bundle"
+* type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
 * date = "2027-01-11T10:00:00+01:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Proposed product information as clean ePI, version 1."
@@ -534,17 +534,17 @@ InstanceOf: DocumentReference
 Title: "Variation validation report"
 Description: "Validation report: variation valid; procedure number assigned."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/health-authority/document-set-id"
 * identifier[0].value = "urn:uuid:44f00d21-a7b4-5102-9725-84d1d5e6c3d9"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/health-authority/document-version-id"
 * identifier[1].value = "urn:uuid:37d79210-995d-5539-ad34-6c5ac58d4323"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#validation-report "Validation Report"
+* type = RWIpharmaTaskInputOutputTypeCS#validation-report "Validation Report"
 * date = "2027-01-15T14:00:00+01:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "Validation report: variation valid; procedure number assigned."
@@ -560,11 +560,11 @@ InstanceOf: DocumentReference
 Title: "Annotated ePI v2 (regulator comments, round 1)"
 Description: "Regulator's tracked changes on v1: nausea frequency raised to common; intake with food required (SmPC 4.2, leaflet section 3)."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:700f0cc4-7500-5394-8c7f-cc1a47f697fc"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/health-authority/document-version-id"
 * identifier[1].value = "urn:uuid:888a24fe-5349-56ad-bcd4-d5181ab7dc71"
 * status = #current
@@ -572,7 +572,7 @@ Usage: #example
 * version = "2"
 * relatesTo[0].code = http://hl7.org/fhir/document-relationship-type#replaces "Replaces"
 * relatesTo[0].target = Reference(docref-epi-annotated-v1)
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#labelling-comments "Labelling Comments"
+* type = RWIpharmaTaskInputOutputTypeCS#labelling-comments "Labelling Comments"
 * date = "2027-02-22T10:00:00+01:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "Regulator's tracked changes on v1: nausea frequency raised to common; intake with food required (SmPC 4.2, leaflet section 3)."
@@ -588,11 +588,11 @@ InstanceOf: DocumentReference
 Title: "Annotated ePI v3 (counter-proposal, round 1)"
 Description: "Applicant accepts the frequency change and counter-proposes \"may be taken with food to reduce nausea\" (SmPC 4.2, leaflet section 3)."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:700f0cc4-7500-5394-8c7f-cc1a47f697fc"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/synthpharma/document-version-id"
 * identifier[1].value = "urn:uuid:225a66eb-8819-5c4d-9625-cc4a2aae425f"
 * status = #current
@@ -600,7 +600,7 @@ Usage: #example
 * version = "3"
 * relatesTo[0].code = http://hl7.org/fhir/document-relationship-type#replaces "Replaces"
 * relatesTo[0].target = Reference(docref-epi-annotated-v2)
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#proposed-labelling "Proposed Labelling"
+* type = RWIpharmaTaskInputOutputTypeCS#proposed-labelling "Proposed Labelling"
 * date = "2027-03-01T16:30:00+01:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Applicant accepts the frequency change and counter-proposes \"may be taken with food to reduce nausea\" (SmPC 4.2, leaflet section 3)."
@@ -616,11 +616,11 @@ InstanceOf: DocumentReference
 Title: "Clean ePI v3 (counter-proposal, round 1)"
 Description: "Clean ePI matching annotated v3."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:754662fd-786a-5623-9442-4ce6d0276707"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/synthpharma/document-version-id"
 * identifier[1].value = "urn:uuid:2c423658-dc7f-5b60-bf90-318f32f86932"
 * status = #current
@@ -628,7 +628,7 @@ Usage: #example
 * version = "3"
 * relatesTo[0].code = http://hl7.org/fhir/document-relationship-type#replaces "Replaces"
 * relatesTo[0].target = Reference(docref-epi-clean-v1)
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#epi-bundle "ePI Bundle"
+* type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
 * date = "2027-03-01T16:30:00+01:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Clean ePI matching annotated v3."
@@ -644,11 +644,11 @@ InstanceOf: DocumentReference
 Title: "Annotated ePI v4 (regulator comments, round 2)"
 Description: "Regulator accepts the counter-proposal and changes the leaflet wording to \"feeling sick\"."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:700f0cc4-7500-5394-8c7f-cc1a47f697fc"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/health-authority/document-version-id"
 * identifier[1].value = "urn:uuid:4276a35e-3880-5996-9c35-550dd8ba6376"
 * status = #current
@@ -656,7 +656,7 @@ Usage: #example
 * version = "4"
 * relatesTo[0].code = http://hl7.org/fhir/document-relationship-type#replaces "Replaces"
 * relatesTo[0].target = Reference(docref-epi-annotated-v3)
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#labelling-comments "Labelling Comments"
+* type = RWIpharmaTaskInputOutputTypeCS#labelling-comments "Labelling Comments"
 * date = "2027-03-08T10:00:00+01:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "Regulator accepts the counter-proposal and changes the leaflet wording to \"feeling sick\"."
@@ -672,11 +672,11 @@ InstanceOf: DocumentReference
 Title: "Clean ePI v5 (agreed text)"
 Description: "Clean ePI with all round 2 changes accepted: the agreed product information."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/synthpharma/document-set-id"
 * identifier[0].value = "urn:uuid:754662fd-786a-5623-9442-4ce6d0276707"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/synthpharma/document-version-id"
 * identifier[1].value = "urn:uuid:327077df-1b3f-5b75-97ff-2c5a341bfb7b"
 * status = #current
@@ -684,7 +684,7 @@ Usage: #example
 * version = "5"
 * relatesTo[0].code = http://hl7.org/fhir/document-relationship-type#replaces "Replaces"
 * relatesTo[0].target = Reference(docref-epi-clean-v3)
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#epi-bundle "ePI Bundle"
+* type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
 * date = "2027-03-10T11:15:00+01:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Clean ePI with all round 2 changes accepted: the agreed product information."
@@ -700,17 +700,17 @@ InstanceOf: DocumentReference
 Title: "Variation approval letter"
 Description: "Approval of Type II variation VAR-II-2027-0012."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/health-authority/document-set-id"
 * identifier[0].value = "urn:uuid:2d318374-d159-55c7-bf97-e46f206848c4"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/health-authority/document-version-id"
 * identifier[1].value = "urn:uuid:5957de3f-ba70-5bcd-af8b-ffee88a92c9e"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#approval-letter "Approval Letter"
+* type = RWIpharmaTaskInputOutputTypeCS#approval-letter "Approval Letter"
 * date = "2027-03-17T09:00:00+01:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "Approval of Type II variation VAR-II-2027-0012."
@@ -726,17 +726,17 @@ InstanceOf: DocumentReference
 Title: "Approved ePI"
 Description: "Approved product information. Points to the same Binary as the agreed clean ePI v5, so the approved text is identical to the agreed text."
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-documentreference"
-* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docsetid "Document Set Identifier"
+* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
+* identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/health-authority/document-set-id"
 * identifier[0].value = "urn:uuid:c6d8547d-ba74-5af0-9031-fe1b3b601f14"
-* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-demo#docverid "Document Version Number Identifier"
+* identifier[1].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docverid "Document Version Number Identifier"
 * identifier[1].system = "http://example.org/health-authority/document-version-id"
 * identifier[1].value = "urn:uuid:d8d84bc9-93bb-5e37-b379-882a680a2566"
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/apix-task-input-output-type#approved-labelling "Approved Labelling"
+* type = RWIpharmaTaskInputOutputTypeCS#approved-labelling "Approved Labelling"
 * date = "2027-03-17T09:00:00+01:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "Approved product information. Points to the same Binary as the agreed clean ePI v5, so the approved text is identical to the agreed text."

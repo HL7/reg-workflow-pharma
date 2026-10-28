@@ -1,0 +1,238 @@
+{
+  "resourceType": "Task",
+  "id": "scenario1-06-technical-response",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2025-03-15T10:00:00+01:00",
+    "profile": [
+      "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "task-instance-uuid",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-identifier-type",
+            "display": "Task Instance UUID"
+          }
+        ]
+      },
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:uuid:888e7d2a-8b1c-4d9f-9a2e-1f6c9d8e7b3c"
+    }
+  ],
+  "partOf": [
+    {
+      "reference": "Task/scenario1-05-technical-question",
+      "display": "Technical Question Task"
+    }
+  ],
+  "contained": [
+    {
+      "resourceType": "Organization",
+      "id": "org-synthpharma-ag",
+      "name": "SynthPharma AG",
+      "address": [
+        {
+          "type": "physical",
+          "text": "123 Synthetic Research Blvd, 4000 Basel, Switzerland",
+          "line": [
+            "123 Synthetic Research Blvd"
+          ],
+          "city": "Basel",
+          "district": "Basel-Stadt",
+          "state": "Basel-Stadt",
+          "postalCode": "4000",
+          "country": "Switzerland"
+        }
+      ],
+      "contact": [
+        {
+          "name": {
+            "text": "Dr. John Doe, Head of Regulatory Affairs"
+          },
+          "telecom": [
+            {
+              "system": "email",
+              "value": "john.doe@synthpharma.example",
+              "use": "work"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resourceType": "Organization",
+      "id": "org-ema-srm-hmed",
+      "name": "European Medicines Agency – Human Medicines Evaluation Division",
+      "address": [
+        {
+          "type": "physical",
+          "text": "Domenico Scarlattilaan 6, 1083 HS Amsterdam, Netherlands",
+          "line": [
+            "Domenico Scarlattilaan 6"
+          ],
+          "city": "Amsterdam",
+          "postalCode": "1083 HS",
+          "country": "Netherlands"
+        }
+      ],
+      "contact": [
+        {
+          "name": {
+            "text": "Scientific and Regulatory Management"
+          },
+          "telecom": [
+            {
+              "system": "email",
+              "value": "srm@ema.example.eu",
+              "use": "work"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resourceType": "DocumentReference",
+      "id": "docref-responses-qresponse",
+      "status": "current",
+      "docStatus": "final",
+      "type": {
+        "coding": [
+          {
+            "code": "1.0",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section",
+            "display": "Cover Letter / Response"
+          }
+        ]
+      },
+      "relatesTo": [
+        {
+          "code": "appends",
+          "target": {
+            "reference": "DocumentReference/docref-list-of-questions",
+            "display": "List of Questions (LoQ)"
+          }
+        }
+      ],
+      "date": "2025-03-15T10:00:00+01:00",
+      "content": [
+        {
+          "attachment": {
+            "contentType": "application/fhir+json",
+            "url": "https://api.synthpharma.example/questionnaire-responses/qr123.json",
+            "title": "Response to Questions (QuestionnaireResponse)",
+            "size": 18400,
+            "creation": "2025-03-15T09:45:00+01:00"
+          }
+        }
+      ]
+    },
+    {
+      "resourceType": "DocumentReference",
+      "id": "docref-stability-data-annex",
+      "status": "current",
+      "docStatus": "final",
+      "type": {
+        "coding": [
+          {
+            "code": "3.2.P.8.3",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section",
+            "display": "Stability Data"
+          }
+        ]
+      },
+      "date": "2025-03-15T10:00:00+01:00",
+      "content": [
+        {
+          "attachment": {
+            "contentType": "application/fhir+json",
+            "url": "https://api.synthpharma.example/bundles/submission-123/m3/stability-data-v2.json",
+            "title": "Updated Stability Data (Transaction Bundle)",
+            "size": 5800000,
+            "creation": "2025-03-14T11:00:00+01:00"
+          }
+        }
+      ]
+    }
+  ],
+  "status": "in-progress",
+  "businessStatus": {
+    "coding": [
+      {
+        "code": "submitted",
+        "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-business-status",
+        "display": "Submitted"
+      }
+    ]
+  },
+  "intent": "proposal",
+  "priority": "routine",
+  "code": {
+    "coding": [
+      {
+        "code": "response-to-questions",
+        "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-task-code",
+        "display": "Response to Information Request"
+      }
+    ]
+  },
+  "for": {
+    "reference": "MedicinalProductDefinition/example-ma",
+    "display": "WonderDrug 50mg Tablets"
+  },
+  "groupIdentifier": {
+    "use": "official",
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:workflow-group-id-12345",
+    "type": {
+      "coding": [
+        {
+          "code": "submission-group-uuid",
+          "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-identifier-type",
+          "display": "Submission Group UUID"
+        }
+      ]
+    }
+  },
+  "requester": {
+    "reference": "#org-synthpharma-ag",
+    "display": "SynthPharma AG"
+  },
+  "authoredOn": "2025-03-15T10:00:00+01:00",
+  "lastModified": "2025-03-15T10:00:00+01:00",
+  "output": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "regulatory-document",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-task-output-type",
+            "display": "Regulatory Document"
+          }
+        ]
+      },
+      "valueReference": {
+        "reference": "#docref-responses-qresponse",
+        "display": "Applicant QuestionnaireResponse"
+      }
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "regulatory-document",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-task-output-type",
+            "display": "Regulatory Document"
+          }
+        ]
+      },
+      "valueReference": {
+        "reference": "#docref-stability-data-annex",
+        "display": "Annex: Updated Stability Data"
+      }
+    }
+  ]
+}

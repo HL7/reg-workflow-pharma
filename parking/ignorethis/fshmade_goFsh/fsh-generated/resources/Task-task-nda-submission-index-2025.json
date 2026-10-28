@@ -1,0 +1,244 @@
+{
+  "resourceType": "Task",
+  "id": "task-nda-submission-index-2025",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2025-12-20T14:15:00Z",
+    "profile": [
+      "http://hl7.org/fhir/uv/apix/StructureDefinition/apix-task"
+    ]
+  },
+  "identifier": [
+    {
+      "use": "official",
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:uuid:8e4d2a-8b1c-4d9f-9a2e-nda-example",
+      "type": {
+        "coding": [
+          {
+            "code": "task-instance-uuid",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-identifier-type",
+            "display": "Task Instance UUID"
+          }
+        ]
+      }
+    }
+  ],
+  "contained": [
+    {
+      "resourceType": "Organization",
+      "id": "org-synthpharma-ag",
+      "name": "SynthPharma AG",
+      "address": [
+        {
+          "type": "physical",
+          "text": "123 Synthetic Research Blvd, 4000 Basel, Switzerland",
+          "line": [
+            "123 Synthetic Research Blvd"
+          ],
+          "city": "Basel",
+          "district": "Basel-Stadt",
+          "state": "Basel-Stadt",
+          "postalCode": "4000",
+          "country": "Switzerland"
+        }
+      ],
+      "contact": [
+        {
+          "name": {
+            "text": "Dr. John Doe, Head of Regulatory Affairs"
+          },
+          "telecom": [
+            {
+              "system": "email",
+              "value": "john.doe@synthpharma.example",
+              "use": "work"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "resourceType": "Organization",
+      "id": "org-ema",
+      "name": "European Medicines Agency",
+      "address": [
+        {
+          "text": "Domenico Scarlattilaan 6, 1083 HS Amsterdam, Netherlands"
+        }
+      ]
+    },
+    {
+      "resourceType": "DocumentReference",
+      "id": "docref-m1-cover",
+      "status": "current",
+      "docStatus": "final",
+      "category": [
+        {
+          "coding": [
+            {
+              "code": "m1",
+              "system": "http://hl7.org/fhir/uv/apix/CodeSystem/ctd-module",
+              "display": "Module 1"
+            }
+          ]
+        }
+      ],
+      "type": {
+        "coding": [
+          {
+            "code": "1.0",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section",
+            "display": "Cover Letter"
+          }
+        ]
+      },
+      "content": [
+        {
+          "attachment": {
+            "contentType": "application/pdf",
+            "url": "https://api.synthpharma.example/binaries/nda-12345/m1/cover-letter.pdf",
+            "title": "Cover Letter.pdf",
+            "size": 1250000,
+            "creation": "2025-12-20T14:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "resourceType": "DocumentReference",
+      "id": "docref-m3-stability-data",
+      "status": "current",
+      "docStatus": "final",
+      "category": [
+        {
+          "coding": [
+            {
+              "code": "m3",
+              "system": "http://hl7.org/fhir/uv/apix/CodeSystem/ctd-module",
+              "display": "Module 3"
+            }
+          ]
+        }
+      ],
+      "type": {
+        "coding": [
+          {
+            "code": "3.2.P.8",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section",
+            "display": "Stability"
+          }
+        ]
+      },
+      "content": [
+        {
+          "attachment": {
+            "contentType": "application/zip",
+            "url": "https://api.synthpharma.example/binaries/nda-12345/m3/stability-package.zip",
+            "title": "Stability Data Package (60GB Referenced)",
+            "size": 64424509440,
+            "creation": "2025-12-15T10:00:00Z"
+          }
+        }
+      ]
+    },
+    {
+      "resourceType": "DocumentReference",
+      "id": "docref-m5-clinical-study",
+      "status": "current",
+      "docStatus": "final",
+      "category": [
+        {
+          "coding": [
+            {
+              "code": "m5",
+              "system": "http://hl7.org/fhir/uv/apix/CodeSystem/ctd-module",
+              "display": "Module 5"
+            }
+          ]
+        }
+      ],
+      "type": {
+        "coding": [
+          {
+            "code": "5.3.5",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/ctd-section",
+            "display": "Reports of Efficacy and Safety Studies"
+          }
+        ]
+      },
+      "content": [
+        {
+          "attachment": {
+            "contentType": "application/pdf",
+            "url": "https://api.synthpharma.example/binaries/nda-12345/m5/study-report-001.pdf",
+            "title": "Clinical Study Report - Phase III.pdf",
+            "size": 45000000,
+            "creation": "2025-12-18T09:00:00Z"
+          }
+        }
+      ]
+    }
+  ],
+  "status": "requested",
+  "intent": "order",
+  "priority": "routine",
+  "code": {
+    "coding": [
+      {
+        "code": "new-drug-application",
+        "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-task-type",
+        "display": "New Drug Application (NDA)"
+      }
+    ]
+  },
+  "authoredOn": "2025-12-20T14:15:00Z",
+  "lastModified": "2025-12-20T14:15:00Z",
+  "requester": {
+    "reference": "#org-synthpharma-ag"
+  },
+  "owner": {
+    "reference": "#org-ema"
+  },
+  "input": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "regulatory-document",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-task-input-type"
+          }
+        ]
+      },
+      "valueReference": {
+        "reference": "#docref-m1-cover"
+      }
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "regulatory-document",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-task-input-type"
+          }
+        ]
+      },
+      "valueReference": {
+        "reference": "#docref-m3-stability-data"
+      }
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "regulatory-document",
+            "system": "http://hl7.org/fhir/uv/apix/CodeSystem/apix-task-input-type"
+          }
+        ]
+      },
+      "valueReference": {
+        "reference": "#docref-m5-clinical-study"
+      }
+    }
+  ]
+}

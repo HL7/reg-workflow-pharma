@@ -13,7 +13,7 @@ table.term-table code {background:#eef2ff; color:#3730a3; padding:1px 5px; borde
 table.term-io th:nth-child(3), table.term-io th:nth-child(4), table.term-io td:nth-child(3), table.term-io td:nth-child(4) {text-align:center; width:70px; color:#047857; font-weight:700;}
 </style>
 
-This page shows example values for the four [Task](apixtask.html) elements that carry regulatory meaning, grouped by domain: Market Authorization, Clinical Trials, and Individual Case Safety Reports (ICSR).
+This page shows example values for the four [Task](rwipharmatask.html) elements that carry regulatory meaning, grouped by domain: Market Authorization, Clinical Trials, and Individual Case Safety Reports (ICSR).
 
 ### How the terminology is organised
 
@@ -21,8 +21,8 @@ There are three code systems. Each domain section below has an example value set
 
 | Task element | Code system (id) | Example value sets per domain |
 |---|---|---|
-| `Task.code` | `apix-task-code` | `apix-ma-task-code-vs`, `apix-ct-task-code-vs`, `apix-icsr-task-code-vs` |
-| `Task.businessStatus` | `apix-business-status` | `apix-ma-business-status-vs`, `apix-ct-business-status-vs`, `apix-icsr-business-status-vs` |
+| `Task.code` | `rwipharma-task-code` | `apix-ma-task-code-vs`, `apix-ct-task-code-vs`, `apix-icsr-task-code-vs` |
+| `Task.businessStatus` | `rwipharma-buisness-status` | `apix-ma-business-status-vs`, `apix-ct-business-status-vs`, `apix-icsr-business-status-vs` |
 | `Task.input.type` | `apix-task-input-output-type` | `apix-ma-task-input-type-vs`, `apix-ct-task-input-type-vs`, `apix-icsr-task-input-type-vs` |
 | `Task.output.type` | `apix-task-input-output-type` (same code system) | `apix-ma-task-output-type-vs`, `apix-ct-task-output-type-vs`, `apix-icsr-task-output-type-vs` |
 {: .term-table}

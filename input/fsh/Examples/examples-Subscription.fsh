@@ -1,5 +1,5 @@
 Instance: Subscription-TaskStatusChange-FullResource
-InstanceOf: APIXSubscription
+InstanceOf: RWIpharmaSubscription
 Title: "Subscription for Task Status Change with Identifier Filter"
 Description: "Subscription example to Task change status with an identifier filter, and sending full-resource."
 Usage: #example

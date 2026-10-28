@@ -1,6 +1,6 @@
 <!-- ARCHITECTURE PAGE -->
 <div style="margin-bottom:32px;">
-  <h2 style="font-size:1.7em; font-weight:800; color:#111827; margin-bottom:10px;">Architecture</h2>
+  <!--h2 style="font-size:1.7em; font-weight:800; color:#111827; margin-bottom:10px;">Architecture</h2-->
   <p style="font-size:.95em; color:#6b7280; line-height:1.6; max-width:640px;">The technical infrastructure required to implement RWI-pharma in production. This page covers FHIR server requirements, authentication, system landscape, data governance, and binary upload patterns.</p>
 </div>
 
