@@ -4,13 +4,15 @@
 Instance: scenario2a-01-icsr-submitted
 InstanceOf: Task
 Title: "scenario2a 01 ICSR submitted"
-Description: "The marketing authorization holder posts an ICSR Task; the E2B(R2) message is the input."
+Description: "Scenario 2a, step 1 (Submit). Version 1 of the ICSR Task. The marketing authorization holder posts the ICSR Task with the E2B(R2) message as input."
 Usage: #example
 * meta.versionId = "1"
+* meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/instance-description"
+* meta.extension[=].valueMarkdown = "Scenario 2a, step 1 (Submit). Version 1 of the ICSR Task. The marketing authorization holder posts the ICSR Task with the E2B(R2) message as input."
 * meta.lastUpdated = "2026-10-02T09:30:00+02:00"
 * meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR submitted</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>1</td></tr><tr><th>Status</th><td>requested</td></tr><tr><th>Business status</th><td>Submitted (<code>submitted</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:936c6113-a6d2-5df6-93f3-4c2726e6bef6</td></tr><tr><th>Authored</th><td>2026-10-02T09:30:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-02T09:30:00+02:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2a.html\">ICSR — case CH-SYNTHPHARMA-2026-000456</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><p>None</p></div>"
+//* text.status = #generated
+//* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR submitted</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>1</td></tr><tr><th>Status</th><td>requested</td></tr><tr><th>Business status</th><td>Submitted (<code>submitted</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:936c6113-a6d2-5df6-93f3-4c2726e6bef6</td></tr><tr><th>Authored</th><td>2026-10-02T09:30:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-02T09:30:00+02:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2a.html\">ICSR — case CH-SYNTHPHARMA-2026-000456</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><p>None</p></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:ba8218ac-6b4e-5be0-8234-3e4cfd5b9cac"
@@ -33,13 +35,15 @@ Usage: #example
 Instance: scenario2a-02-icsr-accepted
 InstanceOf: Task
 Title: "scenario2a 02 ICSR accepted"
-Description: "Version 2 of the ICSR Task (in production, the same Task as scenario2a-01). The report passed validation and was loaded; the regulator adds the E2B(R2) acknowledgment log as an output."
+Description: "Scenario 2a, step 2 (Accepted). Version 2 of the ICSR Task (in production, the same Task.id as scenario2a-01). The report passed validation and was loaded; the regulator adds the E2B(R2) acknowledgment log as an output."
 Usage: #example
 * meta.versionId = "2"
+* meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/instance-description"
+* meta.extension[=].valueMarkdown = "Scenario 2a, step 2 (Accepted). Version 2 of the ICSR Task (in production, the same Task.id as scenario2a-01). The report passed validation and was loaded; the regulator adds the E2B(R2) acknowledgment log as an output."
 * meta.lastUpdated = "2026-10-02T09:45:12+02:00"
 * meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR accepted</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>2</td></tr><tr><th>Status</th><td>accepted</td></tr><tr><th>Business status</th><td>Accepted (<code>accepted</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:936c6113-a6d2-5df6-93f3-4c2726e6bef6</td></tr><tr><th>Authored</th><td>2026-10-02T09:30:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-02T09:45:12+02:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2a.html\">ICSR — case CH-SYNTHPHARMA-2026-000456</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2a-acklog.html\">ICSR acknowledgment log</a> <code>icsr-e2b-r2-acklog</code></li></ul></div>"
+//* text.status = #generated
+//* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR accepted</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>2</td></tr><tr><th>Status</th><td>accepted</td></tr><tr><th>Business status</th><td>Accepted (<code>accepted</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:936c6113-a6d2-5df6-93f3-4c2726e6bef6</td></tr><tr><th>Authored</th><td>2026-10-02T09:30:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-02T09:45:12+02:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2a.html\">ICSR — case CH-SYNTHPHARMA-2026-000456</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2a-acklog.html\">ICSR acknowledgment log</a> <code>icsr-e2b-r2-acklog</code></li></ul></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:ba8218ac-6b4e-5be0-8234-3e4cfd5b9cac"
@@ -65,13 +69,15 @@ Usage: #example
 Instance: scenario2a-03-icsr-complete
 InstanceOf: Task
 Title: "scenario2a 03 ICSR complete"
-Description: "Version 3 of the ICSR Task (in production, the same Task as scenario2a-01). Processing is complete and the Task is closed."
+Description: "Scenario 2a, step 3 (Complete). Version 3 of the ICSR Task (in production, the same Task.id as scenario2a-01). Processing is complete and the regulator closes the Task."
 Usage: #example
 * meta.versionId = "3"
+* meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/instance-description"
+* meta.extension[=].valueMarkdown = "Scenario 2a, step 3 (Complete). Version 3 of the ICSR Task (in production, the same Task.id as scenario2a-01). Processing is complete and the regulator closes the Task."
 * meta.lastUpdated = "2026-10-02T10:02:40+02:00"
 * meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR complete</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>3</td></tr><tr><th>Status</th><td>completed</td></tr><tr><th>Business status</th><td>Complete (<code>complete</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:936c6113-a6d2-5df6-93f3-4c2726e6bef6</td></tr><tr><th>Authored</th><td>2026-10-02T09:30:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-02T10:02:40+02:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2a.html\">ICSR — case CH-SYNTHPHARMA-2026-000456</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2a-acklog.html\">ICSR acknowledgment log</a> <code>icsr-e2b-r2-acklog</code></li></ul></div>"
+//* text.status = #generated
+//* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR complete</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>3</td></tr><tr><th>Status</th><td>completed</td></tr><tr><th>Business status</th><td>Complete (<code>complete</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:936c6113-a6d2-5df6-93f3-4c2726e6bef6</td></tr><tr><th>Authored</th><td>2026-10-02T09:30:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-02T10:02:40+02:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2a.html\">ICSR — case CH-SYNTHPHARMA-2026-000456</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2a-acklog.html\">ICSR acknowledgment log</a> <code>icsr-e2b-r2-acklog</code></li></ul></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:ba8218ac-6b4e-5be0-8234-3e4cfd5b9cac"
@@ -98,13 +104,15 @@ Usage: #example
 Instance: scenario2b-01-icsr-submitted
 InstanceOf: Task
 Title: "scenario2b 01 ICSR submitted"
-Description: "The marketing authorization holder posts an ICSR Task; the E2B(R2) message is the input. The message has an error."
+Description: "Scenario 2b, step 1 (Submit). Version 1 of the Original ICSR Task. The marketing authorization holder posts the ICSR Task with the E2B(R2) message as input; the message contains an error."
 Usage: #example
 * meta.versionId = "1"
+* meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/instance-description"
+* meta.extension[=].valueMarkdown = "Scenario 2b, step 1 (Submit). Version 1 of the Original ICSR Task. The marketing authorization holder posts the ICSR Task with the E2B(R2) message as input; the message contains an error."
 * meta.lastUpdated = "2026-10-14T11:00:00+02:00"
 * meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR submitted</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>1</td></tr><tr><th>Status</th><td>requested</td></tr><tr><th>Business status</th><td>Submitted (<code>submitted</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546</td></tr><tr><th>Authored</th><td>2026-10-14T11:00:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-14T11:00:00+02:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b.html\">ICSR — case CH-SYNTHPHARMA-2026-000512</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><p>None</p></div>"
+//* text.status = #generated
+//* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR submitted</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>1</td></tr><tr><th>Status</th><td>requested</td></tr><tr><th>Business status</th><td>Submitted (<code>submitted</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546</td></tr><tr><th>Authored</th><td>2026-10-14T11:00:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-14T11:00:00+02:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b.html\">ICSR — case CH-SYNTHPHARMA-2026-000512</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><p>None</p></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:b2f7cb95-4ab9-5dc5-b889-83f284126d52"
@@ -127,13 +135,15 @@ Usage: #example
 Instance: scenario2b-02-icsr-rejected
 InstanceOf: Task
 Title: "scenario2b 02 ICSR rejected"
-Description: "Version 2 of the ICSR Task (in production, the same Task as scenario2b-01). The report failed validation; the regulator rejects the Task and adds the acknowledgment log and a validation report as outputs."
+Description: "Scenario 2b, step 2 (Rejected). Version 2 of the Original ICSR Task (in production, the same Task.id as scenario2b-01). The report failed validation; the regulator rejects the Task and adds the acknowledgment log and a validation report as outputs."
 Usage: #example
 * meta.versionId = "2"
+* meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/instance-description"
+* meta.extension[=].valueMarkdown = "Scenario 2b, step 2 (Rejected). Version 2 of the Original ICSR Task (in production, the same Task.id as scenario2b-01). The report failed validation; the regulator rejects the Task and adds the acknowledgment log and a validation report as outputs."
 * meta.lastUpdated = "2026-10-14T11:12:30+02:00"
 * meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR rejected</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>2</td></tr><tr><th>Status</th><td>rejected</td></tr><tr><th>Status reason</th><td>The ICSR failed validation (rule R2-0214: MedDRA version missing in B.2.i.1a) and was not loaded. See the acknowledgment log and validation report.</td></tr><tr><th>Business status</th><td>Rejected (<code>rejected</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546</td></tr><tr><th>Authored</th><td>2026-10-14T11:00:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-14T11:12:30+02:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b.html\">ICSR — case CH-SYNTHPHARMA-2026-000512</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b-acklog.html\">ICSR acknowledgment log (rejected)</a> <code>icsr-e2b-r2-acklog</code></li><li><a href=\"DocumentReference-docref-icsr-2b-validation-report.html\">ICSR validation report</a> <code>validation-report</code></li></ul></div>"
+//* text.status = #generated
+//* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR rejected</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>2</td></tr><tr><th>Status</th><td>rejected</td></tr><tr><th>Status reason</th><td>The ICSR failed validation (rule R2-0214: MedDRA version missing in B.2.i.1a) and was not loaded. See the acknowledgment log and validation report.</td></tr><tr><th>Business status</th><td>Rejected (<code>rejected</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546</td></tr><tr><th>Authored</th><td>2026-10-14T11:00:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-14T11:12:30+02:00</td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b.html\">ICSR — case CH-SYNTHPHARMA-2026-000512</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b-acklog.html\">ICSR acknowledgment log (rejected)</a> <code>icsr-e2b-r2-acklog</code></li><li><a href=\"DocumentReference-docref-icsr-2b-validation-report.html\">ICSR validation report</a> <code>validation-report</code></li></ul></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:b2f7cb95-4ab9-5dc5-b889-83f284126d52"
@@ -163,13 +173,15 @@ Usage: #example
 Instance: scenario2b-03-icsr-resubmitted
 InstanceOf: Task
 Title: "scenario2b 03 ICSR resubmitted"
-Description: "The marketing authorization holder posts a new ICSR Task with the corrected E2B(R2) message. It has the same group identifier and is basedOn the rejected Task."
+Description: "Scenario 2b, step 3 (Resubmit). Version 1 of the Resubmission Task, based on the Original ICSR Task. The marketing authorization holder posts a new Task with the corrected E2B(R2) message as input and the same group identifier."
 Usage: #example
 * meta.versionId = "1"
+* meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/instance-description"
+* meta.extension[=].valueMarkdown = "Scenario 2b, step 3 (Resubmit). Version 1 of the Resubmission Task, based on the Original ICSR Task. The marketing authorization holder posts a new Task with the corrected E2B(R2) message as input and the same group identifier."
 * meta.lastUpdated = "2026-10-14T15:40:00+02:00"
 * meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR resubmitted</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>1</td></tr><tr><th>Status</th><td>requested</td></tr><tr><th>Business status</th><td>Submitted (<code>submitted</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546</td></tr><tr><th>Authored</th><td>2026-10-14T15:40:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-14T15:40:00+02:00</td></tr><tr><th>Based on</th><td><a href=\"Task-scenario2b-01-icsr-submitted.html\">scenario2b-01-icsr-submitted</a></td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b-resubmission.html\">ICSR resubmission — case CH-SYNTHPHARMA-2026-000512</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><p>None</p></div>"
+//* text.status = #generated
+//* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR resubmitted</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>1</td></tr><tr><th>Status</th><td>requested</td></tr><tr><th>Business status</th><td>Submitted (<code>submitted</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546</td></tr><tr><th>Authored</th><td>2026-10-14T15:40:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-14T15:40:00+02:00</td></tr><tr><th>Based on</th><td><a href=\"Task-scenario2b-01-icsr-submitted.html\">scenario2b-01-icsr-submitted</a></td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b-resubmission.html\">ICSR resubmission — case CH-SYNTHPHARMA-2026-000512</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><p>None</p></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:27b56f00-39f7-5b08-8519-a7e7fdf34945"
@@ -193,13 +205,15 @@ Usage: #example
 Instance: scenario2b-04-icsr-accepted
 InstanceOf: Task
 Title: "scenario2b 04 ICSR resubmission accepted"
-Description: "Version 2 of the resubmission Task (in production, the same Task as scenario2b-03). The corrected report passed validation and was loaded; the regulator adds the acknowledgment log as an output."
+Description: "Scenario 2b, step 4 (Accepted). Version 2 of the Resubmission Task (in production, the same Task.id as scenario2b-03). The corrected report passed validation and was loaded; the regulator adds the acknowledgment log as an output."
 Usage: #example
 * meta.versionId = "2"
+* meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/instance-description"
+* meta.extension[=].valueMarkdown = "Scenario 2b, step 4 (Accepted). Version 2 of the Resubmission Task (in production, the same Task.id as scenario2b-03). The corrected report passed validation and was loaded; the regulator adds the acknowledgment log as an output."
 * meta.lastUpdated = "2026-10-14T15:52:08+02:00"
 * meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR resubmission accepted</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>2</td></tr><tr><th>Status</th><td>accepted</td></tr><tr><th>Business status</th><td>Accepted (<code>accepted</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546</td></tr><tr><th>Authored</th><td>2026-10-14T15:40:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-14T15:52:08+02:00</td></tr><tr><th>Based on</th><td><a href=\"Task-scenario2b-01-icsr-submitted.html\">scenario2b-01-icsr-submitted</a></td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b-resubmission.html\">ICSR resubmission — case CH-SYNTHPHARMA-2026-000512</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b-resubmission-acklog.html\">ICSR acknowledgment log (resubmission)</a> <code>icsr-e2b-r2-acklog</code></li></ul></div>"
+//* text.status = #generated
+//* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR resubmission accepted</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>2</td></tr><tr><th>Status</th><td>accepted</td></tr><tr><th>Business status</th><td>Accepted (<code>accepted</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546</td></tr><tr><th>Authored</th><td>2026-10-14T15:40:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-14T15:52:08+02:00</td></tr><tr><th>Based on</th><td><a href=\"Task-scenario2b-01-icsr-submitted.html\">scenario2b-01-icsr-submitted</a></td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b-resubmission.html\">ICSR resubmission — case CH-SYNTHPHARMA-2026-000512</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b-resubmission-acklog.html\">ICSR acknowledgment log (resubmission)</a> <code>icsr-e2b-r2-acklog</code></li></ul></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:27b56f00-39f7-5b08-8519-a7e7fdf34945"
@@ -226,13 +240,15 @@ Usage: #example
 Instance: scenario2b-05-icsr-complete
 InstanceOf: Task
 Title: "scenario2b 05 ICSR resubmission complete"
-Description: "Version 3 of the resubmission Task (in production, the same Task as scenario2b-03). Processing is complete and the Task is closed."
+Description: "Scenario 2b, step 5 (Complete). Version 3 of the Resubmission Task (in production, the same Task.id as scenario2b-03). Processing is complete and the regulator closes the Task."
 Usage: #example
 * meta.versionId = "3"
+* meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/instance-description"
+* meta.extension[=].valueMarkdown = "Scenario 2b, step 5 (Complete). Version 3 of the Resubmission Task (in production, the same Task.id as scenario2b-03). Processing is complete and the regulator closes the Task."
 * meta.lastUpdated = "2026-10-14T16:10:21+02:00"
 * meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
-* text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR resubmission complete</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>3</td></tr><tr><th>Status</th><td>completed</td></tr><tr><th>Business status</th><td>Complete (<code>complete</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546</td></tr><tr><th>Authored</th><td>2026-10-14T15:40:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-14T16:10:21+02:00</td></tr><tr><th>Based on</th><td><a href=\"Task-scenario2b-01-icsr-submitted.html\">scenario2b-01-icsr-submitted</a></td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b-resubmission.html\">ICSR resubmission — case CH-SYNTHPHARMA-2026-000512</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b-resubmission-acklog.html\">ICSR acknowledgment log (resubmission)</a> <code>icsr-e2b-r2-acklog</code></li></ul></div>"
+//* text.status = #generated
+//* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>ICSR resubmission complete</b></p><table class=\"grid\"><tr><th>Task</th><td>Individual Case Safety Report (<code>icsr</code>)</td></tr><tr><th>Version</th><td>3</td></tr><tr><th>Status</th><td>completed</td></tr><tr><th>Business status</th><td>Complete (<code>complete</code>)</td></tr><tr><th>Requester</th><td>SynthPharma AG</td></tr><tr><th>Owner</th><td>Health Authority – Regulatory Review Division</td></tr><tr><th>Group identifier</th><td>urn:uuid:6575f2a4-b372-557c-a74d-0b0f039d0546</td></tr><tr><th>Authored</th><td>2026-10-14T15:40:00+02:00</td></tr><tr><th>Last modified</th><td>2026-10-14T16:10:21+02:00</td></tr><tr><th>Based on</th><td><a href=\"Task-scenario2b-01-icsr-submitted.html\">scenario2b-01-icsr-submitted</a></td></tr></table><p><b>Inputs (from the requester)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b-resubmission.html\">ICSR resubmission — case CH-SYNTHPHARMA-2026-000512</a> <code>icsr-e2b-r2</code></li></ul><p><b>Outputs (from the owner)</b></p><ul><li><a href=\"DocumentReference-docref-icsr-2b-resubmission-acklog.html\">ICSR acknowledgment log (resubmission)</a> <code>icsr-e2b-r2-acklog</code></li></ul></div>"
 * identifier[0].use = #official
 * identifier[=].system = "http://example.org/health-authority/task-id"
 * identifier[=].value = "urn:uuid:27b56f00-39f7-5b08-8519-a7e7fdf34945"

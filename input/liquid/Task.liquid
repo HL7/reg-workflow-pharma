@@ -1,0 +1,143 @@
+<div xmlns="http://www.w3.org/1999/xhtml">{% assign codeDisp = iif(code.coding.display.exists(), code.coding.display.first(), iif(code.text.exists(), code.text, '')) %}
+{% assign au = authoredOn.toString() %}
+{% assign lm = lastModified.toString() %}
+{% assign stColor = iif(status = 'completed', '#28a745', iif(status in ('rejected' | 'failed' | 'cancelled' | 'entered-in-error'), '#dc3545', iif(status = 'on-hold', '#ffc107', iif(status in ('accepted' | 'received' | 'ready' | 'in-progress'), '#17a2b8', '#007aff')))) %}
+{% assign bsCode = businessStatus.coding.code.first() %}
+{% assign bsColor = iif(bsCode in ('approved' | 'validation-successful' | 'payment-received' | 'response-accepted' | 'authorised' | 'authorised-with-conditions' | 'accepted' | 'complete' | 'labelling-agreed' | 'may-proceed' | 'filed-accepted-for-review' | 'notification-accepted' | 'change-implemented' | 'meeting-granted' | 'designation-granted' | 'fee-waiver-granted' | 'extension-granted' | 'clinical-hold-lifted' | 'refund-issued'), '#28a745', iif(bsCode in ('rejected' | 'validation-failed' | 'refused-to-file' | 'not-authorised' | 'meeting-denied' | 'designation-denied' | 'fee-waiver-denied' | 'extension-denied' | 'payment-overdue' | 'complete-response-issued' | 'withdrawn' | 'on-clinical-hold'), '#dc3545', iif(bsCode in ('clock-stop' | 'payment-requested' | 'questions-issued' | 'awaiting-applicant-response' | 'request-for-information-issued' | 'further-information-required' | 'labelling-comments-issued' | 'decision-pending'), '#ffc107', '#8e8e93'))) %}
+{% assign inCats = input.value.ofType(Reference).resolve().category.coding.display.distinct() %}
+{% assign inGroups = iif(inCats.exists(), inCats.combine(iif(input.where(value.ofType(Reference).resolve().category.empty()).exists(), '__other__', {})), '__all__') %}
+{% assign outCats = output.value.ofType(Reference).resolve().category.coding.display.distinct() %}
+{% assign outGroups = iif(outCats.exists(), outCats.combine(iif(output.where(value.ofType(Reference).resolve().category.empty()).exists(), '__other__', {})), '__all__') %}
+<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(to bottom,#f2f6fa,#e8eef5);color:#1d1d1f;margin:0;padding:40px 20px;line-height:1.5;">
+<div style="max-width:1000px;margin:0 auto;">
+
+{% if meta.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/instance-description').exists() %}
+<div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:14px 18px;margin:0 0 24px 0;font-size:15px;color:#1e3a8a;line-height:1.6;">
+<div style="font-weight:600;margin-bottom:4px;">About this example</div>
+<div>{{ meta.extension.where(url = 'http://hl7.org/fhir/StructureDefinition/instance-description').value.first() }}</div>
+<div style="font-size:13px;font-style:italic;margin-top:8px;">{% if meta.versionId.exists() %}Version {{ meta.versionId }} of the Task{% if identifier.where(type.coding.code = 'rwipharmataskinstance').exists() %} with RWI Pharma Task Instance ID {{ identifier.where(type.coding.code = 'rwipharmataskinstance').value.first() }}{% endif %}. {% endif %}All versions of a Task share one Task.id on a server. <a href="rwipharmatask.html#task-identifiers">Why versions are shown as separate examples</a></div>
+</div>
+{% endif %}
+<div style="background:linear-gradient(135deg,#007aff,#5ac8fa);color:#ffffff;padding:40px 24px;border-radius:18px;text-align:center;box-shadow:0 10px 30px rgba(0,122,255,0.3);margin-bottom:36px;">
+<div style="margin:0 0 8px 0;font-size:32px;font-weight:600;">Task{% if codeDisp != '' %}: {{ codeDisp }}{% endif %}</div>
+<p style="margin:0;opacity:0.95;font-size:17px;">HL7 FHIR R5 – RWI-Pharma Implementation Guide</p>
+</div>
+
+{% if description.exists() or codeDisp != '' %}
+<div style="background:#ffffff;border-radius:18px;padding:32px;margin-bottom:32px;box-shadow:0 8px 28px rgba(0,0,0,0.08),0 2px 10px rgba(0,0,0,0.06);">
+<div style="font-size:24px;font-weight:600;color:#007aff;margin:0 0 24px 0;padding-bottom:12px;border-bottom:1px solid #e5e5ea;display:flex;justify-content:space-between;align-items:center;">Task Description</div>
+<div style="font-size:18px;line-height:1.6;color:#333333;">{{ iif(description.exists(), description, codeDisp) }}</div>
+</div>
+{% endif %}
+
+<div style="background:#ffffff;border-radius:18px;padding:32px;margin-bottom:32px;box-shadow:0 8px 28px rgba(0,0,0,0.08),0 2px 10px rgba(0,0,0,0.06);">
+<div style="font-size:24px;font-weight:600;color:#007aff;margin:0 0 24px 0;padding-bottom:12px;border-bottom:1px solid #e5e5ea;display:flex;justify-content:space-between;align-items:center;">Core Task Information</div>
+<div style="display:grid;grid-template-columns:max-content auto;gap:12px 20px;align-items:baseline;">
+{% if meta.versionId.exists() %}<span style="font-weight:600;color:#555555;text-align:right;min-width:150px;">Version ID</span><span style="color:#1d1d1f;">{{ meta.versionId }}</span>{% endif %}
+{% if identifier.where(type.coding.code = 'rwipharmataskinstance').exists() %}<span style="font-weight:600;color:#555555;text-align:right;min-width:150px;">Instance UUID</span><span style="color:#1d1d1f;">{{ identifier.where(type.coding.code = 'rwipharmataskinstance').value.first() }}</span>{% endif %}
+{% if groupIdentifier.value.exists() %}<span style="font-weight:600;color:#555555;text-align:right;min-width:150px;">Group Identifier</span><span style="color:#1d1d1f;">{{ groupIdentifier.value }}</span>{% endif %}
+<span style="font-weight:600;color:#555555;text-align:right;min-width:150px;">Procedure ID</span><span style="color:#1d1d1f;">{{ iif(identifier.where(type.coding.code = 'rwipharmaregulatorprocedureno').exists(), identifier.where(type.coding.code = 'rwipharmaregulatorprocedureno').value.first(), 'not yet assigned') }}</span>
+{% if basedOn.exists() %}<span style="font-weight:600;color:#555555;text-align:right;min-width:150px;">Based On</span><span style="color:#1d1d1f;">{% for b in basedOn %}{% if b.reference.exists() and b.reference.startsWith('http').not() and b.reference.startsWith('#').not() %}<a href="{{ b.reference.replace('/', '-') + '.html' }}">{{ b.reference }}</a>{% elsif b.reference.exists() %}{{ b.reference }}{% else %}{{ iif(b.display.exists(), b.display, '(no reference)') }}{% endif %}<br />{% endfor %}</span>{% endif %}
+<span style="font-weight:600;color:#555555;text-align:right;min-width:150px;">Task Status</span><span style="color:#1d1d1f;"><span style="padding:2px 8px;border-radius:12px;font-size:0.9em;font-weight:500;color:#ffffff;background:{{ stColor }};">{{ status }}</span></span>
+{% if businessStatus.exists() %}<span style="font-weight:600;color:#555555;text-align:right;min-width:150px;">Business Status</span><span style="color:#1d1d1f;"><span style="padding:2px 8px;border-radius:12px;font-size:0.9em;font-weight:500;color:#ffffff;background:{{ bsColor }};">{{ iif(businessStatus.coding.display.exists(), businessStatus.coding.display.first(), iif(businessStatus.text.exists(), businessStatus.text, bsCode)) }}</span></span>{% endif %}
+{% if intent.exists() %}<span style="font-weight:600;color:#555555;text-align:right;min-width:150px;">Intent</span><span style="color:#1d1d1f;">{{ intent }}</span>{% endif %}
+{% if priority.exists() %}<span style="font-weight:600;color:#555555;text-align:right;min-width:150px;">Priority</span><span style="color:#1d1d1f;">{{ priority }}</span>{% endif %}
+</div>
+{% if code.coding.exists() or authoredOn.exists() or lastModified.exists() %}
+<hr style="border:0;border-top:1px solid #eeeeee;margin:20px 0;" />
+<div style="display:grid;grid-template-columns:max-content auto;gap:12px 20px;align-items:baseline;">
+{% if code.coding.exists() %}<span style="font-weight:600;color:#555555;text-align:right;min-width:150px;">Code</span><span style="color:#1d1d1f;">{{ iif(code.coding.first().display.exists(), code.coding.first().display + ' (' + code.coding.first().code + ')', code.coding.first().code) }}</span>{% endif %}
+{% if authoredOn.exists() %}<span style="font-weight:600;color:#555555;text-align:right;min-width:150px;">Authored</span><span style="color:#1d1d1f;">{{ iif(au.length() >= 19, au.substring(0, 10) + ' ' + au.substring(11, 8) + iif(au.length() > 19, ' UTC' + iif(au.substring(19) = 'Z', '', au.substring(19)), ''), au) }}</span>{% endif %}
+{% if lastModified.exists() %}<span style="font-weight:600;color:#555555;text-align:right;min-width:150px;">Last Updated</span><span style="color:#1d1d1f;">{{ iif(lm.length() >= 19, lm.substring(0, 10) + ' ' + lm.substring(11, 8) + iif(lm.length() > 19, ' UTC' + iif(lm.substring(19) = 'Z', '', lm.substring(19)), ''), lm) }}</span>{% endif %}
+</div>
+{% endif %}
+</div>
+
+{% if requester.exists() or owner.exists() %}
+<div style="background:#ffffff;border-radius:18px;padding:32px;margin-bottom:32px;box-shadow:0 8px 28px rgba(0,0,0,0.08),0 2px 10px rgba(0,0,0,0.06);">
+<div style="font-size:24px;font-weight:600;color:#007aff;margin:0 0 24px 0;padding-bottom:12px;border-bottom:1px solid #e5e5ea;display:flex;justify-content:space-between;align-items:center;">Parties Involved</div>
+{% if requester.exists() %}
+{% assign rqRef = requester.reference %}
+{% assign rqName = iif(rqRef = 'Organization/org-synthpharma-ag', 'SynthPharma AG', iif(rqRef = 'Organization/org-ema-srm-hmed', 'Health Authority – Regulatory Review Division', '')) %}
+{% assign rqAddr = iif(rqRef = 'Organization/org-synthpharma-ag', '123 Synthetic Research Blvd, 4000 Basel, Switzerland', iif(rqRef = 'Organization/org-ema-srm-hmed', 'Regulatory Authority Headquarters, 1083 HS Capital City, Country', '')) %}
+{% assign rqContact = iif(rqRef = 'Organization/org-synthpharma-ag', 'Dr. John Doe, Head of Regulatory Affairs', iif(rqRef = 'Organization/org-ema-srm-hmed', 'Scientific and Regulatory Management', '')) %}
+{% assign rqEmail = iif(rqRef = 'Organization/org-synthpharma-ag', 'john.doe@synthpharma.example', iif(rqRef = 'Organization/org-ema-srm-hmed', 'regulatory@health-authority.example', '')) %}
+<div style="{{ iif(owner.exists(), 'margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid #eeeeee;', 'margin-bottom:0;padding-bottom:0;border-bottom:none;') }}">
+<span style="font-weight:600;color:#007aff;margin-bottom:4px;display:block;">Requester</span>
+{% if rqName != '' %}<div style="font-size:16px;font-weight:500;margin-bottom:8px;color:#1d1d1f;">{{ rqName }}</div>
+<div style="font-size:14px;color:#555555;line-height:1.5;"><div><strong>Address:</strong> {{ rqAddr }}</div><div><strong>Contact:</strong> {{ rqContact }}</div><div><strong>Email:</strong> {{ rqEmail }}</div></div>
+{% elsif requester.reference.exists() and requester.reference.startsWith('http').not() and requester.reference.startsWith('#').not() %}<div style="font-size:16px;font-weight:500;margin-bottom:8px;color:#1d1d1f;"><a href="{{ requester.reference.replace('/', '-') + '.html' }}">{{ iif(requester.display.exists(), requester.display, requester.reference) }}</a></div>
+{% else %}<div style="font-size:16px;font-weight:500;margin-bottom:8px;color:#1d1d1f;">{{ iif(requester.display.exists(), requester.display, requester.reference) }}</div>
+{% endif %}
+</div>
+{% endif %}
+{% if owner.exists() %}
+{% assign owRef = owner.reference %}
+{% assign owName = iif(owRef = 'Organization/org-synthpharma-ag', 'SynthPharma AG', iif(owRef = 'Organization/org-ema-srm-hmed', 'Health Authority – Regulatory Review Division', '')) %}
+{% assign owAddr = iif(owRef = 'Organization/org-synthpharma-ag', '123 Synthetic Research Blvd, 4000 Basel, Switzerland', iif(owRef = 'Organization/org-ema-srm-hmed', 'Regulatory Authority Headquarters, 1083 HS Capital City, Country', '')) %}
+{% assign owContact = iif(owRef = 'Organization/org-synthpharma-ag', 'Dr. John Doe, Head of Regulatory Affairs', iif(owRef = 'Organization/org-ema-srm-hmed', 'Scientific and Regulatory Management', '')) %}
+{% assign owEmail = iif(owRef = 'Organization/org-synthpharma-ag', 'john.doe@synthpharma.example', iif(owRef = 'Organization/org-ema-srm-hmed', 'regulatory@health-authority.example', '')) %}
+<div style="margin-bottom:0;padding-bottom:0;border-bottom:none;">
+<span style="font-weight:600;color:#007aff;margin-bottom:4px;display:block;">Owner</span>
+{% if owName != '' %}<div style="font-size:16px;font-weight:500;margin-bottom:8px;color:#1d1d1f;">{{ owName }}</div>
+<div style="font-size:14px;color:#555555;line-height:1.5;"><div><strong>Address:</strong> {{ owAddr }}</div><div><strong>Contact:</strong> {{ owContact }}</div><div><strong>Email:</strong> {{ owEmail }}</div></div>
+{% elsif owner.reference.exists() and owner.reference.startsWith('http').not() and owner.reference.startsWith('#').not() %}<div style="font-size:16px;font-weight:500;margin-bottom:8px;color:#1d1d1f;"><a href="{{ owner.reference.replace('/', '-') + '.html' }}">{{ iif(owner.display.exists(), owner.display, owner.reference) }}</a></div>
+{% else %}<div style="font-size:16px;font-weight:500;margin-bottom:8px;color:#1d1d1f;">{{ iif(owner.display.exists(), owner.display, owner.reference) }}</div>
+{% endif %}
+</div>
+{% endif %}
+</div>
+{% endif %}
+
+<div style="background:#ffffff;border-radius:18px;padding:32px;margin-bottom:32px;box-shadow:0 8px 28px rgba(0,0,0,0.08),0 2px 10px rgba(0,0,0,0.06);">
+<div style="font-size:24px;font-weight:600;color:#007aff;margin:0 0 24px 0;padding-bottom:12px;border-bottom:1px solid #e5e5ea;display:flex;justify-content:space-between;align-items:center;">Input Documents{% if input.exists() %}<span style="background:#007aff;color:#ffffff;font-size:14px;font-weight:600;padding:6px 14px;border-radius:20px;">{{ input.count().toString() + iif(input.count() = 1, ' document', ' documents') }}</span>{% endif %}</div>
+{% if input.exists() %}
+{% for g in inGroups %}
+{% if g != '__all__' %}<div style="margin:24px 0;padding:20px;background:#f8fbff;border-radius:14px;border-left:5px solid #007aff;"><div style="margin:0 0 16px 0;font-size:18px;color:#007aff;font-weight:600;">{{ iif(g = '__other__', 'Other documents', g) }}</div>{% endif %}
+{% for x in input %}
+{% if g = '__all__' or (g = '__other__' and x.value.ofType(Reference).resolve().category.empty()) or (x.value.ofType(Reference).resolve().category.coding.display contains g) %}
+<div style="background:#ffffff;border:1px solid #d1e4ff;border-radius:12px;padding:16px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+<div style="font-weight:600;color:#007aff;font-size:15px;">{{ iif(x.type.coding.display.exists(), x.type.coding.display.first(), iif(x.type.text.exists(), x.type.text, x.type.coding.code.first())) }}</div>
+{% if x.type.coding.code.exists() %}<span style="font-family:Menlo,Monaco,Consolas,monospace;background:#e5f2ff;padding:2px 8px;border-radius:6px;font-size:13px;">{{ x.type.coding.code.first() }}</span><br />{% endif %}
+{% if x.value.ofType(Reference).exists() %}
+{% if x.value.ofType(Reference).reference.exists() and x.value.ofType(Reference).reference.startsWith('http').not() and x.value.ofType(Reference).reference.startsWith('#').not() %}<a href="{{ x.value.ofType(Reference).reference.replace('/', '-') + '.html' }}">{{ iif(x.value.ofType(Reference).resolve().content.attachment.title.exists(), x.value.ofType(Reference).resolve().content.attachment.title.first(), iif(x.value.ofType(Reference).display.exists(), x.value.ofType(Reference).display, x.value.ofType(Reference).reference)) }}</a>{% else %}{{ iif(x.value.ofType(Reference).display.exists(), x.value.ofType(Reference).display, x.value.ofType(Reference).reference) }}{% endif %}
+{% if x.value.ofType(Reference).resolve().type.coding.display.exists() %}<div style="font-size:13px;color:#555555;margin-top:4px;">{{ x.value.ofType(Reference).resolve().type.coding.display.first() }}</div>{% elsif x.value.ofType(Reference).resolve().type.text.exists() %}<div style="font-size:13px;color:#555555;margin-top:4px;">{{ x.value.ofType(Reference).resolve().type.text }}</div>{% endif %}
+{% endif %}
+</div>
+{% endif %}
+{% endfor %}
+{% if g != '__all__' %}</div>{% endif %}
+{% endfor %}
+{% else %}
+<div style="text-align:center;padding:40px 20px;color:#888888;background:#f9f9f9;border-radius:14px;">No input content</div>
+{% endif %}
+</div>
+
+<div style="background:#ffffff;border-radius:18px;padding:32px;margin-bottom:32px;box-shadow:0 8px 28px rgba(0,0,0,0.08),0 2px 10px rgba(0,0,0,0.06);">
+<div style="font-size:24px;font-weight:600;color:#007aff;margin:0 0 24px 0;padding-bottom:12px;border-bottom:1px solid #e5e5ea;display:flex;justify-content:space-between;align-items:center;">Output Documents{% if output.exists() %}<span style="background:#34c759;color:#ffffff;font-size:14px;font-weight:600;padding:6px 14px;border-radius:20px;">{{ output.count().toString() + iif(output.count() = 1, ' document', ' documents') }}</span>{% endif %}</div>
+{% if output.exists() %}
+{% for g in outGroups %}
+{% if g != '__all__' %}<div style="margin:24px 0;padding:20px;background:#f4fbf6;border-radius:14px;border-left:5px solid #34c759;"><div style="margin:0 0 16px 0;font-size:18px;color:#34c759;font-weight:600;">{{ iif(g = '__other__', 'Other documents', g) }}</div>{% endif %}
+{% for x in output %}
+{% if g = '__all__' or (g = '__other__' and x.value.ofType(Reference).resolve().category.empty()) or (x.value.ofType(Reference).resolve().category.coding.display contains g) %}
+<div style="background:#ffffff;border:1px solid #ccebd3;border-radius:12px;padding:16px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+<div style="font-weight:600;color:#34c759;font-size:15px;">{{ iif(x.type.coding.display.exists(), x.type.coding.display.first(), iif(x.type.text.exists(), x.type.text, x.type.coding.code.first())) }}</div>
+{% if x.type.coding.code.exists() %}<span style="font-family:Menlo,Monaco,Consolas,monospace;background:#e6f9eb;padding:2px 8px;border-radius:6px;font-size:13px;">{{ x.type.coding.code.first() }}</span><br />{% endif %}
+{% if x.value.ofType(Reference).exists() %}
+{% if x.value.ofType(Reference).reference.exists() and x.value.ofType(Reference).reference.startsWith('http').not() and x.value.ofType(Reference).reference.startsWith('#').not() %}<a href="{{ x.value.ofType(Reference).reference.replace('/', '-') + '.html' }}">{{ iif(x.value.ofType(Reference).resolve().content.attachment.title.exists(), x.value.ofType(Reference).resolve().content.attachment.title.first(), iif(x.value.ofType(Reference).display.exists(), x.value.ofType(Reference).display, x.value.ofType(Reference).reference)) }}</a>{% else %}{{ iif(x.value.ofType(Reference).display.exists(), x.value.ofType(Reference).display, x.value.ofType(Reference).reference) }}{% endif %}
+{% if x.value.ofType(Reference).resolve().type.coding.display.exists() %}<div style="font-size:13px;color:#555555;margin-top:4px;">{{ x.value.ofType(Reference).resolve().type.coding.display.first() }}</div>{% elsif x.value.ofType(Reference).resolve().type.text.exists() %}<div style="font-size:13px;color:#555555;margin-top:4px;">{{ x.value.ofType(Reference).resolve().type.text }}</div>{% endif %}
+{% endif %}
+</div>
+{% endif %}
+{% endfor %}
+{% if g != '__all__' %}</div>{% endif %}
+{% endfor %}
+{% else %}
+<div style="text-align:center;padding:40px 20px;color:#888888;background:#f9f9f9;border-radius:14px;">No output content</div>
+{% endif %}
+</div>
+
+<div style="text-align:center;padding:50px;color:#666666;font-size:14px;">HL7 FHIR R5 – Regulatory Workflows and Interactions - pharma (RWI-Pharma)<br />Generated Render</div>
+</div>
+</div>
+</div>
