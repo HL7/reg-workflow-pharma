@@ -14,8 +14,8 @@ Description: "Organization profile for RWI Pharma regulatory workflows, derived 
 * alias 0..* MS
 * description 0..1 MS
 * type 0..* MS 
-  * ^binding.strength = #example
-  * ^binding.valueSet = "https://www.fda.gov/industry/structured-product-labeling-resources/business-operation"
+//  * ^binding.strength = #example
+//  * ^binding.valueSet = "https://www.fda.gov/industry/structured-product-labeling-resources/business-operation"
 
 // Contact details - aligned with Organization-uv-epi
 // In R5, Organization.address is removed? Or at least in this context we use contact.address
