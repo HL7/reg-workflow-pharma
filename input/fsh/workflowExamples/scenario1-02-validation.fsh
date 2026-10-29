@@ -1,7 +1,7 @@
 Instance: scenario1-02-validation
 InstanceOf: Task
-Title: "scenario1 02 validation"
-Description: "Example Task Type IB Variation"
+Title: "scenario1 02 Type IB variation validated"
+Description: "Version 2 of the submission Task (in production, the same Task as scenario1-01). The regulator accepts it, assigns procedure number PROC-2025-12345 and adds the acknowledgement and validation report as outputs."
 Usage: #example
 * meta.versionId = "2"
 * meta.lastUpdated = "2025-11-20T14:30:00+01:00"

@@ -1,7 +1,7 @@
 Instance: scenario1-05-technical-question
 InstanceOf: Task
-Title: "scenario1 05 technical question"
-Description: "Example Task Information Request"
+Title: "scenario1 05 questions issued"
+Description: "Version 1 of the question Task. The regulator posts an information-request Task, based on the submission Task, with the list of questions as input."
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2025-12-01T14:30:00+01:00"

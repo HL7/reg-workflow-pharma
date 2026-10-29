@@ -1,7 +1,7 @@
 Instance: scenario1-01-initial-submission
 InstanceOf: Task
-Title: "scenario1 01 initial submission"
-Description: "Example Task Type IB Variation"
+Title: "scenario1 01 Type IB variation submitted"
+Description: "Version 1 of the submission Task. The applicant posts a Type IB variation with the stability update documents as inputs."
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2025-11-15T09:00:00+01:00"

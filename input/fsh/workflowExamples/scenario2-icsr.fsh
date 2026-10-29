@@ -33,7 +33,7 @@ Usage: #example
 Instance: scenario2a-02-icsr-accepted
 InstanceOf: Task
 Title: "scenario2a 02 ICSR accepted"
-Description: "Version 2 of the ICSR Task (in production, the same Task as scenario2a-01). The report passed validation and was loaded; the regulator returns the E2B(R2) acknowledgment log."
+Description: "Version 2 of the ICSR Task (in production, the same Task as scenario2a-01). The report passed validation and was loaded; the regulator adds the E2B(R2) acknowledgment log as an output."
 Usage: #example
 * meta.versionId = "2"
 * meta.lastUpdated = "2026-10-02T09:45:12+02:00"
@@ -127,7 +127,7 @@ Usage: #example
 Instance: scenario2b-02-icsr-rejected
 InstanceOf: Task
 Title: "scenario2b 02 ICSR rejected"
-Description: "Version 2 of the ICSR Task (in production, the same Task as scenario2b-01). The report failed validation; the regulator rejects the Task and returns the acknowledgment log and a validation report."
+Description: "Version 2 of the ICSR Task (in production, the same Task as scenario2b-01). The report failed validation; the regulator rejects the Task and adds the acknowledgment log and a validation report as outputs."
 Usage: #example
 * meta.versionId = "2"
 * meta.lastUpdated = "2026-10-14T11:12:30+02:00"
@@ -193,7 +193,7 @@ Usage: #example
 Instance: scenario2b-04-icsr-accepted
 InstanceOf: Task
 Title: "scenario2b 04 ICSR resubmission accepted"
-Description: "Version 2 of the resubmission Task (in production, the same Task as scenario2b-03). The corrected report passed validation and was loaded; the regulator returns the acknowledgment log."
+Description: "Version 2 of the resubmission Task (in production, the same Task as scenario2b-03). The corrected report passed validation and was loaded; the regulator adds the acknowledgment log as an output."
 Usage: #example
 * meta.versionId = "2"
 * meta.lastUpdated = "2026-10-14T15:52:08+02:00"

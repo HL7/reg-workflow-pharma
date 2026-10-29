@@ -1,9 +1,9 @@
 Instance: scenario1-04-finance-payment
 InstanceOf: Task
-Title: "scenario1 04 finance payment reflected by invoice Task update"
-Description: "Example Task Request Payment - payment has been made"
+Title: "scenario1 04 invoice paid"
+Description: "Version 2 of the invoice Task (in production, the same Task as scenario1-03). The applicant completes it and adds proof of payment as an output."
 Usage: #example
-* meta.versionId = "3"
+* meta.versionId = "2"
 * meta.lastUpdated = "2025-11-22T14:00:00+01:00"
 * meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 

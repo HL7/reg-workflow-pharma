@@ -26,8 +26,8 @@
 
 Instance: scenario1-07-final-decision
 InstanceOf: Task
-Title: "scenario1-07-final-decision"
-Description: "Completetion of Scenario 01 initial submission Task - Example Task Type IB Variation. This is the initial submision Task but in the completed form"
+Title: "scenario1 07 Type IB variation approved"
+Description: "Version 3 of the submission Task (in production, the same Task as scenario1-01). The regulator approves the variation and adds the approval letter and assessment report as outputs."
 Usage: #example
 * meta.versionId = "3"
 * meta.lastUpdated = "2025-12-22T09:00:00+01:00"

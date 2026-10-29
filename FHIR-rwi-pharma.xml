@@ -115,13 +115,13 @@
 <artifact id="DocumentReference/docref-stability-data-annex" key="DocumentReference-docref-stability-data-annex" name="docref stability data annex"/>
 <artifact id="DocumentReference/output-ack" key="DocumentReference-output-ack" name="output ack"/>
 <artifact id="DocumentReference/output-validation" key="DocumentReference-output-validation" name="output validation"/>
-<artifact id="Task/scenario1-01-initial-submission" key="Task-scenario1-01-initial-submission" name="scenario1 01 initial submission"/>
-<artifact id="Task/scenario1-02-validation" key="Task-scenario1-02-validation" name="scenario1 02 validation"/>
-<artifact id="Task/scenario1-03-finance-invoice" key="Task-scenario1-03-finance-invoice" name="scenario1 03 finance invoice original Task"/>
-<artifact id="Task/scenario1-04-finance-payment" key="Task-scenario1-04-finance-payment" name="scenario1 04 finance payment reflected by invoice Task update"/>
-<artifact id="Task/scenario1-05-technical-question" key="Task-scenario1-05-technical-question" name="scenario1 05 technical question"/>
-<artifact id="Task/scenario1-06-technical-response" key="Task-scenario1-06-technical-response" name="scenario1 06 technical response"/>
-<artifact id="Task/scenario1-07-final-decision" key="Task-scenario1-07-final-decision" name="scenario1-07-final-decision"/>
+<artifact id="Task/scenario1-01-initial-submission" key="Task-scenario1-01-initial-submission" name="scenario1 01 Type IB variation submitted"/>
+<artifact id="Task/scenario1-02-validation" key="Task-scenario1-02-validation" name="scenario1 02 Type IB variation validated"/>
+<artifact id="Task/scenario1-03-finance-invoice" key="Task-scenario1-03-finance-invoice" name="scenario1 03 invoice issued"/>
+<artifact id="Task/scenario1-04-finance-payment" key="Task-scenario1-04-finance-payment" name="scenario1 04 invoice paid"/>
+<artifact id="Task/scenario1-05-technical-question" key="Task-scenario1-05-technical-question" name="scenario1 05 questions issued"/>
+<artifact id="Task/scenario1-06-technical-response" key="Task-scenario1-06-technical-response" name="scenario1 06 questions answered"/>
+<artifact id="Task/scenario1-07-final-decision" key="Task-scenario1-07-final-decision" name="scenario1 07 Type IB variation approved"/>
 <artifact id="Task/scenario2a-01-icsr-submitted" key="Task-scenario2a-01-icsr-submitted" name="scenario2a 01 ICSR submitted"/>
 <artifact id="Task/scenario2a-02-icsr-accepted" key="Task-scenario2a-02-icsr-accepted" name="scenario2a 02 ICSR accepted"/>
 <artifact id="Task/scenario2a-03-icsr-complete" key="Task-scenario2a-03-icsr-complete" name="scenario2a 03 ICSR complete"/>

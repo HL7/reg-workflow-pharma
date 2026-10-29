@@ -1,7 +1,7 @@
 Instance: scenario1-03-finance-invoice
 InstanceOf: Task
-Title: "scenario1 03 finance invoice original Task"
-Description: "Example Task Request Payment - original"
+Title: "scenario1 03 invoice issued"
+Description: "Version 1 of the invoice Task. The regulator posts a request-payment Task, based on the submission Task, with the invoice as input."
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2025-11-21T09:00:00+01:00"

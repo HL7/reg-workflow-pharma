@@ -37,7 +37,7 @@ Usage: #example
 Instance: scenario3-02-cta-validated
 InstanceOf: Task
 Title: "scenario3 02 clinical trial application validated"
-Description: "Version 2 of the application Task (in production, the same Task as scenario3-01). The regulator accepts it, assigns the trial number and returns the validation report."
+Description: "Version 2 of the application Task (in production, the same Task as scenario3-01). The regulator accepts it, assigns the trial number and adds the validation report as an output."
 Usage: #example
 * meta.versionId = "2"
 * meta.lastUpdated = "2026-09-12T15:00:00+02:00"
@@ -153,7 +153,7 @@ Usage: #example
 Instance: scenario3-05-cta-authorised
 InstanceOf: Task
 Title: "scenario3 05 clinical trial authorised"
-Description: "Version 3 of the application Task (in production, the same Task as scenario3-01). The regulator completes it and returns the authorisation decision."
+Description: "Version 3 of the application Task (in production, the same Task as scenario3-01). The regulator completes it and adds the authorisation decision as an output."
 Usage: #example
 * meta.versionId = "3"
 * meta.lastUpdated = "2026-11-03T09:00:00+01:00"

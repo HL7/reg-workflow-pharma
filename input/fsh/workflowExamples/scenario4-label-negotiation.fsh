@@ -41,7 +41,7 @@ Usage: #example
 Instance: scenario4-02-variation-validated
 InstanceOf: Task
 Title: "scenario4 02 Type II variation validated"
-Description: "Version 2 of the variation Task (in production, the same Task as scenario4-01). The regulator validates it, assigns the procedure number and returns the validation report."
+Description: "Version 2 of the variation Task (in production, the same Task as scenario4-01). The regulator validates it, assigns the procedure number and adds the validation report as an output."
 Usage: #example
 * meta.versionId = "2"
 * meta.lastUpdated = "2027-01-15T14:00:00+01:00"
@@ -165,7 +165,7 @@ Usage: #example
 Instance: scenario4-05-labelling-comments-round1-response
 InstanceOf: Task
 Title: "scenario4 05 labelling comments round 1 answered with a counter-proposal"
-Description: "Version 2 of the round 1 Task (in production, the same Task as scenario4-04). The applicant accepts the frequency change and counter-proposes the food wording, returning annotated and clean ePI v3."
+Description: "Version 2 of the round 1 Task (in production, the same Task as scenario4-04). The applicant accepts the frequency change and counter-proposes the food wording, adding annotated and clean ePI v3 as outputs."
 Usage: #example
 * meta.versionId = "2"
 * meta.lastUpdated = "2027-03-01T16:30:00+01:00"
@@ -243,7 +243,7 @@ Usage: #example
 Instance: scenario4-07-labelling-comments-round2-response
 InstanceOf: Task
 Title: "scenario4 07 labelling comments round 2 accepted"
-Description: "Version 2 of the round 2 Task (in production, the same Task as scenario4-06). The applicant accepts all changes and returns clean ePI v5."
+Description: "Version 2 of the round 2 Task (in production, the same Task as scenario4-06). The applicant accepts all changes and adds clean ePI v5 as an output."
 Usage: #example
 * meta.versionId = "2"
 * meta.lastUpdated = "2027-03-10T11:15:00+01:00"
@@ -353,7 +353,7 @@ Usage: #example
 Instance: scenario4-10-variation-approved
 InstanceOf: Task
 Title: "scenario4 10 Type II variation approved"
-Description: "Version 4 of the variation Task (in production, the same Task as scenario4-01). The regulator approves it and returns the approval letter and the approved ePI."
+Description: "Version 4 of the variation Task (in production, the same Task as scenario4-01). The regulator approves it and adds the approval letter and the approved ePI as outputs."
 Usage: #example
 * meta.versionId = "4"
 * meta.lastUpdated = "2027-03-17T09:00:00+01:00"

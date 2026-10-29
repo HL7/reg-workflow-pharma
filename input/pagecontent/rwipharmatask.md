@@ -12,13 +12,13 @@
 <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:32px;">
   <a href="Task-scenario1-01-initial-submission.html" style="text-decoration:none; background:#eff6ff; border:1px solid #bfdbfe; border-radius:6px; padding:6px 12px; font-size:.8em; font-weight:600; color:#1d4ed8;">📤 Initial Submission</a>
   <a href="Task-scenario1-05-technical-question.html" style="text-decoration:none; background:#fff7ed; border:1px solid #fed7aa; border-radius:6px; padding:6px 12px; font-size:.8em; font-weight:600; color:#c2410c;">❓ Questions</a>
-  <a href="Task-scenario1-06-technical-response.html" style="text-decoration:none; background:#ecfdf5; border:1px solid #a7f3d0; border-radius:6px; padding:6px 12px; font-size:.8em; font-weight:600; color:#047857;">💬 Response</a>
+  <a href="Task-scenario1-06-technical-response.html" style="text-decoration:none; background:#ecfdf5; border:1px solid #a7f3d0; border-radius:6px; padding:6px 12px; font-size:.8em; font-weight:600; color:#047857;">💬 Response (question Task, v2)</a>
   <a href="Task-scenario1-07-final-decision.html" style="text-decoration:none; background:#faf5ff; border:1px solid #e9d5ff; border-radius:6px; padding:6px 12px; font-size:.8em; font-weight:600; color:#7e22ce;">📩 Decision</a>
 </div>
 
 <hr style="border:none; border-top:1px solid #e5e7eb; margin:0 0 24px;"/>
 
-The following are examples of Tasks with synthetic content: <a href="Task-scenario1-01-initial-submission.html">Initial Submission</a>, <a href="Task-scenario1-05-technical-question.html">Questions</a>, <a href="Task-scenario1-06-technical-response.html">Response</a>, and <a href="Task-scenario1-07-final-decision.html">Decision</a>.
+The following are examples of Tasks with synthetic content: <a href="Task-scenario1-01-initial-submission.html">Initial Submission</a>, <a href="Task-scenario1-05-technical-question.html">Questions</a>, <a href="Task-scenario1-06-technical-response.html">Response (question Task, v2)</a>, and <a href="Task-scenario1-07-final-decision.html">Decision</a>.
 
 The following table provides an overview of the key elements of the RWI-pharma Task resource. For a technical description of the Task resource, see the <a href="StructureDefinition-rwi-pharma-task.html">RWI-pharma Task profile</a>.
 

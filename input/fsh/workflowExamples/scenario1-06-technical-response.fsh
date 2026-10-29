@@ -1,9 +1,8 @@
 Instance: scenario1-06-technical-response
 InstanceOf: Task
-Title: "scenario1 06 technical response"
-Description: "Example Task Response to Information Request, fulfillment of information request Scenario1 05 technical question"
+Title: "scenario1 06 questions answered"
+Description: "Version 2 of the question Task (in production, the same Task as scenario1-05). The applicant completes it and adds the questionnaire response and updated stability data annex as outputs."
 Usage: #example
-//* meta.versionId = "1"
 //* meta.lastUpdated = "2025-03-15T10:00:00+01:00"
 //* meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 // * identifier.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharama-identifier-type#task-instance-uuid "Task Instance UUID"
@@ -24,7 +23,7 @@ Usage: #example
 //* owner = Reference(org-ema-srm-hmed) "Health Authority"
 //* authoredOn = "2025-03-15T10:00:00+01:00"
 
-* meta.versionId = "3"
+* meta.versionId = "2"
 * meta.lastUpdated = "2025-12-05T10:00:00+01:00"
 * meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 
