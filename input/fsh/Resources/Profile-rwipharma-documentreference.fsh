@@ -51,14 +51,16 @@ Description: "DocumentReference profile used in RWI Pharma regulatory submission
 
 * category 0..1 MS
   * ^short = "High-level categorization (e.g. CTD Module 1, Clinical Trial Data)"
-  * ^binding.strength = #extensible
+  * ^binding.strength = #example
   * ^binding.valueSet = Canonical(eg-ctd-module-vs)
 
 * type 1..1 MS
-  * ^short = "CTD section code (e.g. 3.2.S.1.1)"
+  * ^short = "Document type: an RWI-pharma input/output type or a CTD section code (e.g. 3.2.S.1.1)"
   * ^definition = "Coded representation of the specific document type or CTD section."
   * ^binding.strength = #example
-  * ^binding.valueSet = Canonical(eg-ctd-section-vs)
+  * ^binding.valueSet = Canonical(rwipharma-document-type-vs)
+  * ^binding.description = "RWI-pharma document types and CTD section codes."
+* type insert DomainCandidateBinding(eg-ctd-section-vs, market-authorization, CTD section codes for eCTD documents in Market Authorization submissions)
 
 * relatesTo 0..* MS
   * ^short = "Relationships to other documents"

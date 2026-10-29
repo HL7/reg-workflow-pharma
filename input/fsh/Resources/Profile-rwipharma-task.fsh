@@ -93,7 +93,10 @@ Description: "Task profile for RWI Pharma regulatory submission workflows"
   * ^short = "Detailed regulatory status (e.g., clock-stop)"
   * ^binding.strength = #example
   * ^binding.valueSet = Canonical(rwipharma-business-status-vs)
-  * ^binding.description = "Detailed regulatory status such as clock-stop"
+  * ^binding.description = "Detailed regulatory status. Each domain has its own value set (see additional bindings)."
+* businessStatus insert DomainCandidateBinding(rwipharma-ma-business-status-vs, market-authorization, Business statuses for Market Authorization Tasks)
+* businessStatus insert DomainCandidateBinding(rwipharma-ct-business-status-vs, clinical-trial, Business statuses for Clinical Trial Tasks)
+* businessStatus insert DomainCandidateBinding(rwipharma-icsr-business-status-vs, icsr-flow, Business statuses for ICSR Tasks)
   
 * statusReason ^short = "Required if status is rejected or cancelled"
 * statusReason ^definition = "Required if status is rejected or cancelled. Reason for current status." 
@@ -106,6 +109,10 @@ Description: "Task profile for RWI Pharma regulatory submission workflows"
   * ^definition = "Defines the regulatory message type and triggers specific business rules"
   * ^binding.strength = #example
   * ^binding.valueSet = Canonical(rwipharma-submission-type-vs)
+  * ^binding.description = "All RWI-pharma Task codes. Each domain has its own value set (see additional bindings)."
+* code insert DomainCandidateBinding(rwipharma-ma-task-code-vs, market-authorization, Task codes for Market Authorization)
+* code insert DomainCandidateBinding(rwipharma-ct-task-code-vs, clinical-trial, Task codes for Clinical Trials)
+* code insert DomainCandidateBinding(rwipharma-icsr-task-code-vs, icsr-flow, Task codes for Individual Case Safety Reports)
 
 * description 0..0
 
@@ -156,7 +163,12 @@ Description: "Task profile for RWI Pharma regulatory submission workflows"
 * input.type MS
   * ^short = "Input type  indicates the type of input, such as the code used as a DocumentReference type"
   * ^binding.strength = #example
-  * ^binding.valueSet = Canonical(eg-ctd-section-vs)
+  * ^binding.valueSet = Canonical(rwipharma-task-input-type-vs)
+  * ^binding.description = "Task input types, including CTD section codes. Each domain has its own value set (see additional bindings)."
+* input.type insert DomainCandidateBinding(rwipharma-ma-task-input-type-vs, market-authorization, Input types for Market Authorization Tasks)
+* input.type insert DomainCandidateBinding(rwipharma-ct-task-input-type-vs, clinical-trial, Input types for Clinical Trial Tasks)
+* input.type insert DomainCandidateBinding(rwipharma-icsr-task-input-type-vs, icsr-flow, Input types for ICSR Tasks)
+* input.type insert DomainCandidateBinding(eg-ctd-section-vs, market-authorization, CTD section codes for eCTD content in Market Authorization submissions)
 //* input ^slicing.discriminator.type = #value
 //* input ^slicing.discriminator.path = "type"
 //* input ^slicing.rules = #open  
@@ -174,7 +186,12 @@ Description: "Task profile for RWI Pharma regulatory submission workflows"
 * output.type MS
   * ^short = "Output type indicates the type of output, such as the code used as a DocumentReference type"
   * ^binding.strength = #example
-  * ^binding.valueSet = Canonical(eg-ctd-section-vs)
+  * ^binding.valueSet = Canonical(rwipharma-task-output-type-vs)
+  * ^binding.description = "Task output types, including CTD section codes. Each domain has its own value set (see additional bindings)."
+* output.type insert DomainCandidateBinding(rwipharma-ma-task-output-type-vs, market-authorization, Output types for Market Authorization Tasks)
+* output.type insert DomainCandidateBinding(rwipharma-ct-task-output-type-vs, clinical-trial, Output types for Clinical Trial Tasks)
+* output.type insert DomainCandidateBinding(rwipharma-icsr-task-output-type-vs, icsr-flow, Output types for ICSR Tasks)
+* output.type insert DomainCandidateBinding(eg-ctd-section-vs, market-authorization, CTD section codes for eCTD content in Market Authorization submissions)
 //  * ^slicing.discriminator.type = #value
 //  * ^slicing.discriminator.path = "type"
 //  * ^slicing.rules = #open
