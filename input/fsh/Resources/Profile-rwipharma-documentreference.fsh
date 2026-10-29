@@ -59,7 +59,13 @@ Description: "DocumentReference profile used in RWI Pharma regulatory submission
   * ^definition = "Coded representation of the specific document type or CTD section."
   * ^binding.strength = #example
   * ^binding.valueSet = Canonical(rwipharma-document-type-vs)
-  * ^binding.description = "RWI-pharma document types and CTD section codes."
+  * ^binding.description = "RWI-pharma document types and CTD section codes. The Task input and output type value sets for each domain apply (see additional bindings)."
+* type insert DomainCandidateBinding(rwipharma-ma-task-input-type-vs, market-authorization, Input types for Market Authorization Tasks)
+* type insert DomainCandidateBinding(rwipharma-ct-task-input-type-vs, clinical-trial, Input types for Clinical Trial Tasks)
+* type insert DomainCandidateBinding(rwipharma-icsr-task-input-type-vs, icsr-flow, Input types for ICSR Tasks)
+* type insert DomainCandidateBinding(rwipharma-ma-task-output-type-vs, market-authorization, Output types for Market Authorization Tasks)
+* type insert DomainCandidateBinding(rwipharma-ct-task-output-type-vs, clinical-trial, Output types for Clinical Trial Tasks)
+* type insert DomainCandidateBinding(rwipharma-icsr-task-output-type-vs, icsr-flow, Output types for ICSR Tasks)
 * type insert DomainCandidateBinding(eg-ctd-section-vs, market-authorization, CTD section codes for eCTD documents in Market Authorization submissions)
 
 * relatesTo 0..* MS

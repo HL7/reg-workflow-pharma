@@ -27,6 +27,7 @@
 <artifact id="ValueSet/rwipharma-ct-task-code-vs" key="ValueSet-rwipharma-ct-task-code-vs" name="Example Value Set RWI-Pharma Clinical Trial Task Codes"/>
 <artifact id="ValueSet/rwipharma-ct-task-input-type-vs" key="ValueSet-rwipharma-ct-task-input-type-vs" name="Example Value Set RWI-Pharma Clinical Trial Task Input Types"/>
 <artifact id="ValueSet/rwipharma-ct-task-output-type-vs" key="ValueSet-rwipharma-ct-task-output-type-vs" name="Example Value Set RWI-Pharma Clinical Trial Task Output Types"/>
+<artifact id="ValueSet/rwipharma-document-type-vs" key="ValueSet-rwipharma-document-type-vs" name="Example Value Set RWI-Pharma Document Types"/>
 <artifact id="ValueSet/rwipharma-icsr-business-status-vs" key="ValueSet-rwipharma-icsr-business-status-vs" name="Example Value Set RWI-Pharma ICSR Business Status"/>
 <artifact id="ValueSet/rwipharma-icsr-task-code-vs" key="ValueSet-rwipharma-icsr-task-code-vs" name="Example Value Set RWI-Pharma ICSR Task Codes"/>
 <artifact id="ValueSet/rwipharma-icsr-task-input-type-vs" key="ValueSet-rwipharma-icsr-task-input-type-vs" name="Example Value Set RWI-Pharma ICSR Task Input Types"/>
@@ -35,6 +36,8 @@
 <artifact id="ValueSet/rwipharma-ma-task-input-type-vs" key="ValueSet-rwipharma-ma-task-input-type-vs" name="Example Value Set RWI-Pharma Market Authorization Task Input Types"/>
 <artifact id="ValueSet/rwipharma-ma-task-output-type-vs" key="ValueSet-rwipharma-ma-task-output-type-vs" name="Example Value Set RWI-Pharma Market Authorization Task Output Types"/>
 <artifact id="ValueSet/rwipharma-ma-task-code-vs" key="ValueSet-rwipharma-ma-task-code-vs" name="Example Value Set RWI-Pharma Marketing Authorization Task Codes"/>
+<artifact id="ValueSet/rwipharma-task-input-type-vs" key="ValueSet-rwipharma-task-input-type-vs" name="Example Value Set RWI-Pharma Task Input Types"/>
+<artifact id="ValueSet/rwipharma-task-output-type-vs" key="ValueSet-rwipharma-task-output-type-vs" name="Example Value Set RWI-Pharma Task Output Types"/>
 <artifact id="Endpoint/1003" key="Endpoint-1003" name="Example basic RWI Pharma interaction Endpoint"/>
 <artifact id="DocumentReference/docref-icsr-2a-acklog" key="DocumentReference-docref-icsr-2a-acklog" name="ICSR acknowledgment log"/>
 <artifact id="DocumentReference/docref-icsr-2b-acklog" key="DocumentReference-docref-icsr-2b-acklog" name="ICSR acknowledgment log rejected"/>
