@@ -174,3 +174,12 @@
     <p style="font-size:.85em; color:#4b5563; line-height:1.6; margin:0;">Join the weekly calls. Test the reference implementation. We welcome industry, solution providers, and regulators from every region to contribute.</p>
   </div>
 </div>
+
+<hr style="border:none; border-top:1px solid #e5e7eb; margin:32px 0;"/>
+
+<!-- INTELLECTUAL PROPERTY -->
+<h3 id="ip-statements" style="font-size:1.3em; font-weight:700; color:#111827; margin-bottom:12px;">Intellectual Property Considerations</h3>
+
+<p>This implementation guide and the underlying FHIR specification are licensed as public domain under the <a href="http://hl7.org/fhir/R5/license.html#license">FHIR license</a>. The license page also describes rules for the use of the FHIR name and logo.</p>
+
+{% lang-fragment ip-statements.xhtml %}

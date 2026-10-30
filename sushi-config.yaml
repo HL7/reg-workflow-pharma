@@ -317,6 +317,8 @@ pages:
     title: Organization & Endpoint
   rwipharmadocumentReference.md:
     title: DocumentReference
+  downloadsANDdependencies.md:
+    title: Downloads and Dependencies
 
 menu:
   Home: index.html
@@ -335,6 +337,7 @@ menu:
     Architecture: architecture.html
     Interaction Pattern: rwipharmainteractionpattern.html
     Capability Requirements: capability-requirements.html
+    Downloads and Dependencies: downloadsANDdependencies.html
   Key Resources:
     RWI-pharma Task: rwipharmatask.html
     Subscription: rwipharmasubscription.html
