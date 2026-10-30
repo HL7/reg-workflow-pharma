@@ -15,14 +15,7 @@ Most code systems defined in HL7 IGs will need to move to THO later during the p
 % None of the codings provided are in the value set 'FHIR Document Type Codes'%
 
 # Slices are intentional and are examples of other slices that can occur
-%This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 %This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-organization|0.1.0%
-INFORMATION: Organization/1002: Organization.contact[0].telecom[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-organization|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-
-# These references are intended
-%Reference to experimental CodeSystem http://hl7.org/fhir/request-intent|5.0.0
-%Reference to draft CodeSystem http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-input-output-type|0.1.0
-%Reference to experimental ValueSet http://hl7.org/fhir/ValueSet/resource-types|5.0.0
 
 # These are found in the base FHIR R5 Task Resource
 WARNING: StructureDefinition/rwi-pharma-task: StructureDefinition.snapshot.element[45].binding: The definition for the element 'Task.priority' binds to the value set 'http://hl7.org/fhir/ValueSet/request-priority|5.0.0' which is experimental, but this structure is not labeled as experimental
@@ -35,8 +28,6 @@ WARNING: StructureDefinition/task-creation-with-organization-assigned-filter: St
 WARNING: StructureDefinition/task-creation-with-organization-assigned-filter: StructureDefinition.snapshot.element[68].comment: The markdown contains content that appears to be an embedded HTML tag starting at '<a'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
 WARNING: StructureDefinition/task-creation-with-organization-assigned-filter: StructureDefinition.snapshot.element[12].binding: The definition for the element 'SubscriptionTopic.versionAlgorithm[x]' binds to the value set 'http://hl7.org/fhir/ValueSet/version-algorithm|5.0.0' which is experimental, but this structure is not labeled as experimental
 WARNING: StructureDefinition/task-creation-with-organization-assigned-filter: StructureDefinition.snapshot.element[23].binding: The definition for the element 'SubscriptionTopic.jurisdiction' binds to the value set 'http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0' which is experimental, but this structure is not labeled as experimental
-ERROR: StructureDefinition/task-status-change-with-identifier-filter: StructureDefinition.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-implements could not be found so is not allowed here
-ERROR: StructureDefinition/task-status-change-with-identifier-filter: StructureDefinition.extension[0].url: No definition could be found for URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-implements'
 WARNING: StructureDefinition/task-status-change-with-identifier-filter: StructureDefinition.snapshot.element[35].definition: The markdown contains content that appears to be an embedded HTML tag starting at '<a'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
 WARNING: StructureDefinition/task-status-change-with-identifier-filter: StructureDefinition.snapshot.element[53].definition: The markdown contains content that appears to be an embedded HTML tag starting at '<a'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
 WARNING: StructureDefinition/task-status-change-with-identifier-filter: StructureDefinition.snapshot.element[59].comment: The markdown contains content that appears to be an embedded HTML tag starting at '<a'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
@@ -47,22 +38,16 @@ WARNING: StructureDefinition/task-status-change-with-identifier-filter: Structur
 # This is an issue with newer versions of the IG Publisher, speculation is a change in R6 that makes it not play nicely with R5 - see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20producing.20R5.20SubscriptionTopic.20with.20missing.20fields/with/635484516. The issue causes the trigger details, including canFilterBy from showing up in the IG, even though they are in the FSH-derived JSON.
 ERROR: SubscriptionTopic/TaskCreationWithOrganizationAssignedFilter: SubscriptionTopic: SubscriptionTopic.canFilterBy: minimum required = 1, but only found 0 (from http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/task-creation-with-organization-assigned-filter|0.1.0)
 
-# Intended to be draft for now
+# These references are intended
+%Reference to experimental CodeSystem http://hl7.org/fhir/request-intent|5.0.0
+%Reference to experimental ValueSet http://hl7.org/fhir/ValueSet/resource-types|5.0.0
+%Reference to draft CodeSystem http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-input-output-type|0.1.0
 %Reference to draft CodeSystem http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status|0.1.0%
 %Reference to draft CodeSystem http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code|0.1.0%
 
-# To address at a later time - has no effect on demo
-%The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed%
-
-# Not applicable as the Bundle is an example of an Event Notification Type Bundle
-INFORMATION: Bundle/eee72492-c236-41f7-a7ba-3af356204f4c: Bundle.entry[0].resource/*SubscriptionStatus/09efceb7-abdc-4dc8-bc31-0788baf65dbd*/.notificationEvent[0].focus: The URL 'Task/scenario1-01-initial-submission' cannot be resolved unless the fullURL is a RESTFul base URL, or a baseURL has been provided and the Bundle is a batch or transaction
-INFORMATION: Bundle/eee72492-c236-41f7-a7ba-3af356204f4c: Bundle.entry[0].resource/*SubscriptionStatus/09efceb7-abdc-4dc8-bc31-0788baf65dbd*/.subscription: The URL 'Subscription/Subscription-TaskStatusChange-FullResource' cannot be resolved unless the fullURL is a RESTFul base URL, or a baseURL has been provided and the Bundle is a batch or transaction
-
 # These will be addressed before publication and are specific to the HL7 IG balloting process, not related to implementation
-ERROR: There is no jira specification file defined with the expected name of FHIR-apix in the xml folder of the  https://github.com/HL7/Jira-Spec-Artifacts project.  This must exist before ballot or publication.
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
-WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 
 # Subscription notification Bundles reference the Subscription and the notified Task on the sending server. As in the FHIR R5 notification examples, these references cannot be resolved inside a subscription-notification Bundle (it is not a batch or transaction).
 The URL 'Subscription/Subscription-TaskStatusChange-IdOnly' cannot be resolved unless the fullURL is a RESTFul base URL, or a baseURL has been provided and the Bundle is a batch or transaction
@@ -76,3 +61,6 @@ The URL 'Task/scenario1-02-validation' cannot be resolved unless the fullURL is 
 INFORMATION: CodeSystem/rwipharma-business-status: CodeSystem.property[0]: This property has only a code ('RWI-Pharma-Domain') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
 INFORMATION: CodeSystem/rwipharma-task-input-output-type: CodeSystem.property[0]: This property has only a code ('RWI-Pharma-Domain') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
 INFORMATION: CodeSystem/rwipharma-task-input-output-type: CodeSystem.property[1]: This property has only a code ('RWI-Pharma-Direction') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+
+# The slice is intended as an example of SubscriptionNotification payloads
+INFORMATION: Bundle/eee72492-c236-41f7-a7ba-3af356204f4c: Bundle.entry[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-notification-bundle|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
