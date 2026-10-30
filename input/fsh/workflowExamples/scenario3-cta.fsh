@@ -29,11 +29,11 @@ Usage: #example
 * lastModified = "2026-09-01T10:00:00+02:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#cover-letter "Cover Letter"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#cover-letter "Cover Letter"
 * input[0].valueReference = Reference(docref-cta-cover-letter) "CTA cover letter"
-* input[1].type = RWIpharmaTaskInputOutputTypeCS#application-form "Application Form"
+* input[1].type = RWIpharmaTaskInputOutputTypeExample#application-form "Application Form"
 * input[1].valueReference = Reference(docref-cta-application-form) "CTA application form"
-* input[2].type = RWIpharmaTaskInputOutputTypeCS#protocol "Protocol"
+* input[2].type = RWIpharmaTaskInputOutputTypeExample#protocol "Protocol"
 * input[2].valueReference = Reference(docref-cta-protocol) "Protocol WD-201 v1.0"
 
 Instance: scenario3-02-cta-validated
@@ -69,13 +69,13 @@ Usage: #example
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * executionPeriod.start = "2026-09-02T08:00:00+02:00"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#cover-letter "Cover Letter"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#cover-letter "Cover Letter"
 * input[0].valueReference = Reference(docref-cta-cover-letter) "CTA cover letter"
-* input[1].type = RWIpharmaTaskInputOutputTypeCS#application-form "Application Form"
+* input[1].type = RWIpharmaTaskInputOutputTypeExample#application-form "Application Form"
 * input[1].valueReference = Reference(docref-cta-application-form) "CTA application form"
-* input[2].type = RWIpharmaTaskInputOutputTypeCS#protocol "Protocol"
+* input[2].type = RWIpharmaTaskInputOutputTypeExample#protocol "Protocol"
 * input[2].valueReference = Reference(docref-cta-protocol) "Protocol WD-201 v1.0"
-* output[0].type = RWIpharmaTaskInputOutputTypeCS#validation-report "Validation Report"
+* output[0].type = RWIpharmaTaskInputOutputTypeExample#validation-report "Validation Report"
 * output[0].valueReference = Reference(docref-cta-validation-report) "CTA validation report"
 
 Instance: scenario3-03-cta-rfi
@@ -113,7 +113,7 @@ Usage: #example
 * owner = Reference(org-synthpharma-ag) "SynthPharma AG"
 * requestedPeriod.start = "2026-10-01T11:00:00+02:00"
 * requestedPeriod.end = "2026-10-15T23:59:59+02:00"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#request-for-information "Request for Information"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#request-for-information "Request for Information"
 * input[0].valueReference = Reference(docref-cta-rfi) "Request for information"
 
 Instance: scenario3-04-cta-rfi-response
@@ -153,9 +153,9 @@ Usage: #example
 * requestedPeriod.end = "2026-10-15T23:59:59+02:00"
 * executionPeriod.start = "2026-10-01T11:05:00+02:00"
 * executionPeriod.end = "2026-10-12T16:00:00+02:00"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#request-for-information "Request for Information"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#request-for-information "Request for Information"
 * input[0].valueReference = Reference(docref-cta-rfi) "Request for information"
-* output[0].type = RWIpharmaTaskInputOutputTypeCS#response-to-questions "Response to Questions"
+* output[0].type = RWIpharmaTaskInputOutputTypeExample#response-to-questions "Response to Questions"
 * output[0].valueReference = Reference(docref-cta-rfi-response) "Response to request for information"
 
 Instance: scenario3-05-cta-authorised
@@ -192,15 +192,15 @@ Usage: #example
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * executionPeriod.start = "2026-09-02T08:00:00+02:00"
 * executionPeriod.end = "2026-11-03T09:00:00+01:00"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#cover-letter "Cover Letter"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#cover-letter "Cover Letter"
 * input[0].valueReference = Reference(docref-cta-cover-letter) "CTA cover letter"
-* input[1].type = RWIpharmaTaskInputOutputTypeCS#application-form "Application Form"
+* input[1].type = RWIpharmaTaskInputOutputTypeExample#application-form "Application Form"
 * input[1].valueReference = Reference(docref-cta-application-form) "CTA application form"
-* input[2].type = RWIpharmaTaskInputOutputTypeCS#protocol "Protocol"
+* input[2].type = RWIpharmaTaskInputOutputTypeExample#protocol "Protocol"
 * input[2].valueReference = Reference(docref-cta-protocol) "Protocol WD-201 v1.0"
-* output[0].type = RWIpharmaTaskInputOutputTypeCS#validation-report "Validation Report"
+* output[0].type = RWIpharmaTaskInputOutputTypeExample#validation-report "Validation Report"
 * output[0].valueReference = Reference(docref-cta-validation-report) "CTA validation report"
-* output[1].type = RWIpharmaTaskInputOutputTypeCS#authorisation-decision "Authorisation Decision"
+* output[1].type = RWIpharmaTaskInputOutputTypeExample#authorisation-decision "Authorisation Decision"
 * output[1].valueReference = Reference(docref-cta-decision) "Authorisation decision"
 
 Instance: docref-cta-cover-letter
@@ -218,7 +218,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#cover-letter "Cover Letter"
+* type = RWIpharmaTaskInputOutputTypeExample#cover-letter "Cover Letter"
 * date = "2026-09-01T10:00:00+02:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Cover letter for the initial clinical trial application for study WD-201."
@@ -244,7 +244,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#application-form "Application Form"
+* type = RWIpharmaTaskInputOutputTypeExample#application-form "Application Form"
 * date = "2026-09-01T10:00:00+02:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Completed clinical trial application form for study WD-201."
@@ -270,7 +270,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#protocol "Protocol"
+* type = RWIpharmaTaskInputOutputTypeExample#protocol "Protocol"
 * date = "2026-09-01T10:00:00+02:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Clinical trial protocol WD-201, version 1.0 (synopsis)."
@@ -296,7 +296,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#validation-report "Validation Report"
+* type = RWIpharmaTaskInputOutputTypeExample#validation-report "Validation Report"
 * date = "2026-09-12T15:00:00+02:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "Validation report: application complete; trial number assigned."
@@ -322,7 +322,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#request-for-information "Request for Information"
+* type = RWIpharmaTaskInputOutputTypeExample#request-for-information "Request for Information"
 * date = "2026-10-01T11:00:00+02:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "Request for information raised during assessment (three questions)."
@@ -348,7 +348,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#response-to-questions "Response to Questions"
+* type = RWIpharmaTaskInputOutputTypeExample#response-to-questions "Response to Questions"
 * date = "2026-10-12T16:00:00+02:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Sponsor response to the three questions."
@@ -374,7 +374,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#authorisation-decision "Authorisation Decision"
+* type = RWIpharmaTaskInputOutputTypeExample#authorisation-decision "Authorisation Decision"
 * date = "2026-11-03T09:00:00+01:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "Decision authorising clinical trial CT-2026-000789."

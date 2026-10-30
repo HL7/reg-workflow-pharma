@@ -6,5 +6,5 @@ Description: "Example Value set for Task.input.type: all RWI-pharma document and
 * ^status = #active
 * ^experimental = false
 
-* include codes from system RWIpharmaTaskInputOutputTypeCS where RWI-Pharma-Direction = "Input"
+* include codes from system RWIpharmaTaskInputOutputTypeExample where RWI-Pharma-Direction = "Input"
 * include codes from valueset EXAMPLECTDSectionVS

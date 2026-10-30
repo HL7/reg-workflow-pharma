@@ -1,4 +1,4 @@
-CodeSystem: RWIpharmaTaskCodeCS
+CodeSystem: RWIpharmaTaskCodeExample
 Id: rwipharma-task-code
 Title: "Example RWI-pharma Task Code System"
 Description: "Example Code system for regulatory task types in RWI-pharma submissions"
@@ -6,6 +6,7 @@ Description: "Example Code system for regulatory task types in RWI-pharma submis
 
 * ^caseSensitive = true
 
+* ^status = #active
 * ^experimental = false
 
 //* #initial-submission "Initial Submission" "First submission of a new application or major variation"

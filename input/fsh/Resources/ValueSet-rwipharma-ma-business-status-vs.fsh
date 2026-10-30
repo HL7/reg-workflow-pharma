@@ -6,4 +6,4 @@ Description: "Example Value set for Task business statuses in the marketing auth
 * ^status = #active
 * ^experimental = false
 
-* include codes from system RWIpharmaBusinessStatusCS where RWI-Pharma-Domain = "Market Authorization"
+* include codes from system RWIpharmaBusinessStatusExample where RWI-Pharma-Domain = "Market Authorization"

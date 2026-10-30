@@ -13,5 +13,5 @@ Description: "Endpoint requiring identifier, name, and connectionType of hl7-fhi
 // Require connectionType with the specific coding
 * connectionType 1..* MS
 * connectionType.coding 1..* MS
-* connectionType.coding.system = "http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-temp"
+* connectionType.coding.system = "http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-temporary"
 * connectionType.coding.code = #hl7-fhir-subscription-notify "HL7 FHIR Subscription Notification Endpoint"

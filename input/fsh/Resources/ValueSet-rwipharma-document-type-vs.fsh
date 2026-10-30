@@ -6,5 +6,5 @@ Description: "Example Value set for DocumentReference.type: all RWI-pharma input
 * ^status = #active
 * ^experimental = false
 
-* include codes from system RWIpharmaTaskInputOutputTypeCS
+* include codes from system RWIpharmaTaskInputOutputTypeExample
 * include codes from valueset EXAMPLECTDSectionVS

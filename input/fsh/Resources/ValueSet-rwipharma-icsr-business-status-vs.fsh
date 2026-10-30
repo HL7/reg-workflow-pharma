@@ -6,4 +6,4 @@ Description: "Example Value set for Task business statuses in the exchange of In
 * ^status = #active
 * ^experimental = false
 
-* include codes from system RWIpharmaBusinessStatusCS where RWI-Pharma-Domain = "ICSR"
+* include codes from system RWIpharmaBusinessStatusExample where RWI-Pharma-Domain = "ICSR"

@@ -6,4 +6,4 @@ Description: "Example Value set for Tasks for ICSR"
 * ^status = #active
 * ^experimental = false
 
-* include codes from system RWIpharmaTaskCodeCS where concept descendent-of #icsr-flow
+* include codes from system RWIpharmaTaskCodeExample where concept descendent-of #icsr-flow

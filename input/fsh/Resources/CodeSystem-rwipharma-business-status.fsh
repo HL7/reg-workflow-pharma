@@ -1,9 +1,10 @@
-CodeSystem: RWIpharmaBusinessStatusCS
+CodeSystem: RWIpharmaBusinessStatusExample
 Id: rwipharma-business-status
-Title: "RWI-pharma Regulatory Business Status"
-Description: "Code system for regulatory business status in RWI-pharma submissions"
+Title: "Example RWI-pharma Regulatory Business Status"
+Description: "Example code system for regulatory business status in RWI-pharma submissions"
 
 * ^caseSensitive = true
+* ^status = #active
 * ^experimental = false
 
 * ^property[0].code = #RWI-Pharma-Domain

@@ -55,7 +55,7 @@ groups:
     resources:
       - CodeSystem/eg-ctd-section
       - CodeSystem/rwi-pharma-demo
-      - CodeSystem/rwi-pharma-temp
+      - CodeSystem/rwi-pharma-temporary
       - CodeSystem/rwipharma-business-status
       - CodeSystem/rwipharma-task-code
       - CodeSystem/rwipharma-task-input-output-type

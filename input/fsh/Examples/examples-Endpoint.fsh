@@ -15,7 +15,7 @@ Usage: #example
 
 * managingOrganization = Reference(Organization-1002)
 
-* connectionType[0].coding[0].system = "http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-temp"
+* connectionType[0].coding[0].system = "http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-temporary"
 * connectionType[0].coding[0].code = #hl7-fhir-subscription-notify "HL7 FHIR Subscription Notification Endpoint"
 
 * name = "Authority FHIR Subscription Notification Endpoint"
@@ -41,7 +41,7 @@ Usage: #example
 
 * status = #active
 
-* connectionType[0].coding[0].system = "http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-temp"
+* connectionType[0].coding[0].system = "http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-temporary"
 * connectionType[0].coding[0].code = #hl7-fhir-subscription-notify "HL7 FHIR Subscription Notification Endpoint"
 
 * name = "Best Company FHIR Subscription Notification Endpoint"

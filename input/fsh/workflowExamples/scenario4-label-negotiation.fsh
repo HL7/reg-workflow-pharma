@@ -29,15 +29,15 @@ Usage: #example
 * lastModified = "2027-01-11T10:00:00+01:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#cover-letter "Cover Letter"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#cover-letter "Cover Letter"
 * input[0].valueReference = Reference(docref-var-cover-letter) "Variation cover letter"
-* input[1].type = RWIpharmaTaskInputOutputTypeCS#application-form "Application Form"
+* input[1].type = RWIpharmaTaskInputOutputTypeExample#application-form "Application Form"
 * input[1].valueReference = Reference(docref-var-application-form) "Variation application form"
-* input[2].type = RWIpharmaTaskInputOutputTypeCS#change-description "Change Description and Justification"
+* input[2].type = RWIpharmaTaskInputOutputTypeExample#change-description "Change Description and Justification"
 * input[2].valueReference = Reference(docref-var-change-description) "Change description and justification"
-* input[3].type = RWIpharmaTaskInputOutputTypeCS#proposed-labelling "Proposed Labelling"
+* input[3].type = RWIpharmaTaskInputOutputTypeExample#proposed-labelling "Proposed Labelling"
 * input[3].valueReference = Reference(docref-epi-annotated-v1) "Annotated ePI v1 (proposal)"
-* input[4].type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
+* input[4].type = RWIpharmaTaskInputOutputTypeExample#epi-bundle "ePI Bundle"
 * input[4].valueReference = Reference(docref-epi-clean-v1) "Clean ePI v1 (proposal)"
 
 Instance: scenario4-02-variation-validated
@@ -73,17 +73,17 @@ Usage: #example
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * executionPeriod.start = "2027-01-15T14:00:00+01:00"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#cover-letter "Cover Letter"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#cover-letter "Cover Letter"
 * input[0].valueReference = Reference(docref-var-cover-letter) "Variation cover letter"
-* input[1].type = RWIpharmaTaskInputOutputTypeCS#application-form "Application Form"
+* input[1].type = RWIpharmaTaskInputOutputTypeExample#application-form "Application Form"
 * input[1].valueReference = Reference(docref-var-application-form) "Variation application form"
-* input[2].type = RWIpharmaTaskInputOutputTypeCS#change-description "Change Description and Justification"
+* input[2].type = RWIpharmaTaskInputOutputTypeExample#change-description "Change Description and Justification"
 * input[2].valueReference = Reference(docref-var-change-description) "Change description and justification"
-* input[3].type = RWIpharmaTaskInputOutputTypeCS#proposed-labelling "Proposed Labelling"
+* input[3].type = RWIpharmaTaskInputOutputTypeExample#proposed-labelling "Proposed Labelling"
 * input[3].valueReference = Reference(docref-epi-annotated-v1) "Annotated ePI v1 (proposal)"
-* input[4].type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
+* input[4].type = RWIpharmaTaskInputOutputTypeExample#epi-bundle "ePI Bundle"
 * input[4].valueReference = Reference(docref-epi-clean-v1) "Clean ePI v1 (proposal)"
-* output[0].type = RWIpharmaTaskInputOutputTypeCS#validation-report "Validation Report"
+* output[0].type = RWIpharmaTaskInputOutputTypeExample#validation-report "Validation Report"
 * output[0].valueReference = Reference(docref-var-validation-report) "Variation validation report"
 
 Instance: scenario4-03-variation-under-assessment
@@ -119,17 +119,17 @@ Usage: #example
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * executionPeriod.start = "2027-01-15T14:00:00+01:00"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#cover-letter "Cover Letter"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#cover-letter "Cover Letter"
 * input[0].valueReference = Reference(docref-var-cover-letter) "Variation cover letter"
-* input[1].type = RWIpharmaTaskInputOutputTypeCS#application-form "Application Form"
+* input[1].type = RWIpharmaTaskInputOutputTypeExample#application-form "Application Form"
 * input[1].valueReference = Reference(docref-var-application-form) "Variation application form"
-* input[2].type = RWIpharmaTaskInputOutputTypeCS#change-description "Change Description and Justification"
+* input[2].type = RWIpharmaTaskInputOutputTypeExample#change-description "Change Description and Justification"
 * input[2].valueReference = Reference(docref-var-change-description) "Change description and justification"
-* input[3].type = RWIpharmaTaskInputOutputTypeCS#proposed-labelling "Proposed Labelling"
+* input[3].type = RWIpharmaTaskInputOutputTypeExample#proposed-labelling "Proposed Labelling"
 * input[3].valueReference = Reference(docref-epi-annotated-v1) "Annotated ePI v1 (proposal)"
-* input[4].type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
+* input[4].type = RWIpharmaTaskInputOutputTypeExample#epi-bundle "ePI Bundle"
 * input[4].valueReference = Reference(docref-epi-clean-v1) "Clean ePI v1 (proposal)"
-* output[0].type = RWIpharmaTaskInputOutputTypeCS#validation-report "Validation Report"
+* output[0].type = RWIpharmaTaskInputOutputTypeExample#validation-report "Validation Report"
 * output[0].valueReference = Reference(docref-var-validation-report) "Variation validation report"
 
 Instance: scenario4-04-labelling-comments-round1
@@ -167,7 +167,7 @@ Usage: #example
 * owner = Reference(org-synthpharma-ag) "SynthPharma AG"
 * requestedPeriod.start = "2027-02-22T10:00:00+01:00"
 * requestedPeriod.end = "2027-03-04T23:59:59+01:00"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#labelling-comments "Labelling Comments"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#labelling-comments "Labelling Comments"
 * input[0].valueReference = Reference(docref-epi-annotated-v2) "Annotated ePI v2 (regulator comments, round 1)"
 
 Instance: scenario4-05-labelling-comments-round1-response
@@ -207,11 +207,11 @@ Usage: #example
 * requestedPeriod.end = "2027-03-04T23:59:59+01:00"
 * executionPeriod.start = "2027-02-22T10:20:00+01:00"
 * executionPeriod.end = "2027-03-01T16:30:00+01:00"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#labelling-comments "Labelling Comments"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#labelling-comments "Labelling Comments"
 * input[0].valueReference = Reference(docref-epi-annotated-v2) "Annotated ePI v2 (regulator comments, round 1)"
-* output[0].type = RWIpharmaTaskInputOutputTypeCS#proposed-labelling "Proposed Labelling"
+* output[0].type = RWIpharmaTaskInputOutputTypeExample#proposed-labelling "Proposed Labelling"
 * output[0].valueReference = Reference(docref-epi-annotated-v3) "Annotated ePI v3 (counter-proposal, round 1)"
-* output[1].type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
+* output[1].type = RWIpharmaTaskInputOutputTypeExample#epi-bundle "ePI Bundle"
 * output[1].valueReference = Reference(docref-epi-clean-v3) "Clean ePI v3 (counter-proposal, round 1)"
 
 Instance: scenario4-06-labelling-comments-round2
@@ -249,7 +249,7 @@ Usage: #example
 * owner = Reference(org-synthpharma-ag) "SynthPharma AG"
 * requestedPeriod.start = "2027-03-08T10:00:00+01:00"
 * requestedPeriod.end = "2027-03-18T23:59:59+01:00"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#labelling-comments "Labelling Comments"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#labelling-comments "Labelling Comments"
 * input[0].valueReference = Reference(docref-epi-annotated-v4) "Annotated ePI v4 (regulator comments, round 2)"
 
 Instance: scenario4-07-labelling-comments-round2-response
@@ -289,9 +289,9 @@ Usage: #example
 * requestedPeriod.end = "2027-03-18T23:59:59+01:00"
 * executionPeriod.start = "2027-03-08T10:05:00+01:00"
 * executionPeriod.end = "2027-03-10T11:15:00+01:00"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#labelling-comments "Labelling Comments"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#labelling-comments "Labelling Comments"
 * input[0].valueReference = Reference(docref-epi-annotated-v4) "Annotated ePI v4 (regulator comments, round 2)"
-* output[0].type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
+* output[0].type = RWIpharmaTaskInputOutputTypeExample#epi-bundle "ePI Bundle"
 * output[0].valueReference = Reference(docref-epi-clean-v5) "Clean ePI v5 (agreed text)"
 
 Instance: scenario4-08-labelling-agreement
@@ -327,7 +327,7 @@ Usage: #example
 * lastModified = "2027-03-11T09:00:00+01:00"
 * requester = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * owner = Reference(org-synthpharma-ag) "SynthPharma AG"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#epi-bundle "ePI Bundle"
 * input[0].valueReference = Reference(docref-epi-clean-v5) "Clean ePI v5 (agreed text)"
 
 Instance: scenario4-09-labelling-agreed
@@ -365,7 +365,7 @@ Usage: #example
 * owner = Reference(org-synthpharma-ag) "SynthPharma AG"
 * executionPeriod.start = "2027-03-11T09:10:00+01:00"
 * executionPeriod.end = "2027-03-11T15:40:00+01:00"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#epi-bundle "ePI Bundle"
 * input[0].valueReference = Reference(docref-epi-clean-v5) "Clean ePI v5 (agreed text)"
 
 Instance: scenario4-10-variation-approved
@@ -402,21 +402,21 @@ Usage: #example
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * executionPeriod.start = "2027-01-15T14:00:00+01:00"
 * executionPeriod.end = "2027-03-17T09:00:00+01:00"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#cover-letter "Cover Letter"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#cover-letter "Cover Letter"
 * input[0].valueReference = Reference(docref-var-cover-letter) "Variation cover letter"
-* input[1].type = RWIpharmaTaskInputOutputTypeCS#application-form "Application Form"
+* input[1].type = RWIpharmaTaskInputOutputTypeExample#application-form "Application Form"
 * input[1].valueReference = Reference(docref-var-application-form) "Variation application form"
-* input[2].type = RWIpharmaTaskInputOutputTypeCS#change-description "Change Description and Justification"
+* input[2].type = RWIpharmaTaskInputOutputTypeExample#change-description "Change Description and Justification"
 * input[2].valueReference = Reference(docref-var-change-description) "Change description and justification"
-* input[3].type = RWIpharmaTaskInputOutputTypeCS#proposed-labelling "Proposed Labelling"
+* input[3].type = RWIpharmaTaskInputOutputTypeExample#proposed-labelling "Proposed Labelling"
 * input[3].valueReference = Reference(docref-epi-annotated-v1) "Annotated ePI v1 (proposal)"
-* input[4].type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
+* input[4].type = RWIpharmaTaskInputOutputTypeExample#epi-bundle "ePI Bundle"
 * input[4].valueReference = Reference(docref-epi-clean-v1) "Clean ePI v1 (proposal)"
-* output[0].type = RWIpharmaTaskInputOutputTypeCS#validation-report "Validation Report"
+* output[0].type = RWIpharmaTaskInputOutputTypeExample#validation-report "Validation Report"
 * output[0].valueReference = Reference(docref-var-validation-report) "Variation validation report"
-* output[1].type = RWIpharmaTaskInputOutputTypeCS#approval-letter "Approval Letter"
+* output[1].type = RWIpharmaTaskInputOutputTypeExample#approval-letter "Approval Letter"
 * output[1].valueReference = Reference(docref-var-approval-letter) "Variation approval letter"
-* output[2].type = RWIpharmaTaskInputOutputTypeCS#approved-labelling "Approved Labelling"
+* output[2].type = RWIpharmaTaskInputOutputTypeExample#approved-labelling "Approved Labelling"
 * output[2].valueReference = Reference(docref-epi-approved) "Approved ePI"
 
 Instance: docref-var-cover-letter
@@ -434,7 +434,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#cover-letter "Cover Letter"
+* type = RWIpharmaTaskInputOutputTypeExample#cover-letter "Cover Letter"
 * date = "2027-01-11T10:00:00+01:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Cover letter for the Type II variation adding nausea to the WonderDrug product information."
@@ -460,7 +460,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#application-form "Application Form"
+* type = RWIpharmaTaskInputOutputTypeExample#application-form "Application Form"
 * date = "2027-01-11T10:00:00+01:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Completed Type II variation application form."
@@ -486,7 +486,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#change-description "Change Description and Justification"
+* type = RWIpharmaTaskInputOutputTypeExample#change-description "Change Description and Justification"
 * date = "2027-01-11T10:00:00+01:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Current versus proposed product information, with justification."
@@ -512,7 +512,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#proposed-labelling "Proposed Labelling"
+* type = RWIpharmaTaskInputOutputTypeExample#proposed-labelling "Proposed Labelling"
 * date = "2027-01-11T10:00:00+01:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Proposed product information as annotated ePI, version 1: adds nausea (uncommon) to SmPC 4.8 and leaflet section 4."
@@ -538,7 +538,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
+* type = RWIpharmaTaskInputOutputTypeExample#epi-bundle "ePI Bundle"
 * date = "2027-01-11T10:00:00+01:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Proposed product information as clean ePI, version 1."
@@ -564,7 +564,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#validation-report "Validation Report"
+* type = RWIpharmaTaskInputOutputTypeExample#validation-report "Validation Report"
 * date = "2027-01-15T14:00:00+01:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "Validation report: variation valid; procedure number assigned."
@@ -592,7 +592,7 @@ Usage: #example
 * version = "2"
 * relatesTo[0].code = http://hl7.org/fhir/document-relationship-type#replaces "Replaces"
 * relatesTo[0].target = Reference(docref-epi-annotated-v1)
-* type = RWIpharmaTaskInputOutputTypeCS#labelling-comments "Labelling Comments"
+* type = RWIpharmaTaskInputOutputTypeExample#labelling-comments "Labelling Comments"
 * date = "2027-02-22T10:00:00+01:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "Regulator's tracked changes on v1: nausea frequency raised to common; intake with food required (SmPC 4.2, leaflet section 3)."
@@ -620,7 +620,7 @@ Usage: #example
 * version = "3"
 * relatesTo[0].code = http://hl7.org/fhir/document-relationship-type#replaces "Replaces"
 * relatesTo[0].target = Reference(docref-epi-annotated-v2)
-* type = RWIpharmaTaskInputOutputTypeCS#proposed-labelling "Proposed Labelling"
+* type = RWIpharmaTaskInputOutputTypeExample#proposed-labelling "Proposed Labelling"
 * date = "2027-03-01T16:30:00+01:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Applicant accepts the frequency change and counter-proposes \"may be taken with food to reduce nausea\" (SmPC 4.2, leaflet section 3)."
@@ -648,7 +648,7 @@ Usage: #example
 * version = "3"
 * relatesTo[0].code = http://hl7.org/fhir/document-relationship-type#replaces "Replaces"
 * relatesTo[0].target = Reference(docref-epi-clean-v1)
-* type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
+* type = RWIpharmaTaskInputOutputTypeExample#epi-bundle "ePI Bundle"
 * date = "2027-03-01T16:30:00+01:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Clean ePI matching annotated v3."
@@ -676,7 +676,7 @@ Usage: #example
 * version = "4"
 * relatesTo[0].code = http://hl7.org/fhir/document-relationship-type#replaces "Replaces"
 * relatesTo[0].target = Reference(docref-epi-annotated-v3)
-* type = RWIpharmaTaskInputOutputTypeCS#labelling-comments "Labelling Comments"
+* type = RWIpharmaTaskInputOutputTypeExample#labelling-comments "Labelling Comments"
 * date = "2027-03-08T10:00:00+01:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "Regulator accepts the counter-proposal and changes the leaflet wording to \"feeling sick\"."
@@ -704,7 +704,7 @@ Usage: #example
 * version = "5"
 * relatesTo[0].code = http://hl7.org/fhir/document-relationship-type#replaces "Replaces"
 * relatesTo[0].target = Reference(docref-epi-clean-v3)
-* type = RWIpharmaTaskInputOutputTypeCS#epi-bundle "ePI Bundle"
+* type = RWIpharmaTaskInputOutputTypeExample#epi-bundle "ePI Bundle"
 * date = "2027-03-10T11:15:00+01:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Clean ePI with all round 2 changes accepted: the agreed product information."
@@ -730,7 +730,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#approval-letter "Approval Letter"
+* type = RWIpharmaTaskInputOutputTypeExample#approval-letter "Approval Letter"
 * date = "2027-03-17T09:00:00+01:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "Approval of Type II variation VAR-II-2027-0012."
@@ -757,7 +757,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#approved-labelling "Approved Labelling"
+* type = RWIpharmaTaskInputOutputTypeExample#approved-labelling "Approved Labelling"
 * date = "2027-03-17T09:00:00+01:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "Approved product information. Points to the same Binary as the agreed clean ePI v5, so the approved text is identical to the agreed text."

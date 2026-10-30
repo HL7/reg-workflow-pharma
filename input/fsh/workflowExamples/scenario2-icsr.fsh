@@ -29,7 +29,7 @@ Usage: #example
 * lastModified = "2026-10-02T09:30:00+02:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#icsr-e2b-r2 "ICSR (E2B(R2))"
 * input[0].valueReference = Reference(docref-icsr-2a) "ICSR — case CH-SYNTHPHARMA-2026-000456"
 
 Instance: scenario2a-02-icsr-accepted
@@ -61,9 +61,9 @@ Usage: #example
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * executionPeriod.start = "2026-10-02T09:30:05+02:00"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#icsr-e2b-r2 "ICSR (E2B(R2))"
 * input[0].valueReference = Reference(docref-icsr-2a) "ICSR — case CH-SYNTHPHARMA-2026-000456"
-* output[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
+* output[0].type = RWIpharmaTaskInputOutputTypeExample#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
 * output[0].valueReference = Reference(docref-icsr-2a-acklog) "ICSR acknowledgment log"
 
 Instance: scenario2a-03-icsr-complete
@@ -96,9 +96,9 @@ Usage: #example
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * executionPeriod.start = "2026-10-02T09:30:05+02:00"
 * executionPeriod.end = "2026-10-02T10:02:40+02:00"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#icsr-e2b-r2 "ICSR (E2B(R2))"
 * input[0].valueReference = Reference(docref-icsr-2a) "ICSR — case CH-SYNTHPHARMA-2026-000456"
-* output[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
+* output[0].type = RWIpharmaTaskInputOutputTypeExample#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
 * output[0].valueReference = Reference(docref-icsr-2a-acklog) "ICSR acknowledgment log"
 
 Instance: scenario2b-01-icsr-submitted
@@ -129,7 +129,7 @@ Usage: #example
 * lastModified = "2026-10-14T11:00:00+02:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#icsr-e2b-r2 "ICSR (E2B(R2))"
 * input[0].valueReference = Reference(docref-icsr-2b) "ICSR — case CH-SYNTHPHARMA-2026-000512"
 
 Instance: scenario2b-02-icsr-rejected
@@ -163,11 +163,11 @@ Usage: #example
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * executionPeriod.start = "2026-10-14T11:00:04+02:00"
 * executionPeriod.end = "2026-10-14T11:12:30+02:00"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#icsr-e2b-r2 "ICSR (E2B(R2))"
 * input[0].valueReference = Reference(docref-icsr-2b) "ICSR — case CH-SYNTHPHARMA-2026-000512"
-* output[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
+* output[0].type = RWIpharmaTaskInputOutputTypeExample#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
 * output[0].valueReference = Reference(docref-icsr-2b-acklog) "ICSR acknowledgment log rejected"
-* output[1].type = RWIpharmaTaskInputOutputTypeCS#validation-report "Validation Report"
+* output[1].type = RWIpharmaTaskInputOutputTypeExample#validation-report "Validation Report"
 * output[1].valueReference = Reference(docref-icsr-2b-validation-report) "ICSR validation report"
 
 Instance: scenario2b-03-icsr-resubmitted
@@ -199,7 +199,7 @@ Usage: #example
 * lastModified = "2026-10-14T15:40:00+02:00"
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#icsr-e2b-r2 "ICSR (E2B(R2))"
 * input[0].valueReference = Reference(docref-icsr-2b-resubmission) "ICSR resubmission — case CH-SYNTHPHARMA-2026-000512"
 
 Instance: scenario2b-04-icsr-accepted
@@ -232,9 +232,9 @@ Usage: #example
 * requester = Reference(org-synthpharma-ag) "SynthPharma AG"
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * executionPeriod.start = "2026-10-14T15:40:03+02:00"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#icsr-e2b-r2 "ICSR (E2B(R2))"
 * input[0].valueReference = Reference(docref-icsr-2b-resubmission) "ICSR resubmission — case CH-SYNTHPHARMA-2026-000512"
-* output[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
+* output[0].type = RWIpharmaTaskInputOutputTypeExample#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
 * output[0].valueReference = Reference(docref-icsr-2b-resubmission-acklog) "ICSR acknowledgment log resubmission"
 
 Instance: scenario2b-05-icsr-complete
@@ -268,9 +268,9 @@ Usage: #example
 * owner = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * executionPeriod.start = "2026-10-14T15:40:03+02:00"
 * executionPeriod.end = "2026-10-14T16:10:21+02:00"
-* input[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
+* input[0].type = RWIpharmaTaskInputOutputTypeExample#icsr-e2b-r2 "ICSR (E2B(R2))"
 * input[0].valueReference = Reference(docref-icsr-2b-resubmission) "ICSR resubmission — case CH-SYNTHPHARMA-2026-000512"
-* output[0].type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
+* output[0].type = RWIpharmaTaskInputOutputTypeExample#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
 * output[0].valueReference = Reference(docref-icsr-2b-resubmission-acklog) "ICSR acknowledgment log resubmission"
 
 Instance: docref-icsr-2a
@@ -288,7 +288,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
+* type = RWIpharmaTaskInputOutputTypeExample#icsr-e2b-r2 "ICSR (E2B(R2))"
 * date = "2026-10-02T09:30:00+02:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "ICH E2B(R2) ICSR for case CH-SYNTHPHARMA-2026-000456 (nausea with WonderDrug 50 mg)."
@@ -314,7 +314,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
+* type = RWIpharmaTaskInputOutputTypeExample#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
 * date = "2026-10-02T09:45:12+02:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "ICH E2B(R2) acknowledgment: transmission 01 (all reports loaded), report 01 (report loaded)."
@@ -340,7 +340,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
+* type = RWIpharmaTaskInputOutputTypeExample#icsr-e2b-r2 "ICSR (E2B(R2))"
 * date = "2026-10-14T11:00:00+02:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "ICH E2B(R2) ICSR for case CH-SYNTHPHARMA-2026-000512 (dizziness with WonderDrug 50 mg). The MedDRA version is missing."
@@ -366,7 +366,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
+* type = RWIpharmaTaskInputOutputTypeExample#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
 * date = "2026-10-14T11:12:30+02:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "ICH E2B(R2) acknowledgment: transmission 02 (not all reports loaded), report 02 (report not loaded), with the error."
@@ -392,7 +392,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#validation-report "Validation Report"
+* type = RWIpharmaTaskInputOutputTypeExample#validation-report "Validation Report"
 * date = "2026-10-14T11:12:30+02:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "Validation report listing the error that caused the rejection."
@@ -418,7 +418,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2 "ICSR (E2B(R2))"
+* type = RWIpharmaTaskInputOutputTypeExample#icsr-e2b-r2 "ICSR (E2B(R2))"
 * date = "2026-10-14T15:40:00+02:00"
 * author = Reference(org-synthpharma-ag) "SynthPharma AG"
 * description = "Corrected ICH E2B(R2) ICSR for case CH-SYNTHPHARMA-2026-000512, with the MedDRA version added."
@@ -444,7 +444,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1"
-* type = RWIpharmaTaskInputOutputTypeCS#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
+* type = RWIpharmaTaskInputOutputTypeExample#icsr-e2b-r2-acklog "ICSR E2B(R2) Acknowledgment Log"
 * date = "2026-10-14T15:52:08+02:00"
 * author = Reference(org-ema-srm-hmed) "Health Authority – Regulatory Review Division"
 * description = "ICH E2B(R2) acknowledgment: transmission 01 (all reports loaded), report 01 (report loaded)."

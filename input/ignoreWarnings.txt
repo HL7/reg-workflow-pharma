@@ -8,8 +8,25 @@
 Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
 Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
 
-# The code systems have example binding and are used only in this IG for illustrative purposes, there is no expectation that they will be of use outside of it at this time
-Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+# eg-ctd-section: Example code system (name ends in "Example") used only for example bindings, so it is maintained in this IG and will not move to THO. Authoritative CTD section codes are owned by ICH.
+INFORMATION: CodeSystem/eg-ctd-section: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+
+# rwipharma-business-status: Example code system (name ends in "Example") used only for example bindings, so it is maintained in this IG and will not move to THO.
+INFORMATION: CodeSystem/rwipharma-business-status: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+
+# rwipharma-task-code: Example code system (name ends in "Example") used only for example bindings, so it is maintained in this IG and will not move to THO.
+INFORMATION: CodeSystem/rwipharma-task-code: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+
+# rwipharma-task-input-output-type: Example code system (name ends in "Example") used only for example bindings, so it is maintained in this IG and will not move to THO.
+INFORMATION: CodeSystem/rwipharma-task-input-output-type: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+
+# rwi-pharma-demo: IG-specific utility codes used only to define the identifier slices in the Task and DocumentReference profiles, so they are maintained in this IG and will not move to THO.
+INFORMATION: CodeSystem/rwi-pharma-demo: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+
+# rwi-pharma-temporary: Immature code system (Case 2): its code is proposed for the existing THO endpoint-connection-type code system, so the URL includes 'temporary' and experimental is true until THO adds it. The Endpoint examples reference it as experimental for the same reason.
+INFORMATION: CodeSystem/rwi-pharma-temporary: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+INFORMATION: Endpoint/1003: Endpoint.connectionType[0]: Reference to experimental CodeSystem http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-temporary|0.1.0
+INFORMATION: Endpoint/1005: Endpoint.connectionType[0]: Reference to experimental CodeSystem http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-temporary|0.1.0
 
 # The RWI-Pharma DocumentReference Profile does not use http://hl7.org/fhir/ValueSet/doc-typecodes|5.0.0, it uses a non-clinical valueset specific to its use case
 % None of the codings provided are in the value set 'FHIR Document Type Codes'%
@@ -41,9 +58,6 @@ ERROR: SubscriptionTopic/TaskCreationWithOrganizationAssignedFilter: Subscriptio
 # These references are intended
 %Reference to experimental CodeSystem http://hl7.org/fhir/request-intent|5.0.0
 %Reference to experimental ValueSet http://hl7.org/fhir/ValueSet/resource-types|5.0.0
-%Reference to draft CodeSystem http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-input-output-type|0.1.0
-%Reference to draft CodeSystem http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status|0.1.0%
-%Reference to draft CodeSystem http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code|0.1.0%
 
 # These will be addressed before publication and are specific to the HL7 IG balloting process, not related to implementation
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
@@ -64,3 +78,6 @@ INFORMATION: CodeSystem/rwipharma-task-input-output-type: CodeSystem.property[1]
 
 # The slice is intended as an example of SubscriptionNotification payloads
 INFORMATION: Bundle/eee72492-c236-41f7-a7ba-3af356204f4c: Bundle.entry[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-notification-bundle|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# The IG is being developed for an STU ballot (Standard for Trial Use, formerly DSTU: Draft Standard for Trial Use), so its profiles and the IG carry status 'draft' alongside standards status 'trial-use'. The status will be set to 'active' (one change to status in sushi-config.yaml) when the IG is published.
+%The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed%

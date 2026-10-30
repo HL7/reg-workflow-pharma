@@ -6,7 +6,7 @@ Description: "Example Value set for Tasks for the regulatory interactions for cl
 * ^status = #active
 * ^experimental = false
 
-* include codes from system RWIpharmaTaskCodeCS where concept descendent-of #clinical-trial
+* include codes from system RWIpharmaTaskCodeExample where concept descendent-of #clinical-trial
 
-* include codes from system RWIpharmaTaskCodeCS where code = #withdrawal "Withdrawal by Applicant"
-* include codes from system RWIpharmaTaskCodeCS where code = #information-request "List of Questions / Information Request"
+* include codes from system RWIpharmaTaskCodeExample where code = #withdrawal "Withdrawal by Applicant"
+* include codes from system RWIpharmaTaskCodeExample where code = #information-request "List of Questions / Information Request"

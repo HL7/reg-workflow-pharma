@@ -8,4 +8,4 @@ RuleSet: DomainCandidateBinding(vs, domainCode, doc)
 * ^binding.additional[=].valueSet = Canonical({vs})
 * ^binding.additional[=].documentation = "{doc}"
 * ^binding.additional[=].usage.code = $usage-context-type#workflow "Workflow Setting"
-* ^binding.additional[=].usage.valueCodeableConcept = RWIpharmaTaskCodeCS#{domainCode}
+* ^binding.additional[=].usage.valueCodeableConcept = RWIpharmaTaskCodeExample#{domainCode}

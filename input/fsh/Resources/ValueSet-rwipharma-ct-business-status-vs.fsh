@@ -6,4 +6,4 @@ Description: "Example Value set for Task business statuses in the regulatory int
 * ^status = #active
 * ^experimental = false
 
-* include codes from system RWIpharmaBusinessStatusCS where RWI-Pharma-Domain = "Clinical Trial"
+* include codes from system RWIpharmaBusinessStatusExample where RWI-Pharma-Domain = "Clinical Trial"

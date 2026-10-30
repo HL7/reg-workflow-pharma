@@ -6,4 +6,4 @@ Description: "Example Value set for Task.input.type: types of documents and data
 * ^status = #active
 * ^experimental = false
 
-* include codes from system RWIpharmaTaskInputOutputTypeCS where RWI-Pharma-Domain = "ICSR" and RWI-Pharma-Direction = "Input"
+* include codes from system RWIpharmaTaskInputOutputTypeExample where RWI-Pharma-Domain = "ICSR" and RWI-Pharma-Direction = "Input"
