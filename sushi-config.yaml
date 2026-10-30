@@ -34,6 +34,7 @@ parameters:
   apply-version: true
  #apply-wg: true
   auto-oid-root: 2.16.840.1.113883.4.642.40.101
+  jira-code: uv-rwi-pharma
 
 groups:
   profiles:
