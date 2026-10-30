@@ -25,14 +25,14 @@ INFORMATION: CodeSystem/rwi-pharma-demo: CodeSystem: Most code systems defined i
 
 # rwi-pharma-temporary: Immature code system (Case 2): its code is proposed for the existing THO endpoint-connection-type code system, so the URL includes 'temporary' and experimental is true until THO adds it. The Endpoint examples reference it as experimental for the same reason.
 INFORMATION: CodeSystem/rwi-pharma-temporary: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-INFORMATION: Endpoint/1003: Endpoint.connectionType[0]: Reference to experimental CodeSystem http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-temporary|0.1.0
-INFORMATION: Endpoint/1005: Endpoint.connectionType[0]: Reference to experimental CodeSystem http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-temporary|0.1.0
+INFORMATION: Endpoint/1003: Endpoint.connectionType[0]: Reference to experimental CodeSystem http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-temporary|1.0.0-ballot
+INFORMATION: Endpoint/1005: Endpoint.connectionType[0]: Reference to experimental CodeSystem http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-temporary|1.0.0-ballot
 
 # The RWI-Pharma DocumentReference Profile does not use http://hl7.org/fhir/ValueSet/doc-typecodes|5.0.0, it uses a non-clinical valueset specific to its use case
 % None of the codings provided are in the value set 'FHIR Document Type Codes'%
 
 # Slices are intentional and are examples of other slices that can occur
-%This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-organization|0.1.0%
+%This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-organization|1.0.0-ballot%
 
 # These are found in the base FHIR R5 Task Resource
 WARNING: StructureDefinition/rwi-pharma-task: StructureDefinition.snapshot.element[45].binding: The definition for the element 'Task.priority' binds to the value set 'http://hl7.org/fhir/ValueSet/request-priority|5.0.0' which is experimental, but this structure is not labeled as experimental
@@ -53,7 +53,7 @@ WARNING: StructureDefinition/task-status-change-with-identifier-filter: Structur
 WARNING: StructureDefinition/task-status-change-with-identifier-filter: StructureDefinition.snapshot.element[23].binding: The definition for the element 'SubscriptionTopic.jurisdiction' binds to the value set 'http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0' which is experimental, but this structure is not labeled as experimental
 
 # This is an issue with newer versions of the IG Publisher, speculation is a change in R6 that makes it not play nicely with R5 - see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20producing.20R5.20SubscriptionTopic.20with.20missing.20fields/with/635484516. The issue causes the trigger details, including canFilterBy from showing up in the IG, even though they are in the FSH-derived JSON.
-ERROR: SubscriptionTopic/TaskCreationWithOrganizationAssignedFilter: SubscriptionTopic: SubscriptionTopic.canFilterBy: minimum required = 1, but only found 0 (from http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/task-creation-with-organization-assigned-filter|0.1.0)
+ERROR: SubscriptionTopic/TaskCreationWithOrganizationAssignedFilter: SubscriptionTopic: SubscriptionTopic.canFilterBy: minimum required = 1, but only found 0 (from http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/task-creation-with-organization-assigned-filter|1.0.0-ballot)
 
 # These references are intended
 %Reference to experimental CodeSystem http://hl7.org/fhir/request-intent|5.0.0
@@ -77,7 +77,7 @@ INFORMATION: CodeSystem/rwipharma-task-input-output-type: CodeSystem.property[0]
 INFORMATION: CodeSystem/rwipharma-task-input-output-type: CodeSystem.property[1]: This property has only a code ('RWI-Pharma-Direction') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
 
 # The slice is intended as an example of SubscriptionNotification payloads
-INFORMATION: Bundle/eee72492-c236-41f7-a7ba-3af356204f4c: Bundle.entry[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-notification-bundle|0.1.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/eee72492-c236-41f7-a7ba-3af356204f4c: Bundle.entry[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-notification-bundle|1.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # The IG is being developed for an STU ballot (Standard for Trial Use, formerly DSTU: Draft Standard for Trial Use), so its profiles and the IG carry status 'draft' alongside standards status 'trial-use'. The status will be set to 'active' (one change to status in sushi-config.yaml) when the IG is published.
 %The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed%

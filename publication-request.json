@@ -1,0 +1,18 @@
+{
+  "package-id" : "hl7.fhir.uv.rwi-pharma",
+  "version" : "1.0.0-ballot",
+  "path" : "http://hl7.org/fhir/uv/rwi-pharma/2027Jan",
+  "mode" : "working",
+  "status" : "ballot",
+  "sequence" : "STU1",
+  "desc" : "This publication is for ballot of a new STU release (1.0.0).",
+  "descmd" : "This publication is for ballot of a new STU release (1.0.0).",
+  "first" : true,
+  "title" : "Regulatory Workflows and Interactions - pharma",
+  "ci-build" : "https://build.fhir.org/ig/HL7/reg-workflow-pharma",
+  "category" : "Pharmaceutical",
+  "registry-description" : "Regulatory exchange is globally fragmented across authorities, product lines, procedures, and technologies. This IG establishes a common Task- and Subscription-based framework for regulatory workflows and interactions, enabling them to be exchanged, tracked, and acted upon with machine-readable status and event-driven notifications.",
+  "registry-country" : "uv",
+  "registry-authority" : "HL7",
+  "introduction" : "The Regulatory Workflows and Interactions - pharma Implementation Guide defines how FHIR can support end-to-end digital regulatory workflows and interactions between applicants and regulatory authorities for human biopharmaceutical products. Today, regulatory exchange is highly fragmented. Authorities may use different mechanisms across product lines and procedures, including portals, gateways, email, secure email, FTP, HTTPS, and physical mail. These differences multiply across regulators globally, creating significant complexity for industry and limiting interoperability. Applicants also frequently lack end-to-end visibility into the status of their regulatory interactions. Consumers can track a FedEx or Amazon delivery through each major step and receive notifications as it progresses, yet applicants often cannot similarly track a critical regulatory interaction or receive automated notifications when key milestones occur. Using Task, DocumentReference, Binary, Subscription, APIs, and related FHIR capabilities, the guide enables regulatory activities to be interoperable, traceable, trackable, and event-driven, replacing fragmented exchange mechanisms with a standardized digital workflow."
+}

@@ -11,16 +11,16 @@ extension:
     valueCode: trial-use
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm  #<<<<< this to to inform the publisher of the default FMM level for the artifacts in this IG
     valueInteger: 1
-version: 0.1.0
+version: 1.0.0-ballot
 
 fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
-releaseLabel: ci-build
+releaseLabel: STU 1 Ballot
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 dependencies:
     hl7.fhir.uv.extensions:
-        version: current
+        version: 5.4.0
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 
 publisher:
