@@ -4,11 +4,11 @@
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
-# This is an unresolved issue for FHIR-I see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/http.3A.2F.2Fhl7.2Eorg.2Ffhir.2FValueSet.2Fjurisdiction.20deprecated.20warnin/with/381972830
+# This is an unresolved issue for FHIR-I; see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/http.3A.2F.2Fhl7.2Eorg.2Ffhir.2FValueSet.2Fjurisdiction.20deprecated.20warnin/with/381972830
 Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
 Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
 
-# Ignore for now
+# The code systems have example binding and are used only in this IG for illustrative purposes, there is no expectation that they will be of use outside of it at this time
 Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 # The RWI-Pharma DocumentReference Profile does not use http://hl7.org/fhir/ValueSet/doc-typecodes|5.0.0, it uses a non-clinical valueset specific to its use case
@@ -29,8 +29,6 @@ WARNING: StructureDefinition/rwi-pharma-task: StructureDefinition.snapshot.eleme
 WARNING: StructureDefinition/rwi-pharma-task: StructureDefinition.snapshot.element[65].binding: The definition for the element 'Task.requestedPerformer' binds to the value set 'http://hl7.org/fhir/ValueSet/performer-role|5.0.0' which is experimental, but this structure is not labeled as experimental
 
 # These are related to items in the base FHIR R5 SubscriptionTopic Resource
-ERROR: StructureDefinition/task-creation-with-organization-assigned-filter: StructureDefinition.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/structuredefinition-implements could not be found so is not allowed here
-ERROR: StructureDefinition/task-creation-with-organization-assigned-filter: StructureDefinition.extension[0].url: No definition could be found for URL value 'http://hl7.org/fhir/StructureDefinition/structuredefinition-implements'
 WARNING: StructureDefinition/task-creation-with-organization-assigned-filter: StructureDefinition.snapshot.element[35].definition: The markdown contains content that appears to be an embedded HTML tag starting at '<a'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
 WARNING: StructureDefinition/task-creation-with-organization-assigned-filter: StructureDefinition.snapshot.element[53].definition: The markdown contains content that appears to be an embedded HTML tag starting at '<a'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
 WARNING: StructureDefinition/task-creation-with-organization-assigned-filter: StructureDefinition.snapshot.element[59].comment: The markdown contains content that appears to be an embedded HTML tag starting at '<a'. This will (or SHOULD) be escaped by the presentation layer. The content should be checked to confirm that this is the desired behaviour
@@ -46,7 +44,7 @@ WARNING: StructureDefinition/task-status-change-with-identifier-filter: Structur
 WARNING: StructureDefinition/task-status-change-with-identifier-filter: StructureDefinition.snapshot.element[12].binding: The definition for the element 'SubscriptionTopic.versionAlgorithm[x]' binds to the value set 'http://hl7.org/fhir/ValueSet/version-algorithm|5.0.0' which is experimental, but this structure is not labeled as experimental
 WARNING: StructureDefinition/task-status-change-with-identifier-filter: StructureDefinition.snapshot.element[23].binding: The definition for the element 'SubscriptionTopic.jurisdiction' binds to the value set 'http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0' which is experimental, but this structure is not labeled as experimental
 
-# This is an issue with newer versions of the IG Publisher, speculation is a change in R6 that makes it not play nicely with R5 - see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20producing.20R5.20SubscriptionTopic.20with.20missing.20fields/with/635484516. The issue causes the trigger details, uncluding canFilterBy from showing up in the IG, eventhough they are in the FSH dervied JSON.
+# This is an issue with newer versions of the IG Publisher, speculation is a change in R6 that makes it not play nicely with R5 - see https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20producing.20R5.20SubscriptionTopic.20with.20missing.20fields/with/635484516. The issue causes the trigger details, including canFilterBy from showing up in the IG, even though they are in the FSH-derived JSON.
 ERROR: SubscriptionTopic/TaskCreationWithOrganizationAssignedFilter: SubscriptionTopic: SubscriptionTopic.canFilterBy: minimum required = 1, but only found 0 (from http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/task-creation-with-organization-assigned-filter|0.1.0)
 
 # Intended to be draft for now
@@ -60,21 +58,21 @@ ERROR: SubscriptionTopic/TaskCreationWithOrganizationAssignedFilter: Subscriptio
 INFORMATION: Bundle/eee72492-c236-41f7-a7ba-3af356204f4c: Bundle.entry[0].resource/*SubscriptionStatus/09efceb7-abdc-4dc8-bc31-0788baf65dbd*/.notificationEvent[0].focus: The URL 'Task/scenario1-01-initial-submission' cannot be resolved unless the fullURL is a RESTFul base URL, or a baseURL has been provided and the Bundle is a batch or transaction
 INFORMATION: Bundle/eee72492-c236-41f7-a7ba-3af356204f4c: Bundle.entry[0].resource/*SubscriptionStatus/09efceb7-abdc-4dc8-bc31-0788baf65dbd*/.subscription: The URL 'Subscription/Subscription-TaskStatusChange-FullResource' cannot be resolved unless the fullURL is a RESTFul base URL, or a baseURL has been provided and the Bundle is a batch or transaction
 
-# The value set is being used soley as an example binding set - the binding used is example - it is not used in validation, only for illustration.
-WARNING: StructureDefinition/rwi-pharma-organization: StructureDefinition.snapshot.element[19].binding.valueSet: A definition could not be found for Canonical URL 'https://www.fda.gov/industry/structured-product-labeling-resources/business-operation'
-WARNING: StructureDefinition/rwi-pharma-organization: StructureDefinition.differential.element[4].binding.valueSet: A definition could not be found for Canonical URL 'https://www.fda.gov/industry/structured-product-labeling-resources/business-operation'
-
-# These will be adressed before publication and are specific to the HL7 IG balloting process, not related to implmentation
+# These will be addressed before publication and are specific to the HL7 IG balloting process, not related to implementation
 ERROR: There is no jira specification file defined with the expected name of FHIR-apix in the xml folder of the  https://github.com/HL7/Jira-Spec-Artifacts project.  This must exist before ballot or publication.
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 
-# Subscription notification Bundles reference the Subscription and the notified Task on the sending server. As in the FHIR R5
-# notification examples, these references cannot be resolved inside a subscription-notification Bundle (it is not a batch or transaction).
+# Subscription notification Bundles reference the Subscription and the notified Task on the sending server. As in the FHIR R5 notification examples, these references cannot be resolved inside a subscription-notification Bundle (it is not a batch or transaction).
 The URL 'Subscription/Subscription-TaskStatusChange-IdOnly' cannot be resolved unless the fullURL is a RESTFul base URL, or a baseURL has been provided and the Bundle is a batch or transaction
 The URL 'Task/scenario1-02-validation' cannot be resolved unless the fullURL is a RESTFul base URL, or a baseURL has been provided and the Bundle is a batch or transaction
 
 # Post-then-Link: DocumentReference.content.attachment.url holds a server-relative Binary URL ("Binary/<id>"). Relative URLs are valid per the FHIR specification (Attachment.url: "Urls may be relative references ... Relative URLs are interpreted relative to the service url, like a resource reference, rather than relative to the resource itself."), and implementers resolve them against the server base where the Binary was posted. The validator does not resolve plain url values against a server base and cannot fetch the content to check size or contentType, so it reports these; the links do resolve in the IG, because the IG Publisher links each attachment URL to its Binary page when it renders the pages after validation (e.g. DocumentReference-doc1 -> Binary-binary-s1-cover-letter.html).
 %No definition could be found for URL value 'Binary/%
 %Attachment content was not checked: Binary/%
+
+# CodeSystem.property.uri is optional (0..1) per the FHIR CodeSystem resource ("Reference to the formal meaning of the property"). RWI-Pharma-Domain and RWI-Pharma-Direction are very specific to this IG: they are used only within this IG (for property-filter ValueSets) and their meaning is defined by property.description in each CodeSystem. Giving them a URI in the HL7 (hl7.org/fhir) space raises a warning that properties should not be defined there without being added to the HL7 Concept Properties code system, which is not appropriate for properties this specific, so no URI is used.
+INFORMATION: CodeSystem/rwipharma-business-status: CodeSystem.property[0]: This property has only a code ('RWI-Pharma-Domain') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+INFORMATION: CodeSystem/rwipharma-task-input-output-type: CodeSystem.property[0]: This property has only a code ('RWI-Pharma-Domain') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+INFORMATION: CodeSystem/rwipharma-task-input-output-type: CodeSystem.property[1]: This property has only a code ('RWI-Pharma-Direction') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
