@@ -16,7 +16,7 @@ Description: "Triggers when a Task.status value changes. Allows subscriptions to
 * canFilterBy.description = "Filter by business identifier"
 * canFilterBy.resource = "Task"
 * canFilterBy.filterParameter = "identifier"
-* canFilterBy.filterDefinition = "http://hl7.org/fhir/SearchParameter/Task-identifier"
+* canFilterBy.filterDefinition = "http://hl7.org/fhir/SearchParameter/clinical-identifier"
 * canFilterBy.modifier = #exact
 
 

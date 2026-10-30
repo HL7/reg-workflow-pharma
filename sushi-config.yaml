@@ -44,6 +44,8 @@ groups:
       - StructureDefinition/rwi-pharma-documentreference
       - StructureDefinition/rwi-pharma-organization
       - StructureDefinition/rwi-pharma-subscription
+      - StructureDefinition/rwi-pharma-subscription-status
+      - StructureDefinition/rwi-pharma-notification-bundle
       - StructureDefinition/rwi-pharma-task
       - StructureDefinition/task-creation-with-organization-assigned-filter
       - StructureDefinition/task-status-change-with-identifier-filter
@@ -77,6 +79,18 @@ groups:
       - ValueSet/rwipharma-ma-task-input-type-vs
       - ValueSet/rwipharma-ma-task-output-type-vs
       - ValueSet/rwipharma-submission-type-vs     
+  actors-and-capabilities:
+    name: "Actors and Capability Statements"
+    description: "Actors, their CapabilityStatements, and search parameters defined by this guide. See [Capability Requirements](capability-requirements.html)."
+    resources:
+      - ActorDefinition/rwipharma-server
+      - ActorDefinition/rwipharma-applicant-client
+      - ActorDefinition/rwipharma-regulator-client
+      - ActorDefinition/rwipharma-notification-receiver
+      - CapabilityStatement/rwipharma-server
+      - CapabilityStatement/rwipharma-applicant-client
+      - CapabilityStatement/rwipharma-regulator-client
+      - SearchParameter/Task-input
   participants:
     name: "Participants"
     description: "The applicant (SynthPharma AG) and health authority organizations used by every scenario."
@@ -88,6 +102,8 @@ groups:
     description: "Subscription, SubscriptionTopics, a notification Bundle, and the Organization and Endpoints used for notifications. See [Notifications](subscriptions.html)."
     resources:
       - Subscription/Subscription-TaskStatusChange-FullResource
+      - Subscription/Subscription-TaskStatusChange-IdOnly
+      - SubscriptionStatus/SubscriptionStatus-TaskStatusChange-QueryStatus
       - SubscriptionTopic/TaskCreationWithOrganizationAssignedFilter
       - SubscriptionTopic/TaskStatusChangeWithIdentifierFilter
       - Bundle/eee72492-c236-41f7-a7ba-3af356204f4c
@@ -271,6 +287,8 @@ pages:
     title: Architecture
   rwipharmainteractionpattern.md:
     title: Interaction Pattern
+  capability-requirements.md:
+    title: Capability Requirements
   terminology.md:
     title: Terminology
   rwipharmatask.md:
@@ -302,6 +320,7 @@ menu:
   Technical Details:
     Architecture: architecture.html
     Interaction Pattern: rwipharmainteractionpattern.html
+    Capability Requirements: capability-requirements.html
   Key Resources:
     RWI-pharma Task: rwipharmatask.html
     Subscription: rwipharmasubscription.html

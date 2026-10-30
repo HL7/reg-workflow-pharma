@@ -69,3 +69,8 @@ ERROR: There is no jira specification file defined with the expected name of FHI
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+
+# Subscription notification Bundles reference the Subscription and the notified Task on the sending server. As in the FHIR R5
+# notification examples, these references cannot be resolved inside a subscription-notification Bundle (it is not a batch or transaction).
+The URL 'Subscription/Subscription-TaskStatusChange-IdOnly' cannot be resolved unless the fullURL is a RESTFul base URL, or a baseURL has been provided and the Bundle is a batch or transaction
+The URL 'Task/scenario1-02-validation' cannot be resolved unless the fullURL is a RESTFul base URL, or a baseURL has been provided and the Bundle is a batch or transaction

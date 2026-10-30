@@ -1,0 +1,429 @@
+# RWI-pharma capability decisions - the single source for:
+#   * ActorDefinitions, CapabilityStatements and SearchParameters  -> input/fsh/Capabilities.generated.fsh
+#   * the Capability Requirements page (conformance statements)    -> input/pagecontent/capability-requirements.md
+# Must Support statements are derived automatically from the profiles in fsh-generated/resources.
+# Regenerate after editing this file or the profiles:  python3 scripts/gen_capabilities.py
+# Expectations: SHALL | SHOULD | MAY  (requirement statements may also use SHALL NOT)
+
+meta:
+  canonical: http://hl7.org/fhir/uv/rwi-pharma
+  date: "2026-10-29"
+  fhirVersion: 5.0.0
+
+actors:
+  - id: rwipharma-server
+    name: RWIpharmaServer
+    title: RWI-pharma Server
+    description: >-
+      The FHIR server, normally operated by the regulator, that holds Tasks, DocumentReferences and Binaries,
+      hosts the SubscriptionTopics and sends notifications.
+    cs: {id: rwipharma-server, mode: server}
+  - id: rwipharma-applicant-client
+    name: RWIpharmaApplicantClient
+    title: RWI-pharma Applicant Client
+    description: >-
+      The applicant's system (for example a regulatory information management system) that submits Tasks and
+      documents, responds to Tasks assigned to the applicant, and subscribes to Task updates.
+    cs: {id: rwipharma-applicant-client, mode: client}
+  - id: rwipharma-regulator-client
+    name: RWIpharmaRegulatorClient
+    title: RWI-pharma Regulator Client
+    description: >-
+      The regulator's internal system that progresses Tasks on the RWI-pharma Server, adds outputs such as
+      acknowledgments, validation reports and decisions, and creates child Tasks such as questions and invoices.
+    cs: {id: rwipharma-regulator-client, mode: client}
+  - id: rwipharma-notification-receiver
+    name: RWIpharmaNotificationReceiver
+    title: RWI-pharma Notification Receiver
+    description: >-
+      The applicant's notification endpoint (rest-hook) that receives subscription notification Bundles from the
+      RWI-pharma Server. It is not a FHIR server, so it has requirement statements but no CapabilityStatement.
+
+# Search parameter registry: code -> type + canonical definition (verified against FHIR R5)
+searchParams:
+  Task:
+    _id: {type: token, def: http://hl7.org/fhir/SearchParameter/Resource-id}
+    _lastUpdated: {type: date, def: http://hl7.org/fhir/SearchParameter/Resource-lastUpdated}
+    identifier: {type: token, def: http://hl7.org/fhir/SearchParameter/clinical-identifier}
+    group-identifier: {type: token, def: http://hl7.org/fhir/SearchParameter/Task-group-identifier}
+    owner: {type: reference, def: http://hl7.org/fhir/SearchParameter/Task-owner}
+    requester: {type: reference, def: http://hl7.org/fhir/SearchParameter/Task-requester}
+    status: {type: token, def: http://hl7.org/fhir/SearchParameter/Task-status}
+    business-status: {type: token, def: http://hl7.org/fhir/SearchParameter/Task-business-status}
+    based-on: {type: reference, def: http://hl7.org/fhir/SearchParameter/Task-based-on}
+    code: {type: token, def: http://hl7.org/fhir/SearchParameter/clinical-code}
+    output: {type: reference, def: http://hl7.org/fhir/SearchParameter/Task-output}
+    input: {type: reference, def: http://hl7.org/fhir/uv/rwi-pharma/SearchParameter/Task-input}
+  DocumentReference:
+    _id: {type: token, def: http://hl7.org/fhir/SearchParameter/Resource-id}
+    identifier: {type: token, def: http://hl7.org/fhir/SearchParameter/clinical-identifier, doc: "Use the of-type modifier with the document set identifier type (rwi-pharma-demo#docsetid) to find all versions of a document."}
+    type: {type: token, def: http://hl7.org/fhir/SearchParameter/clinical-type}
+    relatesto: {type: reference, def: http://hl7.org/fhir/SearchParameter/DocumentReference-relatesto}
+  Provenance:
+    target: {type: reference, def: http://hl7.org/fhir/SearchParameter/Provenance-target}
+  SubscriptionTopic:
+    url: {type: uri, def: http://hl7.org/fhir/SearchParameter/CanonicalResource-url}
+  Organization:
+    identifier: {type: token, def: http://hl7.org/fhir/SearchParameter/Organization-identifier}
+    name: {type: string, def: http://hl7.org/fhir/SearchParameter/Organization-name}
+
+operations:
+  status: {def: http://hl7.org/fhir/OperationDefinition/Subscription-status}
+  events: {def: http://hl7.org/fhir/OperationDefinition/Subscription-events}
+
+# Search parameters defined by this IG (gaps in core R5)
+customSearchParameters:
+  - id: Task-input
+    name: TaskInput
+    title: Task Input Reference
+    code: input
+    base: Task
+    type: reference
+    expression: Task.input.value.ofType(Reference)
+    description: >-
+      Search Tasks by a resource referenced from Task.input, for example a DocumentReference. FHIR R5 defines the
+      equivalent output search parameter (Task-output) but none for inputs, so this guide adds it to allow
+      Task?input=... and _include=Task:input.
+
+# CapabilityStatement content per actor.
+# ms: how Must Support elements of the resource's profiles apply to the actor: store | populate | process
+capabilities:
+  rwipharma-server:
+    documentation: >-
+      The RWI-pharma Server holds the Tasks, documents and subscriptions of regulatory procedures. It keeps every
+      version of every Task, sends notifications for Task changes and records Provenance for every Task change.
+    security: >-
+      SMART Backend Services (system-level scopes, JWT bearer tokens). Each applicant organization may only access
+      Tasks and documents in which it is requester or owner, or that are linked to such Tasks.
+    interactions: {transaction: SHOULD, batch: MAY}
+    resources:
+      - type: Task
+        expectation: SHALL
+        profiles: [rwi-pharma-task]
+        ms: store
+        interactions: {read: SHALL, vread: SHALL, create: SHALL, update: SHALL, history-instance: SHALL, search-type: SHALL}
+        versioning: versioned-update
+        readHistory: true
+        updateCreate: false
+        conditionalCreate: true
+        conditionalUpdate: true
+        conditionalDelete: not-supported
+        searchInclude: ["Task:input", "Task:output", "Task:based-on"]
+        searchRevInclude: ["Provenance:target"]
+        search: {_id: SHALL, identifier: SHALL, group-identifier: SHALL, owner: SHALL, requester: SHALL, status: SHALL, based-on: SHALL, business-status: SHOULD, code: SHOULD, _lastUpdated: SHOULD, input: SHOULD, output: SHOULD}
+        documentation: "Every status, business status or output change creates a new version of the same Task (same Task.id). Task deletion is not supported."
+      - type: DocumentReference
+        expectation: SHALL
+        profiles: [rwi-pharma-documentreference]
+        ms: store
+        interactions: {read: SHALL, vread: SHOULD, create: SHALL, update: SHALL, history-instance: SHOULD, search-type: SHALL}
+        versioning: versioned-update
+        readHistory: true
+        search: {_id: SHALL, identifier: SHALL, type: SHOULD, relatesto: SHOULD}
+      - type: Binary
+        expectation: SHALL
+        interactions: {read: SHALL, create: SHALL}
+        documentation: "Document content is uploaded as a Binary first and then referenced from a DocumentReference (Post-then-Link)."
+      - type: Subscription
+        expectation: SHALL
+        profiles: [rwi-pharma-subscription]
+        ms: store
+        interactions: {read: SHALL, create: SHALL, update: SHALL, delete: SHALL, search-type: SHOULD}
+        operations: {status: SHALL, events: SHOULD}
+        documentation: "Topic-based (R5) subscriptions with the rest-hook channel and id-only or full-resource content."
+      - type: SubscriptionStatus
+        expectation: SHALL
+        profiles: [rwi-pharma-subscription-status]
+        ms: populate
+        documentation: "Returned by the Subscription $status operation and carried as the first entry of every notification Bundle."
+      - type: Bundle
+        expectation: SHALL
+        profiles: [rwi-pharma-notification-bundle]
+        ms: populate
+        documentation: "Sent to the subscriber's Endpoint as a subscription notification (Bundle.type = subscription-notification). Notification Bundles are delivered, not stored on the server."
+      - type: SubscriptionTopic
+        expectation: SHALL
+        profiles: [task-creation-with-organization-assigned-filter, task-status-change-with-identifier-filter]
+        ms: store
+        interactions: {read: SHALL, search-type: SHALL}
+        search: {url: SHALL}
+      - type: Organization
+        expectation: SHALL
+        profiles: [rwi-pharma-organization]
+        ms: store
+        interactions: {read: SHALL, search-type: SHOULD}
+        search: {identifier: SHOULD, name: SHOULD}
+      - type: Endpoint
+        expectation: SHALL
+        profiles: [endpoint-subscription-notify]
+        ms: store
+        interactions: {read: SHALL, create: SHALL, update: SHOULD}
+      - type: Provenance
+        expectation: SHALL
+        interactions: {read: SHALL, search-type: SHOULD}
+        search: {target: SHOULD}
+        documentation: "The server creates a Provenance resource for every Task create or update."
+      - type: Questionnaire
+        expectation: SHOULD
+        interactions: {read: SHOULD, create: SHOULD}
+      - type: QuestionnaireResponse
+        expectation: SHOULD
+        interactions: {read: SHOULD, create: SHOULD}
+  rwipharma-applicant-client:
+    documentation: >-
+      The Applicant Client submits Tasks and documents to the RWI-pharma Server, responds to Tasks that the
+      regulator assigns to the applicant, and subscribes to updates of its Tasks.
+    security: "SMART Backend Services (system-level scopes, JWT bearer tokens)."
+    interactions: {transaction: MAY}
+    resources:
+      - type: Task
+        expectation: SHALL
+        profiles: [rwi-pharma-task]
+        ms: populate-process
+        interactions: {create: SHALL, read: SHALL, update: SHALL, search-type: SHALL, vread: SHOULD, history-instance: SHOULD}
+        search: {identifier: SHALL, owner: SHALL, status: SHALL, group-identifier: SHOULD, based-on: SHOULD, business-status: SHOULD, input: MAY, output: MAY}
+      - type: DocumentReference
+        expectation: SHALL
+        profiles: [rwi-pharma-documentreference]
+        ms: populate-process
+        interactions: {create: SHALL, read: SHALL, update: SHOULD, search-type: SHOULD}
+        search: {identifier: SHOULD}
+      - type: Binary
+        expectation: SHALL
+        interactions: {create: SHALL, read: SHALL}
+      - type: Subscription
+        expectation: SHALL
+        profiles: [rwi-pharma-subscription]
+        ms: populate
+        interactions: {create: SHALL, read: SHOULD, delete: SHOULD}
+        operations: {status: SHOULD, events: MAY}
+      - type: SubscriptionStatus
+        expectation: SHOULD
+        profiles: [rwi-pharma-subscription-status]
+        ms: process
+        documentation: "Processed from Subscription $status responses."
+      - type: SubscriptionTopic
+        expectation: SHOULD
+        interactions: {read: SHOULD, search-type: SHOULD}
+        search: {url: SHOULD}
+      - type: Endpoint
+        expectation: SHOULD
+        profiles: [endpoint-subscription-notify]
+        ms: populate
+        interactions: {create: SHOULD, update: MAY}
+      - type: Organization
+        expectation: SHOULD
+        profiles: [rwi-pharma-organization]
+        ms: process
+        interactions: {read: SHOULD}
+      - type: Questionnaire
+        expectation: SHOULD
+        interactions: {read: SHOULD}
+      - type: QuestionnaireResponse
+        expectation: SHOULD
+        interactions: {create: SHOULD}
+      - type: Provenance
+        expectation: MAY
+        interactions: {search-type: MAY}
+        search: {target: MAY}
+  rwipharma-regulator-client:
+    documentation: >-
+      The Regulator Client progresses Tasks on the RWI-pharma Server, adds outputs such as acknowledgments,
+      validation reports and decisions, and creates child Tasks such as questions, invoices and labelling rounds.
+    security: "SMART Backend Services (system-level scopes, JWT bearer tokens)."
+    resources:
+      - type: Task
+        expectation: SHALL
+        profiles: [rwi-pharma-task]
+        ms: populate-process
+        interactions: {create: SHALL, read: SHALL, update: SHALL, search-type: SHALL, vread: SHOULD, history-instance: SHOULD}
+        search: {identifier: SHALL, group-identifier: SHALL, owner: SHOULD, requester: SHOULD, status: SHALL, business-status: SHOULD, based-on: SHOULD, code: SHOULD}
+      - type: DocumentReference
+        expectation: SHALL
+        profiles: [rwi-pharma-documentreference]
+        ms: populate-process
+        interactions: {create: SHALL, read: SHALL, search-type: SHOULD}
+        search: {identifier: SHOULD}
+      - type: Binary
+        expectation: SHALL
+        interactions: {create: SHALL, read: SHALL}
+      - type: Organization
+        expectation: SHOULD
+        profiles: [rwi-pharma-organization]
+        ms: process
+        interactions: {read: SHOULD, search-type: SHOULD}
+        search: {identifier: SHOULD}
+      - type: Questionnaire
+        expectation: SHOULD
+        interactions: {create: SHOULD}
+      - type: QuestionnaireResponse
+        expectation: SHOULD
+        interactions: {read: SHOULD}
+      - type: Subscription
+        expectation: SHOULD
+        profiles: [rwi-pharma-subscription]
+        ms: populate
+        interactions: {create: SHOULD}
+      - type: Provenance
+        expectation: SHOULD
+        interactions: {search-type: SHOULD}
+        search: {target: SHOULD}
+
+# Must Support statements for actors that have no CapabilityStatement.
+mustSupportOnly:
+  rwipharma-notification-receiver:
+    - profiles: [rwi-pharma-notification-bundle, rwi-pharma-subscription-status]
+      ms: process
+
+# Inferred requirement statements (not expressed by any profile). Each becomes a conformance statement.
+requirements:
+  - section: Task identity and versions
+    items:
+      - id: cap-1
+        actors: [rwipharma-server]
+        text: "The RWI-pharma Server **SHALL** keep every version of a Task and **SHALL** support `vread` and instance history (`GET Task/[id]/_history`), so that every state of a Task can be retrieved."
+        basis: "[Task Identity and Versions](rwipharmatask.html#task-identifiers); every example Task carries `meta.versionId`."
+      - id: cap-2
+        actors: [rwipharma-server]
+        text: "When a Task's status, business status or outputs change, the RWI-pharma Server **SHALL** record the change as a new version of the same Task (same `Task.id`, new `meta.versionId`)."
+        basis: "[Task Identity and Versions](rwipharmatask.html#task-identifiers)"
+      - id: cap-3
+        actors: [rwipharma-applicant-client, rwipharma-regulator-client]
+        text: "Clients **SHALL** update the existing Task to record progress, change its status or add outputs, and **SHALL NOT** create a new Task for these purposes."
+        basis: "Scenario tables: Task columns show v1, v2, v3 of the same Task."
+      - id: cap-4
+        actors: [rwipharma-applicant-client, rwipharma-regulator-client]
+        text: "Clients **SHALL** create a new Task only for a new request (for example a question, an invoice or a labelling round) or after a terminal status, and **SHALL** link it to the related Task with `Task.basedOn` and the same `Task.groupIdentifier`."
+        basis: "Child Tasks in Scenarios 1, 3 and 4; the resubmission in Scenario 2b."
+      - id: cap-5
+        actors: [rwipharma-server]
+        text: "The RWI-pharma Server **SHALL** support versioned updates and **SHALL** reject a Task update whose `If-Match` version is not the current version."
+        basis: "Requester and owner both update the same Task (scenario tables, 'Created / updated by')."
+      - id: cap-6
+        actors: [rwipharma-applicant-client, rwipharma-regulator-client]
+        text: "Clients **SHALL** send `If-Match` with the version they last read when updating a Task."
+        basis: "As cap-5."
+      - id: cap-7
+        actors: [rwipharma-server]
+        text: "The RWI-pharma Server **SHALL** support conditional create (`If-None-Exist`) on `Task.identifier`."
+        basis: "[Interaction Pattern](rwipharmainteractionpattern.html): the Task identifier is known before the Task id is assigned."
+      - id: cap-8
+        actors: [rwipharma-applicant-client]
+        text: "The Applicant Client **SHOULD** use conditional create with the Task instance identifier when creating a Task, so that a retried request does not create a duplicate Task."
+        basis: "As cap-7."
+      - id: cap-9
+        actors: [rwipharma-server]
+        text: "The RWI-pharma Server **SHALL NOT** allow Tasks to be deleted; a Task and its history are the audit trail of a regulatory procedure."
+        basis: "Versioning model and Provenance requirement ([Architecture](architecture.html))."
+  - section: Searching
+    items:
+      - id: cap-10
+        actors: [rwipharma-server]
+        text: "The RWI-pharma Server **SHALL** support searching Tasks by `identifier`, `group-identifier`, `owner`, `requester`, `status` and `based-on`."
+        basis: "Task identifiers, group identifiers and child Tasks used throughout the examples; [Tracking and Dashboards](usecases-status-tracking.html)."
+      - id: cap-11
+        actors: [rwipharma-server]
+        text: "The RWI-pharma Server **SHOULD** support the `input` search parameter defined by this guide and the core `output` search parameter, with `_include=Task:input` and `_include=Task:output`, so that a client can retrieve a Task with its documents in one request."
+        basis: "Every Task links its documents through `Task.input` and `Task.output`; FHIR R5 has no search parameter for `Task.input`."
+      - id: cap-12
+        actors: [rwipharma-server]
+        text: "The RWI-pharma Server **SHOULD** support searching DocumentReferences by `identifier` with the `of-type` modifier, so that all versions of a document can be found by its document set identifier."
+        basis: "DocumentReference document set and document version identifiers."
+  - section: Documents and binaries
+    items:
+      - id: cap-13
+        actors: [rwipharma-applicant-client, rwipharma-regulator-client]
+        text: "Clients **SHALL** upload document content as a Binary before creating the DocumentReference that points to it, and **SHALL** reference the DocumentReference, not the Binary, from `Task.input` and `Task.output`."
+        basis: "[Post-then-Link](architecture.html#binary-upload-guide-post-then-link)"
+      - id: cap-14
+        actors: [rwipharma-applicant-client, rwipharma-regulator-client]
+        text: "When creating a new version of a document, clients **SHALL** keep its document set identifier, assign a new document version identifier, and **SHOULD** point to the previous version with `DocumentReference.relatesTo` (`replaces`)."
+        basis: "[DocumentReference](rwipharmadocumentReference.html) identifier slices."
+      - id: cap-15
+        actors: [rwipharma-server]
+        text: "The RWI-pharma Server **SHOULD** support transaction Bundles, so that a Binary, its DocumentReference and the Task can be submitted together."
+        basis: "[Workflow](workflow.html) submission steps."
+  - section: Notifications
+    items:
+      - id: cap-16
+        actors: [rwipharma-server]
+        text: "The RWI-pharma Server **SHALL** support topic-based Subscriptions on the Task status-change and Task-creation topics, with the `rest-hook` channel and both `id-only` and `full-resource` content."
+        basis: "[Notifications](subscriptions.html); Subscription and SubscriptionTopic examples."
+      - id: cap-17
+        actors: [rwipharma-server]
+        text: "The RWI-pharma Server **SHALL** support every search parameter that its SubscriptionTopics use as a filter; in this guide these are Task `identifier` and Task `owner`."
+        basis: "SubscriptionTopic `canFilterBy` definitions."
+      - id: cap-18
+        actors: [rwipharma-server]
+        text: "The RWI-pharma Server **SHALL** support the Subscription `$status` operation and **SHOULD** support `$events`."
+        basis: "[Notification & Status](rwipharmasubscriptionNotificationAndStatus.html)"
+      - id: cap-19
+        actors: [rwipharma-applicant-client]
+        text: "The Applicant Client **SHOULD** create its Task status-change Subscription, filtered by the Task identifier, when it creates the Task."
+        basis: "[Interaction Pattern](rwipharmainteractionpattern.html)"
+      - id: cap-20
+        actors: [rwipharma-notification-receiver]
+        text: "The Notification Receiver **SHALL** accept subscription notification Bundles POSTed to its registered Endpoint address and **SHALL** respond with an HTTP 2xx status when a notification is received."
+        basis: "[Organization & Endpoint](rwipharmaorganizationEndpoint.html)"
+      - id: cap-21
+        actors: [rwipharma-notification-receiver]
+        text: "The Notification Receiver **SHALL** treat a notification about a Task as an update of that Task (same `Task.id`), and **SHOULD** retrieve the current version of the Task when the notification content is `id-only`."
+        basis: "[Task Identity and Versions](rwipharmatask.html#task-identifiers)"
+      - id: cap-22
+        actors: [rwipharma-notification-receiver]
+        text: "The Notification Receiver **SHOULD** use notification event numbers to detect missed notifications, and **SHOULD** recover them with `$events` or by reading the Task."
+        basis: "R5 subscription notification event numbering."
+      - id: cap-30
+        actors: [rwipharma-server]
+        text: "The RWI-pharma Server **SHALL** send each notification as a Bundle of type `subscription-notification` whose first entry is a SubscriptionStatus that identifies the Subscription and, for event notifications, gives `eventsSinceSubscriptionStart` and each event's `eventNumber` and `focus`. The topic **SHOULD** be included for `full-resource` content and **MAY** be included for `id-only` content."
+        basis: "[Notification & Status](rwipharmasubscriptionNotificationAndStatus.html); RWI Pharma Subscription Notification Bundle profile."
+      - id: cap-31
+        actors: [rwipharma-server]
+        text: "The RWI-pharma Server **SHOULD** send a `handshake` notification when a Subscription is activated, and **SHOULD** send `heartbeat` notifications when the Subscription specifies a `heartbeatPeriod`."
+        basis: "R5 topic-based subscriptions."
+      - id: cap-32
+        actors: [rwipharma-server]
+        text: "For `id-only` content, `notificationEvent.focus` **SHALL** reference the Task and the Bundle **SHALL** include an entry for the Task with `fullUrl`, `request` and `response` but no resource. For `full-resource` content, the Bundle **SHALL** include the current version of the Task. In both cases `additionalContext` **SHOULD** reference related resources, such as the parent Task."
+        basis: "[Notifications](subscriptions.html); FHIR R5 SubscriptionStatus notification types and the id-only notification examples."
+      - id: cap-33
+        actors: [rwipharma-notification-receiver]
+        text: "The Notification Receiver **SHALL** accept `handshake`, `heartbeat` and `event-notification` notifications with an HTTP 2xx status, **SHALL** process event notifications, and **SHOULD** ignore or reject notifications for a Subscription that its own system did not create."
+        basis: "FHIR R5 SubscriptionStatus notification types; [Organization & Endpoint](rwipharmaorganizationEndpoint.html)."
+      - id: cap-34
+        actors: [rwipharma-notification-receiver]
+        text: "The Notification Receiver **SHOULD** verify that a `full-resource` notification comes from the RWI-pharma Server, for example using a secret supplied in the Subscription, before acting on its content."
+        basis: "FHIR R5 Subscriptions, Safety and Security."
+  - section: Provenance and audit
+    items:
+      - id: cap-23
+        actors: [rwipharma-server]
+        text: "The RWI-pharma Server **SHALL** create a Provenance resource for every create or update of a Task, targeting that version of the Task."
+        basis: "[Architecture](architecture.html): Provenance on every Task change."
+      - id: cap-24
+        actors: [rwipharma-server]
+        text: "The RWI-pharma Server **SHOULD** support searching Provenance by `target` and `_revinclude=Provenance:target` on Task searches."
+        basis: "As cap-23."
+  - section: Security and access
+    items:
+      - id: cap-25
+        actors: [rwipharma-server, rwipharma-applicant-client, rwipharma-regulator-client]
+        text: "All interactions with the RWI-pharma Server **SHALL** be authorized using SMART Backend Services (system-level scopes, JWT bearer tokens)."
+        basis: "[Architecture](architecture.html)"
+      - id: cap-26
+        actors: [rwipharma-server]
+        text: "The RWI-pharma Server **SHALL** limit each applicant organization to the Tasks in which it is requester or owner, and to the documents linked to those Tasks."
+        basis: "[Architecture](architecture.html): attribute-based access control."
+  - section: Workflow responsibilities
+    items:
+      - id: cap-27
+        actors: [rwipharma-applicant-client]
+        text: "The Applicant Client **SHALL** be able to create submission Tasks as requester, and **SHALL** be able to update Tasks it owns (such as question, invoice and labelling Tasks), adding its responses as outputs."
+        basis: "Scenario tables, 'Created / updated by'."
+      - id: cap-28
+        actors: [rwipharma-regulator-client]
+        text: "The Regulator Client **SHALL** be able to update Tasks it owns, setting status and business status and adding outputs such as acknowledgments, validation reports and decisions, and **SHALL** be able to create child Tasks owned by the applicant."
+        basis: "Scenario tables, 'Created / updated by'."
+      - id: cap-29
+        actors: [rwipharma-server]
+        text: "The RWI-pharma Server **SHOULD** reject an update that changes a Task's `requester`, `owner`, `groupIdentifier` or Task instance identifier after the Task has been created."
+        basis: "These values identify the parties and the procedure across all versions of a Task."
