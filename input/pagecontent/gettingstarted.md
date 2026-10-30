@@ -24,7 +24,7 @@
         <div style="font-size:.82em; color:#374151; line-height:1.5;">Registering a shipping address before you can send or receive packages. You only do this once.</div>
       </div>
       <div style="font-size:.82em; color:#6b7280;">✅ <strong>Business benefit:</strong> One-time setup — connects your organization to any party, regulator or company, that supports RWI-pharma.</div>
-      <div style="margin-top:10px;"><a href="RWIpharmaOrganizationEndpoint.html" style="font-size:.82em; color:#2563eb; font-weight:600; text-decoration:none;">Deep dive: Organization &amp; Endpoint →</a></div>
+      <div style="margin-top:10px;"><a href="rwipharmaorganizationEndpoint.html" style="font-size:.82em; color:#2563eb; font-weight:600; text-decoration:none;">Deep dive: Organization &amp; Endpoint →</a></div>
     </div>
   </div>
 </div>
