@@ -77,3 +77,6 @@ INFORMATION: Bundle/eee72492-c236-41f7-a7ba-3af356204f4c: Bundle.entry[1]: This 
 
 # The IG is being developed for an STU ballot (Standard for Trial Use, formerly DSTU: Draft Standard for Trial Use), so its profiles and the IG carry status 'draft' alongside standards status 'trial-use'. The status will be set to 'active' (one change to status in sushi-config.yaml) when the IG is published.
 %The resource status 'draft' and the standards status 'trial-use' may not be consistent and should be reviewed%
+
+#if needed for codesystem concept properties as of 10/29/2026 https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/vsac.20sqlite.20db.20broken.20on.20tx.2Efhir.2Eorg/near/635905773
+
