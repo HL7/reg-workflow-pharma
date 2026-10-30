@@ -1,6 +1,6 @@
 Instance: binary-1004
 InstanceOf: Binary
-Description: "3.2.S.7.1_Stability_Summary_and_Conclusions_pdf"
+Description: "3.2.P.8.1_Stability_Summary_and_Conclusions_pdf"
 Usage: #example
 * meta.versionId = "1"
 * meta.lastUpdated = "2026-03-16T19:06:36.462+00:00"

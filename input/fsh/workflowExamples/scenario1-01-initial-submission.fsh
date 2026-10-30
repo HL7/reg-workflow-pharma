@@ -96,7 +96,7 @@ Usage: #example
 
 * type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#1.0 "Cover Letter"
 * content.attachment.contentType = #application/pdf
-* content.attachment.url = "https://api.synthpharma.example/binaries/submission-123/m1/cover-letter.pdf"
+* content.attachment.url = "Binary/binary-s1-cover-letter"
 * content.attachment.title = "Cover Letter.pdf"
 * content.attachment.size = 1250000
 * content.attachment.creation = "2025-11-15T08:30:00+01:00"
@@ -119,7 +119,7 @@ Usage: #example
 * category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#m1 "Module 1"
 * type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#application-form "Application Form"
 * content.attachment.contentType = #application/pdf
-* content.attachment.url = "https://api.synthpharma.example/binaries/submission-123/m1/app-form.pdf"
+* content.attachment.url = "Binary/binary-s1-application-form"
 * content.attachment.title = "Application Form.pdf"
 * content.attachment.size = 3400000
 * content.attachment.creation = "2025-11-15T08:35:00+01:00"
@@ -142,7 +142,7 @@ Usage: #example
 * category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#m1 "Module 1"
 * type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#1.14.1.2 "Annotated draft labeling text" //"annotated-label "Annotated Label"
 * content.attachment.contentType = #application/fhir+json
-* content.attachment.url = "https://api.synthpharma.example/bundles/submission-123/m1/annotated-label.json"
+* content.attachment.url = "Binary/binary-s1-annotated-label"
 * content.attachment.title = "Annotated Label (Bundle)"
 * content.attachment.size = 45000
 * content.attachment.creation = "2025-11-14T16:00:00+01:00"
@@ -165,7 +165,7 @@ Usage: #example
 * category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#m1 "Module 1"
 * type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#1.14.1.3 "Draft labeling text" //"clean-label "Clean Label"
 * content.attachment.contentType = #application/fhir+json
-* content.attachment.url = "https://api.synthpharma.example/bundles/submission-123/m1/clean-label.json"
+* content.attachment.url = "Binary/binary-s1-clean-label"
 * content.attachment.title = "Clean Label (Bundle)"
 * content.attachment.size = 42000
 * content.attachment.creation = "2025-11-14T16:05:00+01:00"
@@ -186,7 +186,7 @@ Usage: #example
 * version = "1.0"
 * type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#1.3.2 "Mock-ups" //"Pack Mockup"
 * content.attachment.contentType = #text/html
-* content.attachment.url = "https://api.synthpharma.example/binaries/submission-123/m1/mockup.html"
+* content.attachment.url = "Binary/binary-s1-pack-mockup"
 * content.attachment.title = "Pack Mockup.html"
 * content.attachment.size = 890000
 * content.attachment.creation = "2025-11-14T10:00:00+01:00"
@@ -207,10 +207,10 @@ Usage: #example
 * version = "1.0"
 * category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#m3 "Module 3"
 * type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#3.2.P.8.1 "Stability Summary and Conclusion"
-* content.attachment.contentType = #application/fhir+json
+* content.attachment.contentType = #application/pdf
 * content.attachment.url = "Binary/binary-1004"
 * content.attachment.title = "STABILITY SUMMARY AND CONCLUSIONS ON STELBAT TABLETS, 20 MG"
-* content.attachment.size = 116000
+* content.attachment.size = 118616
 * content.attachment.creation = "2025-11-12T14:30:00+01:00"
 * identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/synthpharma/document-set-id"
@@ -229,10 +229,10 @@ Usage: #example
 * version = "1.0"
 * category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#m3 "Module 3"
 * type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#3.2.P.8.3 "Stability Data"
-* content.attachment.contentType = #application/fhir+json
+* content.attachment.contentType = #application/pdf
 * content.attachment.url = "Binary/binary-1005"
 * content.attachment.title = "STABILITY DATA ON STELBAT TABLETS, 20MG"
-* content.attachment.size = 312000
+* content.attachment.size = 319390
 * content.attachment.creation = "2025-11-12T14:35:00+01:00"
 * identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/synthpharma/document-set-id"
@@ -250,13 +250,11 @@ Usage: #example
 * docStatus = #final
 * version = "1.0"
 * category = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#m3 "Module 3"
-//* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#3.2.P.8.2 "Post-approval Stability Protocol and Commitment"
 * type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#3.2.S.7 "Stability (Drug Substance)"
-* content.attachment.contentType = #application/fhir+json
-//* content.attachment.url = "https://api.synthpharma.example/bundles/submission-123/m3/stability-commitment.json"
+* content.attachment.contentType = #application/pdf
 * content.attachment.url = "Binary/binary-1006"
 * content.attachment.title = "STABILITY DATA ON API"
-* content.attachment.size = 238000
+* content.attachment.size = 243107
 * content.attachment.creation = "2025-11-12T14:40:00+01:00"
 * identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/synthpharma/document-set-id"

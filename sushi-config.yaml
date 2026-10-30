@@ -149,6 +149,20 @@ groups:
       - Binary/binary-1004
       - Binary/binary-1005
       - Binary/binary-1006
+      - Binary/binary-s1-cover-letter
+      - Binary/binary-s1-application-form
+      - Binary/binary-s1-annotated-label
+      - Binary/binary-s1-clean-label
+      - Binary/binary-s1-pack-mockup
+      - Binary/binary-s1-acknowledgement
+      - Binary/binary-s1-validation-report
+      - Binary/binary-s1-invoice
+      - Binary/binary-s1-payment-proof
+      - Binary/binary-s1-list-of-questions
+      - Binary/binary-s1-questionnaire-response
+      - Binary/binary-s1-stability-data-annex
+      - Binary/binary-s1-approval-letter
+      - Binary/binary-s1-assessment-report
   scenario-2-icsr-tasks:
     name: "Scenario 2: ICSR Accepted, and Rejected then Resubmitted – Tasks"
     description: "Tasks for an ICSR that is accepted (2a), and one that is rejected and then resubmitted (2b). See [Scenario 2](usecases-scenario-icsr.html)."

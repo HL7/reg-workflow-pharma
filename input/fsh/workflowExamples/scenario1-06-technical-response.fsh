@@ -97,7 +97,7 @@ Usage: #example
 * relatesTo.target = Reference(docref-list-of-questions) "List of Questions (LoQ)"
 * date = "2025-12-04T10:00:00+01:00"
 * content.attachment.contentType = #application/fhir+json
-* content.attachment.url = "https://api.synthpharma.example/questionnaire-responses/qr123.json"
+* content.attachment.url = "Binary/binary-s1-questionnaire-response"
 * content.attachment.title = "Response to Questions (QuestionnaireResponse)"
 * content.attachment.size = 18400
 * content.attachment.creation = "2025-12-04T09:59:00+01:00"
@@ -120,7 +120,7 @@ Usage: #example
 * type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#3.2.P.8.3 "Stability Data"
 * date = "2025-12-04T09:59:00+01:00"
 * content.attachment.contentType = #application/fhir+json
-* content.attachment.url = "https://api.synthpharma.example/bundles/submission-123/m3/stability-data-v2.json"
+* content.attachment.url = "Binary/binary-s1-stability-data-annex"
 * content.attachment.title = "Updated Stability Data (Transaction Bundle)"
 * content.attachment.size = 5800000
 * content.attachment.creation = "2025-12-04T09:59:00+01:00"

@@ -11,7 +11,7 @@ Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.
 # Ignore for now
 Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-# The APIC DocumentReference Profile does not use http://hl7.org/fhir/ValueSet/doc-typecodes|5.0.0, it uses a non-clinical valueset specific to its use case
+# The RWI-Pharma DocumentReference Profile does not use http://hl7.org/fhir/ValueSet/doc-typecodes|5.0.0, it uses a non-clinical valueset specific to its use case
 % None of the codings provided are in the value set 'FHIR Document Type Codes'%
 
 # Slices are intentional and are examples of other slices that can occur
@@ -74,3 +74,7 @@ WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in 
 # notification examples, these references cannot be resolved inside a subscription-notification Bundle (it is not a batch or transaction).
 The URL 'Subscription/Subscription-TaskStatusChange-IdOnly' cannot be resolved unless the fullURL is a RESTFul base URL, or a baseURL has been provided and the Bundle is a batch or transaction
 The URL 'Task/scenario1-02-validation' cannot be resolved unless the fullURL is a RESTFul base URL, or a baseURL has been provided and the Bundle is a batch or transaction
+
+# Post-then-Link: DocumentReference.content.attachment.url holds a server-relative Binary URL ("Binary/<id>"). Relative URLs are valid per the FHIR specification (Attachment.url: "Urls may be relative references ... Relative URLs are interpreted relative to the service url, like a resource reference, rather than relative to the resource itself."), and implementers resolve them against the server base where the Binary was posted. The validator does not resolve plain url values against a server base and cannot fetch the content to check size or contentType, so it reports these; the links do resolve in the IG, because the IG Publisher links each attachment URL to its Binary page when it renders the pages after validation (e.g. DocumentReference-doc1 -> Binary-binary-s1-cover-letter.html).
+%No definition could be found for URL value 'Binary/%
+%Attachment content was not checked: Binary/%

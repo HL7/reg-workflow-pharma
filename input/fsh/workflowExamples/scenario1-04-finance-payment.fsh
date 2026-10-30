@@ -62,7 +62,7 @@ Usage: #example
 * relatesTo.code = http://hl7.org/fhir/document-relationship-type#appends
 * relatesTo.target = Reference(docref-invoice) "Invoice #INV-2025-001"
 * content.attachment.contentType = #application/pdf
-* content.attachment.url = "https://api.synthpharma.example/binaries/payments/confirm-inv-2025-001.pdf"
+* content.attachment.url = "Binary/binary-s1-payment-proof"
 * content.attachment.title = "Payment-Confirmation.pdf"
 * content.attachment.size = 280000
 * content.attachment.creation = "2025-03-06T13:30:00+01:00"

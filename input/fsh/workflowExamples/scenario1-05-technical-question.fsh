@@ -72,7 +72,7 @@ Usage: #example
 * type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#list-of-questions "List of Questions"
 * date = "2024-03-01T14:30:00+01:00"
 * content.attachment.contentType = #application/fhir+json
-* content.attachment.url = "https://build.fhir.org/ig/HL7/rtq-ig/Questionnaire-questionnaire-ID001.html"
+* content.attachment.url = "Binary/binary-s1-list-of-questions"
 * content.attachment.title = "List of Questions (Questionnaire)"
 * content.attachment.size = 810
 * content.attachment.creation = "2025-03-01T14:20:00+01:00"

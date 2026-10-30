@@ -61,7 +61,7 @@ Usage: #example
 * type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#invoice-reg-fee "Invoice Regulatory Fee"
 * description = "Financial invoice for regulatory submission review"
 * content.attachment.contentType = #application/pdf
-* content.attachment.url = "https://api.health.authority.example/binaries/invoices/INV-2025-001.pdf"
+* content.attachment.url = "Binary/binary-s1-invoice"
 * content.attachment.title = "INV-2025-001.pdf"
 * content.attachment.size = 450000
 * content.attachment.creation = "2025-03-05T08:00:00+01:00"

@@ -113,7 +113,7 @@ Usage: #example
 * content.attachment.title = "Acknowledgement_Letter.pdf"
 * content.attachment.contentType = #application/pdf
 * content.attachment.creation = "2025-11-19T09:00:00+01:00"
-* content.attachment.url = "https://api.example/acknowledgement-receipt.pdf"
+* content.attachment.url = "Binary/binary-s1-acknowledgement"
 * identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/health-authority/document-set-id"
 * identifier[0].value = "urn:uuid:80808080-8080-8080-8080-808080808082"
@@ -132,7 +132,7 @@ Usage: #example
 * content.attachment.title = "Validation_Report.pdf"
 * content.attachment.contentType = #application/pdf
 * content.attachment.creation = "2025-11-19T09:00:00+01:00"
-* content.attachment.url = "https://api.example/validation-report.pdf"
+* content.attachment.url = "Binary/binary-s1-validation-report"
 * identifier[0].type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-demo#docsetid "Document Set Identifier"
 * identifier[0].system = "http://example.org/health-authority/document-set-id"
 * identifier[0].value = "urn:uuid:80808080-8080-8080-8080-808080808081"
