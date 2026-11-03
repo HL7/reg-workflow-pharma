@@ -3,7 +3,7 @@
 <div style="text-align:center; padding:40px 20px 24px;">
   <div style="font-size:.75em; font-weight:700; text-transform:uppercase; letter-spacing:.22em; color:#003087; margin-bottom:16px;">HL7 FHIR R5 · Global Standard</div>
   <h3 style="font-size:2.4em; font-weight:800; line-height:1.15; margin-bottom:16px; color:#111827;">Regulatory exchange,<br/><span style="background:linear-gradient(135deg,#003087,#7c3aed); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">reimagined.</span></h3>
-  <p style="font-size:1.02em; color:#4b5563; max-width:680px; margin:0 auto 24px; line-height:1.6;">Regulatory exchange is globally fragmented across authorities, product lines, procedures, and technologies. This IG establishes a common Task- and Subscription-based framework for regulatory workflows and interactions, enabling them to be exchanged, tracked, and acted upon with machine-readable status and event-driven notifications.</p>
+  <p style="font-size:1.02em; color:#4b5563; max-width:680px; margin:0 auto 24px; line-height:1.6;">Regulatory exchange is globally fragmented across authorities, product lines, procedures, and technologies. Taking an API-first approach to interoperability, this IG establishes a common Task- and Subscription-based framework for regulatory workflows and interactions, enabling them to be exchanged, tracked, and acted upon with machine-readable status and event-driven notifications.</p>
   <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
     <a href="gettingstarted.html" style="display:inline-block; background:#003087; color:#fff; padding:14px 28px; border-radius:8px; font-weight:700; font-size:1em; text-decoration:none;">Get Started</a>
   </div>
@@ -17,7 +17,7 @@
 <h3 id="about" style="font-size:1.3em; font-weight:700; color:#111827; margin-bottom:12px;">About this IG</h3>
 
 <div style="margin-bottom:24px;">
-  <p style="font-size:.88em; color:#374151; line-height:1.7; margin-bottom:12px;">The Regulatory Workflows and Interactions - pharma Implementation Guide defines how FHIR can support end-to-end digital regulatory workflows and interactions between applicants and regulatory authorities for human biopharmaceutical products.</p>
+  <p style="font-size:.88em; color:#374151; line-height:1.7; margin-bottom:12px;">The Regulatory Workflows and Interactions - pharma (RWI-pharma) Implementation Guide, originally developed as APIX (API Exchange for Medicinal Products), defines how FHIR can support end-to-end digital regulatory workflows and interactions between applicants and regulatory authorities for human biopharmaceutical products.</p>
   <p style="font-size:.88em; color:#374151; line-height:1.7; margin-bottom:12px;">Today, regulatory exchange is highly fragmented. Authorities may use different mechanisms across product lines and procedures, including portals, gateways, email, secure email, FTP, HTTPS, and physical mail. These differences multiply across regulators globally, creating significant complexity for industry and limiting interoperability.</p>
   <p style="font-size:.88em; color:#374151; line-height:1.7; margin-bottom:12px;">Applicants also frequently lack end-to-end visibility into the status of their regulatory interactions. Consumers can track a FedEx or Amazon delivery through each major step and receive notifications as it progresses, yet applicants often cannot similarly track a critical regulatory interaction or receive automated notifications when key milestones occur.</p>
   <p style="font-size:.88em; color:#374151; line-height:1.7; margin:0;">Using <a href="rwipharmatask.html">Task</a>, <a href="rwipharmadocumentReference.html">DocumentReference</a>, <a href="architecture.html#binary-upload-guide-post-then-link">Binary</a>, <a href="rwipharmasubscription.html">Subscription</a>, APIs, and related FHIR capabilities, the guide enables regulatory activities to be interoperable, traceable, trackable, and event-driven, replacing fragmented exchange mechanisms with a standardized digital workflow.</p>
@@ -166,7 +166,7 @@
   <div style="background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:20px;">
     <div style="font-size:1.3em; margin-bottom:8px;">🤝</div>
     <div style="font-weight:700; color:#003087; margin-bottom:6px;">Governance & Collaboration</div>
-    <p style="font-size:.85em; color:#4b5563; line-height:1.6; margin:0;">RWI-pharma is developed under the HL7 Vulcan Accelerator with active participation from regulators, pharmaceutical companies, and technology vendors.</p>
+    <p style="font-size:.85em; color:#4b5563; line-height:1.6; margin:0;">RWI-pharma (formerly APIX) is developed under the HL7 Vulcan Accelerator with active participation from regulators, pharmaceutical companies, and technology vendors. Project details are on the <a href="https://confluence.hl7.org/spaces/VA/pages/358267070/Regulatory+Workflows+and+Interactions+RWI+-+pharma">project Confluence page</a>, and contributors are listed in the <a href="acknowledgements.html">Acknowledgements</a>.</p>
   </div>
   <div style="background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:20px;">
     <div style="font-size:1.3em; margin-bottom:8px;">🚀</div>

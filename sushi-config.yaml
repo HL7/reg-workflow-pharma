@@ -320,6 +320,8 @@ pages:
     title: DocumentReference
   downloadsANDdependencies.md:
     title: Downloads and Dependencies
+  acknowledgements.md:
+    title: Acknowledgements
 
 menu:
   Home: index.html
@@ -347,6 +349,7 @@ menu:
     Organization & Endpoint: rwipharmaorganizationEndpoint.html
     DocumentReference: rwipharmadocumentReference.html
   Artifacts: artifacts.html
+  Acknowledgements: acknowledgements.html
 
 instanceOptions:
   manualSliceOrdering: true 
