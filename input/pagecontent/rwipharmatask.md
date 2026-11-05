@@ -108,14 +108,14 @@ The following table provides an overview of the key elements of the RWI-pharma T
 <tr>
 <td><code>Task.input</code></td>
 <td>0..*</td>
-<td>type from the domain Task input value sets (e.g. <code>cover-letter</code>), see <a href="terminology.html">Terminology</a><br>valueReference = Reference(DocumentReference)</td>
-<td>Primary mechanism to attach submission content, or for a Regulator to ask questions or make requests. Can reference DocumentReferences.</td>
+<td>type from the domain Task input value sets (e.g. <code>cover-letter</code>), see <a href="terminology.html">Terminology</a><br>valueReference = Reference(DocumentReference) as best practice for files</td>
+<td>Primary mechanism to attach submission content, or for a Regulator to ask questions or make requests. Best practice is to reference DocumentReferences.</td>
 </tr>
 <tr>
 <td><code>Task.output</code></td>
 <td>0..*</td>
-<td>type from the domain Task output value sets (e.g. <code>validation-report</code>), see <a href="terminology.html">Terminology</a><br>valueReference = Reference(DocumentReference)</td>
-<td>Used by the regulator to return assessment reports, decisions, etc. Or, used by Applicant to provide responses to Regulator questions or requests. Can reference DocumentReferences. Outputs are added to the existing Task as a new version. Returning a document never creates a new Task.</td>
+<td>type from the domain Task output value sets (e.g. <code>validation-report</code>), see <a href="terminology.html">Terminology</a><br>valueReference = Reference(DocumentReference) as best practice for files</td>
+<td>Used by the regulator to return assessment reports, decisions, etc. Or, used by Applicant to provide responses to Regulator questions or requests. Best practice is to reference DocumentReferences. Outputs are added to the existing Task as a new version. Returning a document never creates a new Task.</td>
 </tr>
 <tr>
 <td><code>Task.groupIdentifier</code></td>

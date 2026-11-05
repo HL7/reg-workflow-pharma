@@ -67,7 +67,7 @@ Each statement has an id that links to it, and applies to the actors listed. The
 
 ### Documents and binaries
 
-§cap-13^rwipharma-applicant-client,rwipharma-regulator-client:Clients **SHALL** upload document content as a Binary before creating the DocumentReference that points to it, and **SHALL** reference the DocumentReference, not the Binary, from `Task.input` and `Task.output`.§
+§cap-13^rwipharma-applicant-client,rwipharma-regulator-client:Clients **SHALL** upload document content as a Binary before referencing it. As best practice, clients **SHOULD** describe each Binary with a DocumentReference and reference the DocumentReference, rather than the Binary, from `Task.input` and `Task.output`, especially for content larger than 20 MB.§
 
 <span style="font-size:.85em;color:#555;">Basis: [Post-then-Link](architecture.html#binary-upload-guide-post-then-link)</span>
 
@@ -75,9 +75,13 @@ Each statement has an id that links to it, and applies to the actors listed. The
 
 <span style="font-size:.85em;color:#555;">Basis: [DocumentReference](rwipharmadocumentReference.html) identifier slices.</span>
 
+§cap-35^rwipharma-applicant-client,rwipharma-regulator-client:When a Task references a Binary directly, clients **SHOULD** populate the Binary's `contentType` and `securityContext` on the Binary itself, and **SHOULD NOT** rely on the Task to imply them.§
+
+<span style="font-size:.85em;color:#555;">Basis: [DocumentReference](rwipharmadocumentReference.html)</span>
+
 §cap-15^rwipharma-server:The RWI-pharma Server **SHOULD** support transaction Bundles, so that a Binary, its DocumentReference and the Task can be submitted together.§
 
-<span style="font-size:.85em;color:#555;">Basis: [Workflow](workflow.html) submission steps.</span>
+<span style="font-size:.85em;color:#555;">Basis: [Workflow](gettingstarted.html#workflow) submission steps.</span>
 
 ### Notifications
 

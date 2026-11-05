@@ -123,7 +123,7 @@ capabilities:
       - type: Binary
         expectation: SHALL
         interactions: {read: SHALL, create: SHALL}
-        documentation: "Document content is uploaded as a Binary first and then referenced from a DocumentReference (Post-then-Link)."
+        documentation: "Document content is uploaded as a Binary first and, as best practice, referenced from a DocumentReference (Post-then-Link)."
       - type: Subscription
         expectation: SHALL
         profiles: [rwi-pharma-subscription]
@@ -183,7 +183,7 @@ capabilities:
         interactions: {create: SHALL, read: SHALL, update: SHALL, search-type: SHALL, vread: SHOULD, history-instance: SHOULD}
         search: {identifier: SHALL, owner: SHALL, status: SHALL, group-identifier: SHOULD, based-on: SHOULD, business-status: SHOULD, input: MAY, output: MAY}
       - type: DocumentReference
-        expectation: SHALL
+        expectation: SHOULD
         profiles: [rwi-pharma-documentreference]
         ms: populate-process
         interactions: {create: SHALL, read: SHALL, update: SHOULD, search-type: SHOULD}
@@ -239,7 +239,7 @@ capabilities:
         interactions: {create: SHALL, read: SHALL, update: SHALL, search-type: SHALL, vread: SHOULD, history-instance: SHOULD}
         search: {identifier: SHALL, group-identifier: SHALL, owner: SHOULD, requester: SHOULD, status: SHALL, business-status: SHOULD, based-on: SHOULD, code: SHOULD}
       - type: DocumentReference
-        expectation: SHALL
+        expectation: SHOULD
         profiles: [rwi-pharma-documentreference]
         ms: populate-process
         interactions: {create: SHALL, read: SHALL, search-type: SHOULD}
@@ -333,16 +333,20 @@ requirements:
     items:
       - id: cap-13
         actors: [rwipharma-applicant-client, rwipharma-regulator-client]
-        text: "Clients **SHALL** upload document content as a Binary before creating the DocumentReference that points to it, and **SHALL** reference the DocumentReference, not the Binary, from `Task.input` and `Task.output`."
+        text: "Clients **SHALL** upload document content as a Binary before referencing it. As best practice, clients **SHOULD** describe each Binary with a DocumentReference and reference the DocumentReference, rather than the Binary, from `Task.input` and `Task.output`, especially for content larger than 20 MB."
         basis: "[Post-then-Link](architecture.html#binary-upload-guide-post-then-link)"
       - id: cap-14
         actors: [rwipharma-applicant-client, rwipharma-regulator-client]
         text: "When creating a new version of a document, clients **SHALL** keep its document set identifier, assign a new document version identifier, and **SHOULD** point to the previous version with `DocumentReference.relatesTo` (`replaces`)."
         basis: "[DocumentReference](rwipharmadocumentReference.html) identifier slices."
+      - id: cap-35
+        actors: [rwipharma-applicant-client, rwipharma-regulator-client]
+        text: "When a Task references a Binary directly, clients **SHOULD** populate the Binary's `contentType` and `securityContext` on the Binary itself, and **SHOULD NOT** rely on the Task to imply them."
+        basis: "[DocumentReference](rwipharmadocumentReference.html)"
       - id: cap-15
         actors: [rwipharma-server]
         text: "The RWI-pharma Server **SHOULD** support transaction Bundles, so that a Binary, its DocumentReference and the Task can be submitted together."
-        basis: "[Workflow](workflow.html) submission steps."
+        basis: "[Workflow](gettingstarted.html#workflow) submission steps."
   - section: Notifications
     items:
       - id: cap-16

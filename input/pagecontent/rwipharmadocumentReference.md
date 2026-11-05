@@ -13,6 +13,10 @@ In RWI-pharma, the **DocumentReference** resource provides the metadata wrapper 
 
 The `DocumentReference.author` element identifies the creator of both the metadata and the associated binary content, ensuring clear provenance for regulatory submissions. DocumentReferences are then attached to Tasks via `Task.input` or `Task.output`, allowing the regulator to discover and retrieve documents only when needed.
 
+Despite its name, DocumentReference is not limited to documents: it catalogs any Binary (XML, JSON, E2B messages, data sets, PDFs) with lightweight metadata (type, content type, size, author, security labels) that a recipient can read without downloading the Binary. Using it is best practice, especially for content larger than 20 MB.
+
+When a Task references a Binary directly, the Binary's own `contentType` and `securityContext` are all the recipient has; see statement cap-35 under [Documents and binaries](capability-requirements.html#documents-and-binaries) on the Capability Requirements page.
+
 Note: To keep the server healthy, business rules should be determined at what frequency unattached binaries and unused DocumentReferences be expunged. 
 
 ---

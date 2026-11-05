@@ -49,7 +49,7 @@
   </div>
 </div>
 
-### Step 3: Describe with DocumentReference
+### Step 3: Describe with DocumentReference (best practice)
 
 <!-- STEP 3: DESCRIBE -->
 <div style="background:#fff; border:1px solid #fed7aa; border-left:5px solid #ea580c; border-radius:10px; padding:28px 32px; margin-bottom:20px; position:relative;">
@@ -58,12 +58,12 @@
       <div style="width:56px; height:56px; border-radius:50%; background:linear-gradient(135deg,#fff7ed,#fed7aa); border:3px solid #ea580c; display:flex; align-items:center; justify-content:center; font-size:1.5em; font-weight:800; color:#ea580c;">3</div>
     </div>
     <div style="flex:1; min-width:260px;">
-      <p style="font-size:.9em; color:#374151; line-height:1.65; margin-bottom:12px;">For each Binary you uploaded, create a <strong>DocumentReference</strong> resource that captures metadata — the file's <strong>category, version, type, and CTD section</strong>. This lets the recipient search, filter, and discover your documents without downloading them. In Step 4, these DocumentReferences are attached to a Task as inputs (if you created the Task) or outputs (if you are doing the work it asks for).</p>
+      <p style="font-size:.9em; color:#374151; line-height:1.65; margin-bottom:12px;">For each Binary uploaded, best practice is to create a <strong>DocumentReference</strong> resource that captures metadata — the file's <strong>category, version, type, and CTD section</strong>. This lets the recipient search, filter, and discover your documents without downloading them. In Step 4, these DocumentReferences are attached to a Task as inputs (if you created the Task) or outputs (if you are doing the work it asks for).</p>
       <div style="background:#fff7ed; border-radius:6px; padding:10px 14px; margin-bottom:12px;">
         <div style="font-size:.78em; color:#c2410c; font-weight:600; margin-bottom:4px;">💡 Think of it like…</div>
         <div style="font-size:.82em; color:#374151; line-height:1.5;">A library catalog card. The card describes the book (title, author, subject) so you can find it without reading every book on the shelf.</div>
       </div>
-      <div style="font-size:.82em; color:#6b7280;">✅ <strong>Business benefit:</strong> Recipients instantly find the exact document they need. No more searching through ZIP files.</div>
+      <div style="font-size:.82em; color:#6b7280;">✅ <strong>Business benefit:</strong> Recipients instantly find the exact file they need, and see its type, author and security labels before downloading it. No more searching through ZIP files.</div>
       <div style="margin-top:10px;"><a href="rwipharmadocumentReference.html" style="font-size:.82em; color:#ea580c; font-weight:600; text-decoration:none;">Deep dive: DocumentReference →</a></div>
     </div>
   </div>
@@ -78,7 +78,7 @@
       <div style="width:56px; height:56px; border-radius:50%; background:linear-gradient(135deg,#faf5ff,#e9d5ff); border:3px solid #7c3aed; display:flex; align-items:center; justify-content:center; font-size:1.5em; font-weight:800; color:#7c3aed;">4</div>
     </div>
     <div style="flex:1; min-width:260px;">
-      <p style="font-size:.9em; color:#374151; line-height:1.65; margin-bottom:12px;">Create a <strong>FHIR Task</strong> resource to initiate and track a regulatory activity — <em>any type of regulatory activity for human biopharmaceutical products</em>. The Task carries the DocumentReferences in both directions and progresses through status changes as the procedure advances.</p>
+      <p style="font-size:.9em; color:#374151; line-height:1.65; margin-bottom:12px;">Create a <strong>FHIR Task</strong> resource to initiate and track a regulatory activity — <em>any type of regulatory activity for human biopharmaceutical products</em>. The Task carries the content (best practice: DocumentReferences) in both directions and progresses through status changes as the procedure advances.</p>
       <div style="background:#faf5ff; border-radius:6px; padding:10px 14px; margin-bottom:12px;">
         <div style="font-size:.78em; color:#7e22ce; font-weight:600; margin-bottom:4px;">💡 Think of it like…</div>
         <div style="font-size:.82em; color:#374151; line-height:1.5;">A FedEx tracking number. You create the shipment (Task), attach the packages (documents), and then both sender and receiver can track exactly where it is in the process at every step.</div>
@@ -292,7 +292,7 @@ The worked scenarios on the [Use Cases](usecases.html) page all follow these con
 
 | Convention | How it works |
 |---|---|
-| **Binary → DocumentReference → Task** | Each file is uploaded as a `Binary`, described by a `DocumentReference`, and attached to a `Task` through `Task.input` or `Task.output`. Tasks never point to a Binary directly. |
+| **Binary → DocumentReference → Task** | Each file is uploaded as a `Binary` and attached to a `Task` through `Task.input` or `Task.output`. Best practice is to describe each Binary with a `DocumentReference` and attach that instead, so recipients see its type, author and security labels before downloading it. All examples follow this best practice. |
 | **Inputs from the requester, outputs from the owner** | The party that creates the Task supplies `Task.input`. The party that does the work returns `Task.output`. |
 | **One procedure, one `groupIdentifier`** | Every Task in a procedure (submission, invoice, questions, decision) carries the same `groupIdentifier`. |
 | **Child Tasks point to the parent** | Questions, payments and follow-ups use `Task.basedOn` to reference the parent submission Task. |

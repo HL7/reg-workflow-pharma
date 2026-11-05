@@ -245,7 +245,7 @@ Description: "Expected capabilities of the RWI-pharma Server actor (server) in R
 * rest[0].resource[2].type = #Binary
 * rest[0].resource[2].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[2].extension[0].valueCode = #SHALL
-* rest[0].resource[2].documentation = "Document content is uploaded as a Binary first and then referenced from a DocumentReference (Post-then-Link)."
+* rest[0].resource[2].documentation = "Document content is uploaded as a Binary first and, as best practice, referenced from a DocumentReference (Post-then-Link)."
 * rest[0].resource[2].interaction[0].code = #read
 * rest[0].resource[2].interaction[0].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
 * rest[0].resource[2].interaction[0].extension[0].valueCode = #SHALL
@@ -467,7 +467,7 @@ Description: "Expected capabilities of the RWI-pharma Applicant Client actor (cl
 * rest[0].resource[0].searchParam[7].extension[0].valueCode = #MAY
 * rest[0].resource[1].type = #DocumentReference
 * rest[0].resource[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[0].resource[1].extension[0].valueCode = #SHALL
+* rest[0].resource[1].extension[0].valueCode = #SHOULD
 * rest[0].resource[1].supportedProfile[0] = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
 * rest[0].resource[1].documentation = "Must Support (RWI Pharma Regulatory DocumentReference): the RWI-pharma Applicant Client SHALL be capable of populating and processing DocumentReference.identifier, DocumentReference.identifier:docSetIdentifier, DocumentReference.identifier:docVersionNumberIdentifier, DocumentReference.version, DocumentReference.docStatus, DocumentReference.type, DocumentReference.category, DocumentReference.subject, DocumentReference.relatesTo, DocumentReference.description, DocumentReference.securityLabel, DocumentReference.content.attachment.size, DocumentReference.content.attachment.hash."
 * rest[0].resource[1].interaction[0].code = #create
@@ -670,7 +670,7 @@ Description: "Expected capabilities of the RWI-pharma Regulator Client actor (cl
 * rest[0].resource[0].searchParam[7].extension[0].valueCode = #SHOULD
 * rest[0].resource[1].type = #DocumentReference
 * rest[0].resource[1].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
-* rest[0].resource[1].extension[0].valueCode = #SHALL
+* rest[0].resource[1].extension[0].valueCode = #SHOULD
 * rest[0].resource[1].supportedProfile[0] = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-documentreference"
 * rest[0].resource[1].documentation = "Must Support (RWI Pharma Regulatory DocumentReference): the RWI-pharma Regulator Client SHALL be capable of populating and processing DocumentReference.identifier, DocumentReference.identifier:docSetIdentifier, DocumentReference.identifier:docVersionNumberIdentifier, DocumentReference.version, DocumentReference.docStatus, DocumentReference.type, DocumentReference.category, DocumentReference.subject, DocumentReference.relatesTo, DocumentReference.description, DocumentReference.securityLabel, DocumentReference.content.attachment.size, DocumentReference.content.attachment.hash."
 * rest[0].resource[1].interaction[0].code = #create

@@ -108,24 +108,33 @@ To protect company trade secrets and clinical data, the following security princ
 
 ### Binary Upload Guide (Post-then-Link)
 
-To handle large documents (e.g., 20MB PDFs) or massive data packages (e.g., 50GB stability datasets) without impacting API performance, RWI-pharma utilizes a two-step **"Post-then-Link"** mechanism. This approach aligns with platform guidance: [Microsoft Azure](https://learn.microsoft.com/en-us/azure/healthcare-apis/fhir/fhir-best-practices#storing-binary-data-in-fhir-resources) notes that binary payloads larger than 1.5 MB introduce access inefficiencies for search and retrieval operations, and several major FHIR server implementations—including [Smile CDR](https://smilecdr.com/docs/fhir_repository/binary_data.html#:~:text=13.16.2.1Binary%20Storage%20Mode,storage%2C%20the%20following%20settings%20apply) and [Google Cloud Healthcare](https://docs.cloud.google.com/healthcare-api/docs/reference/rest/v1/projects.locations.datasets.fhirStores.fhir/Binary-create#:~:text=This%20method%20can%20be%20used,are%20larger%20than%2010%20MB.) —support Binary ingestion as a stream rather than a single in‑memory upload.
+To handle large documents (e.g., 20MB PDFs) or massive data packages (e.g., 50GB stability datasets) without impacting API performance, RWI-pharma strongly recommends a two-step **"Post-then-Link"** mechanism that makes use of DocumentReference. This approach aligns with platform guidance: [Microsoft Azure](https://learn.microsoft.com/en-us/azure/healthcare-apis/fhir/fhir-best-practices#storing-binary-data-in-fhir-resources) notes that binary payloads larger than 1.5 MB introduce access inefficiencies for search and retrieval operations, and several major FHIR server implementations—including [Smile CDR](https://smilecdr.com/docs/fhir_repository/binary_data.html#:~:text=13.16.2.1Binary%20Storage%20Mode,storage%2C%20the%20following%20settings%20apply) and [Google Cloud Healthcare](https://docs.cloud.google.com/healthcare-api/docs/reference/rest/v1/projects.locations.datasets.fhirStores.fhir/Binary-create#:~:text=This%20method%20can%20be%20used,are%20larger%20than%2010%20MB.) —support Binary ingestion as a stream rather than a single in‑memory upload.
 
 #### Step 1: Upload Raw Binary
-The submittor posts the file as a raw octet-stream directly to the `/Binary` endpoint. This avoids the overhead of Base64 encoding.
+The submitter posts the file as a raw octet-stream directly to the `/Binary` endpoint. This avoids the overhead of Base64 encoding.
 
 *   **Request**: `POST [base]/Binary`
 *   **Header**: `Content-Type: application/pdf` (or appropriate MIME type)
 *   **Body**: Raw binary bytes.
 *   **Response**: `201 Created` with a `Location` header (e.g., `Location: Binary/123`).
 
-#### Step 2: Create Metadata Link (`DocumentReference`)
-The submittor creates a `DocumentReference` resource that "claims" the binary and provides regulatory context (CTD section, title, etc.).
+#### Step 2: Create Metadata Link (`DocumentReference`, best practice)
+The submitter creates a `DocumentReference` resource that "claims" the binary and provides regulatory context (CTD section, title, etc.).
 
 *   **Content URL**: Set `DocumentReference.content.attachment.url` to the ID received in Step 1 (`Binary/123`).
 *   **Metadata**: Add `category` (e.g., Module 3) and `type` (e.g., Stability Report) to allow for indexing and search.
 
-#### Step 3: Orchestrate via Task
+#### Then: Orchestrate via Task
 The `DocumentReference` ID is added to the `Task.input` or `Task.output` array. The regulator can now discover the file through the Task and only retrieve the binary payload if needed.
+
+#### Why DocumentReference?
+Despite its name, DocumentReference is not only for documents. It catalogs **any file type**: PDFs, E2B XML messages, ePI, JSON, and data sets.
+*   **Metadata before download**: Its `content.attachment` ([Attachment](https://hl7.org/fhir/R5/datatypes.html#Attachment)) carries the content type, size, hash, title and creation date, and DocumentReference adds the regulatory type, category, version and status. A recipient can read all of this without downloading the Binary, which matters for files larger than 20 MB.
+*   **Authorship and provenance**: A Binary does not say who authored or owns it. `DocumentReference.author` records this directly, rather than leaving it to be inferred from the Task.
+*   **Security before access**: `DocumentReference.securityLabel` is visible before the payload is retrieved. Reading `Binary.securityContext` requires pulling the Binary itself.
+*   **Versioning**: Document set and version identifiers, plus `relatesTo`, track versions of a file without relying on file names.
+
+See [DocumentReference](rwipharmadocumentReference.html) for the profile's key elements.
 
 #### Technical Benefits
 *   **Memory Efficiency**: The server can stream the binary directly to storage without loading the entire file into memory.

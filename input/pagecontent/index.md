@@ -95,7 +95,7 @@
     <div style="width:56px; height:56px; border-radius:50%; background:linear-gradient(135deg,#fff7ed,#fed7aa); border:3px solid #ea580c; display:flex; align-items:center; justify-content:center; margin:0 auto 12px; font-size:1.3em; box-shadow:0 2px 8px rgba(234,88,12,.15);">🏷️</div>
     <div style="font-size:.7em; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:#ea580c; margin-bottom:4px;">Step 3</div>
     <div style="font-weight:700; color:#111827; font-size:.92em; margin-bottom:6px;">Describe</div>
-    <p style="font-size:.78em; color:#6b7280; line-height:1.5; margin:0;">Create DocumentReference metadata for each file</p>
+    <p style="font-size:.78em; color:#6b7280; line-height:1.5; margin:0;">Best practice: create DocumentReference metadata for each file</p>
   </div>
   <!-- Arrow -->
   <div style="display:flex; align-items:center; padding-top:18px; flex-shrink:0; color:#d1d5db; font-size:1.2em;">→</div>

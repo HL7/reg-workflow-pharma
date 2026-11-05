@@ -160,8 +160,9 @@
       "valueId" : "rwipharma-regulator-client"
     }],
     "key" : "cap-13",
-    "conformance" : ["SHALL"],
-    "requirement" : "Clients **SHALL** upload document content as a Binary before creating the DocumentReference that points to it, and **SHALL** reference the DocumentReference, not the Binary, from `Task.input` and `Task.output`."
+    "conformance" : ["SHALL",
+    "SHOULD"],
+    "requirement" : "Clients **SHALL** upload document content as a Binary before referencing it. As best practice, clients **SHOULD** describe each Binary with a DocumentReference and reference the DocumentReference, rather than the Binary, from `Task.input` and `Task.output`, especially for content larger than 20 MB."
   },
   {
     "extension" : [{
@@ -370,6 +371,20 @@
     "key" : "cap-34",
     "conformance" : ["SHOULD"],
     "requirement" : "The Notification Receiver **SHOULD** verify that a `full-resource` notification comes from the RWI-pharma Server, for example using a secret supplied in the Subscription, before acting on its content."
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "rwipharma-applicant-client"
+    },
+    {
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/requirements-statementactor",
+      "valueId" : "rwipharma-regulator-client"
+    }],
+    "key" : "cap-35",
+    "conformance" : ["SHOULD-NOT",
+    "SHOULD"],
+    "requirement" : "When a Task references a Binary directly, clients **SHOULD** populate the Binary's `contentType` and `securityContext` on the Binary itself, and **SHOULD NOT** rely on the Task to imply them."
   },
   {
     "extension" : [{
