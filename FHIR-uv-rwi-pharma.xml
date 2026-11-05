@@ -181,6 +181,7 @@
 <page key="architecture" name="Architecture"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="capability-requirements" name="Capability Requirements"/>
+<page key="changes" name="Change Log"/>
 <page key="rwipharmadocumentReference" name="DocumentReference"/>
 <page key="downloadsANDdependencies" name="Downloads and Dependencies"/>
 <page key="gettingstarted" name="Getting Started"/>

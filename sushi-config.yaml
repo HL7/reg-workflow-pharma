@@ -320,6 +320,8 @@ pages:
     title: DocumentReference
   downloadsANDdependencies.md:
     title: Downloads and Dependencies
+  changes.md:
+    title: Change Log
   acknowledgements.md:
     title: Acknowledgements
 
@@ -341,6 +343,7 @@ menu:
     Interaction Pattern: rwipharmainteractionpattern.html
     Capability Requirements: capability-requirements.html
     Downloads and Dependencies: downloadsANDdependencies.html
+    Change Log: changes.html
   Key Resources:
     RWI-pharma Task: rwipharmatask.html
     Subscription: rwipharmasubscription.html
