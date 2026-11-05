@@ -83,7 +83,7 @@ Looking for a specific pattern? Find the scenario that demonstrates it.
 
 ### Ready to build?
 
-- [Workflow](workflow.html): the four phases, and the [conventions](workflow.html#conventions) every scenario follows.
+- [Workflow](gettingstarted.html#workflow): the four phases, and the [conventions](gettingstarted.html#conventions) every scenario follows.
 - [Notifications](subscriptions.html): subscribe to status changes.
 - [Terminology](terminology.html): Task codes, business statuses, and input and output types.
 - [Tracking and Dashboards](usecases-status-tracking.html): timelines and performance views built from Task history.

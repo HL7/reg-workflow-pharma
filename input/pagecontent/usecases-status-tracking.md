@@ -375,7 +375,7 @@
 
 <div style="background:#f9fafb; border:1px solid #e5e7eb; border-radius:8px; padding:14px 18px; font-size:.85em; color:#374151; display:flex; gap:10px; align-items:flex-start;">
   <span style="flex-shrink:0;">ℹ️</span>
-  <span><strong>Note:</strong> The examples on this page use the FDA shelf-life update test procedure (<code>NDA-214365-S-021</code>), which is not one of the four worked scenarios. For a step-by-step technical walkthrough, visit the <a href="workflow.html#walkthrough">Workflow</a> page.</span>
+  <span><strong>Note:</strong> The examples on this page use the FDA shelf-life update test procedure (<code>NDA-214365-S-021</code>), which is not one of the four worked scenarios. For a step-by-step technical walkthrough, visit the <a href="gettingstarted.html#walkthrough">Workflow</a> page.</span>
 </div>
 
 <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; font-size:.85em; margin-top:24px;">

@@ -91,7 +91,7 @@ Each statement has an id that links to it, and applies to the actors listed. The
 
 §cap-18^rwipharma-server:The RWI-pharma Server **SHALL** support the Subscription `$status` operation and **SHOULD** support `$events`.§
 
-<span style="font-size:.85em;color:#555;">Basis: [Notification & Status](rwipharmasubscriptionNotificationAndStatus.html)</span>
+<span style="font-size:.85em;color:#555;">Basis: [Subscription Notification & Status](rwipharmasubscriptionNotificationAndStatus.html)</span>
 
 §cap-19^rwipharma-applicant-client:The Applicant Client **SHOULD** create its Task status-change Subscription, filtered by the Task identifier, when it creates the Task.§
 
@@ -111,7 +111,7 @@ Each statement has an id that links to it, and applies to the actors listed. The
 
 §cap-30^rwipharma-server:The RWI-pharma Server **SHALL** send each notification as a Bundle of type `subscription-notification` whose first entry is a SubscriptionStatus that identifies the Subscription and, for event notifications, gives `eventsSinceSubscriptionStart` and each event's `eventNumber` and `focus`. The topic **SHOULD** be included for `full-resource` content and **MAY** be included for `id-only` content.§
 
-<span style="font-size:.85em;color:#555;">Basis: [Notification & Status](rwipharmasubscriptionNotificationAndStatus.html); RWI Pharma Subscription Notification Bundle profile.</span>
+<span style="font-size:.85em;color:#555;">Basis: [Subscription Notification & Status](rwipharmasubscriptionNotificationAndStatus.html); RWI Pharma Subscription Notification Bundle profile.</span>
 
 §cap-31^rwipharma-server:The RWI-pharma Server **SHOULD** send a `handshake` notification when a Subscription is activated, and **SHOULD** send `heartbeat` notifications when the Subscription specifies a `heartbeatPeriod`.§
 

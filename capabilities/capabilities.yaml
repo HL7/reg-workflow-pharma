@@ -356,7 +356,7 @@ requirements:
       - id: cap-18
         actors: [rwipharma-server]
         text: "The RWI-pharma Server **SHALL** support the Subscription `$status` operation and **SHOULD** support `$events`."
-        basis: "[Notification & Status](rwipharmasubscriptionNotificationAndStatus.html)"
+        basis: "[Subscription Notification & Status](rwipharmasubscriptionNotificationAndStatus.html)"
       - id: cap-19
         actors: [rwipharma-applicant-client]
         text: "The Applicant Client **SHOULD** create its Task status-change Subscription, filtered by the Task identifier, when it creates the Task."
@@ -376,7 +376,7 @@ requirements:
       - id: cap-30
         actors: [rwipharma-server]
         text: "The RWI-pharma Server **SHALL** send each notification as a Bundle of type `subscription-notification` whose first entry is a SubscriptionStatus that identifies the Subscription and, for event notifications, gives `eventsSinceSubscriptionStart` and each event's `eventNumber` and `focus`. The topic **SHOULD** be included for `full-resource` content and **MAY** be included for `id-only` content."
-        basis: "[Notification & Status](rwipharmasubscriptionNotificationAndStatus.html); RWI Pharma Subscription Notification Bundle profile."
+        basis: "[Subscription Notification & Status](rwipharmasubscriptionNotificationAndStatus.html); RWI Pharma Subscription Notification Bundle profile."
       - id: cap-31
         actors: [rwipharma-server]
         text: "The RWI-pharma Server **SHOULD** send a `handshake` notification when a Subscription is activated, and **SHOULD** send `heartbeat` notifications when the Subscription specifies a `heartbeatPeriod`."

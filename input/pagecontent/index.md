@@ -17,7 +17,7 @@
 <h3 id="about" style="font-size:1.3em; font-weight:700; color:#111827; margin-bottom:12px;">About this IG</h3>
 
 <div style="margin-bottom:24px;">
-  <p style="font-size:.88em; color:#374151; line-height:1.7; margin-bottom:12px;">The Regulatory Workflows and Interactions - pharma (RWI-pharma) Implementation Guide, originally developed as APIX (API Exchange for Medicinal Products), defines how FHIR can support end-to-end digital regulatory workflows and interactions between applicants and regulatory authorities for human biopharmaceutical products.</p>
+  <p style="font-size:.88em; color:#374151; line-height:1.7; margin-bottom:12px;">The Regulatory Workflows and Interactions - pharma (RWI-pharma) Implementation Guide, previously named APIX (API Exchange for Medicinal Products), defines how FHIR can support end-to-end digital regulatory workflows and interactions between applicants and regulatory authorities for human biopharmaceutical products.</p>
   <p style="font-size:.88em; color:#374151; line-height:1.7; margin-bottom:12px;">Today, regulatory exchange is highly fragmented. Authorities may use different mechanisms across product lines and procedures, including portals, gateways, email, secure email, FTP, HTTPS, and physical mail. These differences multiply across regulators globally, creating significant complexity for industry and limiting interoperability.</p>
   <p style="font-size:.88em; color:#374151; line-height:1.7; margin-bottom:12px;">Applicants also frequently lack end-to-end visibility into the status of their regulatory interactions. Consumers can track a FedEx or Amazon delivery through each major step and receive notifications as it progresses, yet applicants often cannot similarly track a critical regulatory interaction or receive automated notifications when key milestones occur.</p>
   <p style="font-size:.88em; color:#374151; line-height:1.7; margin:0;">Using <a href="rwipharmatask.html">Task</a>, <a href="rwipharmadocumentReference.html">DocumentReference</a>, <a href="architecture.html#binary-upload-guide-post-then-link">Binary</a>, <a href="rwipharmasubscription.html">Subscription</a>, APIs, and related FHIR capabilities, the guide enables regulatory activities to be interoperable, traceable, trackable, and event-driven, replacing fragmented exchange mechanisms with a standardized digital workflow.</p>
@@ -138,7 +138,7 @@
     <div style="font-size:1.4em; margin-bottom:10px;">📤</div>
     <div style="font-weight:700; color:#003087; margin-bottom:6px;">Submit via Web-Standard APIs</div>
     <p style="font-size:.88em; color:#4b5563; line-height:1.6; margin:0 0 12px; flex:1;">Post regulatory submissions directly via FHIR APIs, using the same RESTful APIs and OAuth2 that already run global banking, eCommerce, and modern healthcare (SMART on FHIR). Zero proprietary formats.</p>
-    <a href="workflow.html" style="color:#003087; font-weight:600; font-size:.85em; text-decoration:none;">See the workflow →</a>
+    <a href="gettingstarted.html#workflow" style="color:#003087; font-weight:600; font-size:.85em; text-decoration:none;">See the workflow →</a>
   </div>
   <div style="background:#f9fafb; border:1px solid #e5e7eb; border-radius:10px; padding:24px; display:flex; flex-direction:column;">
     <div style="font-size:1.4em; margin-bottom:10px;">📊</div>

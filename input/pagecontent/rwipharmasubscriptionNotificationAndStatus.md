@@ -1,6 +1,6 @@
-<!-- NOTIFICATION & STATUS PAGE -->
+<!-- SUBSCRIPTION NOTIFICATION & STATUS PAGE -->
 <div style="margin-bottom:16px;">
-  <!--h2 style="font-size:1.7em; font-weight:800; color:#111827; margin-bottom:10px;">Notification & Status</h2-->
+  <!--h2 style="font-size:1.7em; font-weight:800; color:#111827; margin-bottom:10px;">Subscription Notification & Status</h2-->
   <p style="font-size:.95em; color:#6b7280; line-height:1.6; max-width:640px;">When a Subscription is triggered, the FHIR server sends a SubscriptionNotification Bundle containing event metadata and the payload resources.</p>
 </div>
 

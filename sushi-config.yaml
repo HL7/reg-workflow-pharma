@@ -313,7 +313,7 @@ pages:
   rwipharmasubscriptionTopic.md:
     title: SubscriptionTopic
   rwipharmasubscriptionNotificationAndStatus.md:
-    title: Notification & Status
+    title: Subscription Notification & Status
   rwipharmaorganizationEndpoint.md:
     title: Organization & Endpoint
   rwipharmadocumentReference.md:
@@ -345,7 +345,7 @@ menu:
     RWI-pharma Task: rwipharmatask.html
     Subscription: rwipharmasubscription.html
     SubscriptionTopic: rwipharmasubscriptionTopic.html
-    Notification & Status: rwipharmasubscriptionNotificationAndStatus.html
+    Subscription Notification & Status: rwipharmasubscriptionNotificationAndStatus.html
     Organization & Endpoint: rwipharmaorganizationEndpoint.html
     DocumentReference: rwipharmadocumentReference.html
   Artifacts: artifacts.html
