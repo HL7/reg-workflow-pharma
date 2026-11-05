@@ -1,13 +1,13 @@
 CodeSystem: RWIpharmaTEMPCODES
 Id: rwi-pharma-temporary
 Title: "Temporary and Experimental RWI Pharma Codes"
-Description: "These codes are intended to be added to the appropriate HL7 Terminology code system"
+Description: "This code is temporary as a place-holder. It is used for convenience to identify subscription-notification endpoints in this guide; it may later be proposed to HL7 Terminology (THO), but publication of this guide does not depend on it."
 * ^status = #active
 * ^caseSensitive = true
 * ^experimental = true
 
-// for https://terminology.hl7.org/7.1.0/en/CodeSystem-endpoint-connection-type.html
-* #hl7-fhir-subscription-notify "HL7 FHIR Subscription Notification Endpoint" "Endpoint intended to receive HL7 FHIR Subscription Notifications"
+// Place-holder; possible future home: https://terminology.hl7.org/CodeSystem-endpoint-connection-type.html
+* #rwipharma-subscription-notify "RWI-pharma Subscription Notification Endpoint" "Endpoint intended to receive HL7 FHIR Subscription Notifications"
 
 CodeSystem: RWIpharmaIdentifierTypeCS
 Id: rwi-pharma-demo

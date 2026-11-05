@@ -90,7 +90,7 @@ The **Endpoint.managingOrganization** element is especially important: it identi
 <tr>
 <td><code>Endpoint.connectionType</code></td>
 <td>1..1</td>
-<td><code>hl7-fhir-subscription-notify</code><br>(or temporary IG code)</td>
+<td><code>rwipharma-subscription-notify</code><br>(or temporary IG code)</td>
 <td>Indicates that the Endpoint is used for receiving FHIR Subscription notifications</td>
 </tr>
 

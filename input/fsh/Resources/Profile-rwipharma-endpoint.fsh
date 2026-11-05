@@ -2,7 +2,7 @@ Profile: EndpointSubscriptionNotify
 Parent: Endpoint
 Id: endpoint-subscription-notify
 Title: "RWI Pharma Endpoint for FHIR Subscription Notifications"
-Description: "Endpoint requiring identifier, name, and connectionType of hl7-fhir-subscription-notify."
+Description: "Endpoint requiring identifier, name, and connectionType of rwipharma-subscription-notify."
 
 // Require at least one identifier
 * identifier 1..* MS
@@ -14,4 +14,4 @@ Description: "Endpoint requiring identifier, name, and connectionType of hl7-fhi
 * connectionType 1..* MS
 * connectionType.coding 1..* MS
 * connectionType.coding.system = "http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwi-pharma-temporary"
-* connectionType.coding.code = #hl7-fhir-subscription-notify "HL7 FHIR Subscription Notification Endpoint"
+* connectionType.coding.code = #rwipharma-subscription-notify "RWI-pharma Subscription Notification Endpoint"
