@@ -1,7 +1,7 @@
 <!-- EXAMPLE SCENARIO 2: ICSR ACCEPTED, AND ICSR REJECTED AND RESUBMITTED -->
 <div style="margin-bottom:28px;">
   <a href="usecases.html" style="font-size:.7em; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:#b91c1c; text-decoration:none;">Use Cases › Scenario 2 of 4 · Safety reporting</a>
-  <p style="font-size:.95em; color:#6b7280; line-height:1.6; max-width:760px;">SynthPharma AG sends two ICSRs for <strong>WonderDrug 50 mg</strong> as ICH E2B(R2) messages, one report per Task. The first is accepted straight away (2a). The second fails validation, is rejected, and is accepted after the company corrects and resubmits it (2b).</p>
+  <p style="font-size:.95em; color:#6b7280; line-height:1.6; max-width:760px;">SynthPharma AG sends two ICSRs for <strong>WonderDrug 50 mg</strong> as ICH E2B(R2) messages, one report per Task. The first is accepted straight away (2a). The second fails validation, is rejected, and is accepted after the company corrects and resubmits it (2b). An alternative example (2c) repeats 2a with the E2B message referenced directly as a Binary, without a DocumentReference.</p>
 </div>
 
 <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:10px; margin-bottom:28px; font-size:.82em;">
@@ -56,6 +56,27 @@ SynthPharma AG reports a case of dizziness (case `CH-SYNTHPHARMA-2026-000512`). 
 {:.grid}
 
 **Timeline:** submitted 14 Oct 2026 11:00 → rejected 11:12 → resubmitted 15:40 → accepted 15:52 → complete 16:10.
+
+### 2c. Alternative: Binary referenced directly (no DocumentReference) {#scenario-2c}
+
+<div style="background:#fffbeb; border:1px solid #fde68a; border-radius:10px; padding:14px 18px; margin:4px 0 16px; font-size:.86em; color:#78350f; line-height:1.6;">
+  <p style="margin:0;"><strong>Alternative, not best practice.</strong> This example repeats the 2a happy path, but <code>Task.input</code> and <code>Task.output</code> reference the E2B(R2) Binaries directly, with no DocumentReference. Using a DocumentReference is best practice, especially for larger files and for indexing, because it lets a recipient see the file's type, author and security labels without downloading it (see <a href="architecture.html#binary-upload-guide-post-then-link">Post-then-Link</a>). When a Binary is referenced directly, it carries its own <code>contentType</code> and <code>securityContext</code> (see cap-35 under <a href="capability-requirements.html#documents-and-binaries">Documents and binaries</a>).</p>
+</div>
+
+<ol style="list-style:none; margin:0 0 14px; padding:0; display:flex; flex-wrap:wrap; gap:8px;">
+  <li style="flex:1 1 150px; margin:0;"><a href="Task-scenario2c-01-icsr-submitted.html" style="height:100%; box-sizing:border-box; display:flex; flex-direction:column; gap:2px; text-decoration:none; color:#111827; border:1px solid #bfdbfe; background:#eff6ff; border-radius:8px; padding:8px 12px;"><span style="font-size:.72em; color:#4b5563;">Step 1</span><span style="font-weight:700; font-size:.9em;">Submit</span><code style="font-size:.72em; background:none; padding:0; color:#374151;">requested / submitted</code></a></li>
+  <li style="flex:1 1 150px; margin:0;"><a href="Task-scenario2c-02-icsr-accepted.html" style="height:100%; box-sizing:border-box; display:flex; flex-direction:column; gap:2px; text-decoration:none; color:#111827; border:1px solid #bfdbfe; background:#eff6ff; border-radius:8px; padding:8px 12px;"><span style="font-size:.72em; color:#4b5563;">Step 2</span><span style="font-weight:700; font-size:.9em;">Accepted</span><code style="font-size:.72em; background:none; padding:0; color:#374151;">accepted / accepted</code></a></li>
+  <li style="flex:1 1 150px; margin:0;"><a href="Task-scenario2c-03-icsr-complete.html" style="height:100%; box-sizing:border-box; display:flex; flex-direction:column; gap:2px; text-decoration:none; color:#111827; border:1px solid #86efac; background:#f0fdf4; border-radius:8px; padding:8px 12px;"><span style="font-size:.72em; color:#4b5563;">Step 3</span><span style="font-weight:700; font-size:.9em;">Complete</span><code style="font-size:.72em; background:none; padding:0; color:#374151;">completed / complete</code></a></li>
+</ol>
+
+| Step | Example instance | ICSR Task | Created / updated by | `status` / `businessStatus` | Documents |
+|---|---|---|---|---|---|
+| 1. Submit | [scenario2c-01-icsr-submitted](Task-scenario2c-01-icsr-submitted.html) | **v1** new | Marketing authorization holder (requester) → Regulator (owner) | `requested` / `submitted` | **Input:** ICSR Binary [binary-icsr-2c-e2b-r2](Binary-binary-icsr-2c-e2b-r2.html) (`icsr-e2b-r2`) |
+| 2. Accepted | [scenario2c-02-icsr-accepted](Task-scenario2c-02-icsr-accepted.html) | **v2** | Regulator | `accepted` / `accepted` | **Output:** acknowledgment log Binary [binary-icsr-2c-e2b-r2-acklog](Binary-binary-icsr-2c-e2b-r2-acklog.html) (`icsr-e2b-r2-acklog`) |
+| 3. Complete | [scenario2c-03-icsr-complete](Task-scenario2c-03-icsr-complete.html) | **v3** ✔ closed | Regulator | `completed` / `complete` | No new documents |
+{:.grid}
+
+**Timeline:** the same as 2a.
 
 ### What it demonstrates
 

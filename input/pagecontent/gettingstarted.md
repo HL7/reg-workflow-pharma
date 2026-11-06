@@ -292,7 +292,7 @@ The worked scenarios on the [Use Cases](usecases.html) page all follow these con
 
 | Convention | How it works |
 |---|---|
-| **Binary → DocumentReference → Task** | Each file is uploaded as a `Binary` and attached to a `Task` through `Task.input` or `Task.output`. Best practice is to describe each Binary with a `DocumentReference` and attach that instead, so recipients see its type, author and security labels before downloading it. All examples follow this best practice. |
+| **Binary → DocumentReference → Task** | Each file is uploaded as a `Binary` and attached to a `Task` through `Task.input` or `Task.output`. Best practice is to describe each Binary with a `DocumentReference` and attach that instead, so recipients see its type, author and security labels before downloading it. |
 | **Inputs from the requester, outputs from the owner** | The party that creates the Task supplies `Task.input`. The party that does the work returns `Task.output`. |
 | **One procedure, one `groupIdentifier`** | Every Task in a procedure (submission, invoice, questions, decision) carries the same `groupIdentifier`. |
 | **Child Tasks point to the parent** | Questions, payments and follow-ups use `Task.basedOn` to reference the parent submission Task. |

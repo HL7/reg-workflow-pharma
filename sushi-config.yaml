@@ -198,6 +198,15 @@ groups:
       - Binary/binary-icsr-2b-validation-report
       - Binary/binary-icsr-2b-resubmission-e2b-r2
       - Binary/binary-icsr-2b-resubmission-e2b-r2-acklog
+  scenario-2c-icsr-alternative:
+    name: "Scenario 2c: ICSR – Alternative without DocumentReference – Tasks and Binaries"
+    description: "An alternative to Scenario 2a in which the Tasks reference the E2B(R2) Binaries directly, with no DocumentReference. Using a DocumentReference is best practice, especially for larger files and for indexing. See [Scenario 2c](usecases-scenario-icsr.html#scenario-2c)."
+    resources:
+      - Task/scenario2c-01-icsr-submitted
+      - Task/scenario2c-02-icsr-accepted
+      - Task/scenario2c-03-icsr-complete
+      - Binary/binary-icsr-2c-e2b-r2
+      - Binary/binary-icsr-2c-e2b-r2-acklog
   scenario-3-cta-tasks:
     name: "Scenario 3: Clinical Trial Application – Tasks"
     description: "Tasks for a clinical trial application from submission to authorisation, including a request for information. See [Scenario 3](usecases-scenario-cta.html)."
