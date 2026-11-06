@@ -201,5 +201,5 @@
 <page key="terminology" name="Terminology"/>
 <page key="usecases-status-tracking" name="Tracking and Dashboards"/>
 <page key="usecases" name="Use Cases"/>
-<page key="workflow" name="Workflow"/>
+<page deprecated="true" key="workflow" name="Workflow"/>
 </specification>
