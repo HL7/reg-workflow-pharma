@@ -72,7 +72,7 @@
 ### What it demonstrates
 
 - **A true back-and-forth.** Both parties propose and counter-propose on the same machine-readable document, and every turn is timestamped.
-- **No version confusion.** The version is recorded in the DocumentReference (`version`, `relatesTo`, document set identifier), not in file names.
+- **No version confusion.** The version is recorded in the DocumentReference (`version`, `relatesTo`, document set identifier), not in file names. A DocumentReference can describe any file, here an ePI ([why](architecture.html#why-documentreference)).
 - **The agreed label is ready to publish.** The approved output is an ePI Bundle.
 - **Measurable negotiation.** The number of rounds, days per round, and applicant versus regulator time all come from the Task history.
 - **Cross-scenario link.** The safety signal comes from the same product as [Scenario 2](usecases-scenario-icsr.html), so safety reporting and labelling are shown running on one channel.

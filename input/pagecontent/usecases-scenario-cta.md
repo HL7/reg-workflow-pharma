@@ -38,7 +38,7 @@
 
 ### What it demonstrates
 
-- **Not limited to marketing authorisations.** Clinical trials use the same Task, DocumentReference and Subscription resources.
+- **Not limited to marketing authorisations.** Clinical trials use the same Task, [DocumentReference](architecture.html#why-documentreference) and Subscription resources.
 - **Both parties' identifiers on one Task.** The regulator's trial number is added to `Task.identifier` when it is assigned.
 - **Deadlines systems can act on.** `requestedPeriod` carries the response deadline, so systems can flag overdue responses automatically.
 - **Requester and owner swap on the RFI Task.** The regulator asks (input), and the sponsor answers (output).

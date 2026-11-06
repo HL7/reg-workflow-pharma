@@ -60,7 +60,7 @@ SynthPharma AG reports a case of dizziness (case `CH-SYNTHPHARMA-2026-000512`). 
 ### 2c. Alternative: Binary referenced directly (no DocumentReference) {#scenario-2c}
 
 <div style="background:#fffbeb; border:1px solid #fde68a; border-radius:10px; padding:14px 18px; margin:4px 0 16px; font-size:.86em; color:#78350f; line-height:1.6;">
-  <p style="margin:0;"><strong>Alternative, not best practice.</strong> This example repeats the 2a happy path, but <code>Task.input</code> and <code>Task.output</code> reference the E2B(R2) Binaries directly, with no DocumentReference. Using a DocumentReference is best practice, especially for larger files and for indexing, because it lets a recipient see the file's type, author and security labels without downloading it (see <a href="architecture.html#binary-upload-guide-post-then-link">Post-then-Link</a>). When a Binary is referenced directly, it carries its own <code>contentType</code> and <code>securityContext</code> (see cap-35 under <a href="capability-requirements.html#documents-and-binaries">Documents and binaries</a>).</p>
+  <p style="margin:0;"><strong>Alternative, not best practice.</strong> This example repeats the 2a happy path, but <code>Task.input</code> and <code>Task.output</code> reference the E2B(R2) Binaries directly, with no DocumentReference. Using a DocumentReference is best practice, especially for larger files and for indexing, because it lets a recipient see the file's type, author and security labels without downloading it (see <a href="architecture.html#why-documentreference">Why DocumentReference</a> and <a href="architecture.html#binary-upload-guide-post-then-link">Post-then-Link</a>). When a Binary is referenced directly, it carries its own <code>contentType</code> and <code>securityContext</code> (see cap-35 under <a href="capability-requirements.html#documents-and-binaries">Documents and binaries</a>).</p>
 </div>
 
 <ol style="list-style:none; margin:0 0 14px; padding:0; display:flex; flex-wrap:wrap; gap:8px;">
@@ -81,7 +81,7 @@ SynthPharma AG reports a case of dizziness (case `CH-SYNTHPHARMA-2026-000512`). 
 ### What it demonstrates
 
 - **One channel for safety reporting.** Safety reports use the same channel as every other regulatory exchange. No separate safety gateway is needed.
-- **The E2B message is unchanged.** The E2B(R2) message and acknowledgment log are carried as Binaries. The Task only describes the exchange around them.
+- **The E2B message is unchanged.** The E2B(R2) message and acknowledgment log are carried as Binaries. The Task only describes the exchange around them. Each Binary is described by a DocumentReference, which [describes any file, not only documents](architecture.html#why-documentreference).
 - **One report per Task.** Each ICSR or SUSAR is sent on its own rather than in a batch, so each report has its own status and acknowledgment log, and a rejection affects only that report.
 - **Rejection is explicit.** A rejected Task has `status` = `rejected`, a `statusReason`, and the acknowledgment log and validation report as outputs, so the sender knows what to fix without a separate channel.
 - **Resubmission keeps the history.** A rejected Task is final, so the resubmission is a new Task. It shares the `groupIdentifier` and points to the rejected Task through `basedOn`, so one search returns both attempts.

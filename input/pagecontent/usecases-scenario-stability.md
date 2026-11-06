@@ -52,6 +52,7 @@
 - The parent shows `clock-stop` while a question is open and `clock-restart` when it is answered.
 - **Route questions on receipt.** The question Task’s type, product and document types (with CTD sections where the documents have them) tell the applicant’s or sponsor’s system which team (CMC, labelling, clinical, safety) should answer, and the due date comes from the Task.
 - **Route responses on receipt.** The response is matched to the question through the Task’s identifiers and goes straight to the reviewer who asked (`Task.requester`), and the clock restarts.
+- Each file is uploaded as a Binary and described by a DocumentReference; see [Why DocumentReference](architecture.html#why-documentreference).
 - Codes: [Terminology › Market Authorization](terminology.html#market-authorization).
 
 <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; font-size:.85em; margin-top:24px;">

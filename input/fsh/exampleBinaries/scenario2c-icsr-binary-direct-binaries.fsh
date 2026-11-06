@@ -3,7 +3,7 @@
 
 Instance: binary-icsr-2c-e2b-r2
 InstanceOf: Binary
-Description: "icsr-2c-e2b-r2.xml (referenced directly from the Task, no DocumentReference)"
+Description: "icsr-2c-e2b-r2.xml (referenced directly from the Task, no DocumentReference; best practice is to describe a Binary with a DocumentReference, see Why DocumentReference on the Architecture page)"
 Usage: #example
 * contentType = #application/xml
 * securityContext = Reference(scenario2c-01-icsr-submitted)
@@ -11,7 +11,7 @@ Usage: #example
 
 Instance: binary-icsr-2c-e2b-r2-acklog
 InstanceOf: Binary
-Description: "icsr-2c-e2b-r2-acklog.xml (referenced directly from the Task, no DocumentReference)"
+Description: "icsr-2c-e2b-r2-acklog.xml (referenced directly from the Task, no DocumentReference; best practice is to describe a Binary with a DocumentReference, see Why DocumentReference on the Architecture page)"
 Usage: #example
 * contentType = #application/xml
 * securityContext = Reference(scenario2c-01-icsr-submitted)

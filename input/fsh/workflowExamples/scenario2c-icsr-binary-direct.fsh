@@ -4,11 +4,11 @@
 Instance: scenario2c-01-icsr-submitted
 InstanceOf: Task
 Title: "scenario2c 01 ICSR submitted (Binary referenced directly)"
-Description: "Scenario 2c, step 1 (Submit). Version 1 of the ICSR Task. The marketing authorization holder posts the ICSR Task with the E2B(R2) message Binary as input. This alternative references the Binary directly from the Task, with no DocumentReference. Using a DocumentReference is best practice, especially for larger files and for indexing (see Scenario 2a)."
+Description: "Scenario 2c, step 1 (Submit). Version 1 of the ICSR Task. The marketing authorization holder posts the ICSR Task with the E2B(R2) message Binary as input. This alternative references the Binary directly from the Task, with no DocumentReference. Using a DocumentReference is best practice, especially for larger files and for indexing; see Why DocumentReference on the Architecture page, and Scenario 2a."
 Usage: #example
 * meta.versionId = "1"
 * meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/instance-description"
-* meta.extension[=].valueMarkdown = "Scenario 2c, step 1 (Submit). Version 1 of the ICSR Task. The marketing authorization holder posts the ICSR Task with the E2B(R2) message Binary as input. This alternative references the Binary directly from the Task, with no DocumentReference. Using a DocumentReference is best practice, especially for larger files and for indexing (see Scenario 2a)."
+* meta.extension[=].valueMarkdown = "Scenario 2c, step 1 (Submit). Version 1 of the ICSR Task. The marketing authorization holder posts the ICSR Task with the E2B(R2) message Binary as input. This alternative references the Binary directly from the Task, with no DocumentReference. Using a DocumentReference is best practice, especially for larger files and for indexing; see Why DocumentReference on the Architecture page, and Scenario 2a."
 * meta.lastUpdated = "2026-10-02T09:30:00+02:00"
 * meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * identifier[0].use = #official
@@ -33,11 +33,11 @@ Usage: #example
 Instance: scenario2c-02-icsr-accepted
 InstanceOf: Task
 Title: "scenario2c 02 ICSR accepted (Binary referenced directly)"
-Description: "Scenario 2c, step 2 (Accepted). Version 2 of the ICSR Task (in production, the same Task.id as scenario2c-01). The report passed validation and was loaded; the regulator adds the E2B(R2) acknowledgment log Binary as an output. This alternative references the Binary directly from the Task, with no DocumentReference. Using a DocumentReference is best practice, especially for larger files and for indexing (see Scenario 2a)."
+Description: "Scenario 2c, step 2 (Accepted). Version 2 of the ICSR Task (in production, the same Task.id as scenario2c-01). The report passed validation and was loaded; the regulator adds the E2B(R2) acknowledgment log Binary as an output. This alternative references the Binary directly from the Task, with no DocumentReference. Using a DocumentReference is best practice, especially for larger files and for indexing; see Why DocumentReference on the Architecture page, and Scenario 2a."
 Usage: #example
 * meta.versionId = "2"
 * meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/instance-description"
-* meta.extension[=].valueMarkdown = "Scenario 2c, step 2 (Accepted). Version 2 of the ICSR Task (in production, the same Task.id as scenario2c-01). The report passed validation and was loaded; the regulator adds the E2B(R2) acknowledgment log Binary as an output. This alternative references the Binary directly from the Task, with no DocumentReference. Using a DocumentReference is best practice, especially for larger files and for indexing (see Scenario 2a)."
+* meta.extension[=].valueMarkdown = "Scenario 2c, step 2 (Accepted). Version 2 of the ICSR Task (in production, the same Task.id as scenario2c-01). The report passed validation and was loaded; the regulator adds the E2B(R2) acknowledgment log Binary as an output. This alternative references the Binary directly from the Task, with no DocumentReference. Using a DocumentReference is best practice, especially for larger files and for indexing; see Why DocumentReference on the Architecture page, and Scenario 2a."
 * meta.lastUpdated = "2026-10-02T09:45:12+02:00"
 * meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * identifier[0].use = #official
@@ -65,11 +65,11 @@ Usage: #example
 Instance: scenario2c-03-icsr-complete
 InstanceOf: Task
 Title: "scenario2c 03 ICSR complete (Binary referenced directly)"
-Description: "Scenario 2c, step 3 (Complete). Version 3 of the ICSR Task (in production, the same Task.id as scenario2c-01). Processing is complete and the regulator closes the Task. This alternative references the Binary directly from the Task, with no DocumentReference. Using a DocumentReference is best practice, especially for larger files and for indexing (see Scenario 2a)."
+Description: "Scenario 2c, step 3 (Complete). Version 3 of the ICSR Task (in production, the same Task.id as scenario2c-01). Processing is complete and the regulator closes the Task. This alternative references the Binary directly from the Task, with no DocumentReference. Using a DocumentReference is best practice, especially for larger files and for indexing; see Why DocumentReference on the Architecture page, and Scenario 2a."
 Usage: #example
 * meta.versionId = "3"
 * meta.extension[+].url = "http://hl7.org/fhir/StructureDefinition/instance-description"
-* meta.extension[=].valueMarkdown = "Scenario 2c, step 3 (Complete). Version 3 of the ICSR Task (in production, the same Task.id as scenario2c-01). Processing is complete and the regulator closes the Task. This alternative references the Binary directly from the Task, with no DocumentReference. Using a DocumentReference is best practice, especially for larger files and for indexing (see Scenario 2a)."
+* meta.extension[=].valueMarkdown = "Scenario 2c, step 3 (Complete). Version 3 of the ICSR Task (in production, the same Task.id as scenario2c-01). Processing is complete and the regulator closes the Task. This alternative references the Binary directly from the Task, with no DocumentReference. Using a DocumentReference is best practice, especially for larger files and for indexing; see Why DocumentReference on the Architecture page, and Scenario 2a."
 * meta.lastUpdated = "2026-10-02T10:02:40+02:00"
 * meta.profile = "http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-task"
 * identifier[0].use = #official

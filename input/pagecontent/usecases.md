@@ -8,7 +8,7 @@
 <div style="display:flex; flex-wrap:wrap; align-items:stretch; gap:10px; margin-bottom:14px;">
   <div style="flex:1 1 200px; border:1px solid #d1d5db; border-radius:8px; padding:12px 16px;"><div style="font-weight:700; color:#003087;"><a href="https://hl7.org/fhir/R5/binary.html">Binary</a></div><div style="font-size:.85em; color:#4b5563;">The file: eCTD sequence, E2B message, ePI, PDF</div></div>
   <div aria-hidden="true" style="display:flex; align-items:center; color:#6b7280; font-size:1.2em;">→</div>
-  <div style="flex:1 1 200px; border:1px solid #d1d5db; border-radius:8px; padding:12px 16px;"><div style="font-weight:700; color:#003087;"><a href="rwipharmadocumentReference.html">DocumentReference</a> (best practice)</div><div style="font-size:.85em; color:#4b5563;">Describes the file: type, version, author</div></div>
+  <div style="flex:1 1 200px; border:1px solid #d1d5db; border-radius:8px; padding:12px 16px;"><div style="font-weight:700; color:#003087;"><a href="rwipharmadocumentReference.html">DocumentReference</a> (<a href="architecture.html#why-documentreference">best practice</a>)</div><div style="font-size:.85em; color:#4b5563;">Describes the file: type, version, author</div></div>
   <div aria-hidden="true" style="display:flex; align-items:center; color:#6b7280; font-size:1.2em;">→</div>
   <div style="flex:1 1 200px; border:1px solid #d1d5db; border-radius:8px; padding:12px 16px;"><div style="font-weight:700; color:#003087;"><a href="rwipharmatask.html">Task</a></div><div style="font-size:.85em; color:#4b5563;">Who asks, who acts, what it is, where it stands</div></div>
 </div>
@@ -87,3 +87,4 @@ Looking for a specific pattern? Find the scenario that demonstrates it.
 - [Notifications](subscriptions.html): subscribe to status changes.
 - [Terminology](terminology.html): Task codes, business statuses, and input and output types.
 - [Tracking and Dashboards](usecases-status-tracking.html): timelines and performance views built from Task history.
+- [Why DocumentReference](architecture.html#why-documentreference): DocumentReference describes any file (not only documents) before it is attached to a Task.
