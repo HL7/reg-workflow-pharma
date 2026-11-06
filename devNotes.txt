@@ -1,0 +1,68 @@
+RWI-pharma IG - developer notes
+================================
+
+1. Capability generator (scripts/gen_capabilities.py)
+-----------------------------------------------------
+Builds the IG's capability artifacts from one YAML file of decisions.
+
+  Input:   capabilities/capabilities.yaml
+             actors, interactions, search parameters, expectations (SHALL/SHOULD/MAY)
+             and the numbered conformance statements (cap-1, cap-2, ...)
+           fsh-generated/resources/StructureDefinition-*.json
+             profile Must Support elements, taken from the last SUSHI run
+
+  Output (overwritten on every run - edit the YAML, not these files):
+           input/fsh/Capabilities.generated.fsh
+             ActorDefinitions, CapabilityStatements, the custom Task-input SearchParameter
+           input/pagecontent/capability-requirements.md
+             the Capability Requirements page (IG Publisher conformance-statement markup)
+
+  Run from the repository root (Windows):
+           python -m pip install pyyaml          (one time only)
+           python scripts\gen_capabilities.py
+
+  Order of work when Must Support elements change:
+           build (SUSHI)  ->  python scripts\gen_capabilities.py  ->  build again
+
+  Notes:
+  - Add or change a conformance statement in capabilities.yaml, then run the script.
+    If you edit the generated files by hand, make the same change in the YAML,
+    or the next run will undo it.
+  - Statement anchors on the Capability Requirements page are added after the
+    Publisher checks links, so other pages cannot link to a single statement.
+    Link to its section heading instead, e.g.
+    capability-requirements.html#documents-and-binaries
+
+2. Example generator (parking/gen_examples.py)
+----------------------------------------------
+Generates the Scenario 2 (2a, 2b), 3 and 4 example Tasks, DocumentReferences
+and Binaries. The generated files say "edit the script, not this file".
+Scenario 2c (ICSR, Binary referenced directly) is hand-written in
+input/fsh/workflowExamples/scenario2c-icsr-binary-direct.fsh and
+input/fsh/exampleBinaries/scenario2c-icsr-binary-direct-binaries.fsh,
+and is not produced by the script.
+
+3. Task narrative template (input/liquid/Task.liquid)
+-----------------------------------------------------
+Renders every Task example's narrative (path-liquid: input/liquid).
+Publisher Liquid limits found so far: no {% comment %} blocks; output must start
+with a tag; resolve() does not return referenced resources; Organization names
+use a small lookup table in the template.
+
+4. Publication files (repository root)
+--------------------------------------
+  publication-request.json   ballot request (version 1.0.0-ballot,
+                             path http://hl7.org/fhir/uv/rwi-pharma/1.0.0-202701-ballot)
+  FHIR-uv-rwi-pharma.xml     Jira spec file (name set by the jira-code parameter
+                             in sushi-config.yaml). The build generates
+                             template/jira-new.xml; copy changes across, keeping the
+                             hand-added gitUrl attribute.
+  oids.ini                   OID assignments; if a resource id changes, rename it here
+                             to keep its OID.
+
+5. QA suppressions (input/ignoreWarnings.txt)
+---------------------------------------------
+One "#" comment line per group (multi-line comments show as separate notes),
+followed by exact messages or %...% wildcards (a % only works at the start and end).
+Entries that include "|1.0.0-ballot" must be updated when the IG version changes.
+Check the QA page "Suppressed Messages" counts for entries with 0 uses.
