@@ -3,7 +3,7 @@ canonical: http://hl7.org/fhir/uv/rwi-pharma
 name: RWIpharma
 title: Regulatory Workflows and Interactions - pharma
 description: "Regulatory exchange is globally fragmented across authorities, product lines, procedures, and technologies. This IG establishes a common Task- and Subscription-based framework for regulatory workflows and interactions, enabling them to be exchanged, tracked, and acted upon with machine-readable status and event-driven notifications."
-status: draft # draft | active | retired | unknown
+status: active # draft | active | retired | unknown
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  #<<< must include a http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension that identifies the workgroup responsible for the IG. This is the authoritative element.
     valueCode: brr
