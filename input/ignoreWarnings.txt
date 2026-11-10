@@ -11,16 +11,12 @@ Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.
 # eg-ctd-section: Example code system (name ends in "Example") used only for example bindings, so it is maintained in this IG and will not move to THO. Authoritative CTD section codes are owned by ICH.
 INFORMATION: CodeSystem/eg-ctd-section: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-# rwipharma-business-status: Example code system (name ends in "Example") used only for example bindings, so it is maintained in this IG and will not move to THO.
+# Example code systems (names end in "Example") used only for example bindings, so they are maintained in this IG and will not move to THO: rwipharma-business-status, rwipharma-task-code, rwipharma-task-input-output-type.
 INFORMATION: CodeSystem/rwipharma-business-status: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-
-# rwipharma-task-code: Example code system (name ends in "Example") used only for example bindings, so it is maintained in this IG and will not move to THO.
 INFORMATION: CodeSystem/rwipharma-task-code: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-
-# rwipharma-task-input-output-type: Example code system (name ends in "Example") used only for example bindings, so it is maintained in this IG and will not move to THO.
 INFORMATION: CodeSystem/rwipharma-task-input-output-type: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-# rwi-pharma-demo: IG-specific utility codes used only to define the identifier slices in the Task and DocumentReference profiles, so they are maintained in this IG and will not move to THO.
+# rwi-pharma-demo: IG-specific utility codes used only to define the identifier slices in the Task and DocumentReference profiles, so they are maintained in this IG and will not move to THO. TSMG has been contacted by email about these identifier type codes.
 INFORMATION: CodeSystem/rwi-pharma-demo: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 # rwi-pharma-temporary: Immature code system (Case 2, target undecided): a temporary place-holder code used for convenience; it may later be proposed to THO, but publication does not depend on it, so the URL includes 'temporary' and experimental is true. The Endpoint examples reference it as experimental for the same reason.
