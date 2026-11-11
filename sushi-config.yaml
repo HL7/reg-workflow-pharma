@@ -10,7 +10,7 @@ extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: trial-use
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm  #<<<<< this to to inform the publisher of the default FMM level for the artifacts in this IG
-    valueInteger: 1
+    valueInteger: 2
 version: 1.0.0-ballot
 
 fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
@@ -54,12 +54,12 @@ groups:
     name: "Code Systems"
     description: "Code systems defined by this guide. See [Terminology](terminology.html)."
     resources:
-      - CodeSystem/eg-ctd-section
+      - CodeSystem/ctd-section-example
       - CodeSystem/rwi-pharma-demo
       - CodeSystem/rwi-pharma-temporary
-      - CodeSystem/rwipharma-business-status
-      - CodeSystem/rwipharma-task-code
-      - CodeSystem/rwipharma-task-input-output-type
+      - CodeSystem/rwipharma-business-status-example
+      - CodeSystem/rwipharma-task-code-example
+      - CodeSystem/rwipharma-task-input-output-type-example
   value-sets:
     name: "Value Sets"
     description: "Value sets defined by this guide. See [Terminology](terminology.html)."

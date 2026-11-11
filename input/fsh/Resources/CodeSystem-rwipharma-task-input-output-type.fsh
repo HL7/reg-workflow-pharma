@@ -1,5 +1,5 @@
 CodeSystem: RWIpharmaTaskInputOutputTypeExample
-Id: rwipharma-task-input-output-type
+Id: rwipharma-task-input-output-type-example
 Title: "Example RWI-pharma Task Input and Output Types"
 Description: "Example Types of documents and data exchanged as Task inputs and outputs. Inputs come from the requester; outputs come from the Task owner."
 * ^caseSensitive = true

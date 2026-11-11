@@ -1,5 +1,5 @@
 CodeSystem: RWIpharmaCTDSectionExample
-Id: eg-ctd-section
+Id: ctd-section-example
 Title: "Example CTD Section Code System"
 Description: "Example code system defining all relevant CTD section codes used in regulatory submissions to EMA, FDA, PMDA and other agencies. Based on ICH guidelines https://www.ich.org/page/ctd."
 

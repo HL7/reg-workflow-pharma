@@ -8,13 +8,13 @@
 Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
 Reference to experimental CodeSystem http://hl7.org/fhir/guide-parameter-code|5.0.0
 
-# eg-ctd-section: Example code system (name ends in "Example") used only for example bindings, so it is maintained in this IG and will not move to THO. Authoritative CTD section codes are owned by ICH.
-INFORMATION: CodeSystem/eg-ctd-section: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+# ctd-section-example: Example code system (name ends in "Example") used only for example bindings, so it is maintained in this IG and will not move to THO. Authoritative CTD section codes are owned by ICH.
+INFORMATION: CodeSystem/ctd-section-example: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-# Example code systems (names end in "Example") used only for example bindings, so they are maintained in this IG and will not move to THO: rwipharma-business-status, rwipharma-task-code, rwipharma-task-input-output-type.
-INFORMATION: CodeSystem/rwipharma-business-status: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-INFORMATION: CodeSystem/rwipharma-task-code: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
-INFORMATION: CodeSystem/rwipharma-task-input-output-type: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+# Example code systems (names end in "Example") used only for example bindings, so they are maintained in this IG and will not move to THO: rwipharma-business-status-example, rwipharma-task-code-example, rwipharma-task-input-output-type-example.
+INFORMATION: CodeSystem/rwipharma-business-status-example: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+INFORMATION: CodeSystem/rwipharma-task-code-example: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+INFORMATION: CodeSystem/rwipharma-task-input-output-type-example: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 # rwi-pharma-demo: IG-specific utility codes used only to define the identifier slices in the Task and DocumentReference profiles, so they are maintained in this IG and will not move to THO. TSMG has been contacted by email about these identifier type codes.
 INFORMATION: CodeSystem/rwi-pharma-demo: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
@@ -64,9 +64,9 @@ The URL 'Task/scenario1-02-validation' cannot be resolved unless the fullURL is 
 %Attachment content was not checked: Binary/%
 
 # CodeSystem.property.uri is optional (0..1) per the FHIR CodeSystem resource ("Reference to the formal meaning of the property"). RWI-Pharma-Domain and RWI-Pharma-Direction are very specific to this IG: they are used only within this IG (for property-filter ValueSets) and their meaning is defined by property.description in each CodeSystem. Giving them a URI in the HL7 (hl7.org/fhir) space raises a warning that properties should not be defined there without being added to the HL7 Concept Properties code system, which is not appropriate for properties this specific, so no URI is used.
-INFORMATION: CodeSystem/rwipharma-business-status: CodeSystem.property[0]: This property has only a code ('RWI-Pharma-Domain') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
-INFORMATION: CodeSystem/rwipharma-task-input-output-type: CodeSystem.property[0]: This property has only a code ('RWI-Pharma-Domain') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
-INFORMATION: CodeSystem/rwipharma-task-input-output-type: CodeSystem.property[1]: This property has only a code ('RWI-Pharma-Direction') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+INFORMATION: CodeSystem/rwipharma-business-status-example: CodeSystem.property[0]: This property has only a code ('RWI-Pharma-Domain') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+INFORMATION: CodeSystem/rwipharma-task-input-output-type-example: CodeSystem.property[0]: This property has only a code ('RWI-Pharma-Domain') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
+INFORMATION: CodeSystem/rwipharma-task-input-output-type-example: CodeSystem.property[1]: This property has only a code ('RWI-Pharma-Direction') and not a URI, so it has no clearly defined meaning in the terminology ecosystem
 
 # The slice is intended as an example of SubscriptionNotification payloads
 INFORMATION: Bundle/eee72492-c236-41f7-a7ba-3af356204f4c: Bundle.entry[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/rwi-pharma/StructureDefinition/rwi-pharma-notification-bundle|1.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)

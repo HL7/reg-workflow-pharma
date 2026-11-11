@@ -37,17 +37,17 @@ Usage: #example
 * authoredOn = "2025-11-21T09:00:00+01:00"
 * basedOn = Reference(scenario1-01-initial-submission)
 * status = #completed
-* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status#payment-received "Payment Received"
+* businessStatus = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-business-status-example#payment-received "Payment Received"
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#request-payment "Request Payment"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code-example#request-payment "Request Payment"
 //* for = Reference(MedicinalProductDefinition/example-ma) "WonderDrug 50mg Tablets"
 * lastModified = "2025-11-22T14:00:00+01:00"
 * requester = Reference(org-ema-srm-hmed) "Health Authority"
 * owner = Reference(org-synthpharma-ag) "SynthPharma AG"
-* input.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#invoice-reg-fee "Invoice Regulatory Fee"
+* input.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section-example#invoice-reg-fee "Invoice Regulatory Fee"
 * input.valueReference = Reference(docref-invoice)
-* output.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#proof-Of-payment "Proof of Payment"
+* output.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section-example#proof-Of-payment "Proof of Payment"
 * output.valueReference = Reference(docref-payment-proof)
 
 Instance: docref-payment-proof
@@ -58,7 +58,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1.0"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#proof-Of-payment "Proof of Payment"
+* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section-example#proof-Of-payment "Proof of Payment"
 * relatesTo.code = http://hl7.org/fhir/document-relationship-type#appends
 * relatesTo.target = Reference(docref-invoice) "Invoice #INV-2025-001"
 * content.attachment.contentType = #application/pdf

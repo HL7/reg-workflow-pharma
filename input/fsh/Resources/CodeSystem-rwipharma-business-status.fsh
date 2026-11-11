@@ -1,5 +1,5 @@
 CodeSystem: RWIpharmaBusinessStatusExample
-Id: rwipharma-business-status
+Id: rwipharma-business-status-example
 Title: "Example RWI-pharma Regulatory Business Status"
 Description: "Example code system for regulatory business status in RWI-pharma submissions"
 

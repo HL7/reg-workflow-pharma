@@ -41,12 +41,12 @@ Usage: #example
 * status = #requested
 * intent = #proposal
 * priority = #routine
-* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code#request-payment "Request Payment"
+* code = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/rwipharma-task-code-example#request-payment "Request Payment"
 //* for = Reference(MedicinalProductDefinition/example-ma) "WonderDrug 50mg Tablets"
 * lastModified = "2025-11-21T09:00:00+01:00"
 * requester = Reference(org-ema-srm-hmed) "Health Authority"
 * owner = Reference(org-synthpharma-ag) "SynthPharma AG"
-* input.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#invoice-reg-fee "Invoice Regulatory Fee"
+* input.type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section-example#invoice-reg-fee "Invoice Regulatory Fee"
 * input.valueReference = Reference(docref-invoice)
 
 Instance: docref-invoice
@@ -58,7 +58,7 @@ Usage: #example
 * status = #current
 * docStatus = #final
 * version = "1.0"
-* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/eg-ctd-section#invoice-reg-fee "Invoice Regulatory Fee"
+* type = http://hl7.org/fhir/uv/rwi-pharma/CodeSystem/ctd-section-example#invoice-reg-fee "Invoice Regulatory Fee"
 * description = "Financial invoice for regulatory submission review"
 * content.attachment.contentType = #application/pdf
 * content.attachment.url = "Binary/binary-s1-invoice"

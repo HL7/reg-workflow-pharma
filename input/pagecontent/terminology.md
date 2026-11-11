@@ -21,10 +21,10 @@ There are three code systems. Each domain section below has an example value set
 
 | Task element | Code system (id) | Example value sets per domain |
 |---|---|---|
-| `Task.code` | [`rwipharma-task-code`](CodeSystem-rwipharma-task-code.html) | [`rwipharma-ma-task-code-vs`](ValueSet-rwipharma-ma-task-code-vs.html), [`rwipharma-ct-task-code-vs`](ValueSet-rwipharma-ct-task-code-vs.html), [`rwipharma-icsr-task-code-vs`](ValueSet-rwipharma-icsr-task-code-vs.html) |
-| `Task.businessStatus` | [`rwipharma-business-status`](CodeSystem-rwipharma-business-status.html) | [`rwipharma-ma-business-status-vs`](ValueSet-rwipharma-ma-business-status-vs.html), [`rwipharma-ct-business-status-vs`](ValueSet-rwipharma-ct-business-status-vs.html), [`rwipharma-icsr-business-status-vs`](ValueSet-rwipharma-icsr-business-status-vs.html) |
-| `Task.input.type` | [`rwipharma-task-input-output-type`](CodeSystem-rwipharma-task-input-output-type.html) | [`rwipharma-ma-task-input-type-vs`](ValueSet-rwipharma-ma-task-input-type-vs.html), [`rwipharma-ct-task-input-type-vs`](ValueSet-rwipharma-ct-task-input-type-vs.html), [`rwipharma-icsr-task-input-type-vs`](ValueSet-rwipharma-icsr-task-input-type-vs.html) |
-| `Task.output.type` | [`rwipharma-task-input-output-type`](CodeSystem-rwipharma-task-input-output-type.html) (same code system) | [`rwipharma-ma-task-output-type-vs`](ValueSet-rwipharma-ma-task-output-type-vs.html), [`rwipharma-ct-task-output-type-vs`](ValueSet-rwipharma-ct-task-output-type-vs.html), [`rwipharma-icsr-task-output-type-vs`](ValueSet-rwipharma-icsr-task-output-type-vs.html) |
+| `Task.code` | [`rwipharma-task-code-example`](CodeSystem-rwipharma-task-code-example.html) | [`rwipharma-ma-task-code-vs`](ValueSet-rwipharma-ma-task-code-vs.html), [`rwipharma-ct-task-code-vs`](ValueSet-rwipharma-ct-task-code-vs.html), [`rwipharma-icsr-task-code-vs`](ValueSet-rwipharma-icsr-task-code-vs.html) |
+| `Task.businessStatus` | [`rwipharma-business-status-example`](CodeSystem-rwipharma-business-status-example.html) | [`rwipharma-ma-business-status-vs`](ValueSet-rwipharma-ma-business-status-vs.html), [`rwipharma-ct-business-status-vs`](ValueSet-rwipharma-ct-business-status-vs.html), [`rwipharma-icsr-business-status-vs`](ValueSet-rwipharma-icsr-business-status-vs.html) |
+| `Task.input.type` | [`rwipharma-task-input-output-type-example`](CodeSystem-rwipharma-task-input-output-type-example.html) | [`rwipharma-ma-task-input-type-vs`](ValueSet-rwipharma-ma-task-input-type-vs.html), [`rwipharma-ct-task-input-type-vs`](ValueSet-rwipharma-ct-task-input-type-vs.html), [`rwipharma-icsr-task-input-type-vs`](ValueSet-rwipharma-icsr-task-input-type-vs.html) |
+| `Task.output.type` | [`rwipharma-task-input-output-type-example`](CodeSystem-rwipharma-task-input-output-type-example.html) (same code system) | [`rwipharma-ma-task-output-type-vs`](ValueSet-rwipharma-ma-task-output-type-vs.html), [`rwipharma-ct-task-output-type-vs`](ValueSet-rwipharma-ct-task-output-type-vs.html), [`rwipharma-icsr-task-output-type-vs`](ValueSet-rwipharma-icsr-task-output-type-vs.html) |
 {: .term-table}
 
 Conventions used throughout:
@@ -37,7 +37,7 @@ Conventions used throughout:
 
 ### Shared terms {#shared-terms}
 
-Used by all three domains. The ICSR value sets use only `submitted`, `rejected` and `validation-report` from this list. Shared business statuses are defined in [`rwipharma-business-status`](CodeSystem-rwipharma-business-status.html), and shared input and output types in [`rwipharma-task-input-output-type`](CodeSystem-rwipharma-task-input-output-type.html).
+Used by all three domains. The ICSR value sets use only `submitted`, `rejected` and `validation-report` from this list. Shared business statuses are defined in [`rwipharma-business-status-example`](CodeSystem-rwipharma-business-status-example.html), and shared input and output types in [`rwipharma-task-input-output-type-example`](CodeSystem-rwipharma-task-input-output-type-example.html).
 
 #### Business status (shared)
 
