@@ -1,7 +1,7 @@
 Instance: Organization-1002
 InstanceOf: RWIpharmaOrganization
 Title: "Organization example with Endpoint"
-Description: "Organization example with Endpoint."
+Description: "Organization example with an Endpoint."
 
 
 * id = "1002"
