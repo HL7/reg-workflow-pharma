@@ -53,7 +53,6 @@ ERROR: SubscriptionTopic/TaskCreationWithOrganizationAssignedFilter: Subscriptio
 
 # These references are intended
 %Reference to experimental CodeSystem http://hl7.org/fhir/request-intent|5.0.0
-%Reference to experimental ValueSet http://hl7.org/fhir/ValueSet/resource-types|5.0.0
 
 # Subscription notification Bundles reference the Subscription and the notified Task on the sending server. As in the FHIR R5 notification examples, these references cannot be resolved inside a subscription-notification Bundle (it is not a batch or transaction).
 The URL 'Subscription/Subscription-TaskStatusChange-IdOnly' cannot be resolved unless the fullURL is a RESTFul base URL, or a baseURL has been provided and the Bundle is a batch or transaction
